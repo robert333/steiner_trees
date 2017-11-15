@@ -21,9 +21,6 @@ private:
 	explicit SteinerTreeSolver() = default;
 
 private:
-	std::string _name;
-	graph::Graph _graph;
-	graph::Net _net;
 };
 
 } // namespace steiner_trees

@@ -20,6 +20,7 @@ public:
 	);
 
 	void create_variables_constraints_and_objective(mip::MIPModel& mip_model) final;
+
 	json compute_solution() const final;
 
 	mip::VariableStorage<graph::EdgeId, graph::Net::Name> const& variables() const;

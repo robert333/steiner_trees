@@ -47,6 +47,7 @@ set(MIP_FILES
         source/mip/Solution.cpp source/mip/Solution.hpp)
 
 set(STEINER_TREE_FILES
+        source/steiner_trees.cpp
         source/steiner_trees/SteinerTreeProblem.cpp
         source/steiner_trees/SteinerTreeSolution.cpp
         source/steiner_trees/SteinerTreeSolver.cpp
@@ -60,6 +61,19 @@ set(STEINER_TREE_MIPS_FILES
         source/steiner_trees/mips/natural_multi_commodity_flow/GroupSteinerTreeCuts.cpp
         source/steiner_trees/mips/SteinerTreeMIPFactory.cpp source/steiner_trees/mips/SteinerTreeMIPFactory.hpp
         source/steiner_trees/mips/SteinerTreeMIP.cpp source/steiner_trees/mips/SteinerTreeMIP.hpp)
+
+set(YANNICK_FILES
+        source/yannick.cpp
+        source/yannick/YannickProblem.cpp
+        source/yannick/YannickSolution.cpp
+        source/yannick/YannickSolver.cpp
+        source/yannick/YannickMIP.cpp
+        source/yannick/YannickMIPFactory.cpp
+        source/yannick/GroupTaskTime.cpp
+        source/yannick/GroupTaskCycle.cpp
+        source/yannick/GroupTaskMachine.cpp
+        source/yannick/GroupTaskMachineOrder.cpp
+)
 
 # Python
 find_package(PythonLibs 3.5 REQUIRED)
@@ -95,6 +109,14 @@ add_executable(steiner_trees
         ${STEINER_TREE_MIPS_FILES}
 )
 
+add_executable(yannick
+        ${SOURCE_FILES}
+        ${HELPER_FILES}
+        ${GRAPH_FILES}
+        ${MIP_FILES}
+        ${YANNICK_FILES}
+)
+
 add_library(steiner_trees_python_lib SHARED
         ${SOURCE_FILES}
         ${HELPER_FILES}
@@ -105,6 +127,13 @@ add_library(steiner_trees_python_lib SHARED
 )
 
 target_link_libraries(steiner_trees
+        ${PYTHON_LIBRARIES}
+        ${CMAKE_THREAD_LIBS_INIT}
+        ${Boost_LIBRARIES}
+        libortools.so
+)
+
+target_link_libraries(yannick
         ${PYTHON_LIBRARIES}
         ${CMAKE_THREAD_LIBS_INIT}
         ${Boost_LIBRARIES}

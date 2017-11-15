@@ -2,9 +2,6 @@
 
 namespace mip {
 
-Variable::Variable()
-{
 
-}
 
 } // namespace mip

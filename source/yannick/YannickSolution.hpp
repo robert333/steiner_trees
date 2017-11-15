@@ -1,19 +1,21 @@
-#ifndef STEINER_TREES_STEINERTREESOLUTION_HPP
-#define STEINER_TREES_STEINERTREESOLUTION_HPP
+#ifndef YANNICK_YANNICKSOLUTION_HPP
+#define YANNICK_YANNICKSOLUTION_HPP
 
 #include "../json.hpp"
 #include "../graph/typedefs.hpp"
-#include "SteinerTreeProblem.hpp"
+#include "../mip/MIP.hpp"
 
-namespace steiner_trees {
+#include "YannickProblem.hpp"
 
-class SteinerTreeSolution {
+namespace yannick {
+
+class YannickSolution {
 public:
-	using SharedPtr = std::shared_ptr<SteinerTreeSolution>;
-	using Vector = std::vector<SteinerTreeSolution>;
+	using SharedPtr = std::shared_ptr<YannickSolution>;
+	using Vector = std::vector<YannickSolution>;
 
 public:
-	explicit SteinerTreeSolution(
+	explicit YannickSolution(
 		mip::MIP::OptimizationProblem const& optimization_problem,
 		mip::MIP::OptimizationType const& optimization_type,
 		mip::MIP::OptimizationResult const& optimization_result,
@@ -40,6 +42,6 @@ private:
 	json const _optimization_solution;
 };
 
-} // namespace steiner_trees
+} // namespace yannick
 
 #endif

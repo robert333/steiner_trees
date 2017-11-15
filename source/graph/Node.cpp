@@ -3,9 +3,19 @@
 
 namespace graph {
 
-Node::Node()
-{
+Node::Node(EdgeId const& id, Weight const& weight) :
+	_id(id),
+	_weight(weight)
+{}
 
+NodeId const& Node::id() const
+{
+	return _id;
+}
+
+Weight const& Node::weight() const
+{
+	return _weight;
 }
 
 void Node::add_incident_edge(EdgeId const& edge_id)
@@ -96,6 +106,21 @@ std::vector<NodeId> const& Node::incoming_nodes() const
 std::vector<NodeId> const& Node::outgoing_nodes() const
 {
 	return _outgoing_nodes;
+}
+
+std::string Node::to_string() const
+{
+	return std::to_string(id());
+}
+
+bool Node::operator==(Node const& rhs) const
+{
+	return id() == rhs.id();
+}
+
+bool Node::operator!=(Node const& rhs) const
+{
+	return id() != rhs.id();
 }
 
 } // namespace graph

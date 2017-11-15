@@ -13,13 +13,17 @@ class Graph {
 public:
 
 public:
-	explicit Graph(bool const& directed = false, std::size_t const& num_nodes = 0);
+	explicit Graph(bool const& directed = false);
 
 	bool is_directed() const;
 	bool is_weighted() const;
 
 	std::size_t num_nodes() const;
 	std::size_t num_edges() const;
+
+	NodeId create_node(
+		Weight const& weight = 0
+	);
 
 	EdgeId create_edge(
 		NodeId const& tail,

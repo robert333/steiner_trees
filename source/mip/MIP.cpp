@@ -21,7 +21,7 @@ std::vector<MIP::Variable*> const& MIP::variables() const
 	return solver().variables();
 }
 
-std::vector<MIP::Constraint*> const& MIP::constraints() const
+std::vector<MIP::MPConstraint*> const& MIP::constraints() const
 {
 	return solver().constraints();
 }
@@ -41,14 +41,19 @@ MIP::Variable* MIP::create_binary_variable(std::string const& name)
 	return solver().MakeBoolVar(name);
 }
 
-MIP::Constraint* MIP::create_constraint(std::string const& name)
+Constraint MIP::create_constraint(std::string const& name)
 {
-	return solver().MakeRowConstraint(name);
+	return Constraint(solver().MakeRowConstraint(name));
 }
 
 void MIP::set_objective_coefficient(MIP::Variable const* variable, double coefficient)
 {
 	solver().MutableObjective()->SetCoefficient(variable, coefficient);
+}
+
+void MIP::add_objective_offset(double offset)
+{
+	solver().MutableObjective()->SetOffset(solver().Objective().offset() + offset);
 }
 
 MIPModel::Value MIP::objective_value() const

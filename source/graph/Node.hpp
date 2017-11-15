@@ -6,12 +6,15 @@
 
 namespace graph {
 
-class Node {
+class Node : public Output {
 public:
 	using Vector = std::vector<Node>;
 
 public:
-	Node();
+	explicit Node(EdgeId const& id, Weight const& weight = 1);
+
+	NodeId const& id() const;
+	Weight const& weight() const;
 	
 	void add_incident_edge(EdgeId const& edge_id);
 	void add_incoming_edge(EdgeId const& edge_id);
@@ -37,9 +40,17 @@ public:
 	std::vector<NodeId> const& incoming_nodes() const;
 	std::vector<NodeId> const& outgoing_nodes() const;
 
+	std::string to_string() const final;
+
+	bool operator==(Node const& rhs) const;
+	bool operator!=(Node const& rhs) const;
+
 private:
 
 private:
+	NodeId /*const*/ _id;
+	Weight /*const*/ _weight;
+
 	std::vector<EdgeId> _incident_edges;
 	std::vector<EdgeId> _incoming_edges;
 	std::vector<EdgeId> _outgoing_edges;

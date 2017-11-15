@@ -3,10 +3,9 @@
 
 namespace graph {
 
-Graph::Graph(bool const& directed, std::size_t const& num_nodes) :
+Graph::Graph(bool const& directed) :
 	_directed(directed),
-	_weighted(true),
-	_nodes(num_nodes)
+	_weighted(true)
 {}
 
 bool Graph::is_directed() const
@@ -27,6 +26,15 @@ std::size_t Graph::num_nodes() const
 std::size_t Graph::num_edges() const
 {
 	return _edges.size();
+}
+
+NodeId Graph::create_node(Weight const& weight)
+{
+	NodeId const node_id = num_nodes();
+
+	_nodes.emplace_back(node_id, weight);
+
+	return node_id;
 }
 
 EdgeId Graph::create_edge(NodeId const& tail, NodeId const& head, Weight const& weight)
@@ -88,11 +96,18 @@ Graph Graph::bidirect() const
 {
 	assert(not is_directed());
 
-	Graph bidirected_graph(true, num_nodes());
+	Graph bidirected_graph(true);
+
+	for (Node const& node : nodes()) {
+		NodeId const node_id = bidirected_graph.create_node(node.weight());
+		assert(node_id == node.id());
+	}
 
 	for (Edge const& edge : edges()) {
-		bidirected_graph.create_edge(edge.tail(), edge.head(), edge.weight());
-		bidirected_graph.create_edge(edge.head(), edge.tail(), edge.weight());
+		EdgeId const forward_edge_id = bidirected_graph.create_edge(edge.tail(), edge.head(), edge.weight());
+		EdgeId const backward_edge_id = bidirected_graph.create_edge(edge.head(), edge.tail(), edge.weight());
+		assert(forward_edge_id == 2 * edge.id());
+		assert(backward_edge_id == 2 * edge.id() + 1);
 	}
 
 	return bidirected_graph;
