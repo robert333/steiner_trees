@@ -33,6 +33,8 @@ set(GRAPH_FILES
         source/graph/CostsFactory.cpp
         source/graph/Net.cpp
         source/graph/Costs.cpp
+        source/graph/algorithms/Dijkstra.cpp
+        source/graph/algorithms/MooreBellmanFord.cpp
 )
 
 set(MIP_FILES

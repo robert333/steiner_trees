@@ -16,7 +16,6 @@ public:
 	explicit Graph(bool const& directed = false);
 
 	bool is_directed() const;
-	bool is_weighted() const;
 
 	std::size_t num_nodes() const;
 	std::size_t num_edges() const;
@@ -47,7 +46,6 @@ private:
 
 private:
 	bool const _directed;
-	bool const _weighted;
 
 	Node::Vector _nodes;
 	Edge::Vector _edges;

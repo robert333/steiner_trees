@@ -3,6 +3,7 @@
 #define GRAPH_NODE_HPP
 
 #include "typedefs.hpp"
+#include "../json.hpp"
 
 namespace graph {
 
@@ -42,8 +43,14 @@ public:
 
 	std::string to_string() const final;
 
-	bool operator==(Node const& rhs) const;
-	bool operator!=(Node const& rhs) const;
+	json export_to_json() const;
+
+	bool operator==(Node const& rhs) const { return id() == rhs.id(); };
+	bool operator!=(Node const& rhs) const { return id() != rhs.id(); };
+	bool operator<(Node const& rhs) const { return id() < rhs.id(); };
+	bool operator>(Node const& rhs) const { return id() > rhs.id(); };
+	bool operator<=(Node const& rhs) const { return id() <= rhs.id(); };
+	bool operator>=(Node const& rhs) const { return id() >= rhs.id(); };
 
 private:
 

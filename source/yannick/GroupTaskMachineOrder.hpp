@@ -33,12 +33,20 @@ public:
 private:
 	void create_constraints(mip::MIPModel& mip_model);
 
-	void create_order_constraint(
+	void create_order_constraints(
 		mip::MIPModel& mip_model,
 		graph::Node const& node_1,
 		graph::Node const& node_2,
 		Cycle cycle_1,
-		Cycle cycle_2,
+		Cycle cycle_2
+	);
+
+	mip::Constraint create_order_constraint(
+		mip::MIPModel& mip_model,
+		graph::Node const& node_first,
+		Cycle cycle_first,
+		graph::Node const& node_second,
+		Cycle cycle_second,
 		Machine machine
 	);
 

@@ -28,6 +28,28 @@ json GroupTaskMachine::compute_solution() const
 		}
 	}
 
+	for (Machine machine = 0; machine < _yannick_problem.machine_number(); ++machine) {
+		std::vector<Task> assigned_tasks;
+
+		for (graph::Node const& node : _yannick_problem.precedence_graph().nodes()) {
+			if (variables().solution_value(node.id(), machine) == 1) {
+				assigned_tasks.push_back(static_cast<Task>(node.id()));
+			}
+		}
+
+		auto const sum_time = [&](double time, Task const& task)->graph::Weight {
+			return time + _yannick_problem.precedence_graph().node(static_cast<graph::NodeId>(task)).weight();
+		};
+
+		assert(
+			std::accumulate(
+				assigned_tasks.begin(), assigned_tasks.end(), 0, sum_time
+			) <= _yannick_problem.cycle_time()
+		);
+
+		solution["machines"].push_back({{"machine", machine}, {"tasks", assigned_tasks}});
+	}
+
 	return solution;
 }
 
@@ -61,6 +83,43 @@ void GroupTaskMachine::create_constraints(mip::MIPModel& mip_model)
 
 		constraint.set_lower_bound(1);
 		constraint.set_upper_bound(1);
+	}
+
+	for (Machine machine = 0; machine < _yannick_problem.machine_number(); ++machine) {
+		mip::Constraint constraint = mip_model.create_constraint(
+			"tasks processed by machine " + std::to_string(machine) + " need to fit into one cycle time"
+		);
+
+		for (graph::Node const& node : _yannick_problem.precedence_graph().nodes()) {
+			constraint.add_variable(variables().get(node.id(), machine), node.weight());
+		}
+
+		constraint.set_upper_bound(_yannick_problem.cycle_time());
+	}
+
+	for (graph::Node const& node_1 : _yannick_problem.precedence_graph().nodes()) {
+		for (graph::Node const& node_2 : _yannick_problem.precedence_graph().nodes()) {
+			if (node_1 >= node_2) {
+				continue;
+			}
+
+			if (not _yannick_problem.is_it_possible_to_process_the_tasks_by_one_machine({node_1, node_2})) {
+				for (Machine machine = 0; machine < _yannick_problem.machine_number(); ++machine) {
+					mip::Constraint constraint = mip_model.create_constraint(
+						"task " + node_1.to_string() + " and task " + node_2.to_string()
+						+ " processed by machine " + std::to_string(machine)
+						+ " is not possible"
+					);
+
+					Logger::logger() << constraint.name() << "\n";
+
+					constraint.add_variable(variables().get(node_1.id(), machine), 1);
+					constraint.add_variable(variables().get(node_2.id(), machine), 1);
+
+					constraint.set_upper_bound(1);
+				}
+			}
+		}
 	}
 }
 

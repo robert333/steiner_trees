@@ -22,7 +22,8 @@ public:
 	static void output(std::ostream& ostream, Graph const& graph);
 
 private:
-	static void output_edge(std::ostream& ostream, Edge const& edge, bool const& directed = true, bool const& weighted = true);
+	static void output_node(std::ostream& ostream, Node const& node);
+	static void output_edge(std::ostream& ostream, Edge const& edge, bool directed);
 
 	static void output_dimac(std::ostream& ostream, Graph const& graph);
 

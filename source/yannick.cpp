@@ -69,7 +69,7 @@ void run_yannick(
 						 << output_json.dump(4)
 						 << "\n\n";
 
-		write_json(instance_path + "/" + "solution_" + instance_name + ".json", output_json);
+		write_json(instance_path + "/" + instance_name + "_solution" + ".json", output_json);
 	} else {
 		assert(false);
 	}

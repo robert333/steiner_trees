@@ -46,7 +46,7 @@ void GroupTaskTime::create_constraints(mip::MIPModel& mip_model)
 {
 	for (graph::Edge const& edge : _yannick_problem.precedence_graph().edges()) {
 		mip::Constraint constraint = mip_model.create_constraint(
-			"precedence : edge = " + edge.to_string()
+			"task " + std::to_string(edge.tail()) + " has to be processed before task " + std::to_string(edge.head())
 		);
 
 		constraint.add_variable(variables().get(edge.tail()), -1);

@@ -55,4 +55,9 @@ bool is_terminal_id_valid(TerminalId const& terminal_id, std::size_t const& num_
 	return is_id_valid(terminal_id, num_terminals);
 }
 
+Weight infinity()
+{
+	return std::numeric_limits<Weight>::infinity();
+}
+
 } // namespace graph

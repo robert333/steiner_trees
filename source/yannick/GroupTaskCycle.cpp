@@ -30,6 +30,18 @@ json GroupTaskCycle::compute_solution() const
 		}
 	}
 
+	for (Cycle cycle = 0; cycle < _yannick_problem.cycle_number(); ++cycle) {
+		std::vector<Task> assigned_tasks;
+
+		for (graph::Node const& node : _yannick_problem.precedence_graph().nodes()) {
+			if (variables().solution_value(node.id(), cycle) == 1) {
+				assigned_tasks.push_back(static_cast<Task>(node.id()));
+			}
+		}
+
+		solution["cycles"].push_back({{"cycle", cycle}, {"tasks", assigned_tasks}});
+	}
+
 	return solution;
 }
 
@@ -54,7 +66,7 @@ void GroupTaskCycle::create_constraints(mip::MIPModel& mip_model)
 {
 	for (graph::Node const& node : _yannick_problem.precedence_graph().nodes()) {
 		mip::Constraint constraint = mip_model.create_constraint(
-			"exact one cycle per task : task = " + node.to_string()
+			"exact one cycle per task " + node.to_string()
 		);
 
 		for (Cycle cycle = 0; cycle < _yannick_problem.cycle_number(); ++cycle) {
@@ -75,20 +87,6 @@ void GroupTaskCycle::create_constraints(mip::MIPModel& mip_model)
 				"if task " + node.to_string() + " in cycle " + std::to_string(cycle)
 				+ " then set upper time slot bound"
 			);
-
-//			constraint_lower.set_lower_bound(node.weight());
-//			constraint_lower.add_variable(_group_task_time.variables().get(node.id()), 1);
-//			constraint_lower.add_variable(
-//				variables().get(node.id(), cycle),
-//				-1 * cycle * _yannick_problem.cycle_time()
-//			);
-//
-//			constraint_upper.set_upper_bound(_yannick_problem.cycle_number() * _yannick_problem.cycle_time());
-//			constraint_upper.add_variable(_group_task_time.variables().get(node.id()), 1);
-//			constraint_upper.add_variable(
-//				variables().get(node.id(), cycle),
-//				(_yannick_problem.cycle_number() - cycle - 1) * _yannick_problem.cycle_time()
-//			);
 
 			constraint_lower.add_variable(_group_task_time.variables().get(node.id()), 1);
 			constraint_lower.set_lower_bound(cycle * _yannick_problem.cycle_time() + node.weight());

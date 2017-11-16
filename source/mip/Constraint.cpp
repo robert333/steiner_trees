@@ -6,31 +6,41 @@ Constraint::Constraint(operations_research::MPConstraint* mp_constraint_ptr) :
 	_mp_constraint_ptr(mp_constraint_ptr)
 {}
 
+bool Constraint::is_valid() const
+{
+	return _mp_constraint_ptr != nullptr;
+}
+
+std::string Constraint::name() const
+{
+	return mp_constraint().name();
+}
+
 void Constraint::add_variable(operations_research::MPVariable* mp_variable_ptr, double coefficient)
 {
-	_mp_constraint_ptr->SetCoefficient(mp_variable_ptr, coefficient);
+	mp_constraint().SetCoefficient(mp_variable_ptr, coefficient);
 
 	_variables.push_back(mp_variable_ptr);
 }
 
 void Constraint::set_lower_bound(double lower_bound)
 {
-	_mp_constraint_ptr->SetLB(lower_bound);
+	mp_constraint().SetLB(lower_bound);
 }
 
 void Constraint::set_upper_bound(double upper_bound)
 {
-	_mp_constraint_ptr->SetUB(upper_bound);
+	mp_constraint().SetUB(upper_bound);
 }
 
 double Constraint::lower_bound() const
 {
-	return _mp_constraint_ptr->lb();
+	return mp_constraint().lb();
 }
 
 double Constraint::upper_bound() const
 {
-	return _mp_constraint_ptr->ub();
+	return mp_constraint().ub();
 }
 
 double Constraint::compute_valid_bound(BoundType bound_type) const
@@ -38,9 +48,9 @@ double Constraint::compute_valid_bound(BoundType bound_type) const
 	double bound = 0;
 
 	for (operations_research::MPVariable const* mp_variable_ptr : _variables) {
-		double const coefficient = _mp_constraint_ptr->GetCoefficient(mp_variable_ptr);
+		double const coefficient = mp_constraint().GetCoefficient(mp_variable_ptr);
 
-		if ((bound_type == LOWER_BOUND ? 1 : -1) * _mp_constraint_ptr->GetCoefficient(mp_variable_ptr) >= 0) {
+		if ((bound_type == LOWER_BOUND ? 1 : -1) * mp_constraint().GetCoefficient(mp_variable_ptr) >= 0) {
 			bound += coefficient * mp_variable_ptr->lb();
 		} else {
 			bound += coefficient * mp_variable_ptr->ub();
@@ -90,7 +100,7 @@ void Constraint::lower_bound_condition_on(operations_research::MPVariable* mp_va
 	double const coefficient = (value == 0 ? 1 : -1) * (lower_bound() - valid_lower_bound);
 
 	if (value == 1) {
-		_mp_constraint_ptr->SetLB(valid_lower_bound);
+		mp_constraint().SetLB(valid_lower_bound);
 	}
 
 	add_variable(mp_variable_ptr, coefficient);
@@ -111,10 +121,22 @@ void Constraint::upper_bound_condition_on(operations_research::MPVariable* mp_va
 	double const coefficient = (value == 0 ? 1 : -1) * (upper_bound() - valid_upper_bound);
 
 	if (value == 1) {
-		_mp_constraint_ptr->SetUB(valid_upper_bound);
+		mp_constraint().SetUB(valid_upper_bound);
 	}
 
 	add_variable(mp_variable_ptr, coefficient);
+}
+
+operations_research::MPConstraint& Constraint::mp_constraint()
+{
+	assert(is_valid());
+	return *_mp_constraint_ptr;
+}
+
+operations_research::MPConstraint const& Constraint::mp_constraint() const
+{
+	assert(is_valid());
+	return *_mp_constraint_ptr;
 }
 
 } // namespace mip

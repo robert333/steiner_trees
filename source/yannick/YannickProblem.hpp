@@ -6,6 +6,7 @@
 namespace yannick {
 
 using Index = int;
+using Task = Index;
 using Cycle = Index;
 using Machine = Index;
 
@@ -28,6 +29,8 @@ public:
 	double cycle_time() const;
 	Index cycle_number() const;
 	Index machine_number() const;
+
+	bool is_it_possible_to_process_the_tasks_by_one_machine(graph::Node::Vector const& nodes) const;
 
 	json export_to_json() const;
 

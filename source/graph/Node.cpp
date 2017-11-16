@@ -113,14 +113,12 @@ std::string Node::to_string() const
 	return std::to_string(id());
 }
 
-bool Node::operator==(Node const& rhs) const
+json Node::export_to_json() const
 {
-	return id() == rhs.id();
-}
-
-bool Node::operator!=(Node const& rhs) const
-{
-	return id() != rhs.id();
+	return {
+		{"id", id()},
+		{"weight", weight()}
+	};
 }
 
 } // namespace graph

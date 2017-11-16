@@ -4,18 +4,12 @@
 namespace graph {
 
 Graph::Graph(bool const& directed) :
-	_directed(directed),
-	_weighted(true)
+	_directed(directed)
 {}
 
 bool Graph::is_directed() const
 {
 	return _directed;
-}
-
-bool Graph::is_weighted() const
-{
-	return _weighted;
 }
 
 std::size_t Graph::num_nodes() const
@@ -118,9 +112,12 @@ json Graph::export_to_json() const
 	json result;
 
 	result["directed"] = is_directed();
-	result["weighted"] = is_weighted();
 
-	for (Edge const& edge: edges()) {
+	for (Node const& node : nodes()) {
+		result["edges"].push_back(node.export_to_json());
+	}
+
+	for (Edge const& edge : edges()) {
 		result["edges"].push_back(edge.export_to_json());
 	}
 

@@ -34,6 +34,8 @@ bool is_edge_id_valid(EdgeId const& edge_id, std::size_t const& num_edges);
 bool is_net_id_valid(NetId const& net_id, std::size_t const& num_nets);
 bool is_terminal_id_valid(TerminalId const& terminal_id, std::size_t const& num_terminals);
 
+Weight infinity();
+
 } // namespace graph
 
 #endif

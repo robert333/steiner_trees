@@ -1,8 +1,6 @@
-// GraphPrinter.cpp
 #include "GraphPrinter.hpp"
 
 #include <fstream>
-#include <sstream>
 
 namespace graph {
 
@@ -38,67 +36,70 @@ void GraphPrinter::output_dimac(Graph const& graph, std::string const& filename)
 
 void GraphPrinter::output(std::ostream& ostream, Graph const& graph)
 {
-	std::size_t const num_nodes = graph.num_nodes();
-	std::size_t const num_edges = graph.num_edges();
-	
-	bool const directed = graph.is_directed();
-	bool const weighted = graph.is_weighted();
-
-	if (directed) {
+	if (graph.is_directed()) {
 		ostream << "Directed ";
 	}
 	
-	if (weighted) {
-		ostream << "Weighted ";
-	}
-	
-	ostream << "Graph with " << num_nodes << " nodes and " << num_edges << " edges\n\n";
+	ostream << "Graph with " << graph.num_nodes() << " nodes and " << graph.num_edges() << " edges\n\n";
 
-	for (NodeId node_id = 0; node_id < num_nodes; ++node_id) {
-		Node const& node = graph.node(node_id);
+	for (Node const& node : graph.nodes()) {
+		ostream << "Node " << node << " with weight " << node.weight() << " and ";
 
-		if (directed) {
-			ostream << "Node " << node_id << " with "
-				    << node.num_incoming_edges() << " incoming edges and "
+		if (graph.is_directed()) {
+			ostream << node.num_incoming_edges() << " incoming edges and "
 				    << node.num_outgoing_edges() << " outgoing edges\n";
 
-			for (EdgeId const edge_id : node.incoming_edges()) {
+			ostream << "incoming:\n";
+
+			for (EdgeId const& edge_id : node.incoming_edges()) {
 				Edge const& edge = graph.edge(edge_id);
-				output_edge(ostream, edge, directed, weighted);
+				output_edge(ostream, edge, graph.is_directed());
 			}
 
-			for (EdgeId const edge_id : node.outgoing_edges()) {
+			ostream << "outgoing:\n";
+
+			for (EdgeId const& edge_id : node.outgoing_edges()) {
 				Edge const& edge = graph.edge(edge_id);
-				output_edge(ostream, edge, directed, weighted);
+				output_edge(ostream, edge, graph.is_directed());
 			}
 		} else {
-			ostream << "Node " << node_id << " with " << node.num_incident_edges() << " incident edges\n";
+			ostream << node.num_incident_edges() << " incident edges\n";
 
-			for (EdgeId const edge_id : node.incident_edges()) {
+			for (EdgeId const& edge_id : node.incident_edges()) {
 				Edge const& edge = graph.edge(edge_id);
-				output_edge(ostream, edge, directed, weighted);
+				output_edge(ostream, edge, graph.is_directed());
 			}
 		}
 
 		ostream << "\n";
 	}
+
+	ostream << "Nodes\n";
+
+	for (Node const& node : graph.nodes()) {
+		output_node(ostream, node);
+	}
+
+	ostream << "\n";
 	
 	ostream << "Edges\n";
 	
-	for (EdgeId edge_id = 0; edge_id < num_edges; ++edge_id) {
-		Edge const& edge = graph.edge(edge_id);
-		output_edge(ostream, edge, directed, weighted);
+	for (Edge const& edge : graph.edges()) {
+		output_edge(ostream, edge, graph.is_directed());
 	}
 }
 
-void GraphPrinter::output_edge(std::ostream& ostream, Edge const& edge, bool const& directed, bool const& weighted)
+void GraphPrinter::output_node(std::ostream& ostream, Node const& node)
+{
+	ostream << "[" << node.id() << "] = (weight = " << node.weight() << ")\n";
+}
+
+void GraphPrinter::output_edge(std::ostream& ostream, Edge const& edge, bool directed)
 {
 	ostream << "[" << edge.id() << "] = "
 			<< edge.tail() << " --";
 	
-	if (weighted) {
-		ostream << "( " << edge.weight() << " )";
-	}
+	ostream << "( " << edge.weight() << " )";
 	
 	ostream << "--";
 	

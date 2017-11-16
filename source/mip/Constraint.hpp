@@ -15,7 +15,11 @@ public:
 	};
 
 public:
-	explicit Constraint(operations_research::MPConstraint* mp_constraint_ptr);
+	explicit Constraint(operations_research::MPConstraint* mp_constraint_ptr = nullptr);
+
+	bool is_valid() const;
+
+	std::string name() const;
 
 	void add_variable(operations_research::MPVariable* mp_variable_ptr, double coefficient);
 
@@ -37,6 +41,8 @@ public:
 	void upper_bound_condition_on(operations_research::MPVariable* mp_variable_ptr, double value = 1);
 
 private:
+	operations_research::MPConstraint& mp_constraint();
+	operations_research::MPConstraint const& mp_constraint() const;
 
 private:
 	operations_research::MPConstraint* _mp_constraint_ptr;
