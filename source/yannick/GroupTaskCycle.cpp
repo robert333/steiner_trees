@@ -77,26 +77,26 @@ void GroupTaskCycle::create_constraints(mip::MIPModel& mip_model)
 		constraint.set_upper_bound(1);
 	}
 
-	for (graph::Node const& node : _yannick_problem.precedence_graph().nodes()) {
-		for (Cycle cycle = 0; cycle < _yannick_problem.cycle_number(); ++cycle) {
-			mip::Constraint constraint_lower = mip_model.create_constraint(
-				"if task " + node.to_string() + " in cycle " + std::to_string(cycle)
-				+ " then set lower time slot bound"
-			);
-			mip::Constraint constraint_upper = mip_model.create_constraint(
-				"if task " + node.to_string() + " in cycle " + std::to_string(cycle)
-				+ " then set upper time slot bound"
-			);
-
-			constraint_lower.add_variable(_group_task_time.variables().get(node.id()), 1);
-			constraint_lower.set_lower_bound(cycle * _yannick_problem.cycle_time() + node.weight());
-			constraint_lower.lower_bound_condition_on(variables().get(node.id(), cycle));
-
-			constraint_upper.add_variable(_group_task_time.variables().get(node.id()), 1);
-			constraint_upper.set_upper_bound((cycle + 1) * _yannick_problem.cycle_time());
-			constraint_upper.upper_bound_condition_on(variables().get(node.id(), cycle));
-		}
-	}
+//	for (graph::Node const& node : _yannick_problem.precedence_graph().nodes()) {
+//		for (Cycle cycle = 0; cycle < _yannick_problem.cycle_number(); ++cycle) {
+//			mip::Constraint constraint_lower = mip_model.create_constraint(
+//				"if task " + node.to_string() + " in cycle " + std::to_string(cycle)
+//				+ " then set lower time slot bound"
+//			);
+//			mip::Constraint constraint_upper = mip_model.create_constraint(
+//				"if task " + node.to_string() + " in cycle " + std::to_string(cycle)
+//				+ " then set upper time slot bound"
+//			);
+//
+//			constraint_lower.add_variable(_group_task_time.variables().get(node.id()), 1);
+//			constraint_lower.set_lower_bound(cycle * _yannick_problem.cycle_time() + node.weight());
+//			constraint_lower.lower_bound_condition_on(variables().get(node.id(), cycle));
+//
+//			constraint_upper.add_variable(_group_task_time.variables().get(node.id()), 1);
+//			constraint_upper.set_upper_bound((cycle + 1) * _yannick_problem.cycle_time());
+//			constraint_upper.upper_bound_condition_on(variables().get(node.id(), cycle));
+//		}
+//	}
 }
 
 } // namespace yannick

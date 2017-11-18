@@ -10,17 +10,17 @@ YannickSolution YannickMIP::solve(
 	mip::MIP::OptimizationProblem const& optimization_problem
 )
 {
-	mip::MIP mip("SteinerTreeMIP", optimization_problem);
+	mip::MIP mip("YannickMIP", optimization_problem);
 
 	mip::GroupManager const group_manager = YannickMIPFactory::create(yannick_problem);
 
 	group_manager.create_variables_constraints_and_objective(mip);
 
-	mip.output(Logger::logger());
+//	mip.output(Logger::logger());
 
-	std::cout << "[SteinerTreeMIP] num variables   = " << mip.num_variables() << "\n";
-	std::cout << "[SteinerTreeMIP] num constraints = " << mip.num_constraints() << "\n";
-	std::cout << "[SteinerTreeMIP] optimize...\n";
+	std::cout << "[YannickMIP] num variables   = " << mip.num_variables() << "\n";
+	std::cout << "[YannickMIP] num constraints = " << mip.num_constraints() << "\n";
+	std::cout << "[YannickMIP] optimize...\n";
 	mip::MIP::Solver::ResultStatus const optimization_result = mip.optimize();
 
 	if (optimization_result == mip::MIP::Solver::OPTIMAL) {

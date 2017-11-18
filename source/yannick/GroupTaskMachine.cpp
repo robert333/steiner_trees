@@ -97,30 +97,30 @@ void GroupTaskMachine::create_constraints(mip::MIPModel& mip_model)
 		constraint.set_upper_bound(_yannick_problem.cycle_time());
 	}
 
-	for (graph::Node const& node_1 : _yannick_problem.precedence_graph().nodes()) {
-		for (graph::Node const& node_2 : _yannick_problem.precedence_graph().nodes()) {
-			if (node_1 >= node_2) {
-				continue;
-			}
-
-			if (not _yannick_problem.is_it_possible_to_process_the_tasks_by_one_machine({node_1, node_2})) {
-				for (Machine machine = 0; machine < _yannick_problem.machine_number(); ++machine) {
-					mip::Constraint constraint = mip_model.create_constraint(
-						"task " + node_1.to_string() + " and task " + node_2.to_string()
-						+ " processed by machine " + std::to_string(machine)
-						+ " is not possible"
-					);
-
-					Logger::logger() << constraint.name() << "\n";
-
-					constraint.add_variable(variables().get(node_1.id(), machine), 1);
-					constraint.add_variable(variables().get(node_2.id(), machine), 1);
-
-					constraint.set_upper_bound(1);
-				}
-			}
-		}
-	}
+//	for (graph::Node const& node_1 : _yannick_problem.precedence_graph().nodes()) {
+//		for (graph::Node const& node_2 : _yannick_problem.precedence_graph().nodes()) {
+//			if (node_1 >= node_2) {
+//				continue;
+//			}
+//
+//			if (not _yannick_problem.is_it_possible_to_process_the_tasks_by_one_machine({node_1, node_2})) {
+//				for (Machine machine = 0; machine < _yannick_problem.machine_number(); ++machine) {
+//					mip::Constraint constraint = mip_model.create_constraint(
+//						"task " + node_1.to_string() + " and task " + node_2.to_string()
+//						+ " processed by machine " + std::to_string(machine)
+//						+ " is not possible"
+//					);
+//
+//					Logger::logger() << constraint.name() << "\n";
+//
+//					constraint.add_variable(variables().get(node_1.id(), machine), 1);
+//					constraint.add_variable(variables().get(node_2.id(), machine), 1);
+//
+//					constraint.set_upper_bound(1);
+//				}
+//			}
+//		}
+//	}
 }
 
 void GroupTaskMachine::create_objective(mip::MIPModel& mip_model)

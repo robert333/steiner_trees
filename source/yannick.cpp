@@ -65,9 +65,9 @@ void run_yannick(
 			{"solution", yannick_solution.export_to_json()}
 		};
 
-		Logger::logger() << instance_path << "/" << "solution_" << instance_name << ".json\n"
-						 << output_json.dump(4)
-						 << "\n\n";
+//		Logger::logger() << instance_path << "/" << "solution_" << instance_name << ".json\n"
+//						 << output_json.dump(4)
+//						 << "\n\n";
 
 		write_json(instance_path + "/" + instance_name + "_solution" + ".json", output_json);
 	} else {

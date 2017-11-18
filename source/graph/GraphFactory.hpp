@@ -11,7 +11,6 @@ public:
 
 public:
 	static Graph create_from_json(json const& graph_json);
-	static Graph input(std::string const& filename, bool const& directed=false, bool const& weighted=false);
 
 private:
 	explicit GraphFactory() = default;

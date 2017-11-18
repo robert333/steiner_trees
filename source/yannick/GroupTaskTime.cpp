@@ -33,27 +33,26 @@ mip::VariableStorage<graph::NodeId> const& GroupTaskTime::variables() const
 void GroupTaskTime::create_variables(mip::MIPModel& mip_model)
 {
 	for (graph::Node const& node : _yannick_problem.precedence_graph().nodes()) {
+		assert(node.weight() <= _yannick_problem.cycle_time());
 		mip::MIPModel::Variable* const variable = mip_model.create_continuous_variable(
-			"node = " + node.to_string(),
-			node.weight(),
-			_yannick_problem.cycle_number() * _yannick_problem.cycle_time()
+			"node = " + node.to_string(), node.weight(), _yannick_problem.cycle_time()
 		);
 		_variables.set(node.id(), variable);
 	}
 }
 
-void GroupTaskTime::create_constraints(mip::MIPModel& mip_model)
+void GroupTaskTime::create_constraints(mip::MIPModel& /*mip_model*/)
 {
-	for (graph::Edge const& edge : _yannick_problem.precedence_graph().edges()) {
-		mip::Constraint constraint = mip_model.create_constraint(
-			"task " + std::to_string(edge.tail()) + " has to be processed before task " + std::to_string(edge.head())
-		);
-
-		constraint.add_variable(variables().get(edge.tail()), -1);
-		constraint.add_variable(variables().get(edge.head()), 1);
-
-		constraint.set_lower_bound(_yannick_problem.precedence_graph().node(edge.head()).weight());
-	}
+//	for (graph::Edge const& edge : _yannick_problem.precedence_graph().edges()) {
+//		mip::Constraint constraint = mip_model.create_constraint(
+//			"task " + std::to_string(edge.tail()) + " has to be processed before task " + std::to_string(edge.head())
+//		);
+//
+//		constraint.add_variable(variables().get(edge.tail()), -1);
+//		constraint.add_variable(variables().get(edge.head()), 1);
+//
+//		constraint.set_lower_bound(_yannick_problem.precedence_graph().node(edge.head()).weight());
+//	}
 }
 
 } // namespace yannick

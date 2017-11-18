@@ -1,4 +1,3 @@
-// GraphFactory.cpp
 #include "GraphFactory.hpp"
 
 namespace graph {

@@ -75,6 +75,7 @@ set(YANNICK_FILES
         source/yannick/GroupTaskCycle.cpp
         source/yannick/GroupTaskMachine.cpp
         source/yannick/GroupTaskMachineOrder.cpp
+        source/yannick/GroupTaskPrecedence.cpp
 )
 
 # Python
