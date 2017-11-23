@@ -18,8 +18,8 @@ YannickSolution YannickMIP::solve(
 
 //	mip.output(Logger::logger());
 
-	std::cout << "[YannickMIP] num variables   = " << mip.num_variables() << "\n";
-	std::cout << "[YannickMIP] num constraints = " << mip.num_constraints() << "\n";
+	mip.output_statistics(std::cout);
+
 	std::cout << "[YannickMIP] optimize...\n";
 	mip::MIP::Solver::ResultStatus const optimization_result = mip.optimize();
 
@@ -35,6 +35,8 @@ YannickSolution YannickMIP::solve(
 				"task_time", mip_solution.get("GroupTaskTime"),
 				"task_cycle", mip_solution.get("GroupTaskCycle"),
 				"task_machine", mip_solution.get("GroupTaskMachine"),
+				"machine", mip_solution.get("GroupMachine"),
+//				"cycle", mip_solution.get("GroupCycle")
 			}
 		);
 	} else {

@@ -75,15 +75,25 @@ Edge::Vector const& Graph::edges() const
 	return _edges;
 }
 
-EdgeId Graph::find_edge(NodeId const& tail, NodeId const& head) const
+EdgeId Graph::find_edge(NodeId const& tail_id, NodeId const& head_id) const
 {
-	for (EdgeId const& edge_id : node(tail).outgoing_edges()) {
-		if (head == edge(edge_id).opposite(tail)) {
+	for (EdgeId const& edge_id : node(tail_id).outgoing_edges()) {
+		if (head_id == edge(edge_id).opposite(tail_id)) {
 			return edge_id;
 		}
 	}
 
 	return invalid_edge_id();
+}
+
+EdgeId Graph::find_edge(Node const& tail, Node const& head) const
+{
+	return find_edge(tail.id(), head.id());
+}
+
+bool Graph::exists_edge(Node const& tail, Node const& head) const
+{
+	return find_edge(tail, head) != invalid_edge_id();
 }
 
 Graph Graph::bidirect() const
@@ -95,6 +105,7 @@ Graph Graph::bidirect() const
 	for (Node const& node : nodes()) {
 		NodeId const node_id = bidirected_graph.create_node(node.weight());
 		assert(node_id == node.id());
+		DUMMY_USE(node_id);
 	}
 
 	for (Edge const& edge : edges()) {
@@ -102,6 +113,8 @@ Graph Graph::bidirect() const
 		EdgeId const backward_edge_id = bidirected_graph.create_edge(edge.head(), edge.tail(), edge.weight());
 		assert(forward_edge_id == 2 * edge.id());
 		assert(backward_edge_id == 2 * edge.id() + 1);
+		DUMMY_USE(forward_edge_id);
+		DUMMY_USE(backward_edge_id);
 	}
 
 	return bidirected_graph;

@@ -36,7 +36,9 @@ public:
 	Node::Vector const& nodes() const;
 	Edge::Vector const& edges() const;
 
-	EdgeId find_edge(NodeId const& tail, NodeId const& head) const;
+	EdgeId find_edge(NodeId const& tail_id, NodeId const& head_id) const;
+	EdgeId find_edge(Node const& tail, Node const& head) const;
+	bool exists_edge(Node const& tail, Node const& head) const;
 
 	Graph bidirect() const;
 

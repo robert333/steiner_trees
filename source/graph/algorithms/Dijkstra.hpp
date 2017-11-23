@@ -10,6 +10,7 @@ public:
 	static bool is_graph_appropriated(Graph const& graph);
 
 	static Weight compute_distance(Graph const& graph, Node const& source, Node const& target);
+	static bool is_reachable(Graph const& graph, Node const& source, Node const& target);
 
 private:
 	static void visit(

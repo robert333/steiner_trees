@@ -1,5 +1,6 @@
 #include "MIPSolver.hpp"
 #include "../Logger.hpp"
+#include "../debug.hpp"
 
 namespace mip {
 
@@ -9,8 +10,8 @@ MIPSolver::Solver::OptimizationProblemType MIPSolver::get_solver_optimization_pr
 {
 	switch (optimization_problem) {
 		case LINEAR_PROGRAMMING : return Solver::GLOP_LINEAR_PROGRAMMING;
-		case MIXED_INTEGER_PROGRAMMING : return Solver::CBC_MIXED_INTEGER_PROGRAMMING;
-		default: assert(false);
+		case MIXED_INTEGER_PROGRAMMING : return Solver::SCIP_MIXED_INTEGER_PROGRAMMING;
+		default: FORBIDDEN;
 	}
 }
 
@@ -19,7 +20,7 @@ std::string MIPSolver::to_string(OptimizationProblem const& optimization_problem
 	switch (optimization_problem) {
 		case LINEAR_PROGRAMMING : return "LP";
 		case MIXED_INTEGER_PROGRAMMING : return "MIP";
-		default: assert(false);
+		default: FORBIDDEN;
 	}
 }
 
@@ -28,7 +29,7 @@ std::string MIPSolver::to_string(OptimizationType const& optimization_type)
 	switch (optimization_type) {
 		case MINIMIZATION : return "min";
 		case MAXIMIZATION : return "max";
-		default: assert(false);
+		default: FORBIDDEN;
 	}
 }
 

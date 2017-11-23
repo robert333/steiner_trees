@@ -33,23 +33,36 @@ void run_yannick(
 
 	graph::Graph const precedence_graph = graph::GraphFactory::create_from_json(instance_json["precedence_graph"]);
 	double const cycle_time = instance_json["cycle_time"];
-	int const cycle_number = instance_json["cycle_number"];
-	int const machine_number = instance_json["machine_number"];
+	yannick::Index const min_cycle_number = instance_json["min_cycle_number"];
+	yannick::Index const max_cycle_number = instance_json["max_cycle_number"];
+	yannick::Index const min_machine_number = instance_json["min_machine_number"];
+	yannick::Index const max_machine_number = instance_json["max_machine_number"];
+	yannick::Index const min_jumper_number = instance_json["min_jumper_number"];
+	yannick::Index const max_jumper_number = instance_json["max_jumper_number"];
 
 	yannick::YannickProblem const yannick_problem(
 		"yannick",
 		precedence_graph,
 		cycle_time,
-		cycle_number,
-		machine_number
+		min_cycle_number,
+		max_cycle_number,
+		min_machine_number,
+		max_machine_number,
+		min_jumper_number,
+		max_jumper_number
 	);
 
 	graph::GraphPrinter::output(Logger::logger(), yannick_problem.precedence_graph());
 
 	Logger::logger() << "\n"
-					 << "cycle time     : " << cycle_time << "\n"
-					 << "cycle number   : " << cycle_number << "\n"
-					 << "machine number : " << machine_number << "\n"
+					 << "cycle time         : " << yannick_problem.cycle_time() << "\n"
+					 << "cycle number       : " << yannick_problem.cycle_number() << "\n"
+					 << "min cycle number : " << yannick_problem.min_cycle_number() << "\n"
+					 << "max cycle number : " << yannick_problem.max_cycle_number() << "\n"
+					 << "min machine number : " << yannick_problem.min_machine_number() << "\n"
+					 << "max machine number : " << yannick_problem.max_machine_number() << "\n"
+					 << "min jumper number  : " << yannick_problem.min_jumper_number() << "\n"
+					 << "max jumper number  : " << yannick_problem.max_jumper_number() << "\n"
 					 << "\n";
 
 	yannick::YannickSolution const yannick_solution = yannick::YannickSolver::solve(yannick_problem);

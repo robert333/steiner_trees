@@ -2,14 +2,15 @@
 #ifndef DEBUG_HPP
 #define DEBUG_HPP
 
-//#define NDEBUG
-
 #include <cassert>
 #include <iostream>
 #include <vector>
 #include <deque>
 
 #include "helper/vector.hpp"
+
+#define DUMMY_USE(x) ((void)(x))
+#define FORBIDDEN throw
 
 //#define DEBUG
 

@@ -19,7 +19,7 @@ json GroupTaskTime::compute_solution() const
 	json solution;
 
 	for (graph::Node const& node : _yannick_problem.precedence_graph().nodes()) {
-		solution["tasks"].push_back({{"id", node.id()}, {"time", variables().solution_value(node.id())}});
+		solution["tasks"].push_back({{"task", node.id()}, {"time", variables().solution_value(node.id())}});
 	}
 
 	return solution;
@@ -35,7 +35,7 @@ void GroupTaskTime::create_variables(mip::MIPModel& mip_model)
 	for (graph::Node const& node : _yannick_problem.precedence_graph().nodes()) {
 		assert(node.weight() <= _yannick_problem.cycle_time());
 		mip::MIPModel::Variable* const variable = mip_model.create_continuous_variable(
-			"node = " + node.to_string(), node.weight(), _yannick_problem.cycle_time()
+			name(), "node = " + node.to_string(), node.weight(), _yannick_problem.cycle_time()
 		);
 		_variables.set(node.id(), variable);
 	}

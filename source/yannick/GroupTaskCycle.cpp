@@ -23,11 +23,20 @@ json GroupTaskCycle::compute_solution() const
 	json solution;
 
 	for (graph::Node const& node : _yannick_problem.precedence_graph().nodes()) {
+		json task_solution;
+
+		task_solution["task"] = node.id();
+
 		for (Cycle cycle = 0; cycle < _yannick_problem.cycle_number(); ++cycle) {
-			if (variables().solution_value(node.id(), cycle) == 1) {
-				solution["task_to_cycle"].push_back({{"task", node.id()}, {"cycle", cycle}});
-			}
+			task_solution["cycles"].push_back(
+				{
+					{"cycle", cycle},
+					{"value", variables().solution_value(node.id(), cycle)}
+				}
+			);
 		}
+
+		solution["solution"].push_back(task_solution);
 	}
 
 	for (Cycle cycle = 0; cycle < _yannick_problem.cycle_number(); ++cycle) {
@@ -55,7 +64,7 @@ void GroupTaskCycle::create_variables(mip::MIPModel& mip_model)
 	for (graph::Node const& node : _yannick_problem.precedence_graph().nodes()) {
 		for (Cycle cycle = 0; cycle < _yannick_problem.cycle_number(); ++cycle) {
 			mip::MIPModel::Variable* const variable = mip_model.create_binary_variable(
-				"task = " + node.to_string() + ", cycle = " + std::to_string(cycle)
+				name(), "task = " + node.to_string() + ", cycle = " + std::to_string(cycle)
 			);
 			_variables.set(node.id(), cycle, variable);
 		}
@@ -66,7 +75,7 @@ void GroupTaskCycle::create_constraints(mip::MIPModel& mip_model)
 {
 	for (graph::Node const& node : _yannick_problem.precedence_graph().nodes()) {
 		mip::Constraint constraint = mip_model.create_constraint(
-			"exact one cycle per task " + node.to_string()
+			name(), "exact one cycle per task " + node.to_string()
 		);
 
 		for (Cycle cycle = 0; cycle < _yannick_problem.cycle_number(); ++cycle) {

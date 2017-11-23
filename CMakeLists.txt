@@ -3,9 +3,10 @@ cmake_minimum_required(VERSION 3.9)
 project(steiner_trees VERSION 0.1 DESCRIPTION "Steiner Tree MIP Solver")
 
 set(WARNING_FLAGS "-Wall -Wextra -Werror -pedantic")
+set(OPTIMIZATION_FLAGS "-DNDEBUG -O3")
 
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_FLAGS "${WARNING_FLAGS}")
+set(CMAKE_CXX_FLAGS "${WARNING_FLAGS} ${OPTIMIZATION_FLAGS}")
 
 set(SOURCE_FILES
         source/main.cpp
@@ -76,6 +77,8 @@ set(YANNICK_FILES
         source/yannick/GroupTaskMachine.cpp
         source/yannick/GroupTaskMachineOrder.cpp
         source/yannick/GroupTaskPrecedence.cpp
+        source/yannick/GroupMachine.cpp
+        source/yannick/GroupCycle.cpp
 )
 
 # Python
@@ -91,7 +94,7 @@ find_package(Boost 1.61 COMPONENTS python-py35 REQUIRED) # log
 include_directories(${Boost_INCLUDE_DIR})
 
 # Google or-tools
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DUSE_GLOP -DUSE_CBC") # -fwrapv -DNDEBUG
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DUSE_GLOP -DUSE_SCIP") # -fwrapv -DUSE_CBC
 
 include_directories(
         or-tools-6.4/

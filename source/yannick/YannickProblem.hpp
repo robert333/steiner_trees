@@ -20,13 +20,24 @@ public:
 		std::string const& name,
 		graph::Graph const& precedence_graph,
 		double cycle_time,
-		Index cycle_number,
-		Index machine_number
+		Index min_cycle_number,
+		Index max_cycle_number,
+		Index min_machine_number,
+		Index max_machine_number,
+		Index min_jumper_number,
+		Index max_jumper_number
 	);
 
 	std::string const& name() const;
 	graph::Graph const& precedence_graph() const;
 	double cycle_time() const;
+	Index min_cycle_number() const;
+	Index max_cycle_number() const;
+	Index min_machine_number() const;
+	Index max_machine_number() const;
+	Index min_jumper_number() const;
+	Index max_jumper_number() const;
+
 	Index cycle_number() const;
 	Index machine_number() const;
 
@@ -40,8 +51,12 @@ private:
 	std::string _name;
 	graph::Graph _precedence_graph;
 	double _cycle_time;
-	Index _cycle_number;
-	Index _machine_number;
+	Index _min_cycle_number;
+	Index _max_cycle_number;
+	Index _min_machine_number;
+	Index _max_machine_number;
+	Index _min_jumper_number;
+	Index _max_jumper_number;
 };
 
 } // namespace yannick

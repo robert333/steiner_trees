@@ -17,11 +17,29 @@ public:
 public:
 	explicit MIPModel() = default;
 
-	virtual Variable* create_continuous_variable(std::string const& name, double lower_bound, double upper_bound) = 0;
-	virtual Variable* create_integer_variable(std::string const& name, double lower_bound, double upper_bound) = 0;
-	virtual Variable* create_binary_variable(std::string const& name) = 0;
+	virtual Variable* create_continuous_variable(
+		std::string const& group,
+		std::string const& name,
+		double lower_bound,
+		double upper_bound
+	) = 0;
 
-	virtual Constraint create_constraint(std::string const& name) = 0;
+	virtual Variable* create_integer_variable(
+		std::string const& group,
+		std::string const& name,
+		double lower_bound,
+		double upper_bound
+	) = 0;
+
+	virtual Variable* create_binary_variable(
+		std::string const& group,
+		std::string const& name
+	) = 0;
+
+	virtual Constraint create_constraint(
+		std::string const& group,
+		std::string const& name
+	) = 0;
 
 	virtual void set_objective_coefficient(Variable const* variable, double coefficient) = 0;
 	virtual void add_objective_offset(double offset) = 0;

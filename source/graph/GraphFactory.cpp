@@ -10,6 +10,7 @@ Graph GraphFactory::create_from_json(json const& graph_json)
 		Weight const weight = node.count("weight") == 1 ? static_cast<Weight>(node["weight"]) : 0;
 		NodeId const node_id = graph.create_node(weight);
 		assert(node["id"] == node_id);
+		DUMMY_USE(node_id);
 	}
 
 	for (json const& edge : graph_json["edges"]) {

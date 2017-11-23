@@ -122,6 +122,7 @@ void GroupTaskMachineOrder::create_order_constraints(
 	for (Machine machine = 0; machine < _yannick_problem.machine_number(); ++machine) {
 		if (task_1_before_task_2_is_not_possible and task_2_before_task_1_is_not_possible) {
 			mip::Constraint constraint = mip_model.create_constraint(
+				name(),
 				"task " + node_1.to_string() + " in cycle " + std::to_string(cycle_1)
 				+ " and task " + node_2.to_string() + " in cycle " + std::to_string(cycle_2)
 				+ " processed by machine " + std::to_string(machine)
@@ -151,6 +152,7 @@ void GroupTaskMachineOrder::create_order_constraints(
 
 		if (not task_1_before_task_2_is_not_possible and not task_2_before_task_1_is_not_possible) {
 			mip::MIPModel::Variable* const variable = mip_model.create_binary_variable(
+				name(),
 				"decision for the order of task " + node_1.to_string() + " in cycle " + std::to_string(cycle_1)
 				+ " and task " + node_2.to_string() + " in cycle " + std::to_string(cycle_2)
 				+ " processed by machine " + std::to_string(machine)
@@ -179,13 +181,14 @@ mip::Constraint GroupTaskMachineOrder::create_order_constraint(
 	Machine machine
 )
 {
-	std::string const description = "task " + node_first.to_string()
-									+ " in cycle " + std::to_string(cycle_first)
-									+ " will be processed before task " + node_second.to_string()
-									+ " in cycle " + std::to_string(cycle_second)
-									+ " by machine " + std::to_string(machine);
-
-	mip::Constraint constraint = mip_model.create_constraint(description);
+	mip::Constraint constraint = mip_model.create_constraint(
+		name(),
+		"task " + node_first.to_string()
+		+ " in cycle " + std::to_string(cycle_first)
+		+ " will be processed before task " + node_second.to_string()
+		+ " in cycle " + std::to_string(cycle_second)
+		+ " by machine " + std::to_string(machine)
+	);
 
 	constraint.add_variable(_group_task_time.variables().get(node_first.id()), -1);
 	constraint.add_variable(_group_task_time.variables().get(node_second.id()), 1);

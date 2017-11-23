@@ -21,11 +21,20 @@ json GroupTaskMachine::compute_solution() const
 	json solution;
 
 	for (graph::Node const& node : _yannick_problem.precedence_graph().nodes()) {
+		json task_solution;
+
+		task_solution["task"] = node.id();
+
 		for (Machine machine = 0; machine < _yannick_problem.machine_number(); ++machine) {
-			if (variables().solution_value(node.id(), machine) == 1) {
-				solution["task_to_machine"].push_back({{"task", node.id()}, {"machine", machine}});
-			}
+			task_solution["machines"].push_back(
+				{
+					{"machine", machine},
+					{"value", variables().solution_value(node.id(), machine)}
+				}
+			);
 		}
+
+		solution["solution"].push_back(task_solution);
 	}
 
 	for (Machine machine = 0; machine < _yannick_problem.machine_number(); ++machine) {
@@ -46,6 +55,7 @@ json GroupTaskMachine::compute_solution() const
 				assigned_tasks.begin(), assigned_tasks.end(), 0, sum_time
 			) <= _yannick_problem.cycle_time()
 		);
+		DUMMY_USE(sum_time);
 
 		solution["machines"].push_back({{"machine", machine}, {"tasks", assigned_tasks}});
 	}
@@ -63,7 +73,7 @@ void GroupTaskMachine::create_variables(mip::MIPModel& mip_model)
 	for (graph::Node const& node : _yannick_problem.precedence_graph().nodes()) {
 		for (Machine machine = 0; machine < _yannick_problem.machine_number(); ++machine) {
 			mip::MIPModel::Variable* const variable = mip_model.create_binary_variable(
-				"task = " + node.to_string() + ", machine = " + std::to_string(machine)
+				name(), "task = " + node.to_string() + ", machine = " + std::to_string(machine)
 			);
 			_variables.set(node.id(), machine, variable);
 		}
@@ -74,7 +84,7 @@ void GroupTaskMachine::create_constraints(mip::MIPModel& mip_model)
 {
 	for (graph::Node const& node : _yannick_problem.precedence_graph().nodes()) {
 		mip::Constraint constraint = mip_model.create_constraint(
-			"exact one machine per task : task = " + node.to_string()
+			name(), "exact one machine per task : task = " + node.to_string()
 		);
 
 		for (Machine machine = 0; machine < _yannick_problem.machine_number(); ++machine) {
@@ -87,7 +97,7 @@ void GroupTaskMachine::create_constraints(mip::MIPModel& mip_model)
 
 	for (Machine machine = 0; machine < _yannick_problem.machine_number(); ++machine) {
 		mip::Constraint constraint = mip_model.create_constraint(
-			"tasks processed by machine " + std::to_string(machine) + " need to fit into one cycle time"
+			name(), "tasks processed by machine " + std::to_string(machine) + " need to fit into one cycle time"
 		);
 
 		for (graph::Node const& node : _yannick_problem.precedence_graph().nodes()) {
@@ -123,15 +133,13 @@ void GroupTaskMachine::create_constraints(mip::MIPModel& mip_model)
 //	}
 }
 
-void GroupTaskMachine::create_objective(mip::MIPModel& mip_model)
+void GroupTaskMachine::create_objective(mip::MIPModel& /*mip_model*/)
 {
-	for (graph::Node const& node : _yannick_problem.precedence_graph().nodes()) {
-		for (Machine machine = 0; machine < _yannick_problem.machine_number(); ++machine) {
-			mip_model.set_objective_coefficient(_variables.get(node.id(), machine), -1 * node.weight());
-		}
-	}
-
-	mip_model.add_objective_offset(_yannick_problem.machine_number() * _yannick_problem.cycle_time());
+//	for (graph::Node const& node : _yannick_problem.precedence_graph().nodes()) {
+//		for (Machine machine = 0; machine < _yannick_problem.machine_number(); ++machine) {
+//			mip_model.set_objective_coefficient(_variables.get(node.id(), machine), 1 + machine);
+//		}
+//	}
 }
 
 } // namespace yannick

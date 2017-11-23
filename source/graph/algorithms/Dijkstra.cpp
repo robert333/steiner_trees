@@ -33,6 +33,18 @@ Weight Dijkstra::compute_distance(Graph const& graph, Node const& source, Node c
 	return length.at(target.id());
 }
 
+bool Dijkstra::is_reachable(Graph const& graph, Node const& source, Node const& target)
+{
+	std::vector<bool> visited;
+	std::vector<bool> reachable;
+	std::vector<Weight> length;
+	std::vector<NodeId> previous;
+
+	compute(graph, source, visited, reachable, length, previous);
+
+	return reachable.at(target.id());
+}
+
 void Dijkstra::visit(
 	Graph const& graph,
 	std::vector<bool>& visited,
@@ -100,7 +112,7 @@ void Dijkstra::compute(
 
 	visited.assign(graph.num_nodes(), false);
 	reachable.assign(graph.num_nodes(), false);
-	length.assign(graph.num_nodes(), 0);
+	length.assign(graph.num_nodes(), - std::numeric_limits<Weight>::infinity());
 	previous.assign(graph.num_nodes(), invalid_node_id());
 
 	reachable.at(source.id()) = true;

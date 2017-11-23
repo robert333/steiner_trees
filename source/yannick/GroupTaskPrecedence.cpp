@@ -1,5 +1,7 @@
 #include "GroupTaskPrecedence.hpp"
+
 #include "../Logger.hpp"
+#include "../graph/algorithms/Dijkstra.hpp"
 
 namespace yannick {
 
@@ -26,6 +28,7 @@ void GroupTaskPrecedence::create_constraints(mip::MIPModel& mip_model)
 	for (graph::Edge const& edge : _yannick_problem.precedence_graph().edges()) {
 		for (Cycle cycle = 0; cycle < _yannick_problem.cycle_number(); ++cycle) {
 			mip::Constraint constraint = mip_model.create_constraint(
+				name() + "_1",
 				"if task " + std::to_string(edge.head()) + " is processed in cycle " + std::to_string(cycle)
 				+ ", then task " + std::to_string(edge.tail())
 				+ " cannot be processed in upcoming cycles by the precedence graph"
@@ -42,6 +45,7 @@ void GroupTaskPrecedence::create_constraints(mip::MIPModel& mip_model)
 
 		for (Cycle cycle = 0; cycle < _yannick_problem.cycle_number(); ++cycle) {
 			mip::Constraint constraint = mip_model.create_constraint(
+				name() + "_2",
 				"if task " + std::to_string(edge.tail()) + " and task " + std::to_string(edge.head())
 				+ " are assigned to cycle " + std::to_string(cycle)
 				+ ", then task " + std::to_string(edge.tail())
@@ -68,6 +72,18 @@ void GroupTaskPrecedence::create_constraints(mip::MIPModel& mip_model)
 			bool task_1_before_task_2_is_not_possible = false;
 			bool task_2_before_task_1_is_not_possible = false;
 
+//			if (graph::Dijkstra::is_reachable(_yannick_problem.precedence_graph(), node_2, node_1)) {
+//				task_1_before_task_2_is_not_possible = true;
+//			}
+//
+//			if (graph::Dijkstra::is_reachable(_yannick_problem.precedence_graph(), node_1, node_2)) {
+//				task_2_before_task_1_is_not_possible = true;
+//			}
+
+			assert(not task_1_before_task_2_is_not_possible or not task_2_before_task_1_is_not_possible);
+
+			mip::MIPModel::Variable* decision_variable = nullptr;
+
 			for (Machine machine = 0; machine < _yannick_problem.machine_number(); ++machine) {
 				mip::Constraint constraint_1;
 				mip::Constraint constraint_2;
@@ -81,14 +97,15 @@ void GroupTaskPrecedence::create_constraints(mip::MIPModel& mip_model)
 				}
 
 				if (not task_1_before_task_2_is_not_possible and not task_2_before_task_1_is_not_possible) {
-					mip::MIPModel::Variable* const variable = mip_model.create_binary_variable(
-						"decision for the order of task " + node_1.to_string()
-						+ " and task " + node_2.to_string()
-						+ " processed by machine " + std::to_string(machine)
-					);
+					if (decision_variable == nullptr) {
+						decision_variable = mip_model.create_binary_variable(
+							name(),
+							"decision for the order of task " + node_1.to_string() + " and task " + node_2.to_string()
+						);
+					}
 
-					constraint_1.lower_bound_condition_on(variable, 0);
-					constraint_2.lower_bound_condition_on(variable, 1);
+					constraint_1.lower_bound_condition_on(decision_variable, 0);
+					constraint_2.lower_bound_condition_on(decision_variable, 1);
 				}
 			}
 		}
@@ -103,6 +120,7 @@ mip::Constraint GroupTaskPrecedence::create_order_constraint(
 )
 {
 	mip::Constraint constraint = mip_model.create_constraint(
+		name() + "_3",
 		"task " + node_first.to_string()
 		+ " will be processed before task " + node_second.to_string()
 		+ " by machine " + std::to_string(machine)
