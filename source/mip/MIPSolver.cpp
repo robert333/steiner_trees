@@ -56,10 +56,10 @@ MIPSolver::Solver::ResultStatus MIPSolver::optimize()
 
 	if (result_status != Solver::OPTIMAL) {
 		Logger::logger() << "[MIPSolver] The problem does not have an optimal solution!\n";
+	} else {
+		Logger::logger() << "[MIPSolver] Problem solved in " << solver().wall_time() << " milliseconds.\n";
+		Logger::logger() << "[MIPSolver] optimal objective value = " << solver().Objective().Value() << "\n";
 	}
-
-	Logger::logger() << "[MIPSolver] Problem solved in " << solver().wall_time() << " milliseconds.\n";
-	Logger::logger() << "[MIPSolver] optimal objective value = " << solver().Objective().Value() << "\n";
 
 	return result_status;
 }

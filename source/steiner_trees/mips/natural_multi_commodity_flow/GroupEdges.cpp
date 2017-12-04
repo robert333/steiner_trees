@@ -51,6 +51,7 @@ void GroupEdges::create_variables(mip::MIPModel& mip_model)
 	for (graph::EdgeId edge_id = 0; edge_id < _graph.num_edges(); ++edge_id) {
 		for (graph::Net const& net : _nets) {
 			mip::MIPModel::Variable* const variable = mip_model.create_binary_variable(
+				name(),
 				"edge_id = " + std::to_string(edge_id) + ", "
 				+ "net_name = " + net.name()
 			);

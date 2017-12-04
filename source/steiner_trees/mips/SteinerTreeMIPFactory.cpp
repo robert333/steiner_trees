@@ -4,6 +4,7 @@
 #include "natural_multi_commodity_flow/GroupMultiCommodityFlow.hpp"
 #include "natural_multi_commodity_flow/GroupEdgesMultiCommodityFlow.hpp"
 #include "natural_multi_commodity_flow/GroupSteinerTreeCuts.hpp"
+#include "multi_commodity_dual/GroupMultiCommodityDual.hpp"
 
 namespace steiner_trees {
 
@@ -15,10 +16,11 @@ mip::GroupManager SteinerTreeMIPFactory::create(
 	switch (steiner_tree_mip_type) {
 		case SteinerTreeMIP::NMC : return create_nmc(steiner_tree_problem);
 		case SteinerTreeMIP::EMC : return create_nmc(steiner_tree_problem);
+		case SteinerTreeMIP::EMC_DUAL : return create_emc_dual(steiner_tree_problem);
 		case SteinerTreeMIP::CF : return create_nmc(steiner_tree_problem);
 		case SteinerTreeMIP::UCB : return create_nmc(steiner_tree_problem);
 		case SteinerTreeMIP::DCB : return create_dcb(steiner_tree_problem);
-		default: assert(false);
+		default: FORBIDDEN;
 	}
 }
 
@@ -82,6 +84,23 @@ mip::GroupManager SteinerTreeMIPFactory::create_dcb(SteinerTreeProblem const& st
 
 	group_manager_steiner_tree_mip.add(group_edges);
 	group_manager_steiner_tree_mip.add(group_steiner_tree_cuts);
+
+	return group_manager_steiner_tree_mip;
+}
+
+mip::GroupManager SteinerTreeMIPFactory::create_emc_dual(SteinerTreeProblem const& steiner_tree_problem)
+{
+	GroupMultiCommodityDual::SharedPtr group_multi_commodity_dual(
+		std::make_shared<GroupMultiCommodityDual>(
+			"GroupMultiCommodityDual",
+			steiner_tree_problem.graph(),
+			steiner_tree_problem.nets()
+		)
+	);
+
+	mip::GroupManager group_manager_steiner_tree_mip{};
+
+	group_manager_steiner_tree_mip.add(group_multi_commodity_dual);
 
 	return group_manager_steiner_tree_mip;
 }

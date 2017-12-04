@@ -58,6 +58,7 @@ set(STEINER_TREE_FILES
 )
 
 set(STEINER_TREE_MIPS_FILES
+        source/steiner_trees/mips/multi_commodity_dual/GroupMultiCommodityDual.cpp
         source/steiner_trees/mips/natural_multi_commodity_flow/GroupEdges.cpp
         source/steiner_trees/mips/natural_multi_commodity_flow/GroupMultiCommodityFlow.cpp
         source/steiner_trees/mips/natural_multi_commodity_flow/GroupEdgesMultiCommodityFlow.cpp

@@ -10,7 +10,7 @@ SteinerTreeSolution SteinerTreeSolver::solve(
 )
 {
 	std::cout << "[SteinerTreeSolver] optimize...\n";
-	return SteinerTreeMIP::solve(steiner_tree_problem, SteinerTreeMIP::NMC, optimization_problem);
+	return SteinerTreeMIP::solve(steiner_tree_problem, SteinerTreeMIP::EMC_DUAL, optimization_problem);
 }
 
 } // namespace steiner_trees

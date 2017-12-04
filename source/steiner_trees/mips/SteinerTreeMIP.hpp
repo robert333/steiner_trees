@@ -10,6 +10,7 @@ public:
 	enum Type {
 		NMC, // natural multi-commodity flow
 		EMC, // extended multi-commodity flow
+		EMC_DUAL, // dual of extended multi-commodity flow
 		CF, // common-flow
 		UCB, // undirected cut based
 		DCB, // directed cut based

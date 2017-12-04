@@ -7,9 +7,10 @@
 
 namespace mip {
 
+using Value = double;
+
 class MIPModel {
 public:
-	using Value = double;
 	using Variable = operations_research::MPVariable;
 	using MPConstraint = operations_research::MPConstraint;
 	using Objective = operations_research::MPObjective;

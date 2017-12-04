@@ -11,11 +11,11 @@ class VariableStorage : public Storage<MIPModel::Variable*, Keys ...> {
 public:
 	explicit VariableStorage() = default;
 
-	MIPModel::Value solution_value(Keys ... keys) const;
+	Value solution_value(Keys ... keys) const;
 };
 
 template<typename ... Keys>
-MIPModel::Value VariableStorage<Keys ...>::solution_value(Keys ... keys) const
+Value VariableStorage<Keys ...>::solution_value(Keys ... keys) const
 {
 	return this->get(keys ...)->solution_value();
 }

@@ -86,7 +86,7 @@ void MIP::add_objective_offset(double offset)
 	solver().MutableObjective()->SetOffset(solver().Objective().offset() + offset);
 }
 
-MIPModel::Value MIP::objective_value() const
+Value MIP::objective_value() const
 {
 	return solver().Objective().Value();
 }

@@ -27,6 +27,10 @@ SteinerTreeSolution SteinerTreeMIP::solve(
 {
 	mip::MIP mip("SteinerTreeMIP", optimization_problem);
 
+	mip::MIP::OptimizationType const optimization_type = mip::MIP::MAXIMIZATION;
+
+	mip.set_optimization_type(optimization_type);
+
 	mip::GroupManager const group_manager = SteinerTreeMIPFactory::create(steiner_tree_problem, steiner_tree_mip_type);
 
 	group_manager.create_variables_constraints_and_objective(mip);
@@ -43,17 +47,17 @@ SteinerTreeSolution SteinerTreeMIP::solve(
 
 		return SteinerTreeSolution(
 			optimization_problem,
-			mip::MIP::MINIMIZATION,
+			optimization_type,
 			optimization_result,
 			mip.objective_value(),
-			mip_solution.get("GroupEdges")
+			mip_solution.get("GroupMultiCommodityDual")
 		);
 	} else {
 		assert(optimization_result == mip::MIP::Solver::INFEASIBLE);
 
 		return SteinerTreeSolution(
 			optimization_problem,
-			mip::MIP::MINIMIZATION,
+			optimization_type,
 			optimization_result,
 			0,
 			{}

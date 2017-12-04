@@ -6,7 +6,7 @@ SteinerTreeSolution::SteinerTreeSolution(
 	mip::MIP::OptimizationProblem const& optimization_problem,
 	mip::MIP::OptimizationType const& optimization_type,
 	mip::MIP::OptimizationResult const& optimization_result,
-	mip::MIP::Value const& optimization_value,
+	mip::Value const& optimization_value,
 	json const& optimization_solution
 ) :
 	_optimization_problem(optimization_problem),
@@ -31,7 +31,7 @@ mip::MIP::OptimizationResult const& SteinerTreeSolution::optimization_result() c
 	return _optimization_result;
 }
 
-mip::MIP::Value const& SteinerTreeSolution::optimization_value() const
+mip::Value const& SteinerTreeSolution::optimization_value() const
 {
 	return _optimization_value;
 }
@@ -44,10 +44,7 @@ json const& SteinerTreeSolution::optimization_solution() const
 json SteinerTreeSolution::export_to_json() const
 {
 	return {
-		{
-			"edges",
-			optimization_solution()["edges"]
-		},
+		optimization_solution(),
 		{
 			"optimization",
 			{

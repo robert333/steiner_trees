@@ -26,21 +26,22 @@ void GroupEdgesMultiCommodityFlow::create_constraints(mip::MIPModel& mip_model)
 	for (graph::EdgeId edge_id = 0; edge_id < _graph.num_edges(); ++edge_id) {
 		for (graph::Net const& net : _nets) {
 			for (graph::TerminalId terminal_id = 1; terminal_id < net.num_terminals(); ++terminal_id) {
-				mip::MIPModel::Constraint* const constraint = mip_model.create_constraint(
+				mip::Constraint constraint = mip_model.create_constraint(
+					name(),
 					"connection : edge_id = " + std::to_string(edge_id)
 					+ ", net_name = " + net.name()
 					+ ", terminal_id = " + std::to_string(terminal_id)
 				);
 
-				constraint->SetCoefficient(
+				constraint.add_variable(
 					_group_edges.variables().get(edge_id, net.name()), -1
 				);
 
-				constraint->SetCoefficient(
+				constraint.add_variable(
 					_group_multi_commodity_flow.variables().get(edge_id, net.name(), terminal_id), 1
 				);
 
-				constraint->SetUB(0);
+				constraint.set_upper_bound(0);
 			}
 		}
 	}

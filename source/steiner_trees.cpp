@@ -62,9 +62,9 @@ void run_steiner_trees(
 
 	if (steiner_tree_solution_continuous.optimization_result() == mip::MIP::Solver::OPTIMAL
 		and steiner_tree_solution_integer.optimization_result() == mip::MIP::Solver::OPTIMAL) {
-		mip::MIP::Value const optimization_value_integer = steiner_tree_solution_integer.optimization_value();
-		mip::MIP::Value const optimization_value_continuous = steiner_tree_solution_continuous.optimization_value();
-		mip::MIP::Value const integrality_gap = optimization_value_integer / optimization_value_continuous;
+		mip::Value const optimization_value_integer = steiner_tree_solution_integer.optimization_value();
+		mip::Value const optimization_value_continuous = steiner_tree_solution_continuous.optimization_value();
+		mip::Value const integrality_gap = optimization_value_integer / optimization_value_continuous;
 		std::cout << "\n"
 				  << "optimization_value_integer    = " << optimization_value_integer << "\n"
 				  << "optimization_value_continuous = " << optimization_value_continuous << "\n"

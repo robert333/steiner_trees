@@ -27,14 +27,15 @@ void GroupSteinerTreeCuts::create_constraints(mip::MIPModel& mip_model)
 		SteinerTreeCut steiner_tree_cut(_graph, net);
 
 		do {
-			mip::MIPModel::Constraint* constraint = mip_model.create_constraint(
+			mip::Constraint constraint = mip_model.create_constraint(
+				name(),
 				"SteinerTreeCut[" + steiner_tree_cut.to_string() + "]"
 			);
 
-			constraint->SetLB(1);
+			constraint.set_lower_bound(1);
 
 			for (graph::EdgeId const& edge_id : steiner_tree_cut.compute_outgoing_edges()) {
-				constraint->SetCoefficient(_group_edges.variables().get(edge_id, net.name()), 1);
+				constraint.add_variable(_group_edges.variables().get(edge_id, net.name()), 1);
 			}
 		} while (steiner_tree_cut.next());
 	}
