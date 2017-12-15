@@ -3,6 +3,7 @@
 #include <iostream>
 
 #include "steiner_trees.hpp"
+#include "skutella.hpp"
 #include "yannick.hpp"
 
 int main(int argc, char* argv[])
@@ -20,6 +21,7 @@ int main(int argc, char* argv[])
 	std::string const instance_name = argv[2];
 
 	run_steiner_trees(program_path, instance_path, instance_name);
+//	run_skutella(program_path, instance_path, instance_name);
 //	run_yannick(program_path, instance_path, instance_name);
 
 	return 0;

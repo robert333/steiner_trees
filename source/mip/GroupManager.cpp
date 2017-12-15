@@ -30,16 +30,16 @@ void GroupManager::create_variables_constraints_and_objective(MIPModel& mip_mode
 	}
 }
 
-Solution GroupManager::compute_solution() const
+json GroupManager::compute_solutions() const
 {
-	Solution solution;
+	json solutions;
 
 	for (std::string const& group_name : _group_order) {
 		Logger::logger() << "[GroupManager] compute solution for group " << group_name << "\n";
-		solution.set(group_name, _groups.at(group_name)->compute_solution());
+		solutions[group_name] = _groups.at(group_name)->compute_solution();
 	}
 
-	return solution;
+	return solutions;
 }
 
 } // namespace mip

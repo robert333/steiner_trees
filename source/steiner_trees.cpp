@@ -31,7 +31,7 @@ void run_steiner_trees(
 					 << instance_json.dump(4)
 					 << "\n\n";
 
-	graph::Graph const graph = graph::GraphFactory::create_from_json(instance_json["graph"]);//.bidirect();
+	graph::Graph const graph = graph::GraphFactory::create_from_json(instance_json["graph"]).bidirect();
 	graph::Net::Vector const nets = graph::NetsFactory::create_from_json(instance_json["nets"]);
 
 	assert(nets.size() == 1);
@@ -71,10 +71,10 @@ void run_steiner_trees(
 				  << "Integrality Gap = " << integrality_gap << "\n\n";
 
 		json const output_json = {
-			{
-				"problem",
-				steiner_tree_problem.export_to_json()
-			},
+//			{
+//				"problem",
+//				steiner_tree_problem.export_to_json()
+//			},
 			{
 				"solution",
 				{

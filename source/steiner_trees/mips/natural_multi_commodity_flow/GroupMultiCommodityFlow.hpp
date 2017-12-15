@@ -28,7 +28,7 @@ private:
 	void create_constraints(mip::MIPModel& mip_model);
 
 private:
-	graph::Graph const& _graph;
+	graph::Graph /*const&*/ _graph;
 	graph::Net::Vector const& _nets;
 
 	mip::VariableStorage<graph::EdgeId, graph::Net::Name, graph::TerminalId> _variables;

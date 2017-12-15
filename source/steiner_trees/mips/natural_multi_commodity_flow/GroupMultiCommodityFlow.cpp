@@ -10,7 +10,9 @@ GroupMultiCommodityFlow::GroupMultiCommodityFlow(
 	Group(name),
 	_graph(graph),
 	_nets(nets)
-{}
+{
+	assert(graph.is_directed());
+}
 
 void GroupMultiCommodityFlow::create_variables_constraints_and_objective(mip::MIPModel& mip_model)
 {

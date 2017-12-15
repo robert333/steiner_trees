@@ -13,8 +13,6 @@ public:
 public:
 	explicit GroupEdgesMultiCommodityFlow(
 		std::string const& name,
-		graph::Graph const& graph,
-		graph::Net::Vector const& nets,
 		GroupEdges const& _group_edges,
 		GroupMultiCommodityFlow const& _group_multi_commodity_flow
 	);
@@ -25,9 +23,6 @@ private:
 	void create_constraints(mip::MIPModel& mip_model);
 
 private:
-	graph::Graph const& _graph;
-	graph::Net::Vector const& _nets;
-
 	GroupEdges const& _group_edges;
 	GroupMultiCommodityFlow const& _group_multi_commodity_flow;
 

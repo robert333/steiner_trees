@@ -63,8 +63,21 @@ set(STEINER_TREE_MIPS_FILES
         source/steiner_trees/mips/natural_multi_commodity_flow/GroupMultiCommodityFlow.cpp
         source/steiner_trees/mips/natural_multi_commodity_flow/GroupEdgesMultiCommodityFlow.cpp
         source/steiner_trees/mips/natural_multi_commodity_flow/GroupSteinerTreeCuts.cpp
+        source/steiner_trees/mips/simplex_embedding/GroupSimplexEmbedding.cpp
+        #source/steiner_trees/mips/objective/GroupMultiCommodityOptimal.cpp
         source/steiner_trees/mips/SteinerTreeMIPFactory.cpp source/steiner_trees/mips/SteinerTreeMIPFactory.hpp
         source/steiner_trees/mips/SteinerTreeMIP.cpp source/steiner_trees/mips/SteinerTreeMIP.hpp)
+
+set(SKUTELLA_FILES
+        source/skutella.cpp
+        source/skutella/SkutellaProblem.cpp
+        source/skutella/SkutellaSolution.cpp
+        source/skutella/SkutellaSolver.cpp
+        source/skutella/SkutellaMIP.cpp
+        source/skutella/SkutellaMIPFactory.cpp
+        source/skutella/GroupSkutella.cpp
+        source/skutella/PowerSetIterator.cpp
+)
 
 set(YANNICK_FILES
         source/yannick.cpp
@@ -114,6 +127,7 @@ add_executable(steiner_trees
         ${MIP_FILES}
         ${STEINER_TREE_FILES}
         ${STEINER_TREE_MIPS_FILES}
+        ${SKUTELLA_FILES}
 )
 
 add_executable(yannick

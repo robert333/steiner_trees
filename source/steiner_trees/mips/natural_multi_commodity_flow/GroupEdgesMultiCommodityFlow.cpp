@@ -4,14 +4,10 @@ namespace steiner_trees {
 
 GroupEdgesMultiCommodityFlow::GroupEdgesMultiCommodityFlow(
 	std::string const& name,
-	graph::Graph const& graph,
-	graph::Net::Vector const& nets,
 	GroupEdges const& _group_edges,
 	GroupMultiCommodityFlow const& _group_multi_commodity_flow
 ) :
 	Group(name),
-	_graph(graph),
-	_nets(nets),
 	_group_edges(_group_edges),
 	_group_multi_commodity_flow(_group_multi_commodity_flow)
 {}
@@ -23,8 +19,8 @@ void GroupEdgesMultiCommodityFlow::create_variables_constraints_and_objective(mi
 
 void GroupEdgesMultiCommodityFlow::create_constraints(mip::MIPModel& mip_model)
 {
-	for (graph::EdgeId edge_id = 0; edge_id < _graph.num_edges(); ++edge_id) {
-		for (graph::Net const& net : _nets) {
+	for (graph::EdgeId edge_id = 0; edge_id < _group_edges.graph().num_edges(); ++edge_id) {
+		for (graph::Net const& net : _group_edges.nets()) {
 			for (graph::TerminalId terminal_id = 1; terminal_id < net.num_terminals(); ++terminal_id) {
 				mip::Constraint constraint = mip_model.create_constraint(
 					name(),

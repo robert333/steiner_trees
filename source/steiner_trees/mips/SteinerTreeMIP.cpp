@@ -27,7 +27,18 @@ SteinerTreeSolution SteinerTreeMIP::solve(
 {
 	mip::MIP mip("SteinerTreeMIP", optimization_problem);
 
-	mip::MIP::OptimizationType const optimization_type = mip::MIP::MAXIMIZATION;
+	mip::MIP::OptimizationType optimization_type;
+
+	switch (steiner_tree_mip_type) {
+		case SteinerTreeMIP::NMC : FORBIDDEN;
+		case SteinerTreeMIP::EMC : optimization_type = mip::MIP::MINIMIZATION; break;
+		case SteinerTreeMIP::EMC_DUAL : optimization_type = mip::MIP::MINIMIZATION; break;
+		case SteinerTreeMIP::CF : FORBIDDEN;
+		case SteinerTreeMIP::UCB : FORBIDDEN;
+		case SteinerTreeMIP::DCB : optimization_type = mip::MIP::MINIMIZATION; break;
+		case SteinerTreeMIP::SIMPLEX_EMBEDDING : optimization_type = mip::MIP::MAXIMIZATION; break;
+		default: FORBIDDEN;
+	}
 
 	mip.set_optimization_type(optimization_type);
 
@@ -43,32 +54,28 @@ SteinerTreeSolution SteinerTreeMIP::solve(
 	mip::MIP::Solver::ResultStatus const optimization_result = mip.optimize();
 
 	if (optimization_result == mip::MIP::Solver::OPTIMAL) {
-		mip::Solution const mip_solution = group_manager.compute_solution();
-
-		return SteinerTreeSolution(
+		mip::Solution const mip_solution(
 			optimization_problem,
 			optimization_type,
 			optimization_result,
 			mip.objective_value(),
-			mip_solution.get("GroupMultiCommodityDual")
+			group_manager.compute_solutions()
 		);
+
+		return SteinerTreeSolution(mip_solution);
 	} else {
 		assert(optimization_result == mip::MIP::Solver::INFEASIBLE);
 
-		return SteinerTreeSolution(
+		mip::Solution const mip_solution(
 			optimization_problem,
 			optimization_type,
 			optimization_result,
 			0,
 			{}
 		);
+
+		return SteinerTreeSolution(mip_solution);
 	}
-}
-
-SteinerTreeMIP::SteinerTreeMIP(mip::MIP const& mip) :
-	_mip(mip)
-{
-
 }
 
 } // namespace steiner_trees

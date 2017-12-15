@@ -1,6 +1,7 @@
 #ifndef STEINER_TREES_STEINERTREEMIP_HPP
 #define STEINER_TREES_STEINERTREEMIP_HPP
 
+#include "../SteinerTreeProblem.hpp"
 #include "../SteinerTreeSolution.hpp"
 
 namespace steiner_trees {
@@ -14,6 +15,7 @@ public:
 		CF, // common-flow
 		UCB, // undirected cut based
 		DCB, // directed cut based
+		SIMPLEX_EMBEDDING // lambda simplex embedding
 	};
 
 //	static SteinerTreeMIP create(
@@ -29,10 +31,9 @@ public:
 	);
 
 public:
-	explicit SteinerTreeMIP(mip::MIP const& mip);
+	explicit SteinerTreeMIP() = default;
 
 private:
-	mip::MIP _mip;
 };
 
 } // namespace steiner_trees

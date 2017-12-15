@@ -16,7 +16,8 @@ public:
 	explicit GroupEdges(
 		std::string const& name,
 		graph::Graph const& graph,
-		graph::Net::Vector const& nets
+		graph::Net::Vector const& nets,
+		bool binary = true
 	);
 
 	void create_variables_constraints_and_objective(mip::MIPModel& mip_model) final;
@@ -25,13 +26,18 @@ public:
 
 	mip::VariableStorage<graph::EdgeId, graph::Net::Name> const& variables() const;
 
+	graph::Graph const& graph() const;
+	graph::Net::Vector const& nets() const;
+
 private:
 	void create_variables(mip::MIPModel& mip_model);
 	void create_objective(mip::MIPModel& mip_model);
 
 private:
-	graph::Graph const& _graph;
+	graph::Graph /*const&*/ _graph;
 	graph::Net::Vector const& _nets;
+
+	bool _binary;
 
 	mip::VariableStorage<graph::EdgeId, graph::Net::Name> _variables;
 };

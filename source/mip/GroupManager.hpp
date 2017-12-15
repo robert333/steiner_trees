@@ -8,6 +8,7 @@ namespace mip {
 
 class GroupManager {
 public:
+	using Solution = std::map<std::string, json>;
 
 public:
 	explicit GroupManager() = default;
@@ -17,7 +18,7 @@ public:
 
 	void create_variables_constraints_and_objective(MIPModel& mip_model) const;
 
-	Solution compute_solution() const;
+	json compute_solutions() const;
 
 private:
 
