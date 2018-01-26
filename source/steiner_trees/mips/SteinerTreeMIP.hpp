@@ -15,7 +15,9 @@ public:
 		CF, // common-flow
 		UCB, // undirected cut based
 		DCB, // directed cut based
-		SIMPLEX_EMBEDDING // lambda simplex embedding
+		DCB_DUAL, // bidirected cut based dual
+		SIMPLEX_EMBEDDING, // lambda simplex embedding
+		OPTIMAL_3_TERMINALS
 	};
 
 //	static SteinerTreeMIP create(

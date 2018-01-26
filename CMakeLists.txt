@@ -10,6 +10,7 @@ set(CMAKE_CXX_FLAGS "${WARNING_FLAGS} ${OPTIMIZATION_FLAGS}")
 
 set(SOURCE_FILES
         source/main.cpp
+        source/typedefs.cpp
         source/debug.cpp
         source/json.cpp
         source/python.cpp
@@ -21,6 +22,7 @@ set(SOURCE_FILES
 set(HELPER_FILES
         source/helper/vector.cpp
         source/helper/map.cpp
+        source/helper/PowerSetIterator.cpp
 )
 
 set(GRAPH_FILES
@@ -58,13 +60,15 @@ set(STEINER_TREE_FILES
 )
 
 set(STEINER_TREE_MIPS_FILES
+        source/steiner_trees/mips/bidirected_cuts_dual/GroupBidirectedCutsDual.cpp
         source/steiner_trees/mips/multi_commodity_dual/GroupMultiCommodityDual.cpp
+        source/steiner_trees/mips/natural_multi_commodity_flow/GroupDynamicGraph.cpp
+        source/steiner_trees/mips/natural_multi_commodity_flow/GroupCommonFlow.cpp
         source/steiner_trees/mips/natural_multi_commodity_flow/GroupEdges.cpp
         source/steiner_trees/mips/natural_multi_commodity_flow/GroupMultiCommodityFlow.cpp
-        source/steiner_trees/mips/natural_multi_commodity_flow/GroupEdgesMultiCommodityFlow.cpp
         source/steiner_trees/mips/natural_multi_commodity_flow/GroupSteinerTreeCuts.cpp
         source/steiner_trees/mips/simplex_embedding/GroupSimplexEmbedding.cpp
-        #source/steiner_trees/mips/objective/GroupMultiCommodityOptimal.cpp
+        source/steiner_trees/mips/objective/GroupMultiCommodityOptimal.cpp
         source/steiner_trees/mips/SteinerTreeMIPFactory.cpp source/steiner_trees/mips/SteinerTreeMIPFactory.hpp
         source/steiner_trees/mips/SteinerTreeMIP.cpp source/steiner_trees/mips/SteinerTreeMIP.hpp)
 
@@ -76,7 +80,6 @@ set(SKUTELLA_FILES
         source/skutella/SkutellaMIP.cpp
         source/skutella/SkutellaMIPFactory.cpp
         source/skutella/GroupSkutella.cpp
-        source/skutella/PowerSetIterator.cpp
 )
 
 set(YANNICK_FILES
@@ -93,6 +96,7 @@ set(YANNICK_FILES
         source/yannick/GroupTaskPrecedence.cpp
         source/yannick/GroupMachine.cpp
         source/yannick/GroupCycle.cpp
+        source/yannick/GroupMachineCycle.cpp
 )
 
 # Python

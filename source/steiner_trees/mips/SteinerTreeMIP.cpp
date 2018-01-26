@@ -32,11 +32,13 @@ SteinerTreeSolution SteinerTreeMIP::solve(
 	switch (steiner_tree_mip_type) {
 		case SteinerTreeMIP::NMC : FORBIDDEN;
 		case SteinerTreeMIP::EMC : optimization_type = mip::MIP::MINIMIZATION; break;
-		case SteinerTreeMIP::EMC_DUAL : optimization_type = mip::MIP::MINIMIZATION; break;
+		case SteinerTreeMIP::EMC_DUAL : optimization_type = mip::MIP::MAXIMIZATION; break;
 		case SteinerTreeMIP::CF : FORBIDDEN;
 		case SteinerTreeMIP::UCB : FORBIDDEN;
 		case SteinerTreeMIP::DCB : optimization_type = mip::MIP::MINIMIZATION; break;
+		case SteinerTreeMIP::DCB_DUAL : optimization_type = mip::MIP::MAXIMIZATION; break;
 		case SteinerTreeMIP::SIMPLEX_EMBEDDING : optimization_type = mip::MIP::MAXIMIZATION; break;
+		case SteinerTreeMIP::OPTIMAL_3_TERMINALS : optimization_type = mip::MIP::MAXIMIZATION; break;
 		default: FORBIDDEN;
 	}
 
@@ -46,7 +48,7 @@ SteinerTreeSolution SteinerTreeMIP::solve(
 
 	group_manager.create_variables_constraints_and_objective(mip);
 
-//	mip.output(Logger::logger());
+	mip.output(Logger::logger());
 
 	std::cout << "[SteinerTreeMIP] num variables   = " << mip.num_variables() << "\n";
 	std::cout << "[SteinerTreeMIP] num constraints = " << mip.num_constraints() << "\n";

@@ -16,8 +16,10 @@ public:
 	static mip::GroupManager create_emc(SteinerTreeProblem const& steiner_tree_problem);
 	static mip::GroupManager create_dcb(SteinerTreeProblem const& steiner_tree_problem);
 	static mip::GroupManager create_emc_dual(SteinerTreeProblem const& steiner_tree_problem);
+	static mip::GroupManager create_dcb_dual(SteinerTreeProblem const& steiner_tree_problem);
 
 	static mip::GroupManager create_simplex_embedding(SteinerTreeProblem const& steiner_tree_problem);
+	static mip::GroupManager create_optimal_3_terminals(SteinerTreeProblem const& steiner_tree_problem);
 
 private:
 

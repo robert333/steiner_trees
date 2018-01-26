@@ -13,8 +13,6 @@ public:
 public:
 	explicit GroupMultiCommodityOptimal(
 		std::string const& name,
-		graph::Graph const& graph,
-		graph::Net::Vector const& nets,
 		GroupEdges const& group_edges,
 		GroupMultiCommodityDual const& group_multi_commodity_dual
 	);

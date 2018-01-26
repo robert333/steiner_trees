@@ -35,7 +35,7 @@ void GroupSteinerTreeCuts::create_constraints(mip::MIPModel& mip_model)
 			constraint.set_lower_bound(1);
 
 			for (graph::EdgeId const& edge_id : steiner_tree_cut.compute_outgoing_edges()) {
-				constraint.add_variable(_group_edges.variables().get(edge_id, net.name()), 1);
+				constraint.add_variable(_group_edges.bidirected_edge_variables().get(edge_id, net.name()), 1);
 			}
 		} while (steiner_tree_cut.next());
 	}

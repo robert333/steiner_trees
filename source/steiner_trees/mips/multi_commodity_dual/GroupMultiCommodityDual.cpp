@@ -2,24 +2,31 @@
 
 #include "../../../Logger.hpp"
 #include "../../../mip/MIPSolver.hpp"
+#include "../../../graph/algorithms/Dijkstra.hpp"
 
 namespace steiner_trees {
 
 GroupMultiCommodityDual::GroupMultiCommodityDual(
 	std::string const& name,
 	graph::Graph const& graph,
-	graph::Net::Vector const& nets
+	graph::Net::Vector const& nets,
+	GroupDynamicGraph const& group_dynamic_graph,
+	bool add_objective
 ) :
 	Group(name),
 	_graph(graph),
-	_nets(nets)
+	_nets(nets),
+	_group_dynamic_graph(group_dynamic_graph),
+	_add_objective(add_objective)
 {}
 
 void GroupMultiCommodityDual::create_variables_constraints_and_objective(mip::MIPModel& mip_model)
 {
 	create_variables(mip_model);
 	create_constraints(mip_model);
-	create_objective(mip_model);
+	if (_add_objective) {
+		create_objective(mip_model);
+	}
 }
 
 json GroupMultiCommodityDual::compute_solution() const
@@ -51,12 +58,17 @@ mip::VariableStorage<graph::NodeId, graph::Net::Name, graph::TerminalId> const& 
 
 void GroupMultiCommodityDual::create_variables(mip::MIPModel& mip_model)
 {
+	mip::Value sum_edge_weights = 0;
+
+	for (graph::Edge const& edge : _graph.edges()) {
+		sum_edge_weights += edge.weight();
+	}
+
 	for (graph::Node const& node : _graph.nodes()) {
 		for (graph::Net const& net : _nets) {
 			for (graph::TerminalId terminal_id = 1; terminal_id < net.num_terminals(); ++terminal_id) {
 				mip::Value const lower_bound = 0;
-				mip::Value const upper_bound = node == _graph.node(net.terminal(terminal_id))
-											   ? 0 : operations_research::MPSolver::infinity();
+				mip::Value const upper_bound = node == _graph.node(net.terminal(terminal_id)) ? 0 : _graph.num_nodes() - 1;
 
 				mip::MIPModel::Variable* const variable = mip_model.create_continuous_variable(
 					name(),
@@ -220,6 +232,9 @@ void GroupMultiCommodityDual::create_emc_constraints(mip::MIPModel& mip_model)
 				cost_bound_constraint_1.add_variable(upper_bound_variable_1, 1);
 				cost_bound_constraint_2.add_variable(upper_bound_variable_2, 1);
 			}
+
+			cost_bound_constraint_1.upper_bound_condition_on(_group_dynamic_graph.variables().get(edge.id()));
+			cost_bound_constraint_2.upper_bound_condition_on(_group_dynamic_graph.variables().get(edge.id()));
 		}
 	}
 }

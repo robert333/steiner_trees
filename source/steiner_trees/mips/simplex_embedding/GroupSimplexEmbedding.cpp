@@ -90,9 +90,9 @@ void GroupSimplexEmbedding::create_constraints(mip::MIPModel& mip_model)
 
 		constraint.set_lower_bound(0);
 
-		if (_net.is_terminal(node.id())) {
+//		if (_net.is_terminal(node.id())) {
 			constraint.set_upper_bound(0);
-		}
+//		}
 	}
 
 	for (graph::Edge const& edge : _graph.edges()) {

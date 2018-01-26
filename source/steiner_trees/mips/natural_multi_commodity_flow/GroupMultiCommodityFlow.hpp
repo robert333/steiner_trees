@@ -1,10 +1,7 @@
 #ifndef STEINER_TREES_GROUPMULTICOMMODITYFLOW_HPP
 #define STEINER_TREES_GROUPMULTICOMMODITYFLOW_HPP
 
-#include "../../../mip/Group.hpp"
-#include "../../../mip/VariableStorage.hpp"
-#include "../../../graph/Graph.hpp"
-#include "../../../graph/Net.hpp"
+#include "GroupEdges.hpp"
 
 namespace steiner_trees {
 
@@ -15,8 +12,8 @@ public:
 public:
 	explicit GroupMultiCommodityFlow(
 		std::string const& name,
-		graph::Graph const& graph,
-		graph::Net::Vector const& nets
+		GroupEdges const& group_edges,
+		bool binary = true
 	);
 
 	void create_variables_constraints_and_objective(mip::MIPModel& mip_model) final;
@@ -28,8 +25,9 @@ private:
 	void create_constraints(mip::MIPModel& mip_model);
 
 private:
-	graph::Graph /*const&*/ _graph;
-	graph::Net::Vector const& _nets;
+	GroupEdges const& _group_edges;
+
+	bool _binary;
 
 	mip::VariableStorage<graph::EdgeId, graph::Net::Name, graph::TerminalId> _variables;
 };

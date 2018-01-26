@@ -4,9 +4,9 @@ namespace skutella {
 
 SkutellaProblem::SkutellaProblem(
 	std::string const& name,
-	Number num_terminals,
-	Number num_paths,
-	Number num_integral_trees
+	Quantity num_terminals,
+	Quantity num_paths,
+	Quantity num_integral_trees
 ) :
 	_name(name),
 	_num_terminals(num_terminals),
@@ -19,17 +19,17 @@ std::string const& SkutellaProblem::name() const
 	return _name;
 }
 
-skutella::Number SkutellaProblem::num_terminals() const
+Quantity SkutellaProblem::num_terminals() const
 {
 	return _num_terminals;
 }
 
-skutella::Number SkutellaProblem::num_paths() const
+Quantity SkutellaProblem::num_paths() const
 {
 	return _num_paths;
 }
 
-skutella::Number SkutellaProblem::num_integral_trees() const
+Quantity SkutellaProblem::num_integral_trees() const
 {
 	return _num_integral_trees;
 }

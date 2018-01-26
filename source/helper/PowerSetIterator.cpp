@@ -1,9 +1,9 @@
 #include "PowerSetIterator.hpp"
 #include "../helper/vector.hpp"
 
-namespace skutella {
+namespace helper {
 
-PowerSetIterator::PowerSetIterator(Number set_cardinality, Number subset_cardinality) :
+PowerSetIterator::PowerSetIterator(Cardinality set_cardinality, Cardinality subset_cardinality) :
 	_set_cardinality(set_cardinality),
 	_subset_cardinality(subset_cardinality),
 	_characteristic_vector(set_cardinality, false)
@@ -24,7 +24,7 @@ bool PowerSetIterator::next()
 
 bool PowerSetIterator::is_valid() const
 {
-	Number cardinality = 0;
+	std::size_t cardinality = 0;
 
 	for (bool is_contained : _characteristic_vector) {
 		if (is_contained) {
@@ -35,9 +35,9 @@ bool PowerSetIterator::is_valid() const
 	return cardinality == _subset_cardinality;
 }
 
-std::vector<Number> PowerSetIterator::compute_current_subset() const
+PowerSetIterator::Set PowerSetIterator::compute_current_subset() const
 {
-	std::vector<Number> subset;
+	Set subset;
 
 	for (std::size_t i = 0; i < _characteristic_vector.size(); ++i) {
 		if (_characteristic_vector.at(i)) {
@@ -66,8 +66,8 @@ void PowerSetIterator::next_characteristic_vector()
 
 bool PowerSetIterator::is_zero_characteristic_vector()
 {
-	for (std::size_t i = 0; i < _characteristic_vector.size(); ++i) {
-		if (_characteristic_vector.at(i)) {
+	for (bool is_contained : _characteristic_vector) {
+		if (is_contained) {
 			return false;
 		}
 	}
@@ -75,4 +75,4 @@ bool PowerSetIterator::is_zero_characteristic_vector()
 	return true;
 }
 
-} // namespace skutella
+} // namespace helper

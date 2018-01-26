@@ -12,6 +12,8 @@ YannickSolution YannickMIP::solve(
 {
 	mip::MIP mip("YannickMIP", optimization_problem);
 
+	mip::MIP::OptimizationType optimization_type = mip::MIP::MINIMIZATION;
+
 	mip::GroupManager const group_manager = YannickMIPFactory::create(yannick_problem);
 
 	group_manager.create_variables_constraints_and_objective(mip);
@@ -24,31 +26,27 @@ YannickSolution YannickMIP::solve(
 	mip::MIP::Solver::ResultStatus const optimization_result = mip.optimize();
 
 	if (optimization_result == mip::MIP::Solver::OPTIMAL) {
-		mip::Solution const mip_solution = group_manager.compute_solution();
-
-		return YannickSolution(
+		mip::Solution const mip_solution(
 			optimization_problem,
-			mip::MIP::MINIMIZATION,
+			optimization_type,
 			optimization_result,
 			mip.objective_value(),
-			{
-				"task_time", mip_solution.get("GroupTaskTime"),
-				"task_cycle", mip_solution.get("GroupTaskCycle"),
-				"task_machine", mip_solution.get("GroupTaskMachine"),
-				"machine", mip_solution.get("GroupMachine"),
-//				"cycle", mip_solution.get("GroupCycle")
-			}
+			group_manager.compute_solutions()
 		);
+
+		return YannickSolution(mip_solution);
 	} else {
 		assert(optimization_result == mip::MIP::Solver::INFEASIBLE);
 
-		return YannickSolution(
+		mip::Solution const mip_solution(
 			optimization_problem,
-			mip::MIP::MINIMIZATION,
+			optimization_type,
 			optimization_result,
 			0,
 			{}
 		);
+
+		return YannickSolution(mip_solution);
 	}
 }
 

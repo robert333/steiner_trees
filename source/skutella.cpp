@@ -27,9 +27,9 @@ void run_skutella(
 					 << instance_json.dump(4)
 					 << "\n\n";
 
-	skutella::Number const num_terminals = instance_json["num_terminals"];
-	skutella::Number const num_paths = instance_json["num_paths"];
-	skutella::Number const num_integral_trees = instance_json["num_integral_trees"];
+	Number const num_terminals = instance_json["num_terminals"];
+	Number const num_paths = instance_json["num_paths"];
+	Number const num_integral_trees = instance_json["num_integral_trees"];
 
 	skutella::SkutellaProblem const skutella_problem(
 		"skutella",

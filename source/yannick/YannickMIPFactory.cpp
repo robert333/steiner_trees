@@ -7,6 +7,7 @@
 #include "GroupTaskPrecedence.hpp"
 #include "GroupMachine.hpp"
 #include "GroupCycle.hpp"
+#include "GroupMachineCycle.hpp"
 
 namespace yannick {
 
@@ -56,6 +57,15 @@ mip::GroupManager YannickMIPFactory::create(YannickProblem const& yannick_proble
 		)
 	);
 
+	GroupMachineCycle::SharedPtr group_machine_cycle(
+		std::make_shared<GroupMachineCycle>(
+			yannick_problem,
+			*group_machine,
+			*group_task_machine,
+			*group_task_cycle
+		)
+	);
+
 	mip::GroupManager group_manager_steiner_tree_mip{};
 
 	group_manager_steiner_tree_mip.add(group_task_time);
@@ -65,6 +75,7 @@ mip::GroupManager YannickMIPFactory::create(YannickProblem const& yannick_proble
 	group_manager_steiner_tree_mip.add(group_task_precedence);
 	group_manager_steiner_tree_mip.add(group_machine);
 //	group_manager_steiner_tree_mip.add(group_cycle);
+	group_manager_steiner_tree_mip.add(group_machine_cycle);
 
 	return group_manager_steiner_tree_mip;
 }

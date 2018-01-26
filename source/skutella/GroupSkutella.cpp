@@ -1,7 +1,6 @@
 #include "GroupSkutella.hpp"
 
 #include "../Logger.hpp"
-#include "PowerSetIterator.hpp"
 
 namespace skutella {
 
@@ -21,10 +20,10 @@ json GroupSkutella::compute_solution() const
 {
 	json solution;
 
-	for (Number set = 0; set < _skutella_problem.num_terminals(); ++set) {
+	for (Index set = 0; set < _skutella_problem.num_terminals(); ++set) {
 		std::vector<Number> terminals;
 
-		for (Number terminal = 0; terminal < _skutella_problem.num_terminals(); ++terminal) {
+		for (Index terminal = 0; terminal < _skutella_problem.num_terminals(); ++terminal) {
 			if (_set_variables.solution_value(set, terminal) == 1) {
 				terminals.push_back(terminal);
 			}
@@ -33,14 +32,16 @@ json GroupSkutella::compute_solution() const
 		solution["sets"].push_back({{"set", set}, {"terminals", terminals}});
 	}
 
-	PowerSetIterator power_set_iterator(_skutella_problem.num_terminals(), _skutella_problem.num_integral_trees() - 1);
+	helper::PowerSetIterator power_set_iterator(
+		_skutella_problem.num_terminals(), _skutella_problem.num_integral_trees() - 1
+	);
 
 	do {
-		std::vector<Number> const set_cover = power_set_iterator.compute_current_subset();
+		helper::PowerSetIterator::Set const set_cover = power_set_iterator.compute_current_subset();
 
-		std::vector<Number> terminals;
+		std::vector<Index> terminals;
 
-		for (Number terminal = 0; terminal < _skutella_problem.num_terminals(); ++terminal) {
+		for (Index terminal = 0; terminal < _skutella_problem.num_terminals(); ++terminal) {
 			if (_set_cover_variables.solution_value(set_cover, terminal) == 1) {
 				terminals.push_back(terminal);
 			}
@@ -61,8 +62,8 @@ json GroupSkutella::compute_solution() const
 
 void GroupSkutella::create_variables(mip::MIPModel& mip_model)
 {
-	for (Number set = 0; set < _skutella_problem.num_terminals(); ++set) {
-		for (Number terminal = 0; terminal < _skutella_problem.num_terminals(); ++terminal) {
+	for (Index set = 0; set < _skutella_problem.num_terminals(); ++set) {
+		for (Index terminal = 0; terminal < _skutella_problem.num_terminals(); ++terminal) {
 			mip::MIPModel::Variable* const variable = mip_model.create_binary_variable(
 				name(), "set " + std::to_string(set) + ", terminal " + std::to_string(terminal)
 			);
@@ -70,14 +71,16 @@ void GroupSkutella::create_variables(mip::MIPModel& mip_model)
 		}
 	}
 
-	PowerSetIterator power_set_iterator(_skutella_problem.num_terminals(), _skutella_problem.num_integral_trees() - 1);
+	helper::PowerSetIterator power_set_iterator(
+		_skutella_problem.num_terminals(), _skutella_problem.num_integral_trees() - 1
+	);
 
 	do {
-		std::vector<Number> const set_cover = power_set_iterator.compute_current_subset();
+		helper::PowerSetIterator::Set const set_cover = power_set_iterator.compute_current_subset();
 
 		Logger::logger() << "set_cover " + helper::to_string(set_cover) << "\n";
 
-		for (Number terminal = 0; terminal < _skutella_problem.num_terminals(); ++terminal) {
+		for (Index terminal = 0; terminal < _skutella_problem.num_terminals(); ++terminal) {
 			mip::MIPModel::Variable* const variable = mip_model.create_binary_variable(
 				name(), "set_cover " + helper::to_string(set_cover) + ", terminal " + std::to_string(terminal)
 			);
@@ -95,14 +98,14 @@ void GroupSkutella::create_variables(mip::MIPModel& mip_model)
 
 void GroupSkutella::create_constraints(mip::MIPModel& mip_model)
 {
-	for (Number set = 0; set < _skutella_problem.num_terminals(); ++set) {
+	for (Index set = 0; set < _skutella_problem.num_terminals(); ++set) {
 		mip::Constraint constraint = mip_model.create_constraint(
 			name(), "cardinality for set " + std::to_string(set)
 		);
 
 		constraint.add_variable(_path_variable.get(0), -1);
 
-		for (Number terminal = 0; terminal < _skutella_problem.num_terminals(); ++terminal) {
+		for (Index terminal = 0; terminal < _skutella_problem.num_terminals(); ++terminal) {
 			constraint.add_variable(_set_variables.get(set, terminal), 1);
 		}
 
@@ -110,14 +113,14 @@ void GroupSkutella::create_constraints(mip::MIPModel& mip_model)
 		constraint.set_upper_bound(0);
 	}
 
-	for (Number terminal = 0; terminal < _skutella_problem.num_terminals(); ++terminal) {
+	for (Index terminal = 0; terminal < _skutella_problem.num_terminals(); ++terminal) {
 		mip::Constraint constraint = mip_model.create_constraint(
 			name(), "access for terminal " + std::to_string(terminal)
 		);
 
 		constraint.add_variable(_path_variable.get(0), -1);
 
-		for (Number set = 0; set < _skutella_problem.num_terminals(); ++set) {
+		for (std::size_t set = 0; set < _skutella_problem.num_terminals(); ++set) {
 			constraint.add_variable(_set_variables.get(set, terminal), 1);
 		}
 
@@ -125,10 +128,12 @@ void GroupSkutella::create_constraints(mip::MIPModel& mip_model)
 		constraint.set_upper_bound(0);
 	}
 
-	PowerSetIterator power_set_iterator(_skutella_problem.num_terminals(), _skutella_problem.num_integral_trees() - 1);
+	helper::PowerSetIterator power_set_iterator(
+		_skutella_problem.num_terminals(), _skutella_problem.num_integral_trees() - 1
+	);
 
 	do {
-		std::vector<Number> const set_cover = power_set_iterator.compute_current_subset();
+		helper::PowerSetIterator::Set const set_cover = power_set_iterator.compute_current_subset();
 
 		mip::Constraint constraint_set_cover = mip_model.create_constraint(
 			name(), "set_cover " + helper::to_string(set_cover) + " should not cover all terminals"
@@ -136,7 +141,7 @@ void GroupSkutella::create_constraints(mip::MIPModel& mip_model)
 
 		constraint_set_cover.set_upper_bound(_skutella_problem.num_terminals() - 1);
 
-		for (Number terminal = 0; terminal < _skutella_problem.num_terminals(); ++terminal) {
+		for (Index terminal = 0; terminal < _skutella_problem.num_terminals(); ++terminal) {
 			constraint_set_cover.add_variable(_set_cover_variables.get(set_cover, terminal), 1);
 
 //			mip::Constraint constraint_terminal_cover = mip_model.create_constraint(
@@ -150,7 +155,7 @@ void GroupSkutella::create_constraints(mip::MIPModel& mip_model)
 //
 //			double const factor = 1.0 / (2.0 * static_cast<double>(set_cover.size()));
 
-			for (Number set : set_cover) {
+			for (Index set : set_cover) {
 //				constraint_terminal_cover.add_variable(_set_variables.get(set, terminal), factor);
 
 				mip::Constraint constraint = mip_model.create_constraint(

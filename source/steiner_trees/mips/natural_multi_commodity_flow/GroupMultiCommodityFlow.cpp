@@ -4,15 +4,13 @@ namespace steiner_trees {
 
 GroupMultiCommodityFlow::GroupMultiCommodityFlow(
 	std::string const& name,
-	graph::Graph const& graph,
-	graph::Net::Vector const& nets
+	GroupEdges const& group_edges,
+	bool binary
 ) :
 	Group(name),
-	_graph(graph),
-	_nets(nets)
-{
-	assert(graph.is_directed());
-}
+	_group_edges(group_edges),
+	_binary(binary)
+{}
 
 void GroupMultiCommodityFlow::create_variables_constraints_and_objective(mip::MIPModel& mip_model)
 {
@@ -27,16 +25,25 @@ mip::VariableStorage<graph::EdgeId, graph::Net::Name, graph::TerminalId> const& 
 
 void GroupMultiCommodityFlow::create_variables(mip::MIPModel& mip_model)
 {
-	for (graph::EdgeId edge_id = 0; edge_id < _graph.num_edges(); ++edge_id) {
-		for (graph::Net const& net : _nets) {
+	for (graph::Net const& net : _group_edges.nets()) {
+		for (graph::Edge const& edge : _group_edges.bidirected_graph().edges()) {
 			for (graph::TerminalId terminal_id = 0; terminal_id < net.num_terminals(); ++terminal_id) {
-				mip::MIPModel::Variable* const variable = mip_model.create_binary_variable(
-					name(),
-					"edge_id = " + std::to_string(edge_id) + ", "
-					+ "net_name = " + net.name() + ", "
-					+ "terminal_id = " + std::to_string(terminal_id)
-				);
-				_variables.set(edge_id, net.name(), terminal_id, variable);
+				if (_binary) {
+					mip::MIPModel::Variable* const variable = mip_model.create_binary_variable(
+						name(),
+						"edge " + edge.to_string() + ", " + "net " + net.name() + ", "
+						+ "terminal_id = " + std::to_string(terminal_id)
+					);
+					_variables.set(edge.id(), net.name(), terminal_id, variable);
+				} else {
+					mip::MIPModel::Variable* const variable = mip_model.create_continuous_variable(
+						name(),
+						"edge " + edge.to_string() + ", " + "net " + net.name() + ", "
+						+ "terminal_id = " + std::to_string(terminal_id),
+						0, 1
+					);
+					_variables.set(edge.id(), net.name(), terminal_id, variable);
+				}
 			}
 		}
 	}
@@ -44,15 +51,13 @@ void GroupMultiCommodityFlow::create_variables(mip::MIPModel& mip_model)
 
 void GroupMultiCommodityFlow::create_constraints(mip::MIPModel& mip_model)
 {
-	for (graph::Net const& net : _nets) {
+	for (graph::Net const& net : _group_edges.nets()) {
 		for (graph::TerminalId terminal_id = 1; terminal_id < net.num_terminals(); ++terminal_id) {
-			for (graph::NodeId node_id = 0; node_id < _graph.num_nodes(); ++node_id) {
-				graph::Node const& node = _graph.node(node_id);
-
+			for (graph::Node const& node : _group_edges.bidirected_graph().nodes()) {
 				mip::Constraint constraint = mip_model.create_constraint(
 					name(),
-					"balance node : node_id = " + std::to_string(node_id) + ", "
-					+ "net_name = " + net.name() + ", "
+					"balance node : node " + node.to_string() + ", "
+					+ "net " + net.name() + ", "
 					+ "terminal_id = " + std::to_string(terminal_id)
 				);
 
@@ -70,16 +75,30 @@ void GroupMultiCommodityFlow::create_constraints(mip::MIPModel& mip_model)
 					constraint.add_variable(_variables.get(incoming_edge_id, net.name(), terminal_id), -1);
 				}
 
-				if (net.terminal(0) == node_id) {
+				if (net.terminal(0) == node.id()) {
 					constraint.set_lower_bound(1);
 					constraint.set_upper_bound(1);
-				} else if (net.terminal(terminal_id) == node_id) {
+				} else if (net.terminal(terminal_id) == node.id()) {
 					constraint.set_lower_bound(-1);
 					constraint.set_upper_bound(-1);
 				} else {
 					constraint.set_lower_bound(0);
 					constraint.set_upper_bound(0);
 				}
+			}
+
+			for (graph::Edge const& edge : _group_edges.bidirected_graph().edges()) {
+				mip::Constraint constraint = mip_model.create_constraint(
+					name(),
+					"connection : edge " + edge.to_string()
+					+ ", net_name = " + net.name()
+					+ ", terminal_id = " + std::to_string(terminal_id)
+				);
+
+				constraint.add_variable(_group_edges.bidirected_edge_variables().get(edge.id(), net.name()), -1);
+				constraint.add_variable(_variables.get(edge.id(), net.name(), terminal_id), 1);
+
+				constraint.set_upper_bound(0);
 			}
 		}
 	}

@@ -5,6 +5,7 @@
 #include "../../../mip/VariableStorage.hpp"
 #include "../../../graph/Graph.hpp"
 #include "../../../graph/Net.hpp"
+#include "../natural_multi_commodity_flow/GroupDynamicGraph.hpp"
 
 namespace steiner_trees {
 
@@ -16,7 +17,9 @@ public:
 	explicit GroupMultiCommodityDual(
 		std::string const& name,
 		graph::Graph const& graph,
-		graph::Net::Vector const& nets
+		graph::Net::Vector const& nets,
+		GroupDynamicGraph const& group_dynamic_graph,
+		bool add_objective = true
 	);
 
 	void create_variables_constraints_and_objective(mip::MIPModel& mip_model) final;
@@ -36,6 +39,10 @@ private:
 private:
 	graph::Graph const& _graph;
 	graph::Net::Vector const& _nets;
+
+	GroupDynamicGraph const& _group_dynamic_graph;
+
+	bool _add_objective;
 
 	mip::VariableStorage<graph::NodeId, graph::Net::Name, graph::TerminalId> _variables;
 };

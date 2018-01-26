@@ -2,6 +2,7 @@
 #define YANNICK_YANNICKMIP_HPP
 
 #include "YannickSolution.hpp"
+#include "YannickProblem.hpp"
 
 namespace yannick {
 

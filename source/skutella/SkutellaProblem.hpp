@@ -6,10 +6,9 @@
 #include <memory>
 
 #include "../json.hpp"
+#include "../typedefs.hpp"
 
 namespace skutella {
-
-using Number = int;
 
 class SkutellaProblem {
 public:
@@ -19,15 +18,15 @@ public:
 public:
 	explicit SkutellaProblem(
 		std::string const& name,
-		Number num_terminals,
-		Number num_paths,
-		Number num_integral_trees
+		Quantity num_terminals,
+		Quantity num_paths,
+		Quantity num_integral_trees
 	);
 
 	std::string const& name() const;
-	Number num_terminals() const;
-	Number num_paths() const;
-	Number num_integral_trees() const;
+	Quantity num_terminals() const;
+	Quantity num_paths() const;
+	Quantity num_integral_trees() const;
 
 	json export_to_json() const;
 
@@ -35,9 +34,9 @@ private:
 
 private:
 	std::string _name;
-	Number _num_terminals;
-	Number _num_paths;
-	Number _num_integral_trees;
+	Quantity _num_terminals;
+	Quantity _num_paths;
+	Quantity _num_integral_trees;
 };
 
 } // namespace skutella

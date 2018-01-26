@@ -5,6 +5,7 @@
 #include "../mip/VariableStorage.hpp"
 #include "../graph/Graph.hpp"
 #include "../graph/Net.hpp"
+#include "../helper/PowerSetIterator.hpp"
 #include "SkutellaProblem.hpp"
 
 namespace skutella {
@@ -28,9 +29,9 @@ private:
 private:
 	SkutellaProblem const& _skutella_problem;
 
-	mip::VariableStorage<Number, Number> _set_variables;
-	mip::VariableStorage<std::vector<Number>, Number> _set_cover_variables;
-	mip::VariableStorage<Number> _path_variable;
+	mip::VariableStorage<Index, Index> _set_variables;
+	mip::VariableStorage<helper::PowerSetIterator::Set, Index> _set_cover_variables;
+	mip::VariableStorage<Index> _path_variable;
 };
 
 } // namespace skutella

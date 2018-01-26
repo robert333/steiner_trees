@@ -1,5 +1,5 @@
-#ifndef TYPEDEFS_HPP
-#define TYPEDEFS_HPP
+#ifndef GRAPH_TYPEDEFS_HPP
+#define GRAPH_TYPEDEFS_HPP
 
 #include <vector>
 #include <deque>

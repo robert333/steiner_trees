@@ -1,5 +1,5 @@
-#ifndef YANNICK_HPP
-#define YANNICK_HPP
+#ifndef SKUTELLA_HPP
+#define SKUTELLA_HPP
 
 #include <string>
 
