@@ -21,6 +21,8 @@ public:
 	static mip::GroupManager create_simplex_embedding(SteinerTreeProblem const& steiner_tree_problem);
 	static mip::GroupManager create_optimal_3_terminals(SteinerTreeProblem const& steiner_tree_problem);
 
+	static mip::GroupManager create_bidirected_multi_commodity_common_flow(SteinerTreeProblem const& steiner_tree_problem);
+
 private:
 
 };

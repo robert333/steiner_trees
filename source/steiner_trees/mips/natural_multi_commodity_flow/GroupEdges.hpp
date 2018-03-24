@@ -5,6 +5,7 @@
 #include "../../../mip/VariableStorage.hpp"
 #include "../../../graph/Graph.hpp"
 #include "../../../graph/Net.hpp"
+#include "../../../graph/TerminalInstance.hpp"
 
 namespace steiner_trees {
 
@@ -15,7 +16,7 @@ public:
 public:
 	explicit GroupEdges(
 		std::string const& name,
-		graph::Graph const& undirected_graph,
+		graph::TerminalInstance const& terminal_instance,
 		graph::Net::Vector const& nets,
 		bool binary = true,
 		bool add_objective = true
@@ -28,8 +29,8 @@ public:
 	mip::VariableStorage<graph::EdgeId, graph::Net::Name> const& undirected_edge_variables() const;
 	mip::VariableStorage<graph::EdgeId, graph::Net::Name> const& bidirected_edge_variables() const;
 
-	graph::Graph const& undirected_graph() const;
-	graph::Graph const& bidirected_graph() const;
+	graph::TerminalInstance const& terminal_instance() const;
+
 	graph::Net::Vector const& nets() const;
 
 private:
@@ -38,8 +39,7 @@ private:
 	void create_objective(mip::MIPModel& mip_model);
 
 private:
-	graph::Graph const& _undirected_graph;
-	graph::Graph _bidirected_graph;
+	graph::TerminalInstance const& _terminal_instance;
 
 	graph::Net::Vector const& _nets;
 

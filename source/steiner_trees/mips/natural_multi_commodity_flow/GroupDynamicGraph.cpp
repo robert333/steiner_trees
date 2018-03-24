@@ -20,7 +20,7 @@ json GroupDynamicGraph::compute_solution() const
 {
 	json solution;
 
-	for (graph::Edge const& edge : _group_edges.undirected_graph().edges()) {
+	for (graph::Edge const& edge : _group_edges.terminal_instance().undirected_graph().edges()) {
 		solution["edges"][edge.to_string()] = _variables.solution_value(edge.id());
 	}
 
@@ -34,7 +34,7 @@ mip::VariableStorage<graph::EdgeId> const& GroupDynamicGraph::variables() const
 
 void GroupDynamicGraph::create_variables(mip::MIPModel& mip_model)
 {
-	for (graph::Edge const& edge : _group_edges.undirected_graph().edges()) {
+	for (graph::Edge const& edge : _group_edges.terminal_instance().undirected_graph().edges()) {
 		mip::MIPModel::Variable* const variable = mip_model.create_binary_variable(
 			name(), "edge " + edge.to_string()
 		);
@@ -45,7 +45,7 @@ void GroupDynamicGraph::create_variables(mip::MIPModel& mip_model)
 
 void GroupDynamicGraph::create_constraints(mip::MIPModel& mip_model)
 {
-	for (graph::Edge const& edge : _group_edges.undirected_graph().edges()) {
+	for (graph::Edge const& edge : _group_edges.terminal_instance().undirected_graph().edges()) {
 		for (graph::Net const& net : _group_edges.nets()) {
 			mip::Constraint constraint = mip_model.create_constraint(
 				name(), "dynamic edge " + edge.to_string()

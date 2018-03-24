@@ -22,6 +22,9 @@ public:
 
 	Set compute_current_subset() const;
 
+	template<typename T>
+	std::vector<T> compute_subvector(std::vector<T> const& vector, Set const& subset) const;
+
 	std::string to_string() const;
 
 private:
@@ -34,6 +37,21 @@ private:
 
 	std::vector<bool> _characteristic_vector;
 };
+
+template<typename T>
+std::vector<T> PowerSetIterator::compute_subvector(
+	std::vector<T> const& vector,
+	PowerSetIterator::Set const& subset
+) const
+{
+	std::vector<T> subvector;
+
+	for (std::size_t const& i : subset) {
+		subvector.push_back(vector.at(i));
+	}
+
+	return subvector;
+}
 
 } // namespace helper
 

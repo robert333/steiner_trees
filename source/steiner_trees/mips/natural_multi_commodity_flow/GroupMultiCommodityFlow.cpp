@@ -26,7 +26,7 @@ mip::VariableStorage<graph::EdgeId, graph::Net::Name, graph::TerminalId> const& 
 void GroupMultiCommodityFlow::create_variables(mip::MIPModel& mip_model)
 {
 	for (graph::Net const& net : _group_edges.nets()) {
-		for (graph::Edge const& edge : _group_edges.bidirected_graph().edges()) {
+		for (graph::Edge const& edge : _group_edges.terminal_instance().bidirected_graph().edges()) {
 			for (graph::TerminalId terminal_id = 0; terminal_id < net.num_terminals(); ++terminal_id) {
 				if (_binary) {
 					mip::MIPModel::Variable* const variable = mip_model.create_binary_variable(
@@ -53,7 +53,7 @@ void GroupMultiCommodityFlow::create_constraints(mip::MIPModel& mip_model)
 {
 	for (graph::Net const& net : _group_edges.nets()) {
 		for (graph::TerminalId terminal_id = 1; terminal_id < net.num_terminals(); ++terminal_id) {
-			for (graph::Node const& node : _group_edges.bidirected_graph().nodes()) {
+			for (graph::Node const& node : _group_edges.terminal_instance().bidirected_graph().nodes()) {
 				mip::Constraint constraint = mip_model.create_constraint(
 					name(),
 					"balance node : node " + node.to_string() + ", "
@@ -87,7 +87,7 @@ void GroupMultiCommodityFlow::create_constraints(mip::MIPModel& mip_model)
 				}
 			}
 
-			for (graph::Edge const& edge : _group_edges.bidirected_graph().edges()) {
+			for (graph::Edge const& edge : _group_edges.terminal_instance().bidirected_graph().edges()) {
 				mip::Constraint constraint = mip_model.create_constraint(
 					name(),
 					"connection : edge " + edge.to_string()

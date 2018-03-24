@@ -24,13 +24,13 @@ void GroupMultiCommodityOptimal::create_constraints(mip::MIPModel& mip_model)
 	constraint.set_upper_bound(0);
 
 	for (graph::Net const& net : _group_edges.nets()) {
-		for (graph::Edge const& edge : _group_edges.undirected_graph().edges()) {
+		for (graph::Edge const& edge : _group_edges.terminal_instance().undirected_graph().edges()) {
 			constraint.add_variable(
 				_group_edges.undirected_edge_variables().get(edge.id(), net.name()), net.weight() * edge.weight()
 			);
 		}
 
-		graph::Node const& root_node = _group_edges.undirected_graph().node(net.terminal(0));
+		graph::Node const& root_node = _group_edges.terminal_instance().undirected_graph().node(net.terminal(0));
 
 		for (graph::TerminalId terminal_id = 1; terminal_id < net.num_terminals(); ++terminal_id) {
 			constraint.add_variable(

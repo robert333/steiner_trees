@@ -17,7 +17,8 @@ public:
 		DCB, // directed cut based
 		DCB_DUAL, // bidirected cut based dual
 		SIMPLEX_EMBEDDING, // lambda simplex embedding
-		OPTIMAL_3_TERMINALS
+		OPTIMAL_3_TERMINALS,
+		BIDIRECTED_MULTI_COMMODITY_COMMON_FLOW
 	};
 
 //	static SteinerTreeMIP create(

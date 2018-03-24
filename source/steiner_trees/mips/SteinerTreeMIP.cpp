@@ -39,6 +39,7 @@ SteinerTreeSolution SteinerTreeMIP::solve(
 		case SteinerTreeMIP::DCB_DUAL : optimization_type = mip::MIP::MAXIMIZATION; break;
 		case SteinerTreeMIP::SIMPLEX_EMBEDDING : optimization_type = mip::MIP::MAXIMIZATION; break;
 		case SteinerTreeMIP::OPTIMAL_3_TERMINALS : optimization_type = mip::MIP::MAXIMIZATION; break;
+		case SteinerTreeMIP::BIDIRECTED_MULTI_COMMODITY_COMMON_FLOW : optimization_type = mip::MIP::MINIMIZATION; break;
 		default: FORBIDDEN;
 	}
 

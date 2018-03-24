@@ -9,6 +9,7 @@
 #include "natural_multi_commodity_flow/GroupDynamicGraph.hpp"
 #include "objective/GroupMultiCommodityOptimal.hpp"
 #include "bidirected_cuts_dual/GroupBidirectedCutsDual.hpp"
+#include "groups/GroupBidirectedMultiCommodityCommonFlow.hpp"
 
 namespace steiner_trees {
 
@@ -27,6 +28,7 @@ mip::GroupManager SteinerTreeMIPFactory::create(
 		case SteinerTreeMIP::DCB_DUAL : return create_dcb_dual(steiner_tree_problem);
 		case SteinerTreeMIP::SIMPLEX_EMBEDDING : return create_simplex_embedding(steiner_tree_problem);
 		case SteinerTreeMIP::OPTIMAL_3_TERMINALS : return create_optimal_3_terminals(steiner_tree_problem);
+		case SteinerTreeMIP::BIDIRECTED_MULTI_COMMODITY_COMMON_FLOW : return create_bidirected_multi_commodity_common_flow(steiner_tree_problem);
 		default: FORBIDDEN;
 	}
 }
@@ -36,7 +38,7 @@ mip::GroupManager SteinerTreeMIPFactory::create_emc(SteinerTreeProblem const& st
 	GroupEdges::SharedPtr group_edges(
 		std::make_shared<GroupEdges>(
 			"GroupEdges",
-			steiner_tree_problem.graph(),
+			steiner_tree_problem.terminal_instance(),
 			steiner_tree_problem.nets()
 		)
 	);
@@ -61,7 +63,7 @@ mip::GroupManager SteinerTreeMIPFactory::create_dcb(SteinerTreeProblem const& st
 	GroupEdges::SharedPtr group_edges(
 		std::make_shared<GroupEdges>(
 			"GroupEdges",
-			steiner_tree_problem.graph(),
+			steiner_tree_problem.terminal_instance(),
 			steiner_tree_problem.nets()
 		)
 	);
@@ -140,7 +142,7 @@ mip::GroupManager SteinerTreeMIPFactory::create_optimal_3_terminals(SteinerTreeP
 	GroupEdges::SharedPtr group_edges(
 		std::make_shared<GroupEdges>(
 			"GroupEdges",
-			steiner_tree_problem.graph(),
+			steiner_tree_problem.terminal_instance(),
 			steiner_tree_problem.nets(),
 			false,
 			false
@@ -197,6 +199,35 @@ mip::GroupManager SteinerTreeMIPFactory::create_optimal_3_terminals(SteinerTreeP
 	group_manager.add(group_multi_commodity_dual);
 	group_manager.add(group_multi_commodity_optimal);
 	group_manager.add(group_common_flow);
+
+	return group_manager;
+}
+
+mip::GroupManager SteinerTreeMIPFactory::create_bidirected_multi_commodity_common_flow(
+	SteinerTreeProblem const& steiner_tree_problem
+)
+{
+	assert(steiner_tree_problem.nets().size() == 1);
+
+	GroupEdges::SharedPtr group_edges(
+		std::make_shared<GroupEdges>(
+			"GroupEdges",
+			steiner_tree_problem.terminal_instance(),
+			steiner_tree_problem.nets()
+		)
+	);
+
+	GroupBidirectedMultiCommodityCommonFlow::SharedPtr group_multi_commodity_common_flow(
+		std::make_shared<GroupBidirectedMultiCommodityCommonFlow>(
+			"GroupBidirectedMultiCommodityCommonFlow",
+			*group_edges
+		)
+	);
+
+	mip::GroupManager group_manager{};
+
+	group_manager.add(group_edges);
+	group_manager.add(group_multi_commodity_common_flow);
 
 	return group_manager;
 }

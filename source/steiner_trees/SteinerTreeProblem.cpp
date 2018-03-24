@@ -4,10 +4,12 @@ namespace steiner_trees {
 
 SteinerTreeProblem::SteinerTreeProblem(
 	std::string const& name,
+	graph::TerminalInstance const& terminal_instance,
 	graph::Graph const& graph,
 	graph::Net::Vector const& nets
 ) :
 	_name(name),
+	_terminal_instance(terminal_instance),
 	_graph(graph),
 	_nets(nets)
 {}
@@ -15,6 +17,11 @@ SteinerTreeProblem::SteinerTreeProblem(
 std::string const& SteinerTreeProblem::name() const
 {
 	return _name;
+}
+
+graph::TerminalInstance const& SteinerTreeProblem::terminal_instance() const
+{
+	return _terminal_instance;
 }
 
 graph::Graph const& SteinerTreeProblem::graph() const

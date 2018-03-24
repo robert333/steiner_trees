@@ -30,11 +30,11 @@ json GroupCommonFlow::compute_solution() const
 	do {
 		helper::PowerSetIterator::Set const terminal_set = power_set_iterator.compute_current_subset();
 
-		for (graph::Edge const& edge : _group_edges.bidirected_graph().edges()) {
+		for (graph::Edge const& edge : _group_edges.terminal_instance().bidirected_graph().edges()) {
 			solution["common_flow"][edge.to_string()] = _common_flow_variables.solution_value(edge.id(), terminal_set);
 		}
 
-		for (graph::Node const& node : _group_edges.bidirected_graph().nodes()) {
+		for (graph::Node const& node : _group_edges.terminal_instance().bidirected_graph().nodes()) {
 			solution["common_flow_rejoin_appearance"][node.to_string()] =
 				_common_flow_rejoin_appearance_variables.solution_value(node.id(), terminal_set);
 			solution["common_flow_rejoin"][node.to_string()] =
@@ -52,7 +52,7 @@ void GroupCommonFlow::create_variables(mip::MIPModel& mip_model)
 	do {
 		helper::PowerSetIterator::Set const terminal_set = power_set_iterator.compute_current_subset();
 
-		for (graph::Edge const& edge : _group_edges.bidirected_graph().edges()) {
+		for (graph::Edge const& edge : _group_edges.terminal_instance().bidirected_graph().edges()) {
 			mip::MIPModel::Variable* const variable = mip_model.create_continuous_variable(
 				name(),
 				"common flow on edge " + edge.to_string() + " for terminals " + helper::to_string(terminal_set),
@@ -62,7 +62,7 @@ void GroupCommonFlow::create_variables(mip::MIPModel& mip_model)
 			_common_flow_variables.set(edge.id(), terminal_set, variable);
 		}
 
-		for (graph::Node const& node : _group_edges.bidirected_graph().nodes()) {
+		for (graph::Node const& node : _group_edges.terminal_instance().bidirected_graph().nodes()) {
 			_common_flow_rejoin_appearance_variables.set(
 				node.id(), terminal_set,
 				mip_model.create_binary_variable(
@@ -92,7 +92,7 @@ void GroupCommonFlow::create_constraints(mip::MIPModel& mip_model)
 	do {
 		helper::PowerSetIterator::Set const terminal_set = power_set_iterator.compute_current_subset();
 
-		for (graph::Edge const& edge : _group_edges.bidirected_graph().edges()) {
+		for (graph::Edge const& edge : _group_edges.terminal_instance().bidirected_graph().edges()) {
 			mip::Constraint constraint_lower_bound = mip_model.create_constraint(
 				name(),
 				"common flow lower bound on edge " + edge.to_string()
@@ -131,7 +131,7 @@ void GroupCommonFlow::create_constraints(mip::MIPModel& mip_model)
 			}
 		}
 
-		for (graph::Node const& node : _group_edges.bidirected_graph().nodes()) {
+		for (graph::Node const& node : _group_edges.terminal_instance().bidirected_graph().nodes()) {
 			if (node.id() == _net.terminal(0)) {
 				continue;
 			}
@@ -191,7 +191,7 @@ void GroupCommonFlow::create_objective(mip::MIPModel& mip_model)
 	do {
 		helper::PowerSetIterator::Set const terminal_set = power_set_iterator.compute_current_subset();
 
-		for (graph::Node const& node : _group_edges.bidirected_graph().nodes()) {
+		for (graph::Node const& node : _group_edges.terminal_instance().bidirected_graph().nodes()) {
 			if (node.id() == _net.terminal(0)) {
 				continue;
 			}

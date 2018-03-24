@@ -36,6 +36,7 @@ set(GRAPH_FILES
         source/graph/CostsFactory.cpp
         source/graph/Net.cpp
         source/graph/Costs.cpp
+        source/graph/TerminalInstance.cpp
         source/graph/algorithms/Dijkstra.cpp
         source/graph/algorithms/MooreBellmanFord.cpp
 )
@@ -60,6 +61,7 @@ set(STEINER_TREE_FILES
 )
 
 set(STEINER_TREE_MIPS_FILES
+        source/steiner_trees/mips/groups/GroupBidirectedMultiCommodityCommonFlow.cpp
         source/steiner_trees/mips/bidirected_cuts_dual/GroupBidirectedCutsDual.cpp
         source/steiner_trees/mips/multi_commodity_dual/GroupMultiCommodityDual.cpp
         source/steiner_trees/mips/natural_multi_commodity_flow/GroupDynamicGraph.cpp

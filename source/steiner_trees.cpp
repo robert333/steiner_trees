@@ -38,7 +38,9 @@ void run_steiner_trees(
 
 	graph::GraphPrinter::output(Logger::logger(), graph);
 
-	steiner_trees::SteinerTreeProblem const steiner_tree_problem("test", graph, nets);
+	graph::TerminalInstance const terminal_instance(graph, nets.front().terminals());
+
+	steiner_trees::SteinerTreeProblem const steiner_tree_problem("test", terminal_instance, graph, nets);
 
 	steiner_trees::SteinerTreeSolution const solution_continuous = steiner_trees::SteinerTreeSolver::solve(
 		steiner_tree_problem, steiner_trees::SteinerTreeMIP::EMC, mip::MIP::LINEAR_PROGRAMMING
@@ -48,15 +50,29 @@ void run_steiner_trees(
 		steiner_tree_problem, steiner_trees::SteinerTreeMIP::SIMPLEX_EMBEDDING, mip::MIP::LINEAR_PROGRAMMING
 	);
 
+	steiner_trees::SteinerTreeSolution const solution_bmccf = steiner_trees::SteinerTreeSolver::solve(
+		steiner_tree_problem,
+		steiner_trees::SteinerTreeMIP::BIDIRECTED_MULTI_COMMODITY_COMMON_FLOW,
+		mip::MIP::LINEAR_PROGRAMMING
+	);
+
 	if (solution_continuous.optimization_result() == mip::MIP::Solver::INFEASIBLE) {
 		std::cout << "LP is infeasible!\n";
 	} else {
+		assert(solution_continuous.optimization_result() == mip::MIP::Solver::OPTIMAL);
+		assert(solution_simplex_embedding.optimization_result() == mip::MIP::Solver::OPTIMAL);
+		assert(solution_bmccf.optimization_result() == mip::MIP::Solver::OPTIMAL);
+
 		std::cout << "optimum value continuous        = "
 				  << solution_continuous.optimization_value()
 				  << "\n";
 		std::cout << "optimum value simplex embedding = "
 				  << solution_simplex_embedding.optimization_value()
 				  << "\n";
+		std::cout << "optimum value BMCCF             = "
+				  << solution_bmccf.optimization_value()
+				  << "\n";
+
 //		assert(solution_continuous.optimization_value() == solution_simplex_embedding.optimization_value());
 		assert(std::abs(solution_continuous.optimization_value() - solution_simplex_embedding.optimization_value()) < 1e-9);
 	}
@@ -75,15 +91,20 @@ void run_steiner_trees(
 
 		mip::Value const optimum_value_continuous = solution_continuous.optimization_value();
 		mip::Value const optimum_value_simplex_embedding = solution_simplex_embedding.optimization_value();
+		mip::Value const optimum_value_bmccf = solution_bmccf.optimization_value();
 		mip::Value const optimum_value_integer = solution_integer.optimization_value();
 		mip::Value const integrality_gap = optimum_value_integer / optimum_value_continuous;
 
 //		assert(optimum_value_continuous == optimum_value_simplex_embedding);
 		assert(std::abs(optimum_value_continuous - optimum_value_simplex_embedding) < 1e-9);
 
+//		assert(optimum_value_bmccf == optimum_value_integer);
+		assert(std::abs(optimum_value_bmccf - optimum_value_integer) < 1e-9);
+
 		std::cout << "\n"
 				  << "optimum value continuous        = " << optimum_value_continuous << "\n"
 				  << "optimum value simplex embedding = " << optimum_value_simplex_embedding << "\n"
+				  << "optimum value BMCCF             = " << optimum_value_bmccf << "\n"
 				  << "optimum value integer           = " << optimum_value_integer << "\n"
 				  << "integrality gap                 = " << integrality_gap << "\n"
 				  << "\n";
