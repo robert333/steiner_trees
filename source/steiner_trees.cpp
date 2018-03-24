@@ -40,35 +40,53 @@ void run_steiner_trees(
 
 	steiner_trees::SteinerTreeProblem const steiner_tree_problem("test", graph, nets);
 
-	steiner_trees::SteinerTreeSolution const steiner_tree_solution_continuous = steiner_trees::SteinerTreeSolver::solve(
-		steiner_tree_problem, mip::MIP::LINEAR_PROGRAMMING
+	steiner_trees::SteinerTreeSolution const solution_continuous = steiner_trees::SteinerTreeSolver::solve(
+		steiner_tree_problem, steiner_trees::SteinerTreeMIP::EMC, mip::MIP::LINEAR_PROGRAMMING
 	);
 
-	if (steiner_tree_solution_continuous.optimization_result() == mip::MIP::Solver::INFEASIBLE) {
+	steiner_trees::SteinerTreeSolution const solution_simplex_embedding = steiner_trees::SteinerTreeSolver::solve(
+		steiner_tree_problem, steiner_trees::SteinerTreeMIP::SIMPLEX_EMBEDDING, mip::MIP::LINEAR_PROGRAMMING
+	);
+
+	if (solution_continuous.optimization_result() == mip::MIP::Solver::INFEASIBLE) {
 		std::cout << "LP is infeasible!\n";
 	} else {
-		std::cout << "optimization_value_continuous = "
-				  << steiner_tree_solution_continuous.optimization_value()
+		std::cout << "optimum value continuous        = "
+				  << solution_continuous.optimization_value()
 				  << "\n";
+		std::cout << "optimum value simplex embedding = "
+				  << solution_simplex_embedding.optimization_value()
+				  << "\n";
+//		assert(solution_continuous.optimization_value() == solution_simplex_embedding.optimization_value());
+		assert(std::abs(solution_continuous.optimization_value() - solution_simplex_embedding.optimization_value()) < 1e-9);
 	}
 
-	steiner_trees::SteinerTreeSolution const steiner_tree_solution_integer = steiner_trees::SteinerTreeSolver::solve(
-		steiner_tree_problem, mip::MIP::MIXED_INTEGER_PROGRAMMING
+	steiner_trees::SteinerTreeSolution const solution_integer = steiner_trees::SteinerTreeSolver::solve(
+		steiner_tree_problem, steiner_trees::SteinerTreeMIP::EMC, mip::MIP::MIXED_INTEGER_PROGRAMMING
 	);
 
-	if (steiner_tree_solution_integer.optimization_result() == mip::MIP::Solver::INFEASIBLE) {
+	if (solution_integer.optimization_result() == mip::MIP::Solver::INFEASIBLE) {
 		std::cout << "MIP is infeasible!\n";
 	}
 
-	if (steiner_tree_solution_continuous.optimization_result() == mip::MIP::Solver::OPTIMAL
-		and steiner_tree_solution_integer.optimization_result() == mip::MIP::Solver::OPTIMAL) {
-		mip::Value const optimization_value_integer = steiner_tree_solution_integer.optimization_value();
-		mip::Value const optimization_value_continuous = steiner_tree_solution_continuous.optimization_value();
-		mip::Value const integrality_gap = optimization_value_integer / optimization_value_continuous;
+	if (solution_continuous.optimization_result() == mip::MIP::Solver::OPTIMAL
+		and solution_simplex_embedding.optimization_result() == mip::MIP::Solver::OPTIMAL
+		and solution_integer.optimization_result() == mip::MIP::Solver::OPTIMAL) {
+
+		mip::Value const optimum_value_continuous = solution_continuous.optimization_value();
+		mip::Value const optimum_value_simplex_embedding = solution_simplex_embedding.optimization_value();
+		mip::Value const optimum_value_integer = solution_integer.optimization_value();
+		mip::Value const integrality_gap = optimum_value_integer / optimum_value_continuous;
+
+//		assert(optimum_value_continuous == optimum_value_simplex_embedding);
+		assert(std::abs(optimum_value_continuous - optimum_value_simplex_embedding) < 1e-9);
+
 		std::cout << "\n"
-				  << "optimization_value_integer    = " << optimization_value_integer << "\n"
-				  << "optimization_value_continuous = " << optimization_value_continuous << "\n"
-				  << "Integrality Gap = " << integrality_gap << "\n\n";
+				  << "optimum value continuous        = " << optimum_value_continuous << "\n"
+				  << "optimum value simplex embedding = " << optimum_value_simplex_embedding << "\n"
+				  << "optimum value integer           = " << optimum_value_integer << "\n"
+				  << "integrality gap                 = " << integrality_gap << "\n"
+				  << "\n";
 
 		json const output_json = {
 //			{
@@ -78,16 +96,28 @@ void run_steiner_trees(
 			{
 				"solution",
 				{
-					{"integer", steiner_tree_solution_integer.export_to_json()},
-					{"continuous", steiner_tree_solution_continuous.export_to_json()}
+					{"continuous", solution_continuous.export_to_json()},
+					{"simplex_embedding", solution_simplex_embedding.export_to_json()},
+					{"integer", solution_integer.export_to_json()}
 				}
 			}
 		};
 
-		Logger::logger() << instance_path << "/" << "solution_" << instance_name << ".json\n"
+		std::string const instance_file_path = instance_path + "/" + instance_name + ".json";
+		std::string const solution_file_path = instance_path + "/" + "solution_" + instance_name + ".json";
+
+		Logger::logger() << solution_file_path << "\n"
 						 << output_json.dump(4)
 						 << "\n\n";
 
-		write_json(instance_path + "/" + "solution_" + instance_name + ".json", output_json);
+		write_json(solution_file_path, output_json);
+
+		std::cout << solution_file_path << "\n";
+
+		int const status = system(("python3 /home/robert/Documents/studies/discrete_mathematics/graph-plotter/simplex_embedding.py " + instance_file_path + " " + solution_file_path + " " + instance_path).c_str());
+
+		if (not status) {
+
+		}
 	}
 }

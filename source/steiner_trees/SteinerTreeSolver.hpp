@@ -3,6 +3,7 @@
 
 #include "SteinerTreeProblem.hpp"
 #include "SteinerTreeSolution.hpp"
+#include "mips/SteinerTreeMIP.hpp"
 
 namespace steiner_trees {
 
@@ -14,6 +15,7 @@ public:
 public:
 	static SteinerTreeSolution solve(
 		SteinerTreeProblem const& steiner_tree_problem,
+		SteinerTreeMIP::Type const& steiner_tree_mip_type,
 		mip::MIP::OptimizationProblem const& optimization_problem
 	);
 

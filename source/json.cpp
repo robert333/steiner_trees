@@ -5,7 +5,7 @@
 json read_json(std::istream& istream)
 {
 	json result;
-	istream >> result;
+	remove_comments(istream) >> result;
 	return result;
 }
 
@@ -34,4 +34,20 @@ void write_json(std::string const& output_file_path, json const& data)
 	}
 
 	write_json(output_file, data);
+}
+
+std::stringstream remove_comments(std::istream& istream)
+{
+	std::stringstream result;
+
+	std::string line;
+	while (getline(istream, line)) {
+		std::size_t const pos = line.find("//");
+		if (pos != std::string::npos) {
+			line.erase(pos);
+		}
+		result << line << "\n";
+	}
+
+	return result;
 }

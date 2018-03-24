@@ -34,14 +34,22 @@ json GroupEdges::compute_solution() const
 
 	for (graph::Net const& net : _nets) {
 		for (graph::Edge const& edge : undirected_graph().edges()) {
-			solution["undirected edges"][edge.to_string()] = undirected_edge_variables().solution_value(
-				edge.id(), net.name()
+			solution["undirected"].push_back(
+				{
+					{"tail",  edge.tail()},
+					{"head",  edge.head()},
+					{"value", undirected_edge_variables().solution_value(edge.id(), net.name())}
+				}
 			);
 		}
 
 		for (graph::Edge const& edge : bidirected_graph().edges()) {
-			solution["bidirected edges"][edge.to_string()] = bidirected_edge_variables().solution_value(
-				edge.id(), net.name()
+			solution["bidirected"].push_back(
+				{
+					{"tail",  edge.tail()},
+					{"head",  edge.head()},
+					{"value", bidirected_edge_variables().solution_value(edge.id(), net.name())}
+				}
 			);
 		}
 	}
