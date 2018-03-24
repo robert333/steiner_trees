@@ -119,6 +119,7 @@ void run_steiner_trees(
 				{
 					{"continuous", solution_continuous.export_to_json()},
 					{"simplex_embedding", solution_simplex_embedding.export_to_json()},
+					{"bmccf", solution_bmccf.export_to_json()},
 					{"integer", solution_integer.export_to_json()}
 				}
 			}

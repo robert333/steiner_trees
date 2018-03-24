@@ -147,6 +147,10 @@ void GroupBidirectedMultiCommodityCommonFlow::create_common_flow_constraints(mip
 		}
 
 		for (graph::Node const& node : terminal_instance.bidirected_graph().nodes()) {
+			if (node.id() == terminal_instance.root_terminal()) {
+				continue;
+			}
+
 			mip::Constraint constraint = mip_model.create_constraint(
 				name(),
 				"balance common flow : node " + node.to_string()
