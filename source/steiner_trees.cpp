@@ -53,7 +53,7 @@ void run_steiner_trees(
 	steiner_trees::SteinerTreeSolution const solution_bmccf = steiner_trees::SteinerTreeSolver::solve(
 		steiner_tree_problem,
 		steiner_trees::SteinerTreeMIP::BIDIRECTED_MULTI_COMMODITY_COMMON_FLOW,
-		mip::MIP::LINEAR_PROGRAMMING
+		mip::MIP::MIXED_INTEGER_PROGRAMMING
 	);
 
 	if (solution_continuous.optimization_result() == mip::MIP::Solver::INFEASIBLE) {
@@ -77,22 +77,23 @@ void run_steiner_trees(
 		assert(std::abs(solution_continuous.optimization_value() - solution_simplex_embedding.optimization_value()) < 1e-9);
 	}
 
-	steiner_trees::SteinerTreeSolution const solution_integer = steiner_trees::SteinerTreeSolver::solve(
-		steiner_tree_problem, steiner_trees::SteinerTreeMIP::EMC, mip::MIP::MIXED_INTEGER_PROGRAMMING
-	);
+//	steiner_trees::SteinerTreeSolution const solution_integer = steiner_trees::SteinerTreeSolver::solve(
+//		steiner_tree_problem, steiner_trees::SteinerTreeMIP::EMC, mip::MIP::MIXED_INTEGER_PROGRAMMING
+//	);
 
-	if (solution_integer.optimization_result() == mip::MIP::Solver::INFEASIBLE) {
-		std::cout << "MIP is infeasible!\n";
-	}
+//	if (solution_integer.optimization_result() == mip::MIP::Solver::INFEASIBLE) {
+//		std::cout << "MIP is infeasible!\n";
+//	}
 
 	if (solution_continuous.optimization_result() == mip::MIP::Solver::OPTIMAL
 		and solution_simplex_embedding.optimization_result() == mip::MIP::Solver::OPTIMAL
-		and solution_integer.optimization_result() == mip::MIP::Solver::OPTIMAL) {
-
+		and solution_bmccf.optimization_result() == mip::MIP::Solver::OPTIMAL
+//		and solution_integer.optimization_result() == mip::MIP::Solver::OPTIMAL
+		) {
 		mip::Value const optimum_value_continuous = solution_continuous.optimization_value();
 		mip::Value const optimum_value_simplex_embedding = solution_simplex_embedding.optimization_value();
 		mip::Value const optimum_value_bmccf = solution_bmccf.optimization_value();
-		mip::Value const optimum_value_integer = solution_integer.optimization_value();
+		mip::Value const optimum_value_integer = optimum_value_bmccf;//solution_integer.optimization_value();
 		mip::Value const integrality_gap = optimum_value_integer / optimum_value_continuous;
 
 //		assert(optimum_value_continuous == optimum_value_simplex_embedding);
@@ -120,7 +121,7 @@ void run_steiner_trees(
 					{"continuous", solution_continuous.export_to_json()},
 					{"simplex_embedding", solution_simplex_embedding.export_to_json()},
 					{"bmccf", solution_bmccf.export_to_json()},
-					{"integer", solution_integer.export_to_json()}
+					{"integer", solution_bmccf.export_to_json()}//solution_integer.export_to_json()}
 				}
 			}
 		};

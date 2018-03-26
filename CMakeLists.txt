@@ -114,7 +114,7 @@ find_package(Boost 1.61 COMPONENTS python-py35 REQUIRED) # log
 include_directories(${Boost_INCLUDE_DIR})
 
 # Google or-tools
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DUSE_GLOP -DUSE_SCIP") # -fwrapv -DUSE_CBC
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DUSE_CLP -DUSE_SCIP") # -fwrapv USE_GLOP USE_CBC
 
 include_directories(
         or-tools-6.4/

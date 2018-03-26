@@ -9,7 +9,7 @@ MIPSolver::Solver::OptimizationProblemType MIPSolver::get_solver_optimization_pr
 )
 {
 	switch (optimization_problem) {
-		case LINEAR_PROGRAMMING : return Solver::GLOP_LINEAR_PROGRAMMING;
+		case LINEAR_PROGRAMMING : return Solver::CLP_LINEAR_PROGRAMMING;//GLOP_LINEAR_PROGRAMMING;
 		case MIXED_INTEGER_PROGRAMMING : return Solver::SCIP_MIXED_INTEGER_PROGRAMMING;
 		default: FORBIDDEN;
 	}
