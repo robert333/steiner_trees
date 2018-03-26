@@ -1,0 +1,1568 @@
+{
+    "solution": {
+        "bmccf": {
+            "optimization": {
+                "objective_value": 12.0,
+                "problem": "MIP",
+                "type": "min"
+            },
+            "variables": {
+                "GroupBidirectedMultiCommodityCommonFlow": null,
+                "GroupEdges": {
+                    "bidirected": [
+                        {
+                            "head": 12,
+                            "tail": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 12,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 14,
+                            "tail": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 14,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 0,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 16,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 18,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 3,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 4,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 7,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 7,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 12,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 12,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 3,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 6,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 11,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 11,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 18,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 5,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 5,
+                            "tail": 3,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 5,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 5,
+                            "tail": 4,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 5,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 5,
+                            "tail": 6,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 8,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 8,
+                            "tail": 4,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 7,
+                            "tail": 8,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 8,
+                            "tail": 7,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 9,
+                            "tail": 8,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 8,
+                            "tail": 9,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 10,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 10,
+                            "tail": 6,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 9,
+                            "tail": 10,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 10,
+                            "tail": 9,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 11,
+                            "tail": 10,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 10,
+                            "tail": 11,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 7,
+                            "tail": 13,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 13,
+                            "tail": 7,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 12,
+                            "tail": 13,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 13,
+                            "tail": 12,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 14,
+                            "tail": 13,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 13,
+                            "tail": 14,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 9,
+                            "tail": 15,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 15,
+                            "tail": 9,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 14,
+                            "tail": 15,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 15,
+                            "tail": 14,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 15,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 15,
+                            "tail": 16,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 11,
+                            "tail": 17,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 17,
+                            "tail": 11,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 17,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 17,
+                            "tail": 16,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 17,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 17,
+                            "tail": 18,
+                            "value": 0.0
+                        }
+                    ],
+                    "undirected": [
+                        {
+                            "head": 12,
+                            "tail": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 14,
+                            "tail": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 0,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 7,
+                            "tail": 1,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 12,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 11,
+                            "tail": 2,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 5,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 5,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 5,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 8,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 7,
+                            "tail": 8,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 9,
+                            "tail": 8,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 10,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 9,
+                            "tail": 10,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 11,
+                            "tail": 10,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 7,
+                            "tail": 13,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 12,
+                            "tail": 13,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 14,
+                            "tail": 13,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 9,
+                            "tail": 15,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 14,
+                            "tail": 15,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 15,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 11,
+                            "tail": 17,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 17,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 17,
+                            "value": 0.0
+                        }
+                    ]
+                }
+            }
+        },
+        "continuous": {
+            "optimization": {
+                "objective_value": 11.25,
+                "problem": "LP",
+                "type": "min"
+            },
+            "variables": {
+                "GroupEdges": {
+                    "bidirected": [
+                        {
+                            "head": 12,
+                            "tail": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 12,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 14,
+                            "tail": 0,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 0,
+                            "tail": 14,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 0,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 0,
+                            "tail": 16,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 18,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 3,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 4,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 7,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 7,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 12,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 12,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 3,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 6,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 11,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 11,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 18,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 18,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 5,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 5,
+                            "tail": 3,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 5,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 5,
+                            "tail": 4,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 6,
+                            "tail": 5,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 5,
+                            "tail": 6,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 4,
+                            "tail": 8,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 8,
+                            "tail": 4,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 7,
+                            "tail": 8,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 8,
+                            "tail": 7,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 9,
+                            "tail": 8,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 8,
+                            "tail": 9,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 6,
+                            "tail": 10,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 10,
+                            "tail": 6,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 9,
+                            "tail": 10,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 10,
+                            "tail": 9,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 11,
+                            "tail": 10,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 10,
+                            "tail": 11,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 7,
+                            "tail": 13,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 13,
+                            "tail": 7,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 12,
+                            "tail": 13,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 13,
+                            "tail": 12,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 14,
+                            "tail": 13,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 13,
+                            "tail": 14,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 9,
+                            "tail": 15,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 15,
+                            "tail": 9,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 14,
+                            "tail": 15,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 15,
+                            "tail": 14,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 16,
+                            "tail": 15,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 15,
+                            "tail": 16,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 11,
+                            "tail": 17,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 17,
+                            "tail": 11,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 17,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 17,
+                            "tail": 16,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 18,
+                            "tail": 17,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 17,
+                            "tail": 18,
+                            "value": 0.0
+                        }
+                    ],
+                    "undirected": [
+                        {
+                            "head": 12,
+                            "tail": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 14,
+                            "tail": 0,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 16,
+                            "tail": 0,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 18,
+                            "tail": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 1,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 7,
+                            "tail": 1,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 12,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 2,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 11,
+                            "tail": 2,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 18,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 5,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 5,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 6,
+                            "tail": 5,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 4,
+                            "tail": 8,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 7,
+                            "tail": 8,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 9,
+                            "tail": 8,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 6,
+                            "tail": 10,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 9,
+                            "tail": 10,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 11,
+                            "tail": 10,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 7,
+                            "tail": 13,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 12,
+                            "tail": 13,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 14,
+                            "tail": 13,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 9,
+                            "tail": 15,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 14,
+                            "tail": 15,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 16,
+                            "tail": 15,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 11,
+                            "tail": 17,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 16,
+                            "tail": 17,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 18,
+                            "tail": 17,
+                            "value": 0.0
+                        }
+                    ]
+                },
+                "GroupMultiCommodityFlow": null
+            }
+        },
+        "integer": {
+            "optimization": {
+                "objective_value": 12.0,
+                "problem": "MIP",
+                "type": "min"
+            },
+            "variables": {
+                "GroupBidirectedMultiCommodityCommonFlow": null,
+                "GroupEdges": {
+                    "bidirected": [
+                        {
+                            "head": 12,
+                            "tail": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 12,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 14,
+                            "tail": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 14,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 0,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 16,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 18,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 3,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 4,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 7,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 7,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 12,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 12,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 3,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 6,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 11,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 11,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 18,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 5,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 5,
+                            "tail": 3,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 5,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 5,
+                            "tail": 4,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 5,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 5,
+                            "tail": 6,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 8,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 8,
+                            "tail": 4,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 7,
+                            "tail": 8,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 8,
+                            "tail": 7,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 9,
+                            "tail": 8,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 8,
+                            "tail": 9,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 10,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 10,
+                            "tail": 6,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 9,
+                            "tail": 10,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 10,
+                            "tail": 9,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 11,
+                            "tail": 10,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 10,
+                            "tail": 11,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 7,
+                            "tail": 13,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 13,
+                            "tail": 7,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 12,
+                            "tail": 13,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 13,
+                            "tail": 12,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 14,
+                            "tail": 13,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 13,
+                            "tail": 14,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 9,
+                            "tail": 15,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 15,
+                            "tail": 9,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 14,
+                            "tail": 15,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 15,
+                            "tail": 14,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 15,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 15,
+                            "tail": 16,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 11,
+                            "tail": 17,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 17,
+                            "tail": 11,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 17,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 17,
+                            "tail": 16,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 17,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 17,
+                            "tail": 18,
+                            "value": 0.0
+                        }
+                    ],
+                    "undirected": [
+                        {
+                            "head": 12,
+                            "tail": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 14,
+                            "tail": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 0,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 7,
+                            "tail": 1,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 12,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 11,
+                            "tail": 2,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 5,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 5,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 5,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 8,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 7,
+                            "tail": 8,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 9,
+                            "tail": 8,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 10,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 9,
+                            "tail": 10,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 11,
+                            "tail": 10,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 7,
+                            "tail": 13,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 12,
+                            "tail": 13,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 14,
+                            "tail": 13,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 9,
+                            "tail": 15,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 14,
+                            "tail": 15,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 15,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 11,
+                            "tail": 17,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 17,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 17,
+                            "value": 0.0
+                        }
+                    ]
+                }
+            }
+        },
+        "simplex_embedding": {
+            "optimization": {
+                "objective_value": 11.25,
+                "problem": "LP",
+                "type": "max"
+            },
+            "variables": {
+                "GroupSimplexEmbedding": {
+                    "nodes": [
+                        {
+                            "node": "0",
+                            "value_per_terminal": [
+                                6.0,
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "node": "1",
+                            "value_per_terminal": [
+                                0.75,
+                                5.25,
+                                0.0
+                            ]
+                        },
+                        {
+                            "node": "2",
+                            "value_per_terminal": [
+                                0.0,
+                                0.0,
+                                6.0
+                            ]
+                        },
+                        {
+                            "node": "3",
+                            "value_per_terminal": [
+                                0.75,
+                                2.25,
+                                3.0
+                            ]
+                        },
+                        {
+                            "node": "4",
+                            "value_per_terminal": [
+                                0.75,
+                                3.25,
+                                2.0
+                            ]
+                        },
+                        {
+                            "node": "5",
+                            "value_per_terminal": [
+                                0.75,
+                                2.25,
+                                3.0
+                            ]
+                        },
+                        {
+                            "node": "6",
+                            "value_per_terminal": [
+                                0.75,
+                                1.25,
+                                4.0
+                            ]
+                        },
+                        {
+                            "node": "7",
+                            "value_per_terminal": [
+                                2.0,
+                                3.25,
+                                0.75
+                            ]
+                        },
+                        {
+                            "node": "8",
+                            "value_per_terminal": [
+                                1.75,
+                                2.5,
+                                1.75
+                            ]
+                        },
+                        {
+                            "node": "9",
+                            "value_per_terminal": [
+                                2.25,
+                                1.5,
+                                2.25
+                            ]
+                        },
+                        {
+                            "node": "10",
+                            "value_per_terminal": [
+                                1.75,
+                                1.0,
+                                3.25
+                            ]
+                        },
+                        {
+                            "node": "11",
+                            "value_per_terminal": [
+                                2.0,
+                                0.0,
+                                4.0
+                            ]
+                        },
+                        {
+                            "node": "12",
+                            "value_per_terminal": [
+                                3.75,
+                                2.25,
+                                0.0
+                            ]
+                        },
+                        {
+                            "node": "13",
+                            "value_per_terminal": [
+                                3.0,
+                                2.25,
+                                0.75
+                            ]
+                        },
+                        {
+                            "node": "14",
+                            "value_per_terminal": [
+                                4.0,
+                                1.25,
+                                0.75
+                            ]
+                        },
+                        {
+                            "node": "15",
+                            "value_per_terminal": [
+                                3.25,
+                                1.0,
+                                1.75
+                            ]
+                        },
+                        {
+                            "node": "16",
+                            "value_per_terminal": [
+                                4.0,
+                                0.0,
+                                2.0
+                            ]
+                        },
+                        {
+                            "node": "17",
+                            "value_per_terminal": [
+                                3.0,
+                                0.0,
+                                3.0
+                            ]
+                        },
+                        {
+                            "node": "18",
+                            "value_per_terminal": [
+                                3.0,
+                                0.0,
+                                3.0
+                            ]
+                        }
+                    ],
+                    "simplex": 6.0
+                }
+            }
+        }
+    }
+}

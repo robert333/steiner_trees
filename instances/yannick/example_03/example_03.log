@@ -1,0 +1,350 @@
+Yannick LP/MIP Solver
+
+program path  : /home/robert/Documents/studies/discrete_mathematics/steiner-trees/cmake-build-debug/yannick
+instance path : instances/yannick/example_03
+instance name : example_03
+
+instances/yannick/example_03/example_03.json
+{
+    "cycle_time": 2.0,
+    "max_cycle_number": 10,
+    "max_jumper_number": 3,
+    "max_machine_number": 14,
+    "min_cycle_number": 0,
+    "min_jumper_number": 0,
+    "min_machine_number": 0,
+    "precedence_graph": {
+        "directed": true,
+        "edges": [
+            {
+                "head": 1,
+                "tail": 0,
+                "weight": 0
+            },
+            {
+                "head": 2,
+                "tail": 1,
+                "weight": 0
+            },
+            {
+                "head": 3,
+                "tail": 1,
+                "weight": 0
+            },
+            {
+                "head": 4,
+                "tail": 1,
+                "weight": 0
+            },
+            {
+                "head": 5,
+                "tail": 2,
+                "weight": 0
+            },
+            {
+                "head": 6,
+                "tail": 2,
+                "weight": 0
+            },
+            {
+                "head": 5,
+                "tail": 3,
+                "weight": 0
+            },
+            {
+                "head": 6,
+                "tail": 4,
+                "weight": 0
+            },
+            {
+                "head": 7,
+                "tail": 4,
+                "weight": 0
+            },
+            {
+                "head": 8,
+                "tail": 4,
+                "weight": 0
+            },
+            {
+                "head": 9,
+                "tail": 4,
+                "weight": 0
+            },
+            {
+                "head": 10,
+                "tail": 5,
+                "weight": 0
+            },
+            {
+                "head": 10,
+                "tail": 6,
+                "weight": 0
+            },
+            {
+                "head": 11,
+                "tail": 6,
+                "weight": 0
+            },
+            {
+                "head": 11,
+                "tail": 7,
+                "weight": 0
+            },
+            {
+                "head": 12,
+                "tail": 7,
+                "weight": 0
+            },
+            {
+                "head": 12,
+                "tail": 8,
+                "weight": 0
+            },
+            {
+                "head": 13,
+                "tail": 8,
+                "weight": 0
+            },
+            {
+                "head": 13,
+                "tail": 9,
+                "weight": 0
+            },
+            {
+                "head": 14,
+                "tail": 9,
+                "weight": 0
+            }
+        ],
+        "nodes": [
+            {
+                "id": 0,
+                "weight": 0.5
+            },
+            {
+                "id": 1,
+                "weight": 1.0
+            },
+            {
+                "id": 2,
+                "weight": 1.0
+            },
+            {
+                "id": 3,
+                "weight": 0.6
+            },
+            {
+                "id": 4,
+                "weight": 0.5
+            },
+            {
+                "id": 5,
+                "weight": 0.4
+            },
+            {
+                "id": 6,
+                "weight": 0.5
+            },
+            {
+                "id": 7,
+                "weight": 1.0
+            },
+            {
+                "id": 8,
+                "weight": 1.0
+            },
+            {
+                "id": 9,
+                "weight": 0.6
+            },
+            {
+                "id": 10,
+                "weight": 0.5
+            },
+            {
+                "id": 11,
+                "weight": 0.4
+            },
+            {
+                "id": 12,
+                "weight": 0.5
+            },
+            {
+                "id": 13,
+                "weight": 1.0
+            },
+            {
+                "id": 14,
+                "weight": 1.0
+            }
+        ]
+    }
+}
+
+Directed Graph with 15 nodes and 20 edges
+
+Node 0 with weight 0.5 and 0 incoming edges and 1 outgoing edges
+incoming:
+outgoing:
+[0] = 0 --( 0 )--> 1
+
+Node 1 with weight 1 and 1 incoming edges and 3 outgoing edges
+incoming:
+[0] = 0 --( 0 )--> 1
+outgoing:
+[1] = 1 --( 0 )--> 2
+[2] = 1 --( 0 )--> 3
+[3] = 1 --( 0 )--> 4
+
+Node 2 with weight 1 and 1 incoming edges and 2 outgoing edges
+incoming:
+[1] = 1 --( 0 )--> 2
+outgoing:
+[4] = 2 --( 0 )--> 5
+[5] = 2 --( 0 )--> 6
+
+Node 3 with weight 0.6 and 1 incoming edges and 1 outgoing edges
+incoming:
+[2] = 1 --( 0 )--> 3
+outgoing:
+[6] = 3 --( 0 )--> 5
+
+Node 4 with weight 0.5 and 1 incoming edges and 4 outgoing edges
+incoming:
+[3] = 1 --( 0 )--> 4
+outgoing:
+[7] = 4 --( 0 )--> 6
+[8] = 4 --( 0 )--> 7
+[9] = 4 --( 0 )--> 8
+[10] = 4 --( 0 )--> 9
+
+Node 5 with weight 0.4 and 2 incoming edges and 1 outgoing edges
+incoming:
+[4] = 2 --( 0 )--> 5
+[6] = 3 --( 0 )--> 5
+outgoing:
+[11] = 5 --( 0 )--> 10
+
+Node 6 with weight 0.5 and 2 incoming edges and 2 outgoing edges
+incoming:
+[5] = 2 --( 0 )--> 6
+[7] = 4 --( 0 )--> 6
+outgoing:
+[12] = 6 --( 0 )--> 10
+[13] = 6 --( 0 )--> 11
+
+Node 7 with weight 1 and 1 incoming edges and 2 outgoing edges
+incoming:
+[8] = 4 --( 0 )--> 7
+outgoing:
+[14] = 7 --( 0 )--> 11
+[15] = 7 --( 0 )--> 12
+
+Node 8 with weight 1 and 1 incoming edges and 2 outgoing edges
+incoming:
+[9] = 4 --( 0 )--> 8
+outgoing:
+[16] = 8 --( 0 )--> 12
+[17] = 8 --( 0 )--> 13
+
+Node 9 with weight 0.6 and 1 incoming edges and 2 outgoing edges
+incoming:
+[10] = 4 --( 0 )--> 9
+outgoing:
+[18] = 9 --( 0 )--> 13
+[19] = 9 --( 0 )--> 14
+
+Node 10 with weight 0.5 and 2 incoming edges and 0 outgoing edges
+incoming:
+[11] = 5 --( 0 )--> 10
+[12] = 6 --( 0 )--> 10
+outgoing:
+
+Node 11 with weight 0.4 and 2 incoming edges and 0 outgoing edges
+incoming:
+[13] = 6 --( 0 )--> 11
+[14] = 7 --( 0 )--> 11
+outgoing:
+
+Node 12 with weight 0.5 and 2 incoming edges and 0 outgoing edges
+incoming:
+[15] = 7 --( 0 )--> 12
+[16] = 8 --( 0 )--> 12
+outgoing:
+
+Node 13 with weight 1 and 2 incoming edges and 0 outgoing edges
+incoming:
+[17] = 8 --( 0 )--> 13
+[18] = 9 --( 0 )--> 13
+outgoing:
+
+Node 14 with weight 1 and 1 incoming edges and 0 outgoing edges
+incoming:
+[19] = 9 --( 0 )--> 14
+outgoing:
+
+Nodes
+[0] = (weight = 0.5)
+[1] = (weight = 1)
+[2] = (weight = 1)
+[3] = (weight = 0.6)
+[4] = (weight = 0.5)
+[5] = (weight = 0.4)
+[6] = (weight = 0.5)
+[7] = (weight = 1)
+[8] = (weight = 1)
+[9] = (weight = 0.6)
+[10] = (weight = 0.5)
+[11] = (weight = 0.4)
+[12] = (weight = 0.5)
+[13] = (weight = 1)
+[14] = (weight = 1)
+
+Edges
+[0] = 0 --( 0 )--> 1
+[1] = 1 --( 0 )--> 2
+[2] = 1 --( 0 )--> 3
+[3] = 1 --( 0 )--> 4
+[4] = 2 --( 0 )--> 5
+[5] = 2 --( 0 )--> 6
+[6] = 3 --( 0 )--> 5
+[7] = 4 --( 0 )--> 6
+[8] = 4 --( 0 )--> 7
+[9] = 4 --( 0 )--> 8
+[10] = 4 --( 0 )--> 9
+[11] = 5 --( 0 )--> 10
+[12] = 6 --( 0 )--> 10
+[13] = 6 --( 0 )--> 11
+[14] = 7 --( 0 )--> 11
+[15] = 7 --( 0 )--> 12
+[16] = 8 --( 0 )--> 12
+[17] = 8 --( 0 )--> 13
+[18] = 9 --( 0 )--> 13
+[19] = 9 --( 0 )--> 14
+
+cycle time         : 2
+cycle number       : 10
+min cycle number : 0
+max cycle number : 10
+min machine number : 0
+max machine number : 14
+min jumper number  : 0
+max jumper number  : 3
+
+[GroupManager] add group GroupTaskTime
+[GroupManager] add group GroupTaskCycle
+[GroupManager] add group GroupTaskMachine
+[GroupManager] add group GroupTaskPrecedence
+[GroupManager] add group GroupMachine
+[GroupManager] add group GroupMachineCycle
+[MIPSolver] number of variables   = 634
+[MIPSolver] number of constraints = 5709
+[MIPSolver] Problem solved in 388621 milliseconds.
+[MIPSolver] optimal objective value = 14
+[GroupManager] compute solution for group GroupTaskTime
+[GroupManager] compute solution for group GroupTaskCycle
+[GroupManager] compute solution for group GroupTaskMachine
+[GroupManager] compute solution for group GroupTaskPrecedence
+[GroupManager] compute solution for group GroupMachine
+[GroupManager] compute solution for group GroupMachineCycle

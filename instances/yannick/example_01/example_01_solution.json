@@ -1,0 +1,334 @@
+{
+    "problem": null,
+    "solution": {
+        "optimization": {
+            "objective_value": 3.0,
+            "problem": "MIP",
+            "type": "min"
+        },
+        "variables": {
+            "GroupMachine": {
+                "machine_value": [
+                    {
+                        "machine": 0,
+                        "value": 1.0
+                    },
+                    {
+                        "machine": 1,
+                        "value": 1.0
+                    },
+                    {
+                        "machine": 2,
+                        "value": 1.0
+                    }
+                ],
+                "machines": [
+                    0,
+                    1,
+                    2
+                ]
+            },
+            "GroupMachineCycle": {
+                "solution": [
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 1.0
+                            }
+                        ],
+                        "machine": 0
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 1.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 0.0
+                            }
+                        ],
+                        "machine": 1
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 1.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 0.0
+                            }
+                        ],
+                        "machine": 2
+                    }
+                ]
+            },
+            "GroupTaskCycle": {
+                "cycles": [
+                    {
+                        "cycle": 0,
+                        "tasks": [
+                            0,
+                            1,
+                            3,
+                            4
+                        ]
+                    },
+                    {
+                        "cycle": 1,
+                        "tasks": [
+                            2,
+                            5
+                        ]
+                    }
+                ],
+                "solution": [
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 1.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": -0.0
+                            }
+                        ],
+                        "task": 0
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 1.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": -0.0
+                            }
+                        ],
+                        "task": 1
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 1.0
+                            }
+                        ],
+                        "task": 2
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 1.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 0.0
+                            }
+                        ],
+                        "task": 3
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 1.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 0.0
+                            }
+                        ],
+                        "task": 4
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 1.0
+                            }
+                        ],
+                        "task": 5
+                    }
+                ]
+            },
+            "GroupTaskMachine": {
+                "machines": [
+                    {
+                        "machine": 0,
+                        "tasks": [
+                            2,
+                            5
+                        ]
+                    },
+                    {
+                        "machine": 1,
+                        "tasks": [
+                            1,
+                            4
+                        ]
+                    },
+                    {
+                        "machine": 2,
+                        "tasks": [
+                            0,
+                            3
+                        ]
+                    }
+                ],
+                "solution": [
+                    {
+                        "machines": [
+                            {
+                                "machine": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 2,
+                                "value": 1.0
+                            }
+                        ],
+                        "task": 0
+                    },
+                    {
+                        "machines": [
+                            {
+                                "machine": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 1,
+                                "value": 1.0
+                            },
+                            {
+                                "machine": 2,
+                                "value": 0.0
+                            }
+                        ],
+                        "task": 1
+                    },
+                    {
+                        "machines": [
+                            {
+                                "machine": 0,
+                                "value": 1.0
+                            },
+                            {
+                                "machine": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 2,
+                                "value": 0.0
+                            }
+                        ],
+                        "task": 2
+                    },
+                    {
+                        "machines": [
+                            {
+                                "machine": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 2,
+                                "value": 1.0
+                            }
+                        ],
+                        "task": 3
+                    },
+                    {
+                        "machines": [
+                            {
+                                "machine": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 1,
+                                "value": 1.0
+                            },
+                            {
+                                "machine": 2,
+                                "value": 0.0
+                            }
+                        ],
+                        "task": 4
+                    },
+                    {
+                        "machines": [
+                            {
+                                "machine": 0,
+                                "value": 1.0
+                            },
+                            {
+                                "machine": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 2,
+                                "value": 0.0
+                            }
+                        ],
+                        "task": 5
+                    }
+                ]
+            },
+            "GroupTaskPrecedence": null,
+            "GroupTaskTime": {
+                "tasks": [
+                    {
+                        "task": 0,
+                        "time": 1.2
+                    },
+                    {
+                        "task": 1,
+                        "time": 1.5
+                    },
+                    {
+                        "task": 2,
+                        "time": 1.5
+                    },
+                    {
+                        "task": 3,
+                        "time": 1.5
+                    },
+                    {
+                        "task": 4,
+                        "time": 1.8
+                    },
+                    {
+                        "task": 5,
+                        "time": 1.7
+                    }
+                ]
+            }
+        }
+    }
+}

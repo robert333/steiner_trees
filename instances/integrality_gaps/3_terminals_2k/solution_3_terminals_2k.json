@@ -1,0 +1,192 @@
+{
+    "solution": {
+        "continuous": {
+            "optimization": {
+                "objective_value": 15.3333333333333,
+                "problem": "LP",
+                "type": "max"
+            },
+            "variables": {
+                "GroupSimplexEmbedding": {
+                    "nodes": [
+                        {
+                            "node": "0",
+                            "value_per_terminal": [
+                                5.33333333333333,
+                                2.0,
+                                2.66666666666667
+                            ]
+                        },
+                        {
+                            "node": "1",
+                            "value_per_terminal": [
+                                0.0,
+                                10.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "node": "2",
+                            "value_per_terminal": [
+                                0.0,
+                                0.0,
+                                10.0
+                            ]
+                        },
+                        {
+                            "node": "3",
+                            "value_per_terminal": [
+                                1.33333333333333,
+                                6.0,
+                                2.66666666666667
+                            ]
+                        },
+                        {
+                            "node": "4",
+                            "value_per_terminal": [
+                                1.33333333333333,
+                                4.33333333333333,
+                                4.33333333333333
+                            ]
+                        },
+                        {
+                            "node": "5",
+                            "value_per_terminal": [
+                                1.33333333333333,
+                                2.66666666666667,
+                                6.0
+                            ]
+                        },
+                        {
+                            "node": "6",
+                            "value_per_terminal": [
+                                1.0,
+                                5.33333333333333,
+                                3.66666666666667
+                            ]
+                        },
+                        {
+                            "node": "7",
+                            "value_per_terminal": [
+                                1.0,
+                                3.66666666666667,
+                                5.33333333333333
+                            ]
+                        },
+                        {
+                            "node": "8",
+                            "value_per_terminal": [
+                                0.0,
+                                6.0,
+                                4.0
+                            ]
+                        },
+                        {
+                            "node": "9",
+                            "value_per_terminal": [
+                                0.0,
+                                4.0,
+                                6.0
+                            ]
+                        }
+                    ],
+                    "simplex": 10.0
+                }
+            }
+        },
+        "integer": {
+            "optimization": {
+                "objective_value": 15.3333333333333,
+                "problem": "MIP",
+                "type": "max"
+            },
+            "variables": {
+                "GroupSimplexEmbedding": {
+                    "nodes": [
+                        {
+                            "node": "0",
+                            "value_per_terminal": [
+                                8.0,
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "node": "1",
+                            "value_per_terminal": [
+                                0.0,
+                                8.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "node": "2",
+                            "value_per_terminal": [
+                                0.666666666666666,
+                                0.0,
+                                7.33333333333333
+                            ]
+                        },
+                        {
+                            "node": "3",
+                            "value_per_terminal": [
+                                4.0,
+                                4.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "node": "4",
+                            "value_per_terminal": [
+                                4.0,
+                                2.33333333333333,
+                                1.66666666666667
+                            ]
+                        },
+                        {
+                            "node": "5",
+                            "value_per_terminal": [
+                                4.0,
+                                0.666666666666667,
+                                3.33333333333333
+                            ]
+                        },
+                        {
+                            "node": "6",
+                            "value_per_terminal": [
+                                3.66666666666667,
+                                3.33333333333333,
+                                1.0
+                            ]
+                        },
+                        {
+                            "node": "7",
+                            "value_per_terminal": [
+                                3.66666666666667,
+                                1.66666666666667,
+                                2.66666666666667
+                            ]
+                        },
+                        {
+                            "node": "8",
+                            "value_per_terminal": [
+                                2.66666666666667,
+                                4.0,
+                                1.33333333333333
+                            ]
+                        },
+                        {
+                            "node": "9",
+                            "value_per_terminal": [
+                                2.66666666666667,
+                                2.0,
+                                3.33333333333333
+                            ]
+                        }
+                    ],
+                    "simplex": 8.0
+                }
+            }
+        }
+    }
+}

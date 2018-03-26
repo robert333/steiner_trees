@@ -1,0 +1,376 @@
+{
+    "solution": {
+        "continuous": {
+            "optimization": {
+                "objective_value": 7.5,
+                "problem": "LP",
+                "type": "min"
+            },
+            "variables": {
+                "GroupEdges": {
+                    "bidirected": [
+                        {
+                            "head": 3,
+                            "tail": 0,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 0,
+                            "tail": 3,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 0,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 0,
+                            "tail": 4,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 4,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 5,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 5,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 5,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 5,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 3,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 3,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 6,
+                            "tail": 3,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 3,
+                            "tail": 6,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 4,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 4,
+                            "tail": 6,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 5,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 5,
+                            "tail": 6,
+                            "value": 0.5
+                        }
+                    ],
+                    "undirected": [
+                        {
+                            "head": 3,
+                            "tail": 0,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 4,
+                            "tail": 0,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 4,
+                            "tail": 1,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 5,
+                            "tail": 1,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 5,
+                            "tail": 2,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 3,
+                            "tail": 2,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 6,
+                            "tail": 3,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 6,
+                            "tail": 4,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 6,
+                            "tail": 5,
+                            "value": 0.5
+                        }
+                    ]
+                },
+                "GroupMultiCommodityFlow": null
+            }
+        },
+        "integer": {
+            "optimization": {
+                "objective_value": 8.0,
+                "problem": "MIP",
+                "type": "min"
+            },
+            "variables": {
+                "GroupEdges": {
+                    "bidirected": [
+                        {
+                            "head": 3,
+                            "tail": 0,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 3,
+                            "value": -0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 0,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 4,
+                            "value": -0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 4,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 5,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 5,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 5,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 5,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 3,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 3,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 6,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 4,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 6,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 5,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 5,
+                            "tail": 6,
+                            "value": 0.0
+                        }
+                    ],
+                    "undirected": [
+                        {
+                            "head": 3,
+                            "tail": 0,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 0,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 1,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 5,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 5,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 2,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 3,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 4,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 5,
+                            "value": 0.0
+                        }
+                    ]
+                },
+                "GroupMultiCommodityFlow": null
+            }
+        },
+        "simplex_embedding": {
+            "optimization": {
+                "objective_value": 7.5,
+                "problem": "LP",
+                "type": "max"
+            },
+            "variables": {
+                "GroupSimplexEmbedding": {
+                    "nodes": [
+                        {
+                            "node": "0",
+                            "value_per_terminal": [
+                                3.5,
+                                0.0,
+                                0.5
+                            ]
+                        },
+                        {
+                            "node": "1",
+                            "value_per_terminal": [
+                                0.0,
+                                4.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "node": "2",
+                            "value_per_terminal": [
+                                0.0,
+                                0.0,
+                                4.0
+                            ]
+                        },
+                        {
+                            "node": "3",
+                            "value_per_terminal": [
+                                1.5,
+                                0.5,
+                                2.0
+                            ]
+                        },
+                        {
+                            "node": "4",
+                            "value_per_terminal": [
+                                1.5,
+                                2.0,
+                                0.5
+                            ]
+                        },
+                        {
+                            "node": "5",
+                            "value_per_terminal": [
+                                0.0,
+                                2.0,
+                                2.0
+                            ]
+                        },
+                        {
+                            "node": "6",
+                            "value_per_terminal": [
+                                1.0,
+                                1.5,
+                                1.5
+                            ]
+                        }
+                    ],
+                    "simplex": 4.0
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,473 @@
+Steiner Tree LP/MIP Solver
+
+program path  : /home/robert/Documents/studies/discrete_mathematics/steiner-trees/cmake-build-debug/steiner_trees
+instance path : instances/emc_dual/example_03
+instance name : example_03
+
+instances/emc_dual/example_03/example_03.json
+{
+    "graph": {
+        "directed": false,
+        "edges": [
+            {
+                "head": 1,
+                "tail": 0,
+                "weight": 3.0
+            },
+            {
+                "head": 3,
+                "tail": 0,
+                "weight": 3.0
+            },
+            {
+                "head": 2,
+                "tail": 1,
+                "weight": 3.0
+            },
+            {
+                "head": 4,
+                "tail": 1,
+                "weight": 1
+            },
+            {
+                "head": 5,
+                "tail": 2,
+                "weight": 3.0
+            },
+            {
+                "head": 4,
+                "tail": 3,
+                "weight": 1
+            },
+            {
+                "head": 5,
+                "tail": 4,
+                "weight": 1
+            },
+            {
+                "head": 3,
+                "tail": 6,
+                "weight": 3.0
+            },
+            {
+                "head": 5,
+                "tail": 6,
+                "weight": 3.0
+            }
+        ],
+        "nodes": [
+            {
+                "id": 0
+            },
+            {
+                "id": 1
+            },
+            {
+                "id": 2
+            },
+            {
+                "id": 3
+            },
+            {
+                "id": 4
+            },
+            {
+                "id": 5
+            },
+            {
+                "id": 6
+            }
+        ]
+    },
+    "nets": [
+        {
+            "name": "net_0",
+            "terminals": [
+                2,
+                6,
+                0
+            ]
+        }
+    ]
+}
+
+Directed Graph with 7 nodes and 18 edges
+
+Node 0 with weight 0 and 2 incoming edges and 2 outgoing edges
+incoming:
+[1] = 1 --( 3 )--> 0
+[3] = 3 --( 3 )--> 0
+outgoing:
+[0] = 0 --( 3 )--> 1
+[2] = 0 --( 3 )--> 3
+
+Node 1 with weight 0 and 3 incoming edges and 3 outgoing edges
+incoming:
+[0] = 0 --( 3 )--> 1
+[5] = 2 --( 3 )--> 1
+[7] = 4 --( 1 )--> 1
+outgoing:
+[1] = 1 --( 3 )--> 0
+[4] = 1 --( 3 )--> 2
+[6] = 1 --( 1 )--> 4
+
+Node 2 with weight 0 and 2 incoming edges and 2 outgoing edges
+incoming:
+[4] = 1 --( 3 )--> 2
+[9] = 5 --( 3 )--> 2
+outgoing:
+[5] = 2 --( 3 )--> 1
+[8] = 2 --( 3 )--> 5
+
+Node 3 with weight 0 and 3 incoming edges and 3 outgoing edges
+incoming:
+[2] = 0 --( 3 )--> 3
+[11] = 4 --( 1 )--> 3
+[14] = 6 --( 3 )--> 3
+outgoing:
+[3] = 3 --( 3 )--> 0
+[10] = 3 --( 1 )--> 4
+[15] = 3 --( 3 )--> 6
+
+Node 4 with weight 0 and 3 incoming edges and 3 outgoing edges
+incoming:
+[6] = 1 --( 1 )--> 4
+[10] = 3 --( 1 )--> 4
+[13] = 5 --( 1 )--> 4
+outgoing:
+[7] = 4 --( 1 )--> 1
+[11] = 4 --( 1 )--> 3
+[12] = 4 --( 1 )--> 5
+
+Node 5 with weight 0 and 3 incoming edges and 3 outgoing edges
+incoming:
+[8] = 2 --( 3 )--> 5
+[12] = 4 --( 1 )--> 5
+[16] = 6 --( 3 )--> 5
+outgoing:
+[9] = 5 --( 3 )--> 2
+[13] = 5 --( 1 )--> 4
+[17] = 5 --( 3 )--> 6
+
+Node 6 with weight 0 and 2 incoming edges and 2 outgoing edges
+incoming:
+[15] = 3 --( 3 )--> 6
+[17] = 5 --( 3 )--> 6
+outgoing:
+[14] = 6 --( 3 )--> 3
+[16] = 6 --( 3 )--> 5
+
+Nodes
+[0] = (weight = 0)
+[1] = (weight = 0)
+[2] = (weight = 0)
+[3] = (weight = 0)
+[4] = (weight = 0)
+[5] = (weight = 0)
+[6] = (weight = 0)
+
+Edges
+[0] = 0 --( 3 )--> 1
+[1] = 1 --( 3 )--> 0
+[2] = 0 --( 3 )--> 3
+[3] = 3 --( 3 )--> 0
+[4] = 1 --( 3 )--> 2
+[5] = 2 --( 3 )--> 1
+[6] = 1 --( 1 )--> 4
+[7] = 4 --( 1 )--> 1
+[8] = 2 --( 3 )--> 5
+[9] = 5 --( 3 )--> 2
+[10] = 3 --( 1 )--> 4
+[11] = 4 --( 1 )--> 3
+[12] = 4 --( 1 )--> 5
+[13] = 5 --( 1 )--> 4
+[14] = 6 --( 3 )--> 3
+[15] = 3 --( 3 )--> 6
+[16] = 6 --( 3 )--> 5
+[17] = 5 --( 3 )--> 6
+[GroupManager] add group GroupEdges
+[GroupManager] add group GroupMultiCommodityFlow
+[GroupManager] add group GroupEdgesMultiCommodityFlow
+[MIPSolver] number of variables   = 72
+[MIPSolver] number of constraints = 50
+[MIPSolver] Problem solved in 17 milliseconds.
+[MIPSolver] optimal objective value = 10.5
+[GroupManager] compute solution for group GroupEdges
+
+Solution GroupEdges
+Edge[0] = {(0, 1), weight = 3.000000} (0), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 0
+Edge[1] = {(1, 0), weight = 3.000000} (1), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 0.5
+Edge[2] = {(0, 3), weight = 3.000000} (2), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 0
+Edge[3] = {(3, 0), weight = 3.000000} (3), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 0.5
+Edge[4] = {(1, 2), weight = 3.000000} (4), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 0
+Edge[5] = {(2, 1), weight = 3.000000} (5), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 0.5
+Edge[6] = {(1, 4), weight = 1.000000} (6), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 0.5
+Edge[7] = {(4, 1), weight = 1.000000} (7), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 0
+Edge[8] = {(2, 5), weight = 3.000000} (8), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 0.5
+Edge[9] = {(5, 2), weight = 3.000000} (9), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 0
+Edge[10] = {(3, 4), weight = 1.000000} (10), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 0
+Edge[11] = {(4, 3), weight = 1.000000} (11), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 0.5
+Edge[12] = {(4, 5), weight = 1.000000} (12), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 0
+Edge[13] = {(5, 4), weight = 1.000000} (13), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 0.5
+Edge[14] = {(6, 3), weight = 3.000000} (14), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 0
+Edge[15] = {(3, 6), weight = 3.000000} (15), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 0.5
+Edge[16] = {(6, 5), weight = 3.000000} (16), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 0
+Edge[17] = {(5, 6), weight = 3.000000} (17), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 0.5
+
+[GroupManager] compute solution for group GroupMultiCommodityFlow
+[GroupManager] compute solution for group GroupEdgesMultiCommodityFlow
+[GroupManager] add group GroupEdges
+[GroupManager] add group GroupMultiCommodityFlow
+[GroupManager] add group GroupEdgesMultiCommodityFlow
+[MIPSolver] number of variables   = 72
+[MIPSolver] number of constraints = 50
+[MIPSolver] Problem solved in 11 milliseconds.
+[MIPSolver] optimal objective value = 11
+[GroupManager] compute solution for group GroupEdges
+
+Solution GroupEdges
+Edge[0] = {(0, 1), weight = 3.000000} (0), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 0
+Edge[1] = {(1, 0), weight = 3.000000} (1), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 0
+Edge[2] = {(0, 3), weight = 3.000000} (2), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 0
+Edge[3] = {(3, 0), weight = 3.000000} (3), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 1
+Edge[4] = {(1, 2), weight = 3.000000} (4), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 0
+Edge[5] = {(2, 1), weight = 3.000000} (5), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 0
+Edge[6] = {(1, 4), weight = 1.000000} (6), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 0
+Edge[7] = {(4, 1), weight = 1.000000} (7), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 0
+Edge[8] = {(2, 5), weight = 3.000000} (8), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 1
+Edge[9] = {(5, 2), weight = 3.000000} (9), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 0
+Edge[10] = {(3, 4), weight = 1.000000} (10), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 0
+Edge[11] = {(4, 3), weight = 1.000000} (11), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 1
+Edge[12] = {(4, 5), weight = 1.000000} (12), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 0
+Edge[13] = {(5, 4), weight = 1.000000} (13), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 1
+Edge[14] = {(6, 3), weight = 3.000000} (14), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 0
+Edge[15] = {(3, 6), weight = 3.000000} (15), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 0
+Edge[16] = {(6, 5), weight = 3.000000} (16), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 0
+Edge[17] = {(5, 6), weight = 3.000000} (17), Net[0] = {name = net_0, terminals = {2, 6, 0}, weight = 1.000000} : 1
+
+[GroupManager] compute solution for group GroupMultiCommodityFlow
+[GroupManager] compute solution for group GroupEdgesMultiCommodityFlow
+instances/emc_dual/example_03/solution_example_03.json
+{
+    "problem": {
+        "graph": {
+            "directed": true,
+            "edges": [
+                {
+                    "id": 0,
+                    "weight": 0.0
+                },
+                {
+                    "id": 1,
+                    "weight": 0.0
+                },
+                {
+                    "id": 2,
+                    "weight": 0.0
+                },
+                {
+                    "id": 3,
+                    "weight": 0.0
+                },
+                {
+                    "id": 4,
+                    "weight": 0.0
+                },
+                {
+                    "id": 5,
+                    "weight": 0.0
+                },
+                {
+                    "id": 6,
+                    "weight": 0.0
+                },
+                {
+                    "head": 1,
+                    "id": 0,
+                    "tail": 0,
+                    "weight": 3.0
+                },
+                {
+                    "head": 0,
+                    "id": 1,
+                    "tail": 1,
+                    "weight": 3.0
+                },
+                {
+                    "head": 3,
+                    "id": 2,
+                    "tail": 0,
+                    "weight": 3.0
+                },
+                {
+                    "head": 0,
+                    "id": 3,
+                    "tail": 3,
+                    "weight": 3.0
+                },
+                {
+                    "head": 2,
+                    "id": 4,
+                    "tail": 1,
+                    "weight": 3.0
+                },
+                {
+                    "head": 1,
+                    "id": 5,
+                    "tail": 2,
+                    "weight": 3.0
+                },
+                {
+                    "head": 4,
+                    "id": 6,
+                    "tail": 1,
+                    "weight": 1.0
+                },
+                {
+                    "head": 1,
+                    "id": 7,
+                    "tail": 4,
+                    "weight": 1.0
+                },
+                {
+                    "head": 5,
+                    "id": 8,
+                    "tail": 2,
+                    "weight": 3.0
+                },
+                {
+                    "head": 2,
+                    "id": 9,
+                    "tail": 5,
+                    "weight": 3.0
+                },
+                {
+                    "head": 4,
+                    "id": 10,
+                    "tail": 3,
+                    "weight": 1.0
+                },
+                {
+                    "head": 3,
+                    "id": 11,
+                    "tail": 4,
+                    "weight": 1.0
+                },
+                {
+                    "head": 5,
+                    "id": 12,
+                    "tail": 4,
+                    "weight": 1.0
+                },
+                {
+                    "head": 4,
+                    "id": 13,
+                    "tail": 5,
+                    "weight": 1.0
+                },
+                {
+                    "head": 3,
+                    "id": 14,
+                    "tail": 6,
+                    "weight": 3.0
+                },
+                {
+                    "head": 6,
+                    "id": 15,
+                    "tail": 3,
+                    "weight": 3.0
+                },
+                {
+                    "head": 5,
+                    "id": 16,
+                    "tail": 6,
+                    "weight": 3.0
+                },
+                {
+                    "head": 6,
+                    "id": 17,
+                    "tail": 5,
+                    "weight": 3.0
+                }
+            ]
+        },
+        "nets": [
+            {
+                "id": 0,
+                "name": "net_0",
+                "terminals": [
+                    2,
+                    6,
+                    0
+                ]
+            }
+        ]
+    },
+    "solution": {
+        "continuous": [
+            {
+                "edges": {
+                    "0": 0.0,
+                    "1": 0.5,
+                    "10": 0.0,
+                    "11": 0.5,
+                    "12": 0.0,
+                    "13": 0.5,
+                    "14": 0.0,
+                    "15": 0.5,
+                    "16": 0.0,
+                    "17": 0.5,
+                    "2": 0.0,
+                    "3": 0.5,
+                    "4": 0.0,
+                    "5": 0.5,
+                    "6": 0.5,
+                    "7": 0.0,
+                    "8": 0.5,
+                    "9": 0.0
+                }
+            },
+            [
+                "optimization",
+                {
+                    "objective_value": 10.5,
+                    "problem": "LP",
+                    "type": "min"
+                }
+            ]
+        ],
+        "integer": [
+            {
+                "edges": {
+                    "0": 0.0,
+                    "1": 0.0,
+                    "10": 0.0,
+                    "11": 1.0,
+                    "12": 0.0,
+                    "13": 1.0,
+                    "14": 0.0,
+                    "15": 0.0,
+                    "16": 0.0,
+                    "17": 1.0,
+                    "2": 0.0,
+                    "3": 1.0,
+                    "4": 0.0,
+                    "5": 0.0,
+                    "6": 0.0,
+                    "7": 0.0,
+                    "8": 1.0,
+                    "9": 0.0
+                }
+            },
+            [
+                "optimization",
+                {
+                    "objective_value": 11.0,
+                    "problem": "MIP",
+                    "type": "min"
+                }
+            ]
+        ]
+    }
+}
+

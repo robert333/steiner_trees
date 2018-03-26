@@ -1,0 +1,480 @@
+Steiner Tree LP/MIP Solver
+
+program path  : /home/robert/Documents/studies/discrete_mathematics/steiner-trees/cmake-build-debug/steiner_trees
+instance path : instances/emc_dual/example_01
+instance name : example_01
+
+instances/emc_dual/example_01/example_01.json
+{
+    "graph": {
+        "directed": false,
+        "edges": [
+            {
+                "head": 3,
+                "tail": 0,
+                "weight": 1
+            },
+            {
+                "head": 4,
+                "tail": 1,
+                "weight": 1
+            },
+            {
+                "head": 4,
+                "tail": 3,
+                "weight": 1
+            },
+            {
+                "head": 5,
+                "tail": 3,
+                "weight": 1
+            },
+            {
+                "head": 6,
+                "tail": 4,
+                "weight": 1
+            },
+            {
+                "head": 7,
+                "tail": 5,
+                "weight": 1
+            },
+            {
+                "head": 7,
+                "tail": 6,
+                "weight": 1
+            },
+            {
+                "head": 2,
+                "tail": 7,
+                "weight": 1
+            }
+        ],
+        "nodes": [
+            {
+                "id": 0
+            },
+            {
+                "id": 1
+            },
+            {
+                "id": 2
+            },
+            {
+                "id": 3
+            },
+            {
+                "id": 4
+            },
+            {
+                "id": 5
+            },
+            {
+                "id": 6
+            },
+            {
+                "id": 7
+            }
+        ]
+    },
+    "nets": [
+        {
+            "name": "net_0",
+            "terminals": [
+                2,
+                0,
+                1
+            ]
+        }
+    ]
+}
+
+Graph with 8 nodes and 8 edges
+
+Node 0 with weight 0 and 1 incident edges
+[0] = 0 --( 1 )-- 3
+
+Node 1 with weight 0 and 1 incident edges
+[1] = 1 --( 1 )-- 4
+
+Node 2 with weight 0 and 1 incident edges
+[7] = 7 --( 1 )-- 2
+
+Node 3 with weight 0 and 3 incident edges
+[0] = 0 --( 1 )-- 3
+[2] = 3 --( 1 )-- 4
+[3] = 3 --( 1 )-- 5
+
+Node 4 with weight 0 and 3 incident edges
+[1] = 1 --( 1 )-- 4
+[2] = 3 --( 1 )-- 4
+[4] = 4 --( 1 )-- 6
+
+Node 5 with weight 0 and 2 incident edges
+[3] = 3 --( 1 )-- 5
+[5] = 5 --( 1 )-- 7
+
+Node 6 with weight 0 and 2 incident edges
+[4] = 4 --( 1 )-- 6
+[6] = 6 --( 1 )-- 7
+
+Node 7 with weight 0 and 3 incident edges
+[5] = 5 --( 1 )-- 7
+[6] = 6 --( 1 )-- 7
+[7] = 7 --( 1 )-- 2
+
+Nodes
+[0] = (weight = 0)
+[1] = (weight = 0)
+[2] = (weight = 0)
+[3] = (weight = 0)
+[4] = (weight = 0)
+[5] = (weight = 0)
+[6] = (weight = 0)
+[7] = (weight = 0)
+
+Edges
+[0] = 0 --( 1 )-- 3
+[1] = 1 --( 1 )-- 4
+[2] = 3 --( 1 )-- 4
+[3] = 3 --( 1 )-- 5
+[4] = 4 --( 1 )-- 6
+[5] = 5 --( 1 )-- 7
+[6] = 6 --( 1 )-- 7
+[7] = 7 --( 1 )-- 2
+[GroupManager] add group GroupMultiCommodityDual
+[MIPSolver] number of variables   = 48
+[MIPSolver] number of constraints = 48
+[MIPSolver] Problem solved in 17 milliseconds.
+[MIPSolver] optimal objective value = 6
+[GroupManager] compute solution for group GroupMultiCommodityDual
+[GroupManager] add group GroupMultiCommodityDual
+[MIPSolver] number of variables   = 48
+[MIPSolver] number of constraints = 48
+[MIPSolver] Problem solved in 9 milliseconds.
+[MIPSolver] optimal objective value = 6
+[GroupManager] compute solution for group GroupMultiCommodityDual
+instances/emc_dual/example_01/solution_example_01.json
+{
+    "problem": {
+        "graph": {
+            "directed": false,
+            "edges": [
+                {
+                    "id": 0,
+                    "weight": 0.0
+                },
+                {
+                    "id": 1,
+                    "weight": 0.0
+                },
+                {
+                    "id": 2,
+                    "weight": 0.0
+                },
+                {
+                    "id": 3,
+                    "weight": 0.0
+                },
+                {
+                    "id": 4,
+                    "weight": 0.0
+                },
+                {
+                    "id": 5,
+                    "weight": 0.0
+                },
+                {
+                    "id": 6,
+                    "weight": 0.0
+                },
+                {
+                    "id": 7,
+                    "weight": 0.0
+                },
+                {
+                    "head": 3,
+                    "id": 0,
+                    "tail": 0,
+                    "weight": 1.0
+                },
+                {
+                    "head": 4,
+                    "id": 1,
+                    "tail": 1,
+                    "weight": 1.0
+                },
+                {
+                    "head": 4,
+                    "id": 2,
+                    "tail": 3,
+                    "weight": 1.0
+                },
+                {
+                    "head": 5,
+                    "id": 3,
+                    "tail": 3,
+                    "weight": 1.0
+                },
+                {
+                    "head": 6,
+                    "id": 4,
+                    "tail": 4,
+                    "weight": 1.0
+                },
+                {
+                    "head": 7,
+                    "id": 5,
+                    "tail": 5,
+                    "weight": 1.0
+                },
+                {
+                    "head": 7,
+                    "id": 6,
+                    "tail": 6,
+                    "weight": 1.0
+                },
+                {
+                    "head": 2,
+                    "id": 7,
+                    "tail": 7,
+                    "weight": 1.0
+                }
+            ]
+        },
+        "nets": [
+            {
+                "id": 0,
+                "name": "net_0",
+                "terminals": [
+                    2,
+                    0,
+                    1
+                ]
+            }
+        ]
+    },
+    "solution": {
+        "continuous": [
+            {
+                "nodes": [
+                    {
+                        "net": "net_0",
+                        "node": 0,
+                        "terminal": 1,
+                        "value": 0.0
+                    },
+                    {
+                        "net": "net_0",
+                        "node": 0,
+                        "terminal": 2,
+                        "value": 2.0
+                    },
+                    {
+                        "net": "net_0",
+                        "node": 1,
+                        "terminal": 1,
+                        "value": 2.0
+                    },
+                    {
+                        "net": "net_0",
+                        "node": 1,
+                        "terminal": 2,
+                        "value": 0.0
+                    },
+                    {
+                        "net": "net_0",
+                        "node": 2,
+                        "terminal": 1,
+                        "value": 3.0
+                    },
+                    {
+                        "net": "net_0",
+                        "node": 2,
+                        "terminal": 2,
+                        "value": 3.0
+                    },
+                    {
+                        "net": "net_0",
+                        "node": 3,
+                        "terminal": 1,
+                        "value": 1.0
+                    },
+                    {
+                        "net": "net_0",
+                        "node": 3,
+                        "terminal": 2,
+                        "value": 2.0
+                    },
+                    {
+                        "net": "net_0",
+                        "node": 4,
+                        "terminal": 1,
+                        "value": 2.0
+                    },
+                    {
+                        "net": "net_0",
+                        "node": 4,
+                        "terminal": 2,
+                        "value": 1.0
+                    },
+                    {
+                        "net": "net_0",
+                        "node": 5,
+                        "terminal": 1,
+                        "value": 2.0
+                    },
+                    {
+                        "net": "net_0",
+                        "node": 5,
+                        "terminal": 2,
+                        "value": 2.0
+                    },
+                    {
+                        "net": "net_0",
+                        "node": 6,
+                        "terminal": 1,
+                        "value": 3.0
+                    },
+                    {
+                        "net": "net_0",
+                        "node": 6,
+                        "terminal": 2,
+                        "value": 1.0
+                    },
+                    {
+                        "net": "net_0",
+                        "node": 7,
+                        "terminal": 1,
+                        "value": 3.0
+                    },
+                    {
+                        "net": "net_0",
+                        "node": 7,
+                        "terminal": 2,
+                        "value": 2.0
+                    }
+                ]
+            },
+            [
+                "optimization",
+                {
+                    "objective_value": 6.0,
+                    "problem": "LP",
+                    "type": "max"
+                }
+            ]
+        ],
+        "integer": [
+            {
+                "nodes": [
+                    {
+                        "net": "net_0",
+                        "node": 0,
+                        "terminal": 1,
+                        "value": 0.0
+                    },
+                    {
+                        "net": "net_0",
+                        "node": 0,
+                        "terminal": 2,
+                        "value": 3.0
+                    },
+                    {
+                        "net": "net_0",
+                        "node": 1,
+                        "terminal": 1,
+                        "value": 3.0
+                    },
+                    {
+                        "net": "net_0",
+                        "node": 1,
+                        "terminal": 2,
+                        "value": 0.0
+                    },
+                    {
+                        "net": "net_0",
+                        "node": 2,
+                        "terminal": 1,
+                        "value": 4.0
+                    },
+                    {
+                        "net": "net_0",
+                        "node": 2,
+                        "terminal": 2,
+                        "value": 2.0
+                    },
+                    {
+                        "net": "net_0",
+                        "node": 3,
+                        "terminal": 1,
+                        "value": 1.0
+                    },
+                    {
+                        "net": "net_0",
+                        "node": 3,
+                        "terminal": 2,
+                        "value": 2.0
+                    },
+                    {
+                        "net": "net_0",
+                        "node": 4,
+                        "terminal": 1,
+                        "value": 2.0
+                    },
+                    {
+                        "net": "net_0",
+                        "node": 4,
+                        "terminal": 2,
+                        "value": 1.0
+                    },
+                    {
+                        "net": "net_0",
+                        "node": 5,
+                        "terminal": 1,
+                        "value": 2.0
+                    },
+                    {
+                        "net": "net_0",
+                        "node": 5,
+                        "terminal": 2,
+                        "value": 2.0
+                    },
+                    {
+                        "net": "net_0",
+                        "node": 6,
+                        "terminal": 1,
+                        "value": 3.0
+                    },
+                    {
+                        "net": "net_0",
+                        "node": 6,
+                        "terminal": 2,
+                        "value": 1.0
+                    },
+                    {
+                        "net": "net_0",
+                        "node": 7,
+                        "terminal": 1,
+                        "value": 3.0
+                    },
+                    {
+                        "net": "net_0",
+                        "node": 7,
+                        "terminal": 2,
+                        "value": 2.0
+                    }
+                ]
+            },
+            [
+                "optimization",
+                {
+                    "objective_value": 6.0,
+                    "problem": "MIP",
+                    "type": "max"
+                }
+            ]
+        ]
+    }
+}
+

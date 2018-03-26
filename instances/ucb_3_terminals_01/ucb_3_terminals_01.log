@@ -1,0 +1,416 @@
+Steiner Tree LP/MIP Solver
+
+program path  : /home/robert/Documents/studies/discrete_mathematics/steiner-trees/cmake-build-debug/steiner_trees
+instance path : instances/ucb_3_terminals_01
+instance name : ucb_3_terminals_01
+
+instances/ucb_3_terminals_01/ucb_3_terminals_01.json
+{
+    "graph": {
+        "directed": false,
+        "edges": [
+            {
+                "head": 1,
+                "tail": 0,
+                "weight": 1
+            },
+            {
+                "head": 3,
+                "tail": 0,
+                "weight": 1
+            },
+            {
+                "head": 4,
+                "tail": 0,
+                "weight": 1
+            },
+            {
+                "head": 5,
+                "tail": 0,
+                "weight": 1
+            },
+            {
+                "head": 3,
+                "tail": 1,
+                "weight": 1
+            },
+            {
+                "head": 4,
+                "tail": 1,
+                "weight": 1
+            },
+            {
+                "head": 5,
+                "tail": 1,
+                "weight": 1
+            },
+            {
+                "head": 3,
+                "tail": 2,
+                "weight": 1
+            },
+            {
+                "head": 4,
+                "tail": 2,
+                "weight": 1
+            },
+            {
+                "head": 5,
+                "tail": 2,
+                "weight": 1
+            }
+        ],
+        "weighted": true
+    },
+    "nets": [
+        {
+            "name": "net_0",
+            "terminals": [
+                0,
+                1,
+                2
+            ]
+        }
+    ]
+}
+
+Directed Weighted Graph with 6 nodes and 20 edges
+
+Node 0 with 4 incoming edges and 4 outgoing edges
+[1] = 1 --( 1 )--> 0
+[3] = 3 --( 1 )--> 0
+[5] = 4 --( 1 )--> 0
+[7] = 5 --( 1 )--> 0
+[0] = 0 --( 1 )--> 1
+[2] = 0 --( 1 )--> 3
+[4] = 0 --( 1 )--> 4
+[6] = 0 --( 1 )--> 5
+
+Node 1 with 4 incoming edges and 4 outgoing edges
+[0] = 0 --( 1 )--> 1
+[9] = 3 --( 1 )--> 1
+[11] = 4 --( 1 )--> 1
+[13] = 5 --( 1 )--> 1
+[1] = 1 --( 1 )--> 0
+[8] = 1 --( 1 )--> 3
+[10] = 1 --( 1 )--> 4
+[12] = 1 --( 1 )--> 5
+
+Node 2 with 3 incoming edges and 3 outgoing edges
+[15] = 3 --( 1 )--> 2
+[17] = 4 --( 1 )--> 2
+[19] = 5 --( 1 )--> 2
+[14] = 2 --( 1 )--> 3
+[16] = 2 --( 1 )--> 4
+[18] = 2 --( 1 )--> 5
+
+Node 3 with 3 incoming edges and 3 outgoing edges
+[2] = 0 --( 1 )--> 3
+[8] = 1 --( 1 )--> 3
+[14] = 2 --( 1 )--> 3
+[3] = 3 --( 1 )--> 0
+[9] = 3 --( 1 )--> 1
+[15] = 3 --( 1 )--> 2
+
+Node 4 with 3 incoming edges and 3 outgoing edges
+[4] = 0 --( 1 )--> 4
+[10] = 1 --( 1 )--> 4
+[16] = 2 --( 1 )--> 4
+[5] = 4 --( 1 )--> 0
+[11] = 4 --( 1 )--> 1
+[17] = 4 --( 1 )--> 2
+
+Node 5 with 3 incoming edges and 3 outgoing edges
+[6] = 0 --( 1 )--> 5
+[12] = 1 --( 1 )--> 5
+[18] = 2 --( 1 )--> 5
+[7] = 5 --( 1 )--> 0
+[13] = 5 --( 1 )--> 1
+[19] = 5 --( 1 )--> 2
+
+Edges
+[0] = 0 --( 1 )--> 1
+[1] = 1 --( 1 )--> 0
+[2] = 0 --( 1 )--> 3
+[3] = 3 --( 1 )--> 0
+[4] = 0 --( 1 )--> 4
+[5] = 4 --( 1 )--> 0
+[6] = 0 --( 1 )--> 5
+[7] = 5 --( 1 )--> 0
+[8] = 1 --( 1 )--> 3
+[9] = 3 --( 1 )--> 1
+[10] = 1 --( 1 )--> 4
+[11] = 4 --( 1 )--> 1
+[12] = 1 --( 1 )--> 5
+[13] = 5 --( 1 )--> 1
+[14] = 2 --( 1 )--> 3
+[15] = 3 --( 1 )--> 2
+[16] = 2 --( 1 )--> 4
+[17] = 4 --( 1 )--> 2
+[18] = 2 --( 1 )--> 5
+[19] = 5 --( 1 )--> 2
+[GroupManager] add group GroupEdges
+[GroupManager] add group GroupSteinerTreeCuts
+[MIPSolver] number of variables   = 20
+[MIPSolver] number of constraints = 24
+[MIPSolver] Problem solved in 4 milliseconds.
+[MIPSolver] optimal objective value = 3
+[GroupManager] compute solution for group GroupEdges
+
+Solution GroupEdges
+Edge[0] = {(0, 1), weight = 1.000000} (0), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[1] = {(1, 0), weight = 1.000000} (1), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 1
+Edge[2] = {(0, 3), weight = 1.000000} (2), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[3] = {(3, 0), weight = 1.000000} (3), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[4] = {(0, 4), weight = 1.000000} (4), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[5] = {(4, 0), weight = 1.000000} (5), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[6] = {(0, 5), weight = 1.000000} (6), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[7] = {(5, 0), weight = 1.000000} (7), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[8] = {(1, 3), weight = 1.000000} (8), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[9] = {(3, 1), weight = 1.000000} (9), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[10] = {(1, 4), weight = 1.000000} (10), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[11] = {(4, 1), weight = 1.000000} (11), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 1
+Edge[12] = {(1, 5), weight = 1.000000} (12), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[13] = {(5, 1), weight = 1.000000} (13), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[14] = {(2, 3), weight = 1.000000} (14), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[15] = {(3, 2), weight = 1.000000} (15), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[16] = {(2, 4), weight = 1.000000} (16), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 1
+Edge[17] = {(4, 2), weight = 1.000000} (17), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[18] = {(2, 5), weight = 1.000000} (18), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[19] = {(5, 2), weight = 1.000000} (19), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+
+[GroupManager] compute solution for group GroupSteinerTreeCuts
+[GroupManager] add group GroupEdges
+[GroupManager] add group GroupSteinerTreeCuts
+[MIPSolver] number of variables   = 20
+[MIPSolver] number of constraints = 24
+[MIPSolver] Problem solved in 7 milliseconds.
+[MIPSolver] optimal objective value = 3
+[GroupManager] compute solution for group GroupEdges
+
+Solution GroupEdges
+Edge[0] = {(0, 1), weight = 1.000000} (0), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[1] = {(1, 0), weight = 1.000000} (1), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[2] = {(0, 3), weight = 1.000000} (2), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[3] = {(3, 0), weight = 1.000000} (3), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[4] = {(0, 4), weight = 1.000000} (4), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[5] = {(4, 0), weight = 1.000000} (5), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[6] = {(0, 5), weight = 1.000000} (6), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[7] = {(5, 0), weight = 1.000000} (7), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 1
+Edge[8] = {(1, 3), weight = 1.000000} (8), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[9] = {(3, 1), weight = 1.000000} (9), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[10] = {(1, 4), weight = 1.000000} (10), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[11] = {(4, 1), weight = 1.000000} (11), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[12] = {(1, 5), weight = 1.000000} (12), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 1
+Edge[13] = {(5, 1), weight = 1.000000} (13), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[14] = {(2, 3), weight = 1.000000} (14), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[15] = {(3, 2), weight = 1.000000} (15), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[16] = {(2, 4), weight = 1.000000} (16), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[17] = {(4, 2), weight = 1.000000} (17), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+Edge[18] = {(2, 5), weight = 1.000000} (18), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 1
+Edge[19] = {(5, 2), weight = 1.000000} (19), Net[0] = {name = net_0, terminals = {0, 1, 2}, weight = 1.000000} : 0
+
+[GroupManager] compute solution for group GroupSteinerTreeCuts
+instances/ucb_3_terminals_01/solution_ucb_3_terminals_01.json
+{
+    "problem": {
+        "graph": {
+            "directed": true,
+            "edges": [
+                {
+                    "head": 1,
+                    "id": 0,
+                    "tail": 0,
+                    "weight": 1.0
+                },
+                {
+                    "head": 0,
+                    "id": 1,
+                    "tail": 1,
+                    "weight": 1.0
+                },
+                {
+                    "head": 3,
+                    "id": 2,
+                    "tail": 0,
+                    "weight": 1.0
+                },
+                {
+                    "head": 0,
+                    "id": 3,
+                    "tail": 3,
+                    "weight": 1.0
+                },
+                {
+                    "head": 4,
+                    "id": 4,
+                    "tail": 0,
+                    "weight": 1.0
+                },
+                {
+                    "head": 0,
+                    "id": 5,
+                    "tail": 4,
+                    "weight": 1.0
+                },
+                {
+                    "head": 5,
+                    "id": 6,
+                    "tail": 0,
+                    "weight": 1.0
+                },
+                {
+                    "head": 0,
+                    "id": 7,
+                    "tail": 5,
+                    "weight": 1.0
+                },
+                {
+                    "head": 3,
+                    "id": 8,
+                    "tail": 1,
+                    "weight": 1.0
+                },
+                {
+                    "head": 1,
+                    "id": 9,
+                    "tail": 3,
+                    "weight": 1.0
+                },
+                {
+                    "head": 4,
+                    "id": 10,
+                    "tail": 1,
+                    "weight": 1.0
+                },
+                {
+                    "head": 1,
+                    "id": 11,
+                    "tail": 4,
+                    "weight": 1.0
+                },
+                {
+                    "head": 5,
+                    "id": 12,
+                    "tail": 1,
+                    "weight": 1.0
+                },
+                {
+                    "head": 1,
+                    "id": 13,
+                    "tail": 5,
+                    "weight": 1.0
+                },
+                {
+                    "head": 3,
+                    "id": 14,
+                    "tail": 2,
+                    "weight": 1.0
+                },
+                {
+                    "head": 2,
+                    "id": 15,
+                    "tail": 3,
+                    "weight": 1.0
+                },
+                {
+                    "head": 4,
+                    "id": 16,
+                    "tail": 2,
+                    "weight": 1.0
+                },
+                {
+                    "head": 2,
+                    "id": 17,
+                    "tail": 4,
+                    "weight": 1.0
+                },
+                {
+                    "head": 5,
+                    "id": 18,
+                    "tail": 2,
+                    "weight": 1.0
+                },
+                {
+                    "head": 2,
+                    "id": 19,
+                    "tail": 5,
+                    "weight": 1.0
+                }
+            ],
+            "weighted": true
+        },
+        "nets": [
+            {
+                "id": 0,
+                "name": "net_0",
+                "terminals": [
+                    0,
+                    1,
+                    2
+                ]
+            }
+        ]
+    },
+    "solution": {
+        "continuous": {
+            "edges": {
+                "0": 0.0,
+                "1": 1.0,
+                "10": 0.0,
+                "11": 1.0,
+                "12": 0.0,
+                "13": 0.0,
+                "14": 0.0,
+                "15": 0.0,
+                "16": 1.0,
+                "17": 0.0,
+                "18": 0.0,
+                "19": 0.0,
+                "2": 0.0,
+                "3": 0.0,
+                "4": 0.0,
+                "5": 0.0,
+                "6": 0.0,
+                "7": 0.0,
+                "8": 0.0,
+                "9": 0.0
+            },
+            "optimization": {
+                "objective_value": 3.0,
+                "problem": "LP",
+                "type": "min"
+            }
+        },
+        "integer": {
+            "edges": {
+                "0": 0.0,
+                "1": 0.0,
+                "10": 0.0,
+                "11": 0.0,
+                "12": 1.0,
+                "13": 0.0,
+                "14": 0.0,
+                "15": 0.0,
+                "16": 0.0,
+                "17": 0.0,
+                "18": 1.0,
+                "19": 0.0,
+                "2": 0.0,
+                "3": 0.0,
+                "4": 0.0,
+                "5": 0.0,
+                "6": 0.0,
+                "7": 1.0,
+                "8": 0.0,
+                "9": 0.0
+            },
+            "optimization": {
+                "objective_value": 3.0,
+                "problem": "MIP",
+                "type": "min"
+            }
+        }
+    }
+}
+

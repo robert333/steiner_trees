@@ -1,0 +1,27 @@
+{
+	"precedence_graph" : {
+		"directed": true,
+		"nodes": [
+			{"id" : 0, "weight" : 0.5},
+			{"id" : 1, "weight" : 1.0},
+			{"id" : 2, "weight" : 1.0},
+			{"id" : 3, "weight" : 0.6},
+			{"id" : 4, "weight" : 0.5},
+			{"id" : 5, "weight" : 0.4}
+		],
+		"edges": [
+			{"tail" : 0, "head" : 3, "weight" : 0},
+			{"tail" : 1, "head" : 3, "weight" : 0},
+			{"tail" : 2, "head" : 4, "weight" : 0},
+			{"tail" : 3, "head" : 5, "weight" : 0},
+			{"tail" : 4, "head" : 5, "weight" : 0}
+		]
+	},
+	"cycle_time" : 1.0,
+	"min_cycle_number": 2,
+	"max_cycle_number": 2,
+	"min_machine_number": 4,
+	"max_machine_number": 4,
+	"min_jumper_number": 0,
+	"max_jumper_number": 3
+}

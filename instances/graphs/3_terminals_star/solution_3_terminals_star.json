@@ -1,0 +1,166 @@
+{
+    "solution": {
+        "continuous": {
+            "optimization": {
+                "objective_value": 0.0,
+                "problem": "LP",
+                "type": "max"
+            },
+            "variables": {
+                "GroupCommonFlow": null,
+                "GroupDynamicGraph": null,
+                "GroupEdges": {
+                    "edges": {
+                        "0": 1.0,
+                        "1": 1.0,
+                        "10": 1.0,
+                        "11": 1.0,
+                        "2": 1.0,
+                        "3": 1.0,
+                        "4": 1.0,
+                        "5": 1.0,
+                        "6": 1.0,
+                        "7": 1.0,
+                        "8": 1.0,
+                        "9": 1.0
+                    }
+                },
+                "GroupEdgesMultiCommodityFlow": null,
+                "GroupMultiCommodityDual": {
+                    "nodes": [
+                        {
+                            "net": "net_0",
+                            "node": 0,
+                            "terminal": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "net": "net_0",
+                            "node": 0,
+                            "terminal": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "net": "net_0",
+                            "node": 1,
+                            "terminal": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "net": "net_0",
+                            "node": 1,
+                            "terminal": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "net": "net_0",
+                            "node": 2,
+                            "terminal": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "net": "net_0",
+                            "node": 2,
+                            "terminal": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "net": "net_0",
+                            "node": 3,
+                            "terminal": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "net": "net_0",
+                            "node": 3,
+                            "terminal": 2,
+                            "value": 0.0
+                        }
+                    ]
+                },
+                "GroupMultiCommodityFlow": null
+            }
+        },
+        "integer": {
+            "optimization": {
+                "objective_value": 0.0,
+                "problem": "MIP",
+                "type": "max"
+            },
+            "variables": {
+                "GroupCommonFlow": null,
+                "GroupDynamicGraph": null,
+                "GroupEdges": {
+                    "edges": {
+                        "0": 1.0,
+                        "1": 1.0,
+                        "10": 1.0,
+                        "11": 1.0,
+                        "2": 1.0,
+                        "3": 1.0,
+                        "4": 1.0,
+                        "5": 1.0,
+                        "6": 1.0,
+                        "7": 1.0,
+                        "8": 1.0,
+                        "9": 1.0
+                    }
+                },
+                "GroupEdgesMultiCommodityFlow": null,
+                "GroupMultiCommodityDual": {
+                    "nodes": [
+                        {
+                            "net": "net_0",
+                            "node": 0,
+                            "terminal": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "net": "net_0",
+                            "node": 0,
+                            "terminal": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "net": "net_0",
+                            "node": 1,
+                            "terminal": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "net": "net_0",
+                            "node": 1,
+                            "terminal": 2,
+                            "value": 1.0
+                        },
+                        {
+                            "net": "net_0",
+                            "node": 2,
+                            "terminal": 1,
+                            "value": 1.0
+                        },
+                        {
+                            "net": "net_0",
+                            "node": 2,
+                            "terminal": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "net": "net_0",
+                            "node": 3,
+                            "terminal": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "net": "net_0",
+                            "node": 3,
+                            "terminal": 2,
+                            "value": 0.0
+                        }
+                    ]
+                },
+                "GroupMultiCommodityFlow": null
+            }
+        }
+    }
+}

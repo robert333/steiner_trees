@@ -1,0 +1,73 @@
+{
+	"graph" : {
+		"directed": false,
+		"weighted": true,
+		"edges": [
+			{"tail" :  0, "head" :  1, "weight" : 1},
+			{"tail" :  1, "head" :  2, "weight" : 1},
+			{"tail" :  2, "head" :  3, "weight" : 1},
+			{"tail" :  3, "head" :  0, "weight" : 1},
+
+			{"tail" :  4, "head" :  5, "weight" : 1},
+			{"tail" :  5, "head" :  6, "weight" : 1},
+			{"tail" :  6, "head" :  7, "weight" : 1},
+			{"tail" :  7, "head" :  4, "weight" : 1},
+
+			{"tail" :  0, "head" :  4, "weight" : 1},
+			{"tail" :  1, "head" :  5, "weight" : 1},
+			{"tail" :  2, "head" :  6, "weight" : 1},
+			{"tail" :  3, "head" :  7, "weight" : 1},
+
+			{"tail" :  0, "head" :  8, "weight" : 4},
+			{"tail" :  1, "head" :  9, "weight" : 4},
+			{"tail" :  2, "head" : 10, "weight" : 4},
+			{"tail" :  3, "head" : 11, "weight" : 4},
+			{"tail" :  4, "head" : 12, "weight" : 4},
+			{"tail" :  5, "head" : 13, "weight" : 4},
+			{"tail" :  6, "head" : 14, "weight" : 4},
+			{"tail" :  7, "head" : 15, "weight" : 4},
+
+			{"tail" :  8, "head" :  9, "weight" : 1},
+			{"tail" :  9, "head" : 10, "weight" : 1},
+			{"tail" : 10, "head" : 11, "weight" : 1},
+			{"tail" : 11, "head" :  8, "weight" : 1},
+
+			{"tail" : 12, "head" : 13, "weight" : 1},
+			{"tail" : 13, "head" : 14, "weight" : 1},
+			{"tail" : 14, "head" : 15, "weight" : 1},
+			{"tail" : 15, "head" : 12, "weight" : 1},
+
+			{"tail" :  8, "head" : 12, "weight" : 1},
+			{"tail" :  9, "head" : 13, "weight" : 1},
+			{"tail" : 10, "head" : 14, "weight" : 1},
+			{"tail" : 11, "head" : 15, "weight" : 1},
+
+			{"tail" :  8, "head" : 16, "weight" : 4},
+			{"tail" :  9, "head" : 17, "weight" : 4},
+			{"tail" : 10, "head" : 18, "weight" : 4},
+			{"tail" : 11, "head" : 19, "weight" : 4},
+			{"tail" : 12, "head" : 20, "weight" : 4},
+			{"tail" : 13, "head" : 21, "weight" : 4},
+			{"tail" : 14, "head" : 22, "weight" : 4},
+			{"tail" : 15, "head" : 23, "weight" : 4},
+
+			{"tail" : 16, "head" : 17, "weight" : 1},
+			{"tail" : 17, "head" : 18, "weight" : 1},
+			{"tail" : 18, "head" : 19, "weight" : 1},
+			{"tail" : 19, "head" : 16, "weight" : 1},
+
+			{"tail" : 20, "head" : 21, "weight" : 1},
+			{"tail" : 21, "head" : 22, "weight" : 1},
+			{"tail" : 22, "head" : 23, "weight" : 1},
+			{"tail" : 23, "head" : 20, "weight" : 1},
+
+			{"tail" : 16, "head" : 20, "weight" : 1},
+			{"tail" : 17, "head" : 21, "weight" : 1},
+			{"tail" : 18, "head" : 22, "weight" : 1},
+			{"tail" : 19, "head" : 23, "weight" : 1}
+		]
+	},
+	"nets" : [
+		{"name": "net_0", "terminals": [0, 2, 5, 7, 9, 11, 12, 14, 16, 18, 21, 23]}
+	]
+}

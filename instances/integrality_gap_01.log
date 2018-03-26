@@ -1,0 +1,66 @@
+Steiner Tree LP/MIP Solver
+
+program path  : /home/robert/Documents/studies/discrete_mathematics/steiner-trees/cmake-build-debug/steiner_trees
+instance path : instances/
+instance name : integrality_gap_01
+
+instances//integrality_gap_01.json
+{
+    "graph": {
+        "directed": true,
+        "edges": [
+            {
+                "head": 1,
+                "id": 0,
+                "tail": 0,
+                "weight": 1
+            },
+            {
+                "head": 2,
+                "id": 1,
+                "tail": 0,
+                "weight": 1
+            },
+            {
+                "head": 3,
+                "id": 2,
+                "tail": 1,
+                "weight": 0
+            },
+            {
+                "head": 3,
+                "id": 3,
+                "tail": 2,
+                "weight": 0
+            },
+            {
+                "head": 4,
+                "id": 4,
+                "tail": 3,
+                "weight": 1
+            },
+            {
+                "head": 1,
+                "id": 5,
+                "tail": 4,
+                "weight": 0
+            },
+            {
+                "head": 2,
+                "id": 6,
+                "tail": 4,
+                "weight": 0
+            }
+        ]
+    },
+    "nets": [
+        {
+            "name": "net_0",
+            "terminals": [
+                0,
+                1,
+                2
+            ]
+        }
+    ]
+}

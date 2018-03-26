@@ -1,0 +1,145 @@
+{
+    "problem": null,
+    "solution": {
+        "optimization": {
+            "objective_value": 0.0,
+            "problem": "MIP",
+            "type": "min"
+        },
+        "variables": [
+            "task_time",
+            {
+                "tasks": [
+                    {
+                        "id": 0,
+                        "time": 1.0
+                    },
+                    {
+                        "id": 1,
+                        "time": 1.0
+                    },
+                    {
+                        "id": 2,
+                        "time": 1.0
+                    },
+                    {
+                        "id": 3,
+                        "time": 0.6
+                    },
+                    {
+                        "id": 4,
+                        "time": 0.5
+                    },
+                    {
+                        "id": 5,
+                        "time": 1.0
+                    }
+                ]
+            },
+            "task_cycle",
+            {
+                "cycles": [
+                    {
+                        "cycle": 0,
+                        "tasks": [
+                            0,
+                            1,
+                            2
+                        ]
+                    },
+                    {
+                        "cycle": 1,
+                        "tasks": [
+                            3,
+                            4,
+                            5
+                        ]
+                    }
+                ],
+                "task_to_cycle": [
+                    {
+                        "cycle": 0,
+                        "task": 0
+                    },
+                    {
+                        "cycle": 0,
+                        "task": 1
+                    },
+                    {
+                        "cycle": 0,
+                        "task": 2
+                    },
+                    {
+                        "cycle": 1,
+                        "task": 3
+                    },
+                    {
+                        "cycle": 1,
+                        "task": 4
+                    },
+                    {
+                        "cycle": 1,
+                        "task": 5
+                    }
+                ]
+            },
+            "task_machine",
+            {
+                "machines": [
+                    {
+                        "machine": 0,
+                        "tasks": [
+                            1
+                        ]
+                    },
+                    {
+                        "machine": 1,
+                        "tasks": [
+                            0,
+                            4
+                        ]
+                    },
+                    {
+                        "machine": 2,
+                        "tasks": [
+                            3,
+                            5
+                        ]
+                    },
+                    {
+                        "machine": 3,
+                        "tasks": [
+                            2
+                        ]
+                    }
+                ],
+                "task_to_machine": [
+                    {
+                        "machine": 1,
+                        "task": 0
+                    },
+                    {
+                        "machine": 0,
+                        "task": 1
+                    },
+                    {
+                        "machine": 3,
+                        "task": 2
+                    },
+                    {
+                        "machine": 2,
+                        "task": 3
+                    },
+                    {
+                        "machine": 1,
+                        "task": 4
+                    },
+                    {
+                        "machine": 2,
+                        "task": 5
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,136 @@
+Yannick LP/MIP Solver
+
+program path  : /home/robert/Documents/studies/discrete_mathematics/steiner-trees/cmake-build-debug/yannick
+instance path : instances/yannick/example_02
+instance name : example_02
+
+instances/yannick/example_02/example_02.json
+{
+    "cycle_number": 2,
+    "cycle_time": 1.0,
+    "machine_number": 4,
+    "precedence_graph": {
+        "directed": true,
+        "edges": [
+            {
+                "head": 3,
+                "tail": 0,
+                "weight": 0
+            },
+            {
+                "head": 3,
+                "tail": 1,
+                "weight": 0
+            },
+            {
+                "head": 4,
+                "tail": 2,
+                "weight": 0
+            },
+            {
+                "head": 5,
+                "tail": 3,
+                "weight": 0
+            },
+            {
+                "head": 5,
+                "tail": 4,
+                "weight": 0
+            }
+        ],
+        "nodes": [
+            {
+                "id": 0,
+                "weight": 0.5
+            },
+            {
+                "id": 1,
+                "weight": 1.0
+            },
+            {
+                "id": 2,
+                "weight": 1.0
+            },
+            {
+                "id": 3,
+                "weight": 0.6
+            },
+            {
+                "id": 4,
+                "weight": 0.5
+            },
+            {
+                "id": 5,
+                "weight": 0.4
+            }
+        ]
+    }
+}
+
+Directed Graph with 6 nodes and 5 edges
+
+Node 0 with weight 0.5 and 0 incoming edges and 1 outgoing edges
+incoming:
+outgoing:
+[0] = 0 --( 0 )--> 3
+
+Node 1 with weight 1 and 0 incoming edges and 1 outgoing edges
+incoming:
+outgoing:
+[1] = 1 --( 0 )--> 3
+
+Node 2 with weight 1 and 0 incoming edges and 1 outgoing edges
+incoming:
+outgoing:
+[2] = 2 --( 0 )--> 4
+
+Node 3 with weight 0.6 and 2 incoming edges and 1 outgoing edges
+incoming:
+[0] = 0 --( 0 )--> 3
+[1] = 1 --( 0 )--> 3
+outgoing:
+[3] = 3 --( 0 )--> 5
+
+Node 4 with weight 0.5 and 1 incoming edges and 1 outgoing edges
+incoming:
+[2] = 2 --( 0 )--> 4
+outgoing:
+[4] = 4 --( 0 )--> 5
+
+Node 5 with weight 0.4 and 2 incoming edges and 0 outgoing edges
+incoming:
+[3] = 3 --( 0 )--> 5
+[4] = 4 --( 0 )--> 5
+outgoing:
+
+Nodes
+[0] = (weight = 0.5)
+[1] = (weight = 1)
+[2] = (weight = 1)
+[3] = (weight = 0.6)
+[4] = (weight = 0.5)
+[5] = (weight = 0.4)
+
+Edges
+[0] = 0 --( 0 )--> 3
+[1] = 1 --( 0 )--> 3
+[2] = 2 --( 0 )--> 4
+[3] = 3 --( 0 )--> 5
+[4] = 4 --( 0 )--> 5
+
+cycle time     : 1
+cycle number   : 2
+machine number : 4
+
+[GroupManager] add group GroupTaskTime
+[GroupManager] add group GroupTaskCycle
+[GroupManager] add group GroupTaskMachine
+[GroupManager] add group GroupTaskPrecedence
+[MIPSolver] number of variables   = 102
+[MIPSolver] number of constraints = 156
+[MIPSolver] Problem solved in 23 milliseconds.
+[MIPSolver] optimal objective value = 0
+[GroupManager] compute solution for group GroupTaskTime
+[GroupManager] compute solution for group GroupTaskCycle
+[GroupManager] compute solution for group GroupTaskMachine
+[GroupManager] compute solution for group GroupTaskPrecedence

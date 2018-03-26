@@ -1,0 +1,2533 @@
+{
+    "problem": null,
+    "solution": {
+        "optimization": {
+            "objective_value": 14.0,
+            "problem": "MIP",
+            "type": "min"
+        },
+        "variables": {
+            "GroupMachine": {
+                "machine_value": [
+                    {
+                        "machine": 0,
+                        "value": 1.0
+                    },
+                    {
+                        "machine": 1,
+                        "value": 1.0
+                    },
+                    {
+                        "machine": 2,
+                        "value": 1.0
+                    },
+                    {
+                        "machine": 3,
+                        "value": 1.0
+                    },
+                    {
+                        "machine": 4,
+                        "value": 1.0
+                    },
+                    {
+                        "machine": 5,
+                        "value": 1.0
+                    },
+                    {
+                        "machine": 6,
+                        "value": 1.0
+                    },
+                    {
+                        "machine": 7,
+                        "value": 1.0
+                    },
+                    {
+                        "machine": 8,
+                        "value": 1.0
+                    },
+                    {
+                        "machine": 9,
+                        "value": 1.0
+                    },
+                    {
+                        "machine": 10,
+                        "value": 1.0
+                    },
+                    {
+                        "machine": 11,
+                        "value": 1.0
+                    },
+                    {
+                        "machine": 12,
+                        "value": 1.0
+                    },
+                    {
+                        "machine": 13,
+                        "value": 1.0
+                    }
+                ],
+                "machines": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13
+                ]
+            },
+            "GroupMachineCycle": {
+                "solution": [
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 9,
+                                "value": 1.0
+                            }
+                        ],
+                        "machine": 0
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 9,
+                                "value": 1.0
+                            }
+                        ],
+                        "machine": 1
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 1.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 9,
+                                "value": 0.0
+                            }
+                        ],
+                        "machine": 2
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 9,
+                                "value": 1.0
+                            }
+                        ],
+                        "machine": 3
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 2,
+                                "value": 1.0
+                            },
+                            {
+                                "cycle": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 9,
+                                "value": 0.0
+                            }
+                        ],
+                        "machine": 4
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 7,
+                                "value": 1.0
+                            },
+                            {
+                                "cycle": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 9,
+                                "value": 0.0
+                            }
+                        ],
+                        "machine": 5
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 8,
+                                "value": 1.0
+                            },
+                            {
+                                "cycle": 9,
+                                "value": 0.0
+                            }
+                        ],
+                        "machine": 6
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 1.0
+                            },
+                            {
+                                "cycle": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 9,
+                                "value": 0.0
+                            }
+                        ],
+                        "machine": 7
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 1.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 9,
+                                "value": 0.0
+                            }
+                        ],
+                        "machine": 8
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 4,
+                                "value": 1.0
+                            },
+                            {
+                                "cycle": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 9,
+                                "value": 0.0
+                            }
+                        ],
+                        "machine": 9
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 9,
+                                "value": 1.0
+                            }
+                        ],
+                        "machine": 10
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 4,
+                                "value": 1.0
+                            },
+                            {
+                                "cycle": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 9,
+                                "value": 0.0
+                            }
+                        ],
+                        "machine": 11
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 1.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 9,
+                                "value": 0.0
+                            }
+                        ],
+                        "machine": 12
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 4,
+                                "value": 1.0
+                            },
+                            {
+                                "cycle": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 9,
+                                "value": 0.0
+                            }
+                        ],
+                        "machine": 13
+                    }
+                ]
+            },
+            "GroupTaskCycle": {
+                "cycles": [
+                    {
+                        "cycle": 0,
+                        "tasks": [
+                            0,
+                            1,
+                            4
+                        ]
+                    },
+                    {
+                        "cycle": 1,
+                        "tasks": [
+                            3,
+                            9
+                        ]
+                    },
+                    {
+                        "cycle": 2,
+                        "tasks": [
+                            7
+                        ]
+                    },
+                    {
+                        "cycle": 3,
+                        "tasks": []
+                    },
+                    {
+                        "cycle": 4,
+                        "tasks": [
+                            8,
+                            14
+                        ]
+                    },
+                    {
+                        "cycle": 5,
+                        "tasks": []
+                    },
+                    {
+                        "cycle": 6,
+                        "tasks": []
+                    },
+                    {
+                        "cycle": 7,
+                        "tasks": [
+                            13
+                        ]
+                    },
+                    {
+                        "cycle": 8,
+                        "tasks": [
+                            12
+                        ]
+                    },
+                    {
+                        "cycle": 9,
+                        "tasks": [
+                            2,
+                            5,
+                            6,
+                            10,
+                            11
+                        ]
+                    }
+                ],
+                "solution": [
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 1.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 9,
+                                "value": 0.0
+                            }
+                        ],
+                        "task": 0
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 1.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 9,
+                                "value": 0.0
+                            }
+                        ],
+                        "task": 1
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 9,
+                                "value": 1.0
+                            }
+                        ],
+                        "task": 2
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 1.0
+                            },
+                            {
+                                "cycle": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 9,
+                                "value": 0.0
+                            }
+                        ],
+                        "task": 3
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 1.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 9,
+                                "value": 0.0
+                            }
+                        ],
+                        "task": 4
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 9,
+                                "value": 1.0
+                            }
+                        ],
+                        "task": 5
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 9,
+                                "value": 1.0
+                            }
+                        ],
+                        "task": 6
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 2,
+                                "value": 1.0
+                            },
+                            {
+                                "cycle": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 9,
+                                "value": 0.0
+                            }
+                        ],
+                        "task": 7
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 4,
+                                "value": 1.0
+                            },
+                            {
+                                "cycle": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 9,
+                                "value": 0.0
+                            }
+                        ],
+                        "task": 8
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 1.0
+                            },
+                            {
+                                "cycle": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 9,
+                                "value": 0.0
+                            }
+                        ],
+                        "task": 9
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 9,
+                                "value": 1.0
+                            }
+                        ],
+                        "task": 10
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 9,
+                                "value": 1.0
+                            }
+                        ],
+                        "task": 11
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 8,
+                                "value": 1.0
+                            },
+                            {
+                                "cycle": 9,
+                                "value": 0.0
+                            }
+                        ],
+                        "task": 12
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 7,
+                                "value": 1.0
+                            },
+                            {
+                                "cycle": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 9,
+                                "value": 0.0
+                            }
+                        ],
+                        "task": 13
+                    },
+                    {
+                        "cycles": [
+                            {
+                                "cycle": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 4,
+                                "value": 1.0
+                            },
+                            {
+                                "cycle": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "cycle": 9,
+                                "value": 0.0
+                            }
+                        ],
+                        "task": 14
+                    }
+                ]
+            },
+            "GroupTaskMachine": {
+                "machines": [
+                    {
+                        "machine": 0,
+                        "tasks": [
+                            2,
+                            5
+                        ]
+                    },
+                    {
+                        "machine": 1,
+                        "tasks": [
+                            11
+                        ]
+                    },
+                    {
+                        "machine": 2,
+                        "tasks": [
+                            0,
+                            1
+                        ]
+                    },
+                    {
+                        "machine": 3,
+                        "tasks": [
+                            6,
+                            10
+                        ]
+                    },
+                    {
+                        "machine": 4,
+                        "tasks": [
+                            7
+                        ]
+                    },
+                    {
+                        "machine": 5,
+                        "tasks": [
+                            13
+                        ]
+                    },
+                    {
+                        "machine": 6,
+                        "tasks": [
+                            12
+                        ]
+                    },
+                    {
+                        "machine": 7,
+                        "tasks": [
+                            3,
+                            9
+                        ]
+                    },
+                    {
+                        "machine": 8,
+                        "tasks": []
+                    },
+                    {
+                        "machine": 9,
+                        "tasks": [
+                            14
+                        ]
+                    },
+                    {
+                        "machine": 10,
+                        "tasks": []
+                    },
+                    {
+                        "machine": 11,
+                        "tasks": [
+                            8
+                        ]
+                    },
+                    {
+                        "machine": 12,
+                        "tasks": [
+                            4
+                        ]
+                    },
+                    {
+                        "machine": 13,
+                        "tasks": []
+                    }
+                ],
+                "solution": [
+                    {
+                        "machines": [
+                            {
+                                "machine": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 2,
+                                "value": 1.0
+                            },
+                            {
+                                "machine": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 9,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 10,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 11,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 12,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 13,
+                                "value": 0.0
+                            }
+                        ],
+                        "task": 0
+                    },
+                    {
+                        "machines": [
+                            {
+                                "machine": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 2,
+                                "value": 1.0
+                            },
+                            {
+                                "machine": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 9,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 10,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 11,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 12,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 13,
+                                "value": 0.0
+                            }
+                        ],
+                        "task": 1
+                    },
+                    {
+                        "machines": [
+                            {
+                                "machine": 0,
+                                "value": 1.0
+                            },
+                            {
+                                "machine": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 9,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 10,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 11,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 12,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 13,
+                                "value": 0.0
+                            }
+                        ],
+                        "task": 2
+                    },
+                    {
+                        "machines": [
+                            {
+                                "machine": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 7,
+                                "value": 1.0
+                            },
+                            {
+                                "machine": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 9,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 10,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 11,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 12,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 13,
+                                "value": 0.0
+                            }
+                        ],
+                        "task": 3
+                    },
+                    {
+                        "machines": [
+                            {
+                                "machine": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 9,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 10,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 11,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 12,
+                                "value": 1.0
+                            },
+                            {
+                                "machine": 13,
+                                "value": 0.0
+                            }
+                        ],
+                        "task": 4
+                    },
+                    {
+                        "machines": [
+                            {
+                                "machine": 0,
+                                "value": 1.0
+                            },
+                            {
+                                "machine": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 9,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 10,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 11,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 12,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 13,
+                                "value": 0.0
+                            }
+                        ],
+                        "task": 5
+                    },
+                    {
+                        "machines": [
+                            {
+                                "machine": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 3,
+                                "value": 1.0
+                            },
+                            {
+                                "machine": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 9,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 10,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 11,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 12,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 13,
+                                "value": 0.0
+                            }
+                        ],
+                        "task": 6
+                    },
+                    {
+                        "machines": [
+                            {
+                                "machine": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 4,
+                                "value": 1.0
+                            },
+                            {
+                                "machine": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 9,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 10,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 11,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 12,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 13,
+                                "value": 0.0
+                            }
+                        ],
+                        "task": 7
+                    },
+                    {
+                        "machines": [
+                            {
+                                "machine": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 9,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 10,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 11,
+                                "value": 1.0
+                            },
+                            {
+                                "machine": 12,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 13,
+                                "value": 0.0
+                            }
+                        ],
+                        "task": 8
+                    },
+                    {
+                        "machines": [
+                            {
+                                "machine": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 7,
+                                "value": 1.0
+                            },
+                            {
+                                "machine": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 9,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 10,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 11,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 12,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 13,
+                                "value": 0.0
+                            }
+                        ],
+                        "task": 9
+                    },
+                    {
+                        "machines": [
+                            {
+                                "machine": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 3,
+                                "value": 1.0
+                            },
+                            {
+                                "machine": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 9,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 10,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 11,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 12,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 13,
+                                "value": 0.0
+                            }
+                        ],
+                        "task": 10
+                    },
+                    {
+                        "machines": [
+                            {
+                                "machine": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 1,
+                                "value": 1.0
+                            },
+                            {
+                                "machine": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 9,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 10,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 11,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 12,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 13,
+                                "value": 0.0
+                            }
+                        ],
+                        "task": 11
+                    },
+                    {
+                        "machines": [
+                            {
+                                "machine": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 6,
+                                "value": 1.0
+                            },
+                            {
+                                "machine": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 9,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 10,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 11,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 12,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 13,
+                                "value": 0.0
+                            }
+                        ],
+                        "task": 12
+                    },
+                    {
+                        "machines": [
+                            {
+                                "machine": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 5,
+                                "value": 1.0
+                            },
+                            {
+                                "machine": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 9,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 10,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 11,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 12,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 13,
+                                "value": 0.0
+                            }
+                        ],
+                        "task": 13
+                    },
+                    {
+                        "machines": [
+                            {
+                                "machine": 0,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 1,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 2,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 3,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 4,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 5,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 6,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 7,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 8,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 9,
+                                "value": 1.0
+                            },
+                            {
+                                "machine": 10,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 11,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 12,
+                                "value": 0.0
+                            },
+                            {
+                                "machine": 13,
+                                "value": 0.0
+                            }
+                        ],
+                        "task": 14
+                    }
+                ]
+            },
+            "GroupTaskPrecedence": null,
+            "GroupTaskTime": {
+                "tasks": [
+                    {
+                        "task": 0,
+                        "time": 0.5
+                    },
+                    {
+                        "task": 1,
+                        "time": 1.5
+                    },
+                    {
+                        "task": 2,
+                        "time": 1.0
+                    },
+                    {
+                        "task": 3,
+                        "time": 2.0
+                    },
+                    {
+                        "task": 4,
+                        "time": 2.0
+                    },
+                    {
+                        "task": 5,
+                        "time": 1.5
+                    },
+                    {
+                        "task": 6,
+                        "time": 1.5
+                    },
+                    {
+                        "task": 7,
+                        "time": 1.0
+                    },
+                    {
+                        "task": 8,
+                        "time": 1.0
+                    },
+                    {
+                        "task": 9,
+                        "time": 0.6
+                    },
+                    {
+                        "task": 10,
+                        "time": 2.0
+                    },
+                    {
+                        "task": 11,
+                        "time": 1.9
+                    },
+                    {
+                        "task": 12,
+                        "time": 0.5
+                    },
+                    {
+                        "task": 13,
+                        "time": 1.0
+                    },
+                    {
+                        "task": 14,
+                        "time": 1.0
+                    }
+                ]
+            }
+        }
+    }
+}

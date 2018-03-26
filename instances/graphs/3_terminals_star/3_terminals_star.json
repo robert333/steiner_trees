@@ -1,0 +1,19 @@
+{
+	"graph" : {
+		"directed": false,
+		"nodes": [
+			{"id" : 0},
+			{"id" : 1},
+			{"id" : 2},
+			{"id" : 3}
+		],
+		"edges": [
+			{"tail" : 0, "head" : 3, "weight" : 1},
+			{"tail" : 1, "head" : 3, "weight" : 1},
+			{"tail" : 2, "head" : 3, "weight" : 1}
+		]
+	},
+	"nets" : [
+		{"name": "net_0", "terminals": [0, 1, 2]}
+	]
+}
