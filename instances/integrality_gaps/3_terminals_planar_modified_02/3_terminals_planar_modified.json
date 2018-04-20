@@ -39,13 +39,11 @@
 		"edges": [
 			{"tail" : 0, "head" : 19, "weight" : 8},
 			{"tail" : 0, "head" : 21, "weight" : 8},
-//			{"tail" : 0, "head" : 23, "weight" : 8},
 			{"tail" : 0, "head" : 25, "weight" : 8},
 			{"tail" : 0, "head" : 27, "weight" : 8},
 
 			{"tail" : 1, "head" : 3, "weight" : 8},
 			{"tail" : 1, "head" : 4, "weight" : 8},
-//			{"tail" : 1, "head" : 7, "weight" : 8},
 			{"tail" : 1, "head" : 12, "weight" : 8},
 			{"tail" : 1, "head" : 19, "weight" : 8},
 
@@ -59,21 +57,9 @@
 			{"tail" : 5, "head" : 4, "weight" : 1},
 			{"tail" : 5, "head" : 6, "weight" : 1},
 
-			{"tail" : 8, "head" : 4, "weight" : 1},
-//			{"tail" : 8, "head" : 7, "weight" : 1},
-			{"tail" : 8, "head" : 9, "weight" : 1},
-
 			{"tail" : 10, "head" : 6, "weight" : 1},
 			{"tail" : 10, "head" : 9, "weight" : 1},
 			{"tail" : 10, "head" : 11, "weight" : 1},
-
-//			{"tail" : 13, "head" : 7, "weight" : 1},
-			{"tail" : 13, "head" : 12, "weight" : 1},
-//			{"tail" : 13, "head" : 14, "weight" : 1},
-
-//			{"tail" : 15, "head" : 9, "weight" : 1},
-//			{"tail" : 15, "head" : 14, "weight" : 1},
-//			{"tail" : 15, "head" : 16, "weight" : 1},
 
 			{"tail" : 17, "head" : 11, "weight" : 1},
 			{"tail" : 17, "head" : 16, "weight" : 1},
@@ -83,23 +69,18 @@
 			{"tail" : 20, "head" : 19, "weight" : 1},
 			{"tail" : 20, "head" : 21, "weight" : 1},
 
-//			{"tail" : 22, "head" : 14, "weight" : 1},
-			{"tail" : 22, "head" : 21, "weight" : 1},
-//			{"tail" : 22, "head" : 23, "weight" : 1},
-
-			{"tail" : 24, "head" : 16, "weight" : 1},
-//			{"tail" : 24, "head" : 23, "weight" : 1},
-			{"tail" : 24, "head" : 25, "weight" : 1},
+//			{"tail" : 9, "head" : 21, "weight" : 4},
+//			{"tail" : 12, "head" : 16, "weight" : 4},
+			{"tail" : 16, "head" : 25, "weight" : 2},
+			{"tail" : 4, "head" : 9, "weight" : 2},
 
 
-			{"tail" : 9, "head" : 22, "weight" : 1},
-			{"tail" : 13, "head" : 16, "weight" : 1},
 
-//			{"tail" : 15, "head" : 14, "weight" : 0.0},
-//			{"tail" : 15, "head" : 9, "weight" : 1.5},
-//			{"tail" : 15, "head" : 16, "weight" : 1.5},
-//			{"tail" : 13, "head" : 14, "weight" : 1.5},
-//			{"tail" : 22, "head" : 14, "weight" : 1.5},
+			{"tail" : 15, "head" : 14, "weight" : 0},
+			{"tail" : 15, "head" : 9, "weight" : 1},
+			{"tail" : 15, "head" : 16, "weight" : 1},
+			{"tail" : 21, "head" : 14, "weight" : 3},
+			{"tail" : 12, "head" : 14, "weight" : 3},
 
 
 			{"tail" : 26, "head" : 18, "weight" : 1},

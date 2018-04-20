@@ -1,5 +1,561 @@
 {
     "solution": {
+        "bmccf": {
+            "optimization": {
+                "objective_value": 30.0,
+                "problem": "MIP",
+                "type": "min"
+            },
+            "variables": {
+                "GroupBidirectedMultiCommodityCommonFlow": null,
+                "GroupEdges": {
+                    "bidirected": [
+                        {
+                            "head": 19,
+                            "tail": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 19,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 21,
+                            "tail": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 21,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 25,
+                            "tail": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 25,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 27,
+                            "tail": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 27,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 3,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 4,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 12,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 12,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 19,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 19,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 3,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 6,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 11,
+                            "tail": 2,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 11,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 18,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 27,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 27,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 5,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 5,
+                            "tail": 3,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 5,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 5,
+                            "tail": 4,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 5,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 5,
+                            "tail": 6,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 8,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 8,
+                            "tail": 4,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 9,
+                            "tail": 8,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 8,
+                            "tail": 9,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 10,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 10,
+                            "tail": 6,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 9,
+                            "tail": 10,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 10,
+                            "tail": 9,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 11,
+                            "tail": 10,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 10,
+                            "tail": 11,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 12,
+                            "tail": 13,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 13,
+                            "tail": 12,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 11,
+                            "tail": 17,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 17,
+                            "tail": 11,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 17,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 17,
+                            "tail": 16,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 17,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 17,
+                            "tail": 18,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 12,
+                            "tail": 20,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 20,
+                            "tail": 12,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 19,
+                            "tail": 20,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 20,
+                            "tail": 19,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 21,
+                            "tail": 20,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 20,
+                            "tail": 21,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 21,
+                            "tail": 22,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 22,
+                            "tail": 21,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 24,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 24,
+                            "tail": 16,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 25,
+                            "tail": 24,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 24,
+                            "tail": 25,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 22,
+                            "tail": 9,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 9,
+                            "tail": 22,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 13,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 13,
+                            "tail": 16,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 26,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 26,
+                            "tail": 18,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 25,
+                            "tail": 26,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 26,
+                            "tail": 25,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 27,
+                            "tail": 26,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 26,
+                            "tail": 27,
+                            "value": 0.0
+                        }
+                    ],
+                    "undirected": [
+                        {
+                            "head": 19,
+                            "tail": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 21,
+                            "tail": 0,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 25,
+                            "tail": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 27,
+                            "tail": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 12,
+                            "tail": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 19,
+                            "tail": 1,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 11,
+                            "tail": 2,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 27,
+                            "tail": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 5,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 5,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 5,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 8,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 9,
+                            "tail": 8,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 10,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 9,
+                            "tail": 10,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 11,
+                            "tail": 10,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 12,
+                            "tail": 13,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 11,
+                            "tail": 17,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 17,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 17,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 12,
+                            "tail": 20,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 19,
+                            "tail": 20,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 21,
+                            "tail": 20,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 21,
+                            "tail": 22,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 24,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 25,
+                            "tail": 24,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 22,
+                            "tail": 9,
+                            "value": 1.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 13,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 26,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 25,
+                            "tail": 26,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 27,
+                            "tail": 26,
+                            "value": 0.0
+                        }
+                    ]
+                }
+            }
+        },
         "continuous": {
             "optimization": {
                 "objective_value": 29.4,
@@ -27,17 +583,7 @@
                         {
                             "head": 0,
                             "tail": 21,
-                            "value": 0.2
-                        },
-                        {
-                            "head": 23,
-                            "tail": 0,
-                            "value": 0.0
-                        },
-                        {
-                            "head": 0,
-                            "tail": 23,
-                            "value": 0.2
+                            "value": 0.4
                         },
                         {
                             "head": 25,
@@ -80,16 +626,6 @@
                             "value": 0.2
                         },
                         {
-                            "head": 7,
-                            "tail": 1,
-                            "value": 0.0
-                        },
-                        {
-                            "head": 1,
-                            "tail": 7,
-                            "value": 0.2
-                        },
-                        {
                             "head": 12,
                             "tail": 1,
                             "value": 0.0
@@ -97,7 +633,7 @@
                         {
                             "head": 1,
                             "tail": 12,
-                            "value": 0.2
+                            "value": 0.4
                         },
                         {
                             "head": 19,
@@ -200,24 +736,14 @@
                             "value": 0.2
                         },
                         {
-                            "head": 7,
-                            "tail": 8,
-                            "value": 0.2
-                        },
-                        {
-                            "head": 8,
-                            "tail": 7,
-                            "value": 0.0
-                        },
-                        {
                             "head": 9,
                             "tail": 8,
-                            "value": 0.0
+                            "value": 0.2
                         },
                         {
                             "head": 8,
                             "tail": 9,
-                            "value": 0.2
+                            "value": 0.0
                         },
                         {
                             "head": 6,
@@ -250,19 +776,9 @@
                             "value": 0.2
                         },
                         {
-                            "head": 7,
-                            "tail": 13,
-                            "value": 5.55111512312578e-17
-                        },
-                        {
-                            "head": 13,
-                            "tail": 7,
-                            "value": 0.2
-                        },
-                        {
                             "head": 12,
                             "tail": 13,
-                            "value": 0.2
+                            "value": 0.4
                         },
                         {
                             "head": 13,
@@ -332,7 +848,7 @@
                         {
                             "head": 21,
                             "tail": 22,
-                            "value": 0.2
+                            "value": 0.4
                         },
                         {
                             "head": 22,
@@ -340,33 +856,13 @@
                             "value": 0.0
                         },
                         {
-                            "head": 23,
-                            "tail": 22,
-                            "value": 1.66533453693773e-16
-                        },
-                        {
-                            "head": 22,
-                            "tail": 23,
-                            "value": 0.2
-                        },
-                        {
                             "head": 16,
                             "tail": 24,
-                            "value": 2.22044604925031e-16
+                            "value": 0.2
                         },
                         {
                             "head": 24,
                             "tail": 16,
-                            "value": 0.2
-                        },
-                        {
-                            "head": 23,
-                            "tail": 24,
-                            "value": 0.2
-                        },
-                        {
-                            "head": 24,
-                            "tail": 23,
                             "value": 0.0
                         },
                         {
@@ -382,7 +878,7 @@
                         {
                             "head": 22,
                             "tail": 9,
-                            "value": 0.2
+                            "value": 0.4
                         },
                         {
                             "head": 9,
@@ -397,7 +893,7 @@
                         {
                             "head": 13,
                             "tail": 16,
-                            "value": 0.2
+                            "value": 0.4
                         },
                         {
                             "head": 18,
@@ -439,12 +935,7 @@
                         {
                             "head": 21,
                             "tail": 0,
-                            "value": 0.2
-                        },
-                        {
-                            "head": 23,
-                            "tail": 0,
-                            "value": 0.2
+                            "value": 0.4
                         },
                         {
                             "head": 25,
@@ -467,14 +958,9 @@
                             "value": 0.2
                         },
                         {
-                            "head": 7,
-                            "tail": 1,
-                            "value": 0.2
-                        },
-                        {
                             "head": 12,
                             "tail": 1,
-                            "value": 0.2
+                            "value": 0.4
                         },
                         {
                             "head": 19,
@@ -527,11 +1013,6 @@
                             "value": 0.2
                         },
                         {
-                            "head": 7,
-                            "tail": 8,
-                            "value": 0.2
-                        },
-                        {
                             "head": 9,
                             "tail": 8,
                             "value": 0.2
@@ -552,14 +1033,9 @@
                             "value": 0.2
                         },
                         {
-                            "head": 7,
-                            "tail": 13,
-                            "value": 0.2
-                        },
-                        {
                             "head": 12,
                             "tail": 13,
-                            "value": 0.2
+                            "value": 0.4
                         },
                         {
                             "head": 11,
@@ -594,20 +1070,10 @@
                         {
                             "head": 21,
                             "tail": 22,
-                            "value": 0.2
-                        },
-                        {
-                            "head": 23,
-                            "tail": 22,
-                            "value": 0.2
+                            "value": 0.4
                         },
                         {
                             "head": 16,
-                            "tail": 24,
-                            "value": 0.2
-                        },
-                        {
-                            "head": 23,
                             "tail": 24,
                             "value": 0.2
                         },
@@ -619,12 +1085,12 @@
                         {
                             "head": 22,
                             "tail": 9,
-                            "value": 0.2
+                            "value": 0.4
                         },
                         {
                             "head": 16,
                             "tail": 13,
-                            "value": 0.2
+                            "value": 0.4
                         },
                         {
                             "head": 18,
@@ -653,6 +1119,7 @@
                 "type": "min"
             },
             "variables": {
+                "GroupBidirectedMultiCommodityCommonFlow": null,
                 "GroupEdges": {
                     "bidirected": [
                         {
@@ -674,16 +1141,6 @@
                             "head": 0,
                             "tail": 21,
                             "value": 1.0
-                        },
-                        {
-                            "head": 23,
-                            "tail": 0,
-                            "value": 0.0
-                        },
-                        {
-                            "head": 0,
-                            "tail": 23,
-                            "value": 0.0
                         },
                         {
                             "head": 25,
@@ -726,16 +1183,6 @@
                             "value": 0.0
                         },
                         {
-                            "head": 7,
-                            "tail": 1,
-                            "value": 0.0
-                        },
-                        {
-                            "head": 1,
-                            "tail": 7,
-                            "value": 0.0
-                        },
-                        {
                             "head": 12,
                             "tail": 1,
                             "value": 0.0
@@ -846,16 +1293,6 @@
                             "value": 0.0
                         },
                         {
-                            "head": 7,
-                            "tail": 8,
-                            "value": 0.0
-                        },
-                        {
-                            "head": 8,
-                            "tail": 7,
-                            "value": 0.0
-                        },
-                        {
                             "head": 9,
                             "tail": 8,
                             "value": 0.0
@@ -894,16 +1331,6 @@
                             "head": 10,
                             "tail": 11,
                             "value": 1.0
-                        },
-                        {
-                            "head": 7,
-                            "tail": 13,
-                            "value": 0.0
-                        },
-                        {
-                            "head": 13,
-                            "tail": 7,
-                            "value": 0.0
                         },
                         {
                             "head": 12,
@@ -986,16 +1413,6 @@
                             "value": 0.0
                         },
                         {
-                            "head": 23,
-                            "tail": 22,
-                            "value": 0.0
-                        },
-                        {
-                            "head": 22,
-                            "tail": 23,
-                            "value": 0.0
-                        },
-                        {
                             "head": 16,
                             "tail": 24,
                             "value": 0.0
@@ -1003,16 +1420,6 @@
                         {
                             "head": 24,
                             "tail": 16,
-                            "value": 0.0
-                        },
-                        {
-                            "head": 23,
-                            "tail": 24,
-                            "value": 0.0
-                        },
-                        {
-                            "head": 24,
-                            "tail": 23,
                             "value": 0.0
                         },
                         {
@@ -1088,11 +1495,6 @@
                             "value": 1.0
                         },
                         {
-                            "head": 23,
-                            "tail": 0,
-                            "value": 0.0
-                        },
-                        {
                             "head": 25,
                             "tail": 0,
                             "value": 0.0
@@ -1113,11 +1515,6 @@
                             "value": 0.0
                         },
                         {
-                            "head": 7,
-                            "tail": 1,
-                            "value": 0.0
-                        },
-                        {
                             "head": 12,
                             "tail": 1,
                             "value": 0.0
@@ -1173,11 +1570,6 @@
                             "value": 0.0
                         },
                         {
-                            "head": 7,
-                            "tail": 8,
-                            "value": 0.0
-                        },
-                        {
                             "head": 9,
                             "tail": 8,
                             "value": 0.0
@@ -1196,11 +1588,6 @@
                             "head": 11,
                             "tail": 10,
                             "value": 1.0
-                        },
-                        {
-                            "head": 7,
-                            "tail": 13,
-                            "value": 0.0
                         },
                         {
                             "head": 12,
@@ -1243,17 +1630,7 @@
                             "value": 1.0
                         },
                         {
-                            "head": 23,
-                            "tail": 22,
-                            "value": 0.0
-                        },
-                        {
                             "head": 16,
-                            "tail": 24,
-                            "value": 0.0
-                        },
-                        {
-                            "head": 23,
                             "tail": 24,
                             "value": 0.0
                         },
@@ -1288,8 +1665,7 @@
                             "value": 0.0
                         }
                     ]
-                },
-                "GroupMultiCommodityFlow": null
+                }
             }
         },
         "simplex_embedding": {
@@ -1306,21 +1682,21 @@
                             "value_per_terminal": [
                                 0.0,
                                 0.0,
-                                16.0
+                                14.7
                             ]
                         },
                         {
                             "node": "1",
                             "value_per_terminal": [
                                 0.0,
-                                13.4,
-                                2.6
+                                14.7,
+                                0.0
                             ]
                         },
                         {
                             "node": "2",
                             "value_per_terminal": [
-                                16.0,
+                                14.7,
                                 0.0,
                                 0.0
                             ]
@@ -1328,89 +1704,89 @@
                         {
                             "node": "3",
                             "value_per_terminal": [
-                                8.0,
-                                5.4,
-                                2.6
+                                6.7,
+                                6.7,
+                                1.3
                             ]
                         },
                         {
                             "node": "4",
                             "value_per_terminal": [
-                                6.6,
-                                5.4,
-                                4.0
+                                5.3,
+                                6.70000000000002,
+                                2.70000000000002
                             ]
                         },
                         {
                             "node": "5",
                             "value_per_terminal": [
-                                7.6,
-                                4.8,
-                                3.6
+                                6.3,
+                                6.10000000000001,
+                                2.30000000000001
                             ]
                         },
                         {
                             "node": "6",
                             "value_per_terminal": [
-                                8.0,
-                                3.8,
-                                4.2
+                                6.7,
+                                5.10000000000001,
+                                2.9
                             ]
                         },
                         {
                             "node": "7",
                             "value_per_terminal": [
-                                5.1,
-                                5.4,
-                                5.5
+                                14.7,
+                                0.0,
+                                0.0
                             ]
                         },
                         {
                             "node": "8",
                             "value_per_terminal": [
-                                6.1,
                                 4.9,
-                                5.0
+                                6.1,
+                                3.7
                             ]
                         },
                         {
                             "node": "9",
                             "value_per_terminal": [
-                                6.1,
-                                3.9,
-                                6.0
+                                4.9,
+                                5.1,
+                                4.7
                             ]
                         },
                         {
                             "node": "10",
                             "value_per_terminal": [
-                                7.1,
-                                3.7,
-                                5.2
+                                5.90000000000001,
+                                4.90000000000001,
+                                3.89999999999999
                             ]
                         },
                         {
                             "node": "11",
                             "value_per_terminal": [
-                                8.0,
-                                2.7,
-                                5.3
+                                6.7,
+                                3.9,
+                                4.1
                             ]
                         },
                         {
                             "node": "12",
                             "value_per_terminal": [
-                                4.1,
-                                5.4,
-                                6.5
+                                2.7,
+                                6.7,
+                                5.3
                             ]
                         },
                         {
                             "node": "13",
                             "value_per_terminal": [
-                                5.1,
-                                4.4,
-                                6.5
+                                3.7,
+                                5.7,
+                                5.3
                             ]
                         },
                         {
@@ -1418,7 +1794,7 @@
                             "value_per_terminal": [
                                 0.0,
                                 0.0,
-                                16.0
+                                14.7
                             ]
                         },
                         {
@@ -1426,107 +1802,107 @@
                             "value_per_terminal": [
                                 0.0,
                                 0.0,
-                                16.0
+                                14.7
                             ]
                         },
                         {
                             "node": "16",
                             "value_per_terminal": [
-                                6.1,
-                                3.4,
-                                6.5
+                                4.7,
+                                4.7,
+                                5.3
                             ]
                         },
                         {
                             "node": "17",
                             "value_per_terminal": [
-                                7.1,
-                                2.6,
-                                6.3
+                                5.7,
+                                3.9,
+                                5.1
                             ]
                         },
                         {
                             "node": "18",
                             "value_per_terminal": [
-                                8.0,
-                                1.6,
-                                6.4
+                                6.7,
+                                2.9,
+                                5.1
                             ]
                         },
                         {
                             "node": "19",
                             "value_per_terminal": [
-                                2.6,
-                                5.4,
-                                8.0
+                                1.3,
+                                6.7,
+                                6.7
                             ]
                         },
                         {
                             "node": "20",
                             "value_per_terminal": [
-                                3.6,
-                                4.9,
-                                7.5
+                                2.3,
+                                6.1,
+                                6.3
                             ]
                         },
                         {
                             "node": "21",
                             "value_per_terminal": [
-                                4.1,
-                                3.9,
-                                8.0
+                                2.9,
+                                5.1,
+                                6.7
                             ]
                         },
                         {
                             "node": "22",
                             "value_per_terminal": [
-                                5.1,
                                 3.9,
-                                7.0
+                                5.1,
+                                5.7
                             ]
                         },
                         {
                             "node": "23",
                             "value_per_terminal": [
-                                5.1,
-                                2.9,
-                                8.0
+                                0.0,
+                                0.0,
+                                14.7
                             ]
                         },
                         {
                             "node": "24",
                             "value_per_terminal": [
-                                6.1,
-                                2.4,
-                                7.5
+                                5.3,
+                                3.7,
+                                5.7
                             ]
                         },
                         {
                             "node": "25",
                             "value_per_terminal": [
-                                6.6,
-                                1.4,
-                                8.0
+                                5.3,
+                                2.7,
+                                6.7
                             ]
                         },
                         {
                             "node": "26",
                             "value_per_terminal": [
-                                7.6,
-                                1.0,
-                                7.4
+                                6.3,
+                                2.3,
+                                6.1
                             ]
                         },
                         {
                             "node": "27",
                             "value_per_terminal": [
-                                8.0,
-                                0.0,
-                                8.0
+                                6.7,
+                                1.3,
+                                6.7
                             ]
                         }
                     ],
-                    "simplex": 16.0
+                    "simplex": 14.7
                 }
             }
         }

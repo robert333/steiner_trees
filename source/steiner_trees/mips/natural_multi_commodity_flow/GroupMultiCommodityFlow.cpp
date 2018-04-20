@@ -18,6 +18,28 @@ void GroupMultiCommodityFlow::create_variables_constraints_and_objective(mip::MI
 	create_constraints(mip_model);
 }
 
+json GroupMultiCommodityFlow::compute_solution() const
+{
+	json solution;
+
+	for (graph::Net const& net : _group_edges.nets()) {
+		for (graph::Edge const& edge : _group_edges.terminal_instance().bidirected_graph().edges()) {
+			for (graph::TerminalId terminal_id = 0; terminal_id < net.num_terminals(); ++terminal_id) {
+				solution["variables"].push_back(
+					{
+						{"tail",  edge.tail()},
+						{"head",  edge.head()},
+						{"terminal_id",  terminal_id},
+						{"value", _variables.solution_value(edge.id(), net.name(), terminal_id)}
+					}
+				);
+			}
+		}
+	}
+
+	return solution;
+}
+
 mip::VariableStorage<graph::EdgeId, graph::Net::Name, graph::TerminalId> const& GroupMultiCommodityFlow::variables() const
 {
 	return _variables;
