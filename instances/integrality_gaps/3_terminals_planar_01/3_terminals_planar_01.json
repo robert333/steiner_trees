@@ -42,7 +42,7 @@
 			{"tail" : 2, "head" : 11, "weight" : 2},
 			{"tail" : 2, "head" : 18, "weight" : 3},
 
-			{"tail" : 5, "head" : 3, "weight" : 0},
+			{"tail" : 5, "head" : 3, "weight" : 1},
 			{"tail" : 5, "head" : 4, "weight" : 1},
 			{"tail" : 5, "head" : 6, "weight" : 1},
 

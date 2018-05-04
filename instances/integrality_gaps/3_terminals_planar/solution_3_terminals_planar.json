@@ -23,7 +23,7 @@
                         {
                             "head": 21,
                             "tail": 0,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 0,
@@ -33,7 +33,7 @@
                         {
                             "head": 23,
                             "tail": 0,
-                            "value": 0.0
+                            "value": 1.0
                         },
                         {
                             "head": 0,
@@ -163,7 +163,7 @@
                         {
                             "head": 3,
                             "tail": 5,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 5,
@@ -263,7 +263,7 @@
                         {
                             "head": 12,
                             "tail": 13,
-                            "value": 0.0
+                            "value": 1.0
                         },
                         {
                             "head": 13,
@@ -278,7 +278,7 @@
                         {
                             "head": 13,
                             "tail": 14,
-                            "value": 0.0
+                            "value": 1.0
                         },
                         {
                             "head": 9,
@@ -298,12 +298,12 @@
                         {
                             "head": 15,
                             "tail": 14,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 16,
                             "tail": 15,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 15,
@@ -343,7 +343,7 @@
                         {
                             "head": 12,
                             "tail": 20,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 20,
@@ -353,7 +353,7 @@
                         {
                             "head": 19,
                             "tail": 20,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 20,
@@ -368,7 +368,7 @@
                         {
                             "head": 20,
                             "tail": 21,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 14,
@@ -388,7 +388,7 @@
                         {
                             "head": 22,
                             "tail": 21,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 23,
@@ -398,12 +398,12 @@
                         {
                             "head": 22,
                             "tail": 23,
-                            "value": 0.0
+                            "value": 1.0
                         },
                         {
                             "head": 16,
                             "tail": 24,
-                            "value": 0.0
+                            "value": 1.0
                         },
                         {
                             "head": 24,
@@ -418,7 +418,7 @@
                         {
                             "head": 24,
                             "tail": 23,
-                            "value": 0.0
+                            "value": 1.0
                         },
                         {
                             "head": 25,
@@ -453,7 +453,7 @@
                         {
                             "head": 27,
                             "tail": 26,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 26,
@@ -470,12 +470,12 @@
                         {
                             "head": 21,
                             "tail": 0,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 23,
                             "tail": 0,
-                            "value": 0.0
+                            "value": 1.0
                         },
                         {
                             "head": 25,
@@ -540,7 +540,7 @@
                         {
                             "head": 3,
                             "tail": 5,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 4,
@@ -590,12 +590,12 @@
                         {
                             "head": 12,
                             "tail": 13,
-                            "value": 0.0
+                            "value": 1.0
                         },
                         {
                             "head": 14,
                             "tail": 13,
-                            "value": 0.0
+                            "value": 1.0
                         },
                         {
                             "head": 9,
@@ -605,12 +605,12 @@
                         {
                             "head": 14,
                             "tail": 15,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 16,
                             "tail": 15,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 11,
@@ -630,17 +630,17 @@
                         {
                             "head": 12,
                             "tail": 20,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 19,
                             "tail": 20,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 21,
                             "tail": 20,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 14,
@@ -650,22 +650,22 @@
                         {
                             "head": 21,
                             "tail": 22,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 23,
                             "tail": 22,
-                            "value": 0.0
+                            "value": 1.0
                         },
                         {
                             "head": 16,
                             "tail": 24,
-                            "value": 0.0
+                            "value": 1.0
                         },
                         {
                             "head": 23,
                             "tail": 24,
-                            "value": 0.0
+                            "value": 1.0
                         },
                         {
                             "head": 25,
@@ -685,7 +685,7 @@
                         {
                             "head": 27,
                             "tail": 26,
-                            "value": 1.0
+                            "value": 0.0
                         }
                     ]
                 }
@@ -838,7 +838,7 @@
                         {
                             "head": 2,
                             "tail": 18,
-                            "value": 0.2
+                            "value": 0.4
                         },
                         {
                             "head": 27,
@@ -848,7 +848,7 @@
                         {
                             "head": 2,
                             "tail": 27,
-                            "value": 0.2
+                            "value": 0.0
                         },
                         {
                             "head": 3,
@@ -1123,7 +1123,7 @@
                         {
                             "head": 18,
                             "tail": 26,
-                            "value": 0.2
+                            "value": 0.4
                         },
                         {
                             "head": 26,
@@ -1143,7 +1143,7 @@
                         {
                             "head": 27,
                             "tail": 26,
-                            "value": 0.2
+                            "value": 0.0
                         },
                         {
                             "head": 26,
@@ -1220,17 +1220,17 @@
                         {
                             "head": 18,
                             "tail": 2,
-                            "value": 0.2
+                            "value": 0.4
                         },
                         {
                             "head": 27,
                             "tail": 2,
-                            "value": 0.2
+                            "value": 0.0
                         },
                         {
                             "head": 3,
                             "tail": 5,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 4,
@@ -1325,7 +1325,7 @@
                         {
                             "head": 19,
                             "tail": 20,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 21,
@@ -1365,7 +1365,7 @@
                         {
                             "head": 18,
                             "tail": 26,
-                            "value": 0.2
+                            "value": 0.4
                         },
                         {
                             "head": 25,
@@ -1375,11 +1375,1634 @@
                         {
                             "head": 27,
                             "tail": 26,
-                            "value": 1.0
+                            "value": 0.0
                         }
                     ]
                 },
-                "GroupMultiCommodityFlow": null
+                "GroupMultiCommodityFlow": {
+                    "variables": [
+                        {
+                            "head": 19,
+                            "tail": 0,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 19,
+                            "tail": 0,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 19,
+                            "tail": 0,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 19,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 19,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 19,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 21,
+                            "tail": 0,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 21,
+                            "tail": 0,
+                            "terminal_id": 1,
+                            "value": 0.4
+                        },
+                        {
+                            "head": 21,
+                            "tail": 0,
+                            "terminal_id": 2,
+                            "value": 0.4
+                        },
+                        {
+                            "head": 0,
+                            "tail": 21,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 21,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 21,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 23,
+                            "tail": 0,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 23,
+                            "tail": 0,
+                            "terminal_id": 1,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 23,
+                            "tail": 0,
+                            "terminal_id": 2,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 0,
+                            "tail": 23,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 23,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 23,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 25,
+                            "tail": 0,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 25,
+                            "tail": 0,
+                            "terminal_id": 1,
+                            "value": 0.4
+                        },
+                        {
+                            "head": 25,
+                            "tail": 0,
+                            "terminal_id": 2,
+                            "value": 0.4
+                        },
+                        {
+                            "head": 0,
+                            "tail": 25,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 25,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 25,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 27,
+                            "tail": 0,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 27,
+                            "tail": 0,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 27,
+                            "tail": 0,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 27,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 27,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 27,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 1,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 1,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 1,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 3,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 3,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 3,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 1,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 1,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 1,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 4,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 4,
+                            "terminal_id": 1,
+                            "value": 0.4
+                        },
+                        {
+                            "head": 1,
+                            "tail": 4,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 7,
+                            "tail": 1,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 7,
+                            "tail": 1,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 7,
+                            "tail": 1,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 7,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 7,
+                            "terminal_id": 1,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 1,
+                            "tail": 7,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 12,
+                            "tail": 1,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 12,
+                            "tail": 1,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 12,
+                            "tail": 1,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 12,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 12,
+                            "terminal_id": 1,
+                            "value": 0.4
+                        },
+                        {
+                            "head": 1,
+                            "tail": 12,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 19,
+                            "tail": 1,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 19,
+                            "tail": 1,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 19,
+                            "tail": 1,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 19,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 19,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 19,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 2,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 2,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 2,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 3,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 3,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 3,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 2,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 2,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 2,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 6,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 6,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 6,
+                            "terminal_id": 2,
+                            "value": 0.4
+                        },
+                        {
+                            "head": 11,
+                            "tail": 2,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 11,
+                            "tail": 2,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 11,
+                            "tail": 2,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 11,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 11,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 11,
+                            "terminal_id": 2,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 18,
+                            "tail": 2,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 2,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 2,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 18,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 18,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 18,
+                            "terminal_id": 2,
+                            "value": 0.4
+                        },
+                        {
+                            "head": 27,
+                            "tail": 2,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 27,
+                            "tail": 2,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 27,
+                            "tail": 2,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 27,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 27,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 27,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 5,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 5,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 5,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 5,
+                            "tail": 3,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 5,
+                            "tail": 3,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 5,
+                            "tail": 3,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 5,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 5,
+                            "terminal_id": 1,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 4,
+                            "tail": 5,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 5,
+                            "tail": 4,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 5,
+                            "tail": 4,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 5,
+                            "tail": 4,
+                            "terminal_id": 2,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 6,
+                            "tail": 5,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 5,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 5,
+                            "terminal_id": 2,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 5,
+                            "tail": 6,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 5,
+                            "tail": 6,
+                            "terminal_id": 1,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 5,
+                            "tail": 6,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 8,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 8,
+                            "terminal_id": 1,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 4,
+                            "tail": 8,
+                            "terminal_id": 2,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 8,
+                            "tail": 4,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 8,
+                            "tail": 4,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 8,
+                            "tail": 4,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 7,
+                            "tail": 8,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 7,
+                            "tail": 8,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 7,
+                            "tail": 8,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 8,
+                            "tail": 7,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 8,
+                            "tail": 7,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 8,
+                            "tail": 7,
+                            "terminal_id": 2,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 9,
+                            "tail": 8,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 9,
+                            "tail": 8,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 9,
+                            "tail": 8,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 8,
+                            "tail": 9,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 8,
+                            "tail": 9,
+                            "terminal_id": 1,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 8,
+                            "tail": 9,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 10,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 10,
+                            "terminal_id": 1,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 6,
+                            "tail": 10,
+                            "terminal_id": 2,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 10,
+                            "tail": 6,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 10,
+                            "tail": 6,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 10,
+                            "tail": 6,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 9,
+                            "tail": 10,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 9,
+                            "tail": 10,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 9,
+                            "tail": 10,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 10,
+                            "tail": 9,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 10,
+                            "tail": 9,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 10,
+                            "tail": 9,
+                            "terminal_id": 2,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 11,
+                            "tail": 10,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 11,
+                            "tail": 10,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 11,
+                            "tail": 10,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 10,
+                            "tail": 11,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 10,
+                            "tail": 11,
+                            "terminal_id": 1,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 10,
+                            "tail": 11,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 7,
+                            "tail": 13,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 7,
+                            "tail": 13,
+                            "terminal_id": 1,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 7,
+                            "tail": 13,
+                            "terminal_id": 2,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 13,
+                            "tail": 7,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 13,
+                            "tail": 7,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 13,
+                            "tail": 7,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 12,
+                            "tail": 13,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 12,
+                            "tail": 13,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 12,
+                            "tail": 13,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 13,
+                            "tail": 12,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 13,
+                            "tail": 12,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 13,
+                            "tail": 12,
+                            "terminal_id": 2,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 14,
+                            "tail": 13,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 14,
+                            "tail": 13,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 14,
+                            "tail": 13,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 13,
+                            "tail": 14,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 13,
+                            "tail": 14,
+                            "terminal_id": 1,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 13,
+                            "tail": 14,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 9,
+                            "tail": 15,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 9,
+                            "tail": 15,
+                            "terminal_id": 1,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 9,
+                            "tail": 15,
+                            "terminal_id": 2,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 15,
+                            "tail": 9,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 15,
+                            "tail": 9,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 15,
+                            "tail": 9,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 14,
+                            "tail": 15,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 14,
+                            "tail": 15,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 14,
+                            "tail": 15,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 15,
+                            "tail": 14,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 15,
+                            "tail": 14,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 15,
+                            "tail": 14,
+                            "terminal_id": 2,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 16,
+                            "tail": 15,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 15,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 15,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 15,
+                            "tail": 16,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 15,
+                            "tail": 16,
+                            "terminal_id": 1,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 15,
+                            "tail": 16,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 11,
+                            "tail": 17,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 11,
+                            "tail": 17,
+                            "terminal_id": 1,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 11,
+                            "tail": 17,
+                            "terminal_id": 2,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 17,
+                            "tail": 11,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 17,
+                            "tail": 11,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 17,
+                            "tail": 11,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 17,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 17,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 17,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 17,
+                            "tail": 16,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 17,
+                            "tail": 16,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 17,
+                            "tail": 16,
+                            "terminal_id": 2,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 18,
+                            "tail": 17,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 17,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 17,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 17,
+                            "tail": 18,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 17,
+                            "tail": 18,
+                            "terminal_id": 1,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 17,
+                            "tail": 18,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 12,
+                            "tail": 20,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 12,
+                            "tail": 20,
+                            "terminal_id": 1,
+                            "value": 0.4
+                        },
+                        {
+                            "head": 12,
+                            "tail": 20,
+                            "terminal_id": 2,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 20,
+                            "tail": 12,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 20,
+                            "tail": 12,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 20,
+                            "tail": 12,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 19,
+                            "tail": 20,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 19,
+                            "tail": 20,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 19,
+                            "tail": 20,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 20,
+                            "tail": 19,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 20,
+                            "tail": 19,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 20,
+                            "tail": 19,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 21,
+                            "tail": 20,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 21,
+                            "tail": 20,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 21,
+                            "tail": 20,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 20,
+                            "tail": 21,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 20,
+                            "tail": 21,
+                            "terminal_id": 1,
+                            "value": 0.4
+                        },
+                        {
+                            "head": 20,
+                            "tail": 21,
+                            "terminal_id": 2,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 14,
+                            "tail": 22,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 14,
+                            "tail": 22,
+                            "terminal_id": 1,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 14,
+                            "tail": 22,
+                            "terminal_id": 2,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 22,
+                            "tail": 14,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 22,
+                            "tail": 14,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 22,
+                            "tail": 14,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 21,
+                            "tail": 22,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 21,
+                            "tail": 22,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 21,
+                            "tail": 22,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 22,
+                            "tail": 21,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 22,
+                            "tail": 21,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 22,
+                            "tail": 21,
+                            "terminal_id": 2,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 23,
+                            "tail": 22,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 23,
+                            "tail": 22,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 23,
+                            "tail": 22,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 22,
+                            "tail": 23,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 22,
+                            "tail": 23,
+                            "terminal_id": 1,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 22,
+                            "tail": 23,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 24,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 24,
+                            "terminal_id": 1,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 16,
+                            "tail": 24,
+                            "terminal_id": 2,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 24,
+                            "tail": 16,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 24,
+                            "tail": 16,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 24,
+                            "tail": 16,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 23,
+                            "tail": 24,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 23,
+                            "tail": 24,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 23,
+                            "tail": 24,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 24,
+                            "tail": 23,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 24,
+                            "tail": 23,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 24,
+                            "tail": 23,
+                            "terminal_id": 2,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 25,
+                            "tail": 24,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 25,
+                            "tail": 24,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 25,
+                            "tail": 24,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 24,
+                            "tail": 25,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 24,
+                            "tail": 25,
+                            "terminal_id": 1,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 24,
+                            "tail": 25,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 26,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 26,
+                            "terminal_id": 1,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 18,
+                            "tail": 26,
+                            "terminal_id": 2,
+                            "value": 0.4
+                        },
+                        {
+                            "head": 26,
+                            "tail": 18,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 26,
+                            "tail": 18,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 26,
+                            "tail": 18,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 25,
+                            "tail": 26,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 25,
+                            "tail": 26,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 25,
+                            "tail": 26,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 26,
+                            "tail": 25,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 26,
+                            "tail": 25,
+                            "terminal_id": 1,
+                            "value": 0.2
+                        },
+                        {
+                            "head": 26,
+                            "tail": 25,
+                            "terminal_id": 2,
+                            "value": 0.4
+                        },
+                        {
+                            "head": 27,
+                            "tail": 26,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 27,
+                            "tail": 26,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 27,
+                            "tail": 26,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 26,
+                            "tail": 27,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 26,
+                            "tail": 27,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 26,
+                            "tail": 27,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        }
+                    ]
+                }
             }
         },
         "integer": {
@@ -1405,7 +3028,7 @@
                         {
                             "head": 21,
                             "tail": 0,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 0,
@@ -1415,7 +3038,7 @@
                         {
                             "head": 23,
                             "tail": 0,
-                            "value": 0.0
+                            "value": 1.0
                         },
                         {
                             "head": 0,
@@ -1545,7 +3168,7 @@
                         {
                             "head": 3,
                             "tail": 5,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 5,
@@ -1645,7 +3268,7 @@
                         {
                             "head": 12,
                             "tail": 13,
-                            "value": 0.0
+                            "value": 1.0
                         },
                         {
                             "head": 13,
@@ -1660,7 +3283,7 @@
                         {
                             "head": 13,
                             "tail": 14,
-                            "value": 0.0
+                            "value": 1.0
                         },
                         {
                             "head": 9,
@@ -1680,12 +3303,12 @@
                         {
                             "head": 15,
                             "tail": 14,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 16,
                             "tail": 15,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 15,
@@ -1725,7 +3348,7 @@
                         {
                             "head": 12,
                             "tail": 20,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 20,
@@ -1735,7 +3358,7 @@
                         {
                             "head": 19,
                             "tail": 20,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 20,
@@ -1750,7 +3373,7 @@
                         {
                             "head": 20,
                             "tail": 21,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 14,
@@ -1770,7 +3393,7 @@
                         {
                             "head": 22,
                             "tail": 21,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 23,
@@ -1780,12 +3403,12 @@
                         {
                             "head": 22,
                             "tail": 23,
-                            "value": 0.0
+                            "value": 1.0
                         },
                         {
                             "head": 16,
                             "tail": 24,
-                            "value": 0.0
+                            "value": 1.0
                         },
                         {
                             "head": 24,
@@ -1800,7 +3423,7 @@
                         {
                             "head": 24,
                             "tail": 23,
-                            "value": 0.0
+                            "value": 1.0
                         },
                         {
                             "head": 25,
@@ -1835,7 +3458,7 @@
                         {
                             "head": 27,
                             "tail": 26,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 26,
@@ -1852,12 +3475,12 @@
                         {
                             "head": 21,
                             "tail": 0,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 23,
                             "tail": 0,
-                            "value": 0.0
+                            "value": 1.0
                         },
                         {
                             "head": 25,
@@ -1922,7 +3545,7 @@
                         {
                             "head": 3,
                             "tail": 5,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 4,
@@ -1972,12 +3595,12 @@
                         {
                             "head": 12,
                             "tail": 13,
-                            "value": 0.0
+                            "value": 1.0
                         },
                         {
                             "head": 14,
                             "tail": 13,
-                            "value": 0.0
+                            "value": 1.0
                         },
                         {
                             "head": 9,
@@ -1987,12 +3610,12 @@
                         {
                             "head": 14,
                             "tail": 15,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 16,
                             "tail": 15,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 11,
@@ -2012,17 +3635,17 @@
                         {
                             "head": 12,
                             "tail": 20,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 19,
                             "tail": 20,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 21,
                             "tail": 20,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 14,
@@ -2032,22 +3655,22 @@
                         {
                             "head": 21,
                             "tail": 22,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 23,
                             "tail": 22,
-                            "value": 0.0
+                            "value": 1.0
                         },
                         {
                             "head": 16,
                             "tail": 24,
-                            "value": 0.0
+                            "value": 1.0
                         },
                         {
                             "head": 23,
                             "tail": 24,
-                            "value": 0.0
+                            "value": 1.0
                         },
                         {
                             "head": 25,
@@ -2067,7 +3690,7 @@
                         {
                             "head": 27,
                             "tail": 26,
-                            "value": 1.0
+                            "value": 0.0
                         }
                     ]
                 }
@@ -2085,16 +3708,16 @@
                         {
                             "node": "0",
                             "value_per_terminal": [
-                                8.6,
-                                1.4,
+                                9.6,
+                                0.0,
                                 0.0
                             ]
                         },
                         {
                             "node": "1",
                             "value_per_terminal": [
-                                0.0,
-                                10.0,
+                                0.6,
+                                9.0,
                                 0.0
                             ]
                         },
@@ -2103,7 +3726,7 @@
                             "value_per_terminal": [
                                 0.0,
                                 0.0,
-                                10.0
+                                9.6
                             ]
                         },
                         {
@@ -2111,203 +3734,203 @@
                             "value_per_terminal": [
                                 0.0,
                                 5.0,
-                                5.0
+                                4.6
                             ]
                         },
                         {
                             "node": "4",
                             "value_per_terminal": [
-                                0.0,
-                                6.0,
-                                4.0
+                                1.0,
+                                5.0,
+                                3.6
                             ]
                         },
                         {
                             "node": "5",
                             "value_per_terminal": [
-                                0.0,
-                                5.0,
-                                5.0
+                                1.0,
+                                4.0,
+                                4.6
                             ]
                         },
                         {
                             "node": "6",
                             "value_per_terminal": [
-                                0.0,
-                                4.0,
-                                6.0
+                                1.0,
+                                3.0,
+                                5.6
                             ]
                         },
                         {
                             "node": "7",
                             "value_per_terminal": [
-                                1.6,
-                                6.0,
-                                2.4
+                                2.3,
+                                5.0,
+                                2.3
                             ]
                         },
                         {
                             "node": "8",
                             "value_per_terminal": [
-                                1.0,
-                                5.6,
-                                3.4
+                                2.0,
+                                4.3,
+                                3.3
                             ]
                         },
                         {
                             "node": "9",
                             "value_per_terminal": [
-                                1.2,
-                                4.6,
+                                2.1,
+                                3.3,
                                 4.2
                             ]
                         },
                         {
                             "node": "10",
                             "value_per_terminal": [
-                                1.0,
-                                3.8,
+                                2.0,
+                                2.4,
                                 5.2
                             ]
                         },
                         {
                             "node": "11",
                             "value_per_terminal": [
-                                1.2,
-                                2.8,
-                                6.0
+                                2.6,
+                                1.4,
+                                5.6
                             ]
                         },
                         {
                             "node": "12",
                             "value_per_terminal": [
-                                2.6,
-                                6.0,
-                                1.4
+                                3.6,
+                                5.0,
+                                1.0
                             ]
                         },
                         {
                             "node": "13",
                             "value_per_terminal": [
-                                2.6,
-                                5.0,
-                                2.4
+                                3.3,
+                                4.3,
+                                2.0
                             ]
                         },
                         {
                             "node": "14",
                             "value_per_terminal": [
-                                3.2,
-                                4.0,
-                                2.8
+                                4.1,
+                                3.3,
+                                2.2
                             ]
                         },
                         {
                             "node": "15",
                             "value_per_terminal": [
-                                2.2,
-                                4.0,
-                                3.8
+                                3.1,
+                                3.3,
+                                3.2
                             ]
                         },
                         {
                             "node": "16",
                             "value_per_terminal": [
-                                2.6,
-                                3.0,
-                                4.4
+                                3.7,
+                                2.3,
+                                3.6
                             ]
                         },
                         {
                             "node": "17",
                             "value_per_terminal": [
-                                2.2,
-                                2.4,
-                                5.4
+                                3.6,
+                                1.4,
+                                4.6
                             ]
                         },
                         {
                             "node": "18",
                             "value_per_terminal": [
-                                2.6,
-                                1.4,
-                                6.0
+                                3.6,
+                                0.4,
+                                5.6
                             ]
                         },
                         {
                             "node": "19",
                             "value_per_terminal": [
-                                3.6,
-                                5.0,
-                                1.4
+                                5.6,
+                                4.0,
+                                0.0
                             ]
                         },
                         {
                             "node": "20",
                             "value_per_terminal": [
-                                3.6,
-                                5.0,
-                                1.4
+                                4.6,
+                                4.0,
+                                1.0
                             ]
                         },
                         {
                             "node": "21",
                             "value_per_terminal": [
-                                4.6,
-                                4.0,
-                                1.4
+                                5.6,
+                                3.0,
+                                1.0
                             ]
                         },
                         {
                             "node": "22",
                             "value_per_terminal": [
-                                4.2,
-                                3.4,
-                                2.4
+                                5.1,
+                                2.5,
+                                2.0
                             ]
                         },
                         {
                             "node": "23",
                             "value_per_terminal": [
-                                4.6,
-                                2.4,
-                                3.0
+                                5.6,
+                                1.5,
+                                2.5
                             ]
                         },
                         {
                             "node": "24",
                             "value_per_terminal": [
-                                3.6,
-                                2.4,
-                                4.0
+                                4.7,
+                                1.4,
+                                3.5
                             ]
                         },
                         {
                             "node": "25",
                             "value_per_terminal": [
-                                4.6,
-                                1.4,
-                                4.0
+                                5.6,
+                                0.4,
+                                3.6
                             ]
                         },
                         {
                             "node": "26",
                             "value_per_terminal": [
-                                3.6,
-                                1.4,
-                                5.0
+                                4.6,
+                                0.4,
+                                4.6
                             ]
                         },
                         {
                             "node": "27",
                             "value_per_terminal": [
-                                3.6,
-                                1.4,
+                                4.6,
+                                0.0,
                                 5.0
                             ]
                         }
                     ],
-                    "simplex": 10.0
+                    "simplex": 9.6
                 }
             }
         }

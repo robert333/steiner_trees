@@ -72,7 +72,7 @@ instances/integrality_gaps/3_terminals_planar_01/3_terminals_planar_01.json
             {
                 "head": 3,
                 "tail": 5,
-                "weight": 0
+                "weight": 1
             },
             {
                 "head": 4,
@@ -255,7 +255,7 @@ Node 2 with weight 0 and 4 incident edges
 Node 3 with weight 0 and 3 incident edges
 [4] = 1 --( 3 )-- 3
 [8] = 2 --( 3 )-- 3
-[12] = 5 --( 0 )-- 3
+[12] = 5 --( 1 )-- 3
 
 Node 4 with weight 0 and 3 incident edges
 [5] = 1 --( 2 )-- 4
@@ -263,7 +263,7 @@ Node 4 with weight 0 and 3 incident edges
 [15] = 8 --( 1 )-- 4
 
 Node 5 with weight 0 and 3 incident edges
-[12] = 5 --( 0 )-- 3
+[12] = 5 --( 1 )-- 3
 [13] = 5 --( 1 )-- 4
 [14] = 5 --( 1 )-- 6
 
@@ -366,7 +366,7 @@ Edges
 [9] = 2 --( 2 )-- 6
 [10] = 2 --( 2 )-- 11
 [11] = 2 --( 3 )-- 18
-[12] = 5 --( 0 )-- 3
+[12] = 5 --( 1 )-- 3
 [13] = 5 --( 1 )-- 4
 [14] = 5 --( 1 )-- 6
 [15] = 8 --( 1 )-- 4
@@ -395,7 +395,7 @@ Edges
 \     Integer        : 0
 \     Continuous     : 0
 Minimize
- Obj: +3 undirected_edge_Edge[0]___{(0,_12),_weight___3.000000},_net_net_0 +2 undirected_edge_Edge[1]___{(0,_14),_weight___2.000000},_net_net_0 +2 undirected_edge_Edge[2]___{(0,_16),_weight___2.000000},_net_net_0 +3 undirected_edge_Edge[3]___{(0,_18),_weight___3.000000},_net_net_0 +3 undirected_edge_Edge[4]___{(1,_3),_weight___3.000000},_net_net_0 +2 undirected_edge_Edge[5]___{(1,_4),_weight___2.000000},_net_net_0 +2 undirected_edge_Edge[6]___{(1,_7),_weight___2.000000},_net_net_0 +3 undirected_edge_Edge[7]___{(1,_12),_weight___3.000000},_net_net_0 +3 undirected_edge_Edge[8]___{(2,_3),_weight___3.000000},_net_net_0 +2 undirected_edge_Edge[9]___{(2,_6),_weight___2.000000},_net_net_0 +2 undirected_edge_Edge[10]___{(2,_11),_weight___2.000000},_net_net_0 +3 undirected_edge_Edge[11]___{(2,_18),_weight___3.000000},_net_net_0 +1 undirected_edge_Edge[13]___{(5,_4),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[14]___{(5,_6),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[15]___{(8,_4),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[16]___{(8,_7),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[17]___{(8,_9),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[18]___{(10,_6),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[19]___{(10,_9),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[20]___{(10,_11),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[21]___{(13,_7),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[22]___{(13,_12),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[23]___{(13,_14),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[24]___{(15,_9),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[25]___{(15,_14),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[26]___{(15,_16),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[27]___{(17,_11),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[28]___{(17,_16),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[29]___{(17,_18),_weight___1.000000},_net_net_0 
+ Obj: +3 undirected_edge_Edge[0]___{(0,_12),_weight___3.000000},_net_net_0 +2 undirected_edge_Edge[1]___{(0,_14),_weight___2.000000},_net_net_0 +2 undirected_edge_Edge[2]___{(0,_16),_weight___2.000000},_net_net_0 +3 undirected_edge_Edge[3]___{(0,_18),_weight___3.000000},_net_net_0 +3 undirected_edge_Edge[4]___{(1,_3),_weight___3.000000},_net_net_0 +2 undirected_edge_Edge[5]___{(1,_4),_weight___2.000000},_net_net_0 +2 undirected_edge_Edge[6]___{(1,_7),_weight___2.000000},_net_net_0 +3 undirected_edge_Edge[7]___{(1,_12),_weight___3.000000},_net_net_0 +3 undirected_edge_Edge[8]___{(2,_3),_weight___3.000000},_net_net_0 +2 undirected_edge_Edge[9]___{(2,_6),_weight___2.000000},_net_net_0 +2 undirected_edge_Edge[10]___{(2,_11),_weight___2.000000},_net_net_0 +3 undirected_edge_Edge[11]___{(2,_18),_weight___3.000000},_net_net_0 +1 undirected_edge_Edge[12]___{(5,_3),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[13]___{(5,_4),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[14]___{(5,_6),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[15]___{(8,_4),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[16]___{(8,_7),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[17]___{(8,_9),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[18]___{(10,_6),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[19]___{(10,_9),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[20]___{(10,_11),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[21]___{(13,_7),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[22]___{(13,_12),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[23]___{(13,_14),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[24]___{(15,_9),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[25]___{(15,_14),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[26]___{(15,_16),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[27]___{(17,_11),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[28]___{(17,_16),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[29]___{(17,_18),_weight___1.000000},_net_net_0 
 Subject to
  edge_connection_undirected_edge_Edge[0]___{(0,_12),_weight___3.000000}_and_directed_edge_Edge[0]___{(0,_12),_weight___3.000000}_and_directed_edge_Edge[1]___{(12,_0),_weight___3.000000}_and_net_net_0: -1 undirected_edge_Edge[0]___{(0,_12),_weight___3.000000},_net_net_0 +1 bidirected_edge_Edge[0]___{(0,_12),_weight___3.000000},_net_net_0 +1 bidirected_edge_Edge[1]___{(12,_0),_weight___3.000000},_net_net_0  <= 0
  edge_connection_undirected_edge_Edge[1]___{(0,_14),_weight___2.000000}_and_directed_edge_Edge[2]___{(0,_14),_weight___2.000000}_and_directed_edge_Edge[3]___{(14,_0),_weight___2.000000}_and_net_net_0: -1 undirected_edge_Edge[1]___{(0,_14),_weight___2.000000},_net_net_0 +1 bidirected_edge_Edge[2]___{(0,_14),_weight___2.000000},_net_net_0 +1 bidirected_edge_Edge[3]___{(14,_0),_weight___2.000000},_net_net_0  <= 0
@@ -409,7 +409,7 @@ Subject to
  edge_connection_undirected_edge_Edge[9]___{(2,_6),_weight___2.000000}_and_directed_edge_Edge[18]___{(2,_6),_weight___2.000000}_and_directed_edge_Edge[19]___{(6,_2),_weight___2.000000}_and_net_net_0: -1 undirected_edge_Edge[9]___{(2,_6),_weight___2.000000},_net_net_0 +1 bidirected_edge_Edge[18]___{(2,_6),_weight___2.000000},_net_net_0 +1 bidirected_edge_Edge[19]___{(6,_2),_weight___2.000000},_net_net_0  <= 0
  edge_connection_undirected_edge_Edge[10]___{(2,_11),_weight___2.000000}_and_directed_edge_Edge[20]___{(2,_11),_weight___2.000000}_and_directed_edge_Edge[21]___{(11,_2),_weight___2.000000}_and_net_net_0: -1 undirected_edge_Edge[10]___{(2,_11),_weight___2.000000},_net_net_0 +1 bidirected_edge_Edge[20]___{(2,_11),_weight___2.000000},_net_net_0 +1 bidirected_edge_Edge[21]___{(11,_2),_weight___2.000000},_net_net_0  <= 0
  edge_connection_undirected_edge_Edge[11]___{(2,_18),_weight___3.000000}_and_directed_edge_Edge[22]___{(2,_18),_weight___3.000000}_and_directed_edge_Edge[23]___{(18,_2),_weight___3.000000}_and_net_net_0: -1 undirected_edge_Edge[11]___{(2,_18),_weight___3.000000},_net_net_0 +1 bidirected_edge_Edge[22]___{(2,_18),_weight___3.000000},_net_net_0 +1 bidirected_edge_Edge[23]___{(18,_2),_weight___3.000000},_net_net_0  <= 0
- edge_connection_undirected_edge_Edge[12]___{(5,_3),_weight___0.000000}_and_directed_edge_Edge[24]___{(5,_3),_weight___0.000000}_and_directed_edge_Edge[25]___{(3,_5),_weight___0.000000}_and_net_net_0: -1 undirected_edge_Edge[12]___{(5,_3),_weight___0.000000},_net_net_0 +1 bidirected_edge_Edge[24]___{(5,_3),_weight___0.000000},_net_net_0 +1 bidirected_edge_Edge[25]___{(3,_5),_weight___0.000000},_net_net_0  <= 0
+ edge_connection_undirected_edge_Edge[12]___{(5,_3),_weight___1.000000}_and_directed_edge_Edge[24]___{(5,_3),_weight___1.000000}_and_directed_edge_Edge[25]___{(3,_5),_weight___1.000000}_and_net_net_0: -1 undirected_edge_Edge[12]___{(5,_3),_weight___1.000000},_net_net_0 +1 bidirected_edge_Edge[24]___{(5,_3),_weight___1.000000},_net_net_0 +1 bidirected_edge_Edge[25]___{(3,_5),_weight___1.000000},_net_net_0  <= 0
  edge_connection_undirected_edge_Edge[13]___{(5,_4),_weight___1.000000}_and_directed_edge_Edge[26]___{(5,_4),_weight___1.000000}_and_directed_edge_Edge[27]___{(4,_5),_weight___1.000000}_and_net_net_0: -1 undirected_edge_Edge[13]___{(5,_4),_weight___1.000000},_net_net_0 +1 bidirected_edge_Edge[26]___{(5,_4),_weight___1.000000},_net_net_0 +1 bidirected_edge_Edge[27]___{(4,_5),_weight___1.000000},_net_net_0  <= 0
  edge_connection_undirected_edge_Edge[14]___{(5,_6),_weight___1.000000}_and_directed_edge_Edge[28]___{(5,_6),_weight___1.000000}_and_directed_edge_Edge[29]___{(6,_5),_weight___1.000000}_and_net_net_0: -1 undirected_edge_Edge[14]___{(5,_6),_weight___1.000000},_net_net_0 +1 bidirected_edge_Edge[28]___{(5,_6),_weight___1.000000},_net_net_0 +1 bidirected_edge_Edge[29]___{(6,_5),_weight___1.000000},_net_net_0  <= 0
  edge_connection_undirected_edge_Edge[15]___{(8,_4),_weight___1.000000}_and_directed_edge_Edge[30]___{(8,_4),_weight___1.000000}_and_directed_edge_Edge[31]___{(4,_8),_weight___1.000000}_and_net_net_0: -1 undirected_edge_Edge[15]___{(8,_4),_weight___1.000000},_net_net_0 +1 bidirected_edge_Edge[30]___{(8,_4),_weight___1.000000},_net_net_0 +1 bidirected_edge_Edge[31]___{(4,_8),_weight___1.000000},_net_net_0  <= 0
@@ -430,9 +430,9 @@ Subject to
  balance_node___node_0,_net_net_0,_terminal_id___1: +1 edge_Edge[0]___{(0,_12),_weight___3.000000},_net_net_0,_terminal_id___1 -1 edge_Edge[1]___{(12,_0),_weight___3.000000},_net_net_0,_terminal_id___1 +1 edge_Edge[2]___{(0,_14),_weight___2.000000},_net_net_0,_terminal_id___1 -1 edge_Edge[3]___{(14,_0),_weight___2.000000},_net_net_0,_terminal_id___1 +1 edge_Edge[4]___{(0,_16),_weight___2.000000},_net_net_0,_terminal_id___1 -1 edge_Edge[5]___{(16,_0),_weight___2.000000},_net_net_0,_terminal_id___1 +1 edge_Edge[6]___{(0,_18),_weight___3.000000},_net_net_0,_terminal_id___1 -1 edge_Edge[7]___{(18,_0),_weight___3.000000},_net_net_0,_terminal_id___1  = 1
  balance_node___node_1,_net_net_0,_terminal_id___1: +1 edge_Edge[8]___{(1,_3),_weight___3.000000},_net_net_0,_terminal_id___1 -1 edge_Edge[9]___{(3,_1),_weight___3.000000},_net_net_0,_terminal_id___1 +1 edge_Edge[10]___{(1,_4),_weight___2.000000},_net_net_0,_terminal_id___1 -1 edge_Edge[11]___{(4,_1),_weight___2.000000},_net_net_0,_terminal_id___1 +1 edge_Edge[12]___{(1,_7),_weight___2.000000},_net_net_0,_terminal_id___1 -1 edge_Edge[13]___{(7,_1),_weight___2.000000},_net_net_0,_terminal_id___1 +1 edge_Edge[14]___{(1,_12),_weight___3.000000},_net_net_0,_terminal_id___1 -1 edge_Edge[15]___{(12,_1),_weight___3.000000},_net_net_0,_terminal_id___1  = -1
  balance_node___node_2,_net_net_0,_terminal_id___1: +1 edge_Edge[16]___{(2,_3),_weight___3.000000},_net_net_0,_terminal_id___1 -1 edge_Edge[17]___{(3,_2),_weight___3.000000},_net_net_0,_terminal_id___1 +1 edge_Edge[18]___{(2,_6),_weight___2.000000},_net_net_0,_terminal_id___1 -1 edge_Edge[19]___{(6,_2),_weight___2.000000},_net_net_0,_terminal_id___1 +1 edge_Edge[20]___{(2,_11),_weight___2.000000},_net_net_0,_terminal_id___1 -1 edge_Edge[21]___{(11,_2),_weight___2.000000},_net_net_0,_terminal_id___1 +1 edge_Edge[22]___{(2,_18),_weight___3.000000},_net_net_0,_terminal_id___1 -1 edge_Edge[23]___{(18,_2),_weight___3.000000},_net_net_0,_terminal_id___1  = 0
- balance_node___node_3,_net_net_0,_terminal_id___1: -1 edge_Edge[8]___{(1,_3),_weight___3.000000},_net_net_0,_terminal_id___1 +1 edge_Edge[9]___{(3,_1),_weight___3.000000},_net_net_0,_terminal_id___1 -1 edge_Edge[16]___{(2,_3),_weight___3.000000},_net_net_0,_terminal_id___1 +1 edge_Edge[17]___{(3,_2),_weight___3.000000},_net_net_0,_terminal_id___1 -1 edge_Edge[24]___{(5,_3),_weight___0.000000},_net_net_0,_terminal_id___1 +1 edge_Edge[25]___{(3,_5),_weight___0.000000},_net_net_0,_terminal_id___1  = 0
+ balance_node___node_3,_net_net_0,_terminal_id___1: -1 edge_Edge[8]___{(1,_3),_weight___3.000000},_net_net_0,_terminal_id___1 +1 edge_Edge[9]___{(3,_1),_weight___3.000000},_net_net_0,_terminal_id___1 -1 edge_Edge[16]___{(2,_3),_weight___3.000000},_net_net_0,_terminal_id___1 +1 edge_Edge[17]___{(3,_2),_weight___3.000000},_net_net_0,_terminal_id___1 -1 edge_Edge[24]___{(5,_3),_weight___1.000000},_net_net_0,_terminal_id___1 +1 edge_Edge[25]___{(3,_5),_weight___1.000000},_net_net_0,_terminal_id___1  = 0
  balance_node___node_4,_net_net_0,_terminal_id___1: -1 edge_Edge[10]___{(1,_4),_weight___2.000000},_net_net_0,_terminal_id___1 +1 edge_Edge[11]___{(4,_1),_weight___2.000000},_net_net_0,_terminal_id___1 -1 edge_Edge[26]___{(5,_4),_weight___1.000000},_net_net_0,_terminal_id___1 +1 edge_Edge[27]___{(4,_5),_weight___1.000000},_net_net_0,_terminal_id___1 -1 edge_Edge[30]___{(8,_4),_weight___1.000000},_net_net_0,_terminal_id___1 +1 edge_Edge[31]___{(4,_8),_weight___1.000000},_net_net_0,_terminal_id___1  = 0
- balance_node___node_5,_net_net_0,_terminal_id___1: +1 edge_Edge[24]___{(5,_3),_weight___0.000000},_net_net_0,_terminal_id___1 -1 edge_Edge[25]___{(3,_5),_weight___0.000000},_net_net_0,_terminal_id___1 +1 edge_Edge[26]___{(5,_4),_weight___1.000000},_net_net_0,_terminal_id___1 -1 edge_Edge[27]___{(4,_5),_weight___1.000000},_net_net_0,_terminal_id___1 +1 edge_Edge[28]___{(5,_6),_weight___1.000000},_net_net_0,_terminal_id___1 -1 edge_Edge[29]___{(6,_5),_weight___1.000000},_net_net_0,_terminal_id___1  = 0
+ balance_node___node_5,_net_net_0,_terminal_id___1: +1 edge_Edge[24]___{(5,_3),_weight___1.000000},_net_net_0,_terminal_id___1 -1 edge_Edge[25]___{(3,_5),_weight___1.000000},_net_net_0,_terminal_id___1 +1 edge_Edge[26]___{(5,_4),_weight___1.000000},_net_net_0,_terminal_id___1 -1 edge_Edge[27]___{(4,_5),_weight___1.000000},_net_net_0,_terminal_id___1 +1 edge_Edge[28]___{(5,_6),_weight___1.000000},_net_net_0,_terminal_id___1 -1 edge_Edge[29]___{(6,_5),_weight___1.000000},_net_net_0,_terminal_id___1  = 0
  balance_node___node_6,_net_net_0,_terminal_id___1: -1 edge_Edge[18]___{(2,_6),_weight___2.000000},_net_net_0,_terminal_id___1 +1 edge_Edge[19]___{(6,_2),_weight___2.000000},_net_net_0,_terminal_id___1 -1 edge_Edge[28]___{(5,_6),_weight___1.000000},_net_net_0,_terminal_id___1 +1 edge_Edge[29]___{(6,_5),_weight___1.000000},_net_net_0,_terminal_id___1 -1 edge_Edge[36]___{(10,_6),_weight___1.000000},_net_net_0,_terminal_id___1 +1 edge_Edge[37]___{(6,_10),_weight___1.000000},_net_net_0,_terminal_id___1  = 0
  balance_node___node_7,_net_net_0,_terminal_id___1: -1 edge_Edge[12]___{(1,_7),_weight___2.000000},_net_net_0,_terminal_id___1 +1 edge_Edge[13]___{(7,_1),_weight___2.000000},_net_net_0,_terminal_id___1 -1 edge_Edge[32]___{(8,_7),_weight___1.000000},_net_net_0,_terminal_id___1 +1 edge_Edge[33]___{(7,_8),_weight___1.000000},_net_net_0,_terminal_id___1 -1 edge_Edge[42]___{(13,_7),_weight___1.000000},_net_net_0,_terminal_id___1 +1 edge_Edge[43]___{(7,_13),_weight___1.000000},_net_net_0,_terminal_id___1  = 0
  balance_node___node_8,_net_net_0,_terminal_id___1: +1 edge_Edge[30]___{(8,_4),_weight___1.000000},_net_net_0,_terminal_id___1 -1 edge_Edge[31]___{(4,_8),_weight___1.000000},_net_net_0,_terminal_id___1 +1 edge_Edge[32]___{(8,_7),_weight___1.000000},_net_net_0,_terminal_id___1 -1 edge_Edge[33]___{(7,_8),_weight___1.000000},_net_net_0,_terminal_id___1 +1 edge_Edge[34]___{(8,_9),_weight___1.000000},_net_net_0,_terminal_id___1 -1 edge_Edge[35]___{(9,_8),_weight___1.000000},_net_net_0,_terminal_id___1  = 0
@@ -470,8 +470,8 @@ Subject to
  connection___edge_Edge[21]___{(11,_2),_weight___2.000000},_net_name___net_0,_terminal_id___1: -1 bidirected_edge_Edge[21]___{(11,_2),_weight___2.000000},_net_net_0 +1 edge_Edge[21]___{(11,_2),_weight___2.000000},_net_net_0,_terminal_id___1  <= 0
  connection___edge_Edge[22]___{(2,_18),_weight___3.000000},_net_name___net_0,_terminal_id___1: -1 bidirected_edge_Edge[22]___{(2,_18),_weight___3.000000},_net_net_0 +1 edge_Edge[22]___{(2,_18),_weight___3.000000},_net_net_0,_terminal_id___1  <= 0
  connection___edge_Edge[23]___{(18,_2),_weight___3.000000},_net_name___net_0,_terminal_id___1: -1 bidirected_edge_Edge[23]___{(18,_2),_weight___3.000000},_net_net_0 +1 edge_Edge[23]___{(18,_2),_weight___3.000000},_net_net_0,_terminal_id___1  <= 0
- connection___edge_Edge[24]___{(5,_3),_weight___0.000000},_net_name___net_0,_terminal_id___1: -1 bidirected_edge_Edge[24]___{(5,_3),_weight___0.000000},_net_net_0 +1 edge_Edge[24]___{(5,_3),_weight___0.000000},_net_net_0,_terminal_id___1  <= 0
- connection___edge_Edge[25]___{(3,_5),_weight___0.000000},_net_name___net_0,_terminal_id___1: -1 bidirected_edge_Edge[25]___{(3,_5),_weight___0.000000},_net_net_0 +1 edge_Edge[25]___{(3,_5),_weight___0.000000},_net_net_0,_terminal_id___1  <= 0
+ connection___edge_Edge[24]___{(5,_3),_weight___1.000000},_net_name___net_0,_terminal_id___1: -1 bidirected_edge_Edge[24]___{(5,_3),_weight___1.000000},_net_net_0 +1 edge_Edge[24]___{(5,_3),_weight___1.000000},_net_net_0,_terminal_id___1  <= 0
+ connection___edge_Edge[25]___{(3,_5),_weight___1.000000},_net_name___net_0,_terminal_id___1: -1 bidirected_edge_Edge[25]___{(3,_5),_weight___1.000000},_net_net_0 +1 edge_Edge[25]___{(3,_5),_weight___1.000000},_net_net_0,_terminal_id___1  <= 0
  connection___edge_Edge[26]___{(5,_4),_weight___1.000000},_net_name___net_0,_terminal_id___1: -1 bidirected_edge_Edge[26]___{(5,_4),_weight___1.000000},_net_net_0 +1 edge_Edge[26]___{(5,_4),_weight___1.000000},_net_net_0,_terminal_id___1  <= 0
  connection___edge_Edge[27]___{(4,_5),_weight___1.000000},_net_name___net_0,_terminal_id___1: -1 bidirected_edge_Edge[27]___{(4,_5),_weight___1.000000},_net_net_0 +1 edge_Edge[27]___{(4,_5),_weight___1.000000},_net_net_0,_terminal_id___1  <= 0
  connection___edge_Edge[28]___{(5,_6),_weight___1.000000},_net_name___net_0,_terminal_id___1: -1 bidirected_edge_Edge[28]___{(5,_6),_weight___1.000000},_net_net_0 +1 edge_Edge[28]___{(5,_6),_weight___1.000000},_net_net_0,_terminal_id___1  <= 0
@@ -509,9 +509,9 @@ Subject to
  balance_node___node_0,_net_net_0,_terminal_id___2: +1 edge_Edge[0]___{(0,_12),_weight___3.000000},_net_net_0,_terminal_id___2 -1 edge_Edge[1]___{(12,_0),_weight___3.000000},_net_net_0,_terminal_id___2 +1 edge_Edge[2]___{(0,_14),_weight___2.000000},_net_net_0,_terminal_id___2 -1 edge_Edge[3]___{(14,_0),_weight___2.000000},_net_net_0,_terminal_id___2 +1 edge_Edge[4]___{(0,_16),_weight___2.000000},_net_net_0,_terminal_id___2 -1 edge_Edge[5]___{(16,_0),_weight___2.000000},_net_net_0,_terminal_id___2 +1 edge_Edge[6]___{(0,_18),_weight___3.000000},_net_net_0,_terminal_id___2 -1 edge_Edge[7]___{(18,_0),_weight___3.000000},_net_net_0,_terminal_id___2  = 1
  balance_node___node_1,_net_net_0,_terminal_id___2: +1 edge_Edge[8]___{(1,_3),_weight___3.000000},_net_net_0,_terminal_id___2 -1 edge_Edge[9]___{(3,_1),_weight___3.000000},_net_net_0,_terminal_id___2 +1 edge_Edge[10]___{(1,_4),_weight___2.000000},_net_net_0,_terminal_id___2 -1 edge_Edge[11]___{(4,_1),_weight___2.000000},_net_net_0,_terminal_id___2 +1 edge_Edge[12]___{(1,_7),_weight___2.000000},_net_net_0,_terminal_id___2 -1 edge_Edge[13]___{(7,_1),_weight___2.000000},_net_net_0,_terminal_id___2 +1 edge_Edge[14]___{(1,_12),_weight___3.000000},_net_net_0,_terminal_id___2 -1 edge_Edge[15]___{(12,_1),_weight___3.000000},_net_net_0,_terminal_id___2  = 0
  balance_node___node_2,_net_net_0,_terminal_id___2: +1 edge_Edge[16]___{(2,_3),_weight___3.000000},_net_net_0,_terminal_id___2 -1 edge_Edge[17]___{(3,_2),_weight___3.000000},_net_net_0,_terminal_id___2 +1 edge_Edge[18]___{(2,_6),_weight___2.000000},_net_net_0,_terminal_id___2 -1 edge_Edge[19]___{(6,_2),_weight___2.000000},_net_net_0,_terminal_id___2 +1 edge_Edge[20]___{(2,_11),_weight___2.000000},_net_net_0,_terminal_id___2 -1 edge_Edge[21]___{(11,_2),_weight___2.000000},_net_net_0,_terminal_id___2 +1 edge_Edge[22]___{(2,_18),_weight___3.000000},_net_net_0,_terminal_id___2 -1 edge_Edge[23]___{(18,_2),_weight___3.000000},_net_net_0,_terminal_id___2  = -1
- balance_node___node_3,_net_net_0,_terminal_id___2: -1 edge_Edge[8]___{(1,_3),_weight___3.000000},_net_net_0,_terminal_id___2 +1 edge_Edge[9]___{(3,_1),_weight___3.000000},_net_net_0,_terminal_id___2 -1 edge_Edge[16]___{(2,_3),_weight___3.000000},_net_net_0,_terminal_id___2 +1 edge_Edge[17]___{(3,_2),_weight___3.000000},_net_net_0,_terminal_id___2 -1 edge_Edge[24]___{(5,_3),_weight___0.000000},_net_net_0,_terminal_id___2 +1 edge_Edge[25]___{(3,_5),_weight___0.000000},_net_net_0,_terminal_id___2  = 0
+ balance_node___node_3,_net_net_0,_terminal_id___2: -1 edge_Edge[8]___{(1,_3),_weight___3.000000},_net_net_0,_terminal_id___2 +1 edge_Edge[9]___{(3,_1),_weight___3.000000},_net_net_0,_terminal_id___2 -1 edge_Edge[16]___{(2,_3),_weight___3.000000},_net_net_0,_terminal_id___2 +1 edge_Edge[17]___{(3,_2),_weight___3.000000},_net_net_0,_terminal_id___2 -1 edge_Edge[24]___{(5,_3),_weight___1.000000},_net_net_0,_terminal_id___2 +1 edge_Edge[25]___{(3,_5),_weight___1.000000},_net_net_0,_terminal_id___2  = 0
  balance_node___node_4,_net_net_0,_terminal_id___2: -1 edge_Edge[10]___{(1,_4),_weight___2.000000},_net_net_0,_terminal_id___2 +1 edge_Edge[11]___{(4,_1),_weight___2.000000},_net_net_0,_terminal_id___2 -1 edge_Edge[26]___{(5,_4),_weight___1.000000},_net_net_0,_terminal_id___2 +1 edge_Edge[27]___{(4,_5),_weight___1.000000},_net_net_0,_terminal_id___2 -1 edge_Edge[30]___{(8,_4),_weight___1.000000},_net_net_0,_terminal_id___2 +1 edge_Edge[31]___{(4,_8),_weight___1.000000},_net_net_0,_terminal_id___2  = 0
- balance_node___node_5,_net_net_0,_terminal_id___2: +1 edge_Edge[24]___{(5,_3),_weight___0.000000},_net_net_0,_terminal_id___2 -1 edge_Edge[25]___{(3,_5),_weight___0.000000},_net_net_0,_terminal_id___2 +1 edge_Edge[26]___{(5,_4),_weight___1.000000},_net_net_0,_terminal_id___2 -1 edge_Edge[27]___{(4,_5),_weight___1.000000},_net_net_0,_terminal_id___2 +1 edge_Edge[28]___{(5,_6),_weight___1.000000},_net_net_0,_terminal_id___2 -1 edge_Edge[29]___{(6,_5),_weight___1.000000},_net_net_0,_terminal_id___2  = 0
+ balance_node___node_5,_net_net_0,_terminal_id___2: +1 edge_Edge[24]___{(5,_3),_weight___1.000000},_net_net_0,_terminal_id___2 -1 edge_Edge[25]___{(3,_5),_weight___1.000000},_net_net_0,_terminal_id___2 +1 edge_Edge[26]___{(5,_4),_weight___1.000000},_net_net_0,_terminal_id___2 -1 edge_Edge[27]___{(4,_5),_weight___1.000000},_net_net_0,_terminal_id___2 +1 edge_Edge[28]___{(5,_6),_weight___1.000000},_net_net_0,_terminal_id___2 -1 edge_Edge[29]___{(6,_5),_weight___1.000000},_net_net_0,_terminal_id___2  = 0
  balance_node___node_6,_net_net_0,_terminal_id___2: -1 edge_Edge[18]___{(2,_6),_weight___2.000000},_net_net_0,_terminal_id___2 +1 edge_Edge[19]___{(6,_2),_weight___2.000000},_net_net_0,_terminal_id___2 -1 edge_Edge[28]___{(5,_6),_weight___1.000000},_net_net_0,_terminal_id___2 +1 edge_Edge[29]___{(6,_5),_weight___1.000000},_net_net_0,_terminal_id___2 -1 edge_Edge[36]___{(10,_6),_weight___1.000000},_net_net_0,_terminal_id___2 +1 edge_Edge[37]___{(6,_10),_weight___1.000000},_net_net_0,_terminal_id___2  = 0
  balance_node___node_7,_net_net_0,_terminal_id___2: -1 edge_Edge[12]___{(1,_7),_weight___2.000000},_net_net_0,_terminal_id___2 +1 edge_Edge[13]___{(7,_1),_weight___2.000000},_net_net_0,_terminal_id___2 -1 edge_Edge[32]___{(8,_7),_weight___1.000000},_net_net_0,_terminal_id___2 +1 edge_Edge[33]___{(7,_8),_weight___1.000000},_net_net_0,_terminal_id___2 -1 edge_Edge[42]___{(13,_7),_weight___1.000000},_net_net_0,_terminal_id___2 +1 edge_Edge[43]___{(7,_13),_weight___1.000000},_net_net_0,_terminal_id___2  = 0
  balance_node___node_8,_net_net_0,_terminal_id___2: +1 edge_Edge[30]___{(8,_4),_weight___1.000000},_net_net_0,_terminal_id___2 -1 edge_Edge[31]___{(4,_8),_weight___1.000000},_net_net_0,_terminal_id___2 +1 edge_Edge[32]___{(8,_7),_weight___1.000000},_net_net_0,_terminal_id___2 -1 edge_Edge[33]___{(7,_8),_weight___1.000000},_net_net_0,_terminal_id___2 +1 edge_Edge[34]___{(8,_9),_weight___1.000000},_net_net_0,_terminal_id___2 -1 edge_Edge[35]___{(9,_8),_weight___1.000000},_net_net_0,_terminal_id___2  = 0
@@ -549,8 +549,8 @@ Subject to
  connection___edge_Edge[21]___{(11,_2),_weight___2.000000},_net_name___net_0,_terminal_id___2: -1 bidirected_edge_Edge[21]___{(11,_2),_weight___2.000000},_net_net_0 +1 edge_Edge[21]___{(11,_2),_weight___2.000000},_net_net_0,_terminal_id___2  <= 0
  connection___edge_Edge[22]___{(2,_18),_weight___3.000000},_net_name___net_0,_terminal_id___2: -1 bidirected_edge_Edge[22]___{(2,_18),_weight___3.000000},_net_net_0 +1 edge_Edge[22]___{(2,_18),_weight___3.000000},_net_net_0,_terminal_id___2  <= 0
  connection___edge_Edge[23]___{(18,_2),_weight___3.000000},_net_name___net_0,_terminal_id___2: -1 bidirected_edge_Edge[23]___{(18,_2),_weight___3.000000},_net_net_0 +1 edge_Edge[23]___{(18,_2),_weight___3.000000},_net_net_0,_terminal_id___2  <= 0
- connection___edge_Edge[24]___{(5,_3),_weight___0.000000},_net_name___net_0,_terminal_id___2: -1 bidirected_edge_Edge[24]___{(5,_3),_weight___0.000000},_net_net_0 +1 edge_Edge[24]___{(5,_3),_weight___0.000000},_net_net_0,_terminal_id___2  <= 0
- connection___edge_Edge[25]___{(3,_5),_weight___0.000000},_net_name___net_0,_terminal_id___2: -1 bidirected_edge_Edge[25]___{(3,_5),_weight___0.000000},_net_net_0 +1 edge_Edge[25]___{(3,_5),_weight___0.000000},_net_net_0,_terminal_id___2  <= 0
+ connection___edge_Edge[24]___{(5,_3),_weight___1.000000},_net_name___net_0,_terminal_id___2: -1 bidirected_edge_Edge[24]___{(5,_3),_weight___1.000000},_net_net_0 +1 edge_Edge[24]___{(5,_3),_weight___1.000000},_net_net_0,_terminal_id___2  <= 0
+ connection___edge_Edge[25]___{(3,_5),_weight___1.000000},_net_name___net_0,_terminal_id___2: -1 bidirected_edge_Edge[25]___{(3,_5),_weight___1.000000},_net_net_0 +1 edge_Edge[25]___{(3,_5),_weight___1.000000},_net_net_0,_terminal_id___2  <= 0
  connection___edge_Edge[26]___{(5,_4),_weight___1.000000},_net_name___net_0,_terminal_id___2: -1 bidirected_edge_Edge[26]___{(5,_4),_weight___1.000000},_net_net_0 +1 edge_Edge[26]___{(5,_4),_weight___1.000000},_net_net_0,_terminal_id___2  <= 0
  connection___edge_Edge[27]___{(4,_5),_weight___1.000000},_net_name___net_0,_terminal_id___2: -1 bidirected_edge_Edge[27]___{(4,_5),_weight___1.000000},_net_net_0 +1 edge_Edge[27]___{(4,_5),_weight___1.000000},_net_net_0,_terminal_id___2  <= 0
  connection___edge_Edge[28]___{(5,_6),_weight___1.000000},_net_name___net_0,_terminal_id___2: -1 bidirected_edge_Edge[28]___{(5,_6),_weight___1.000000},_net_net_0 +1 edge_Edge[28]___{(5,_6),_weight___1.000000},_net_net_0,_terminal_id___2  <= 0
@@ -598,7 +598,7 @@ Bounds
  0 <= undirected_edge_Edge[9]___{(2,_6),_weight___2.000000},_net_net_0 <= 1
  0 <= undirected_edge_Edge[10]___{(2,_11),_weight___2.000000},_net_net_0 <= 1
  0 <= undirected_edge_Edge[11]___{(2,_18),_weight___3.000000},_net_net_0 <= 1
- 0 <= undirected_edge_Edge[12]___{(5,_3),_weight___0.000000},_net_net_0 <= 1
+ 0 <= undirected_edge_Edge[12]___{(5,_3),_weight___1.000000},_net_net_0 <= 1
  0 <= undirected_edge_Edge[13]___{(5,_4),_weight___1.000000},_net_net_0 <= 1
  0 <= undirected_edge_Edge[14]___{(5,_6),_weight___1.000000},_net_net_0 <= 1
  0 <= undirected_edge_Edge[15]___{(8,_4),_weight___1.000000},_net_net_0 <= 1
@@ -640,8 +640,8 @@ Bounds
  0 <= bidirected_edge_Edge[21]___{(11,_2),_weight___2.000000},_net_net_0 <= 1
  0 <= bidirected_edge_Edge[22]___{(2,_18),_weight___3.000000},_net_net_0 <= 1
  0 <= bidirected_edge_Edge[23]___{(18,_2),_weight___3.000000},_net_net_0 <= 1
- 0 <= bidirected_edge_Edge[24]___{(5,_3),_weight___0.000000},_net_net_0 <= 1
- 0 <= bidirected_edge_Edge[25]___{(3,_5),_weight___0.000000},_net_net_0 <= 1
+ 0 <= bidirected_edge_Edge[24]___{(5,_3),_weight___1.000000},_net_net_0 <= 1
+ 0 <= bidirected_edge_Edge[25]___{(3,_5),_weight___1.000000},_net_net_0 <= 1
  0 <= bidirected_edge_Edge[26]___{(5,_4),_weight___1.000000},_net_net_0 <= 1
  0 <= bidirected_edge_Edge[27]___{(4,_5),_weight___1.000000},_net_net_0 <= 1
  0 <= bidirected_edge_Edge[28]___{(5,_6),_weight___1.000000},_net_net_0 <= 1
@@ -724,10 +724,10 @@ Bounds
  0 <= edge_Edge[22]___{(2,_18),_weight___3.000000},_net_net_0,_terminal_id___2 <= 1
  0 <= edge_Edge[23]___{(18,_2),_weight___3.000000},_net_net_0,_terminal_id___1 <= 1
  0 <= edge_Edge[23]___{(18,_2),_weight___3.000000},_net_net_0,_terminal_id___2 <= 1
- 0 <= edge_Edge[24]___{(5,_3),_weight___0.000000},_net_net_0,_terminal_id___1 <= 1
- 0 <= edge_Edge[24]___{(5,_3),_weight___0.000000},_net_net_0,_terminal_id___2 <= 1
- 0 <= edge_Edge[25]___{(3,_5),_weight___0.000000},_net_net_0,_terminal_id___1 <= 1
- 0 <= edge_Edge[25]___{(3,_5),_weight___0.000000},_net_net_0,_terminal_id___2 <= 1
+ 0 <= edge_Edge[24]___{(5,_3),_weight___1.000000},_net_net_0,_terminal_id___1 <= 1
+ 0 <= edge_Edge[24]___{(5,_3),_weight___1.000000},_net_net_0,_terminal_id___2 <= 1
+ 0 <= edge_Edge[25]___{(3,_5),_weight___1.000000},_net_net_0,_terminal_id___1 <= 1
+ 0 <= edge_Edge[25]___{(3,_5),_weight___1.000000},_net_net_0,_terminal_id___2 <= 1
  0 <= edge_Edge[26]___{(5,_4),_weight___1.000000},_net_net_0,_terminal_id___1 <= 1
  0 <= edge_Edge[26]___{(5,_4),_weight___1.000000},_net_net_0,_terminal_id___2 <= 1
  0 <= edge_Edge[27]___{(4,_5),_weight___1.000000},_net_net_0,_terminal_id___1 <= 1
@@ -809,7 +809,7 @@ Binaries
  undirected_edge_Edge[9]___{(2,_6),_weight___2.000000},_net_net_0
  undirected_edge_Edge[10]___{(2,_11),_weight___2.000000},_net_net_0
  undirected_edge_Edge[11]___{(2,_18),_weight___3.000000},_net_net_0
- undirected_edge_Edge[12]___{(5,_3),_weight___0.000000},_net_net_0
+ undirected_edge_Edge[12]___{(5,_3),_weight___1.000000},_net_net_0
  undirected_edge_Edge[13]___{(5,_4),_weight___1.000000},_net_net_0
  undirected_edge_Edge[14]___{(5,_6),_weight___1.000000},_net_net_0
  undirected_edge_Edge[15]___{(8,_4),_weight___1.000000},_net_net_0
@@ -851,8 +851,8 @@ Binaries
  bidirected_edge_Edge[21]___{(11,_2),_weight___2.000000},_net_net_0
  bidirected_edge_Edge[22]___{(2,_18),_weight___3.000000},_net_net_0
  bidirected_edge_Edge[23]___{(18,_2),_weight___3.000000},_net_net_0
- bidirected_edge_Edge[24]___{(5,_3),_weight___0.000000},_net_net_0
- bidirected_edge_Edge[25]___{(3,_5),_weight___0.000000},_net_net_0
+ bidirected_edge_Edge[24]___{(5,_3),_weight___1.000000},_net_net_0
+ bidirected_edge_Edge[25]___{(3,_5),_weight___1.000000},_net_net_0
  bidirected_edge_Edge[26]___{(5,_4),_weight___1.000000},_net_net_0
  bidirected_edge_Edge[27]___{(4,_5),_weight___1.000000},_net_net_0
  bidirected_edge_Edge[28]___{(5,_6),_weight___1.000000},_net_net_0
@@ -935,10 +935,10 @@ Binaries
  edge_Edge[22]___{(2,_18),_weight___3.000000},_net_net_0,_terminal_id___2
  edge_Edge[23]___{(18,_2),_weight___3.000000},_net_net_0,_terminal_id___1
  edge_Edge[23]___{(18,_2),_weight___3.000000},_net_net_0,_terminal_id___2
- edge_Edge[24]___{(5,_3),_weight___0.000000},_net_net_0,_terminal_id___1
- edge_Edge[24]___{(5,_3),_weight___0.000000},_net_net_0,_terminal_id___2
- edge_Edge[25]___{(3,_5),_weight___0.000000},_net_net_0,_terminal_id___1
- edge_Edge[25]___{(3,_5),_weight___0.000000},_net_net_0,_terminal_id___2
+ edge_Edge[24]___{(5,_3),_weight___1.000000},_net_net_0,_terminal_id___1
+ edge_Edge[24]___{(5,_3),_weight___1.000000},_net_net_0,_terminal_id___2
+ edge_Edge[25]___{(3,_5),_weight___1.000000},_net_net_0,_terminal_id___1
+ edge_Edge[25]___{(3,_5),_weight___1.000000},_net_net_0,_terminal_id___2
  edge_Edge[26]___{(5,_4),_weight___1.000000},_net_net_0,_terminal_id___1
  edge_Edge[26]___{(5,_4),_weight___1.000000},_net_net_0,_terminal_id___2
  edge_Edge[27]___{(4,_5),_weight___1.000000},_net_net_0,_terminal_id___1
@@ -1129,13 +1129,13 @@ Subject to
  _2._norm_bound_for_edge_Edge[11]___{(2,_18),_weight___3.000000}_and_terminal_1: -1 node_2,_terminal_1 +1 node_18,_terminal_1 -1 edge_Edge[11]___{(2,_18),_weight___3.000000},_terminal_1  <= 0
  _1._norm_bound_for_edge_Edge[11]___{(2,_18),_weight___3.000000}_and_terminal_2: +1 node_2,_terminal_2 -1 node_18,_terminal_2 -1 edge_Edge[11]___{(2,_18),_weight___3.000000},_terminal_2  <= 0
  _2._norm_bound_for_edge_Edge[11]___{(2,_18),_weight___3.000000}_and_terminal_2: -1 node_2,_terminal_2 +1 node_18,_terminal_2 -1 edge_Edge[11]___{(2,_18),_weight___3.000000},_terminal_2  <= 0
- cost_bound_for_edge_Edge[12]___{(5,_3),_weight___0.000000}: +1 edge_Edge[12]___{(5,_3),_weight___0.000000},_terminal_0 +1 edge_Edge[12]___{(5,_3),_weight___0.000000},_terminal_1 +1 edge_Edge[12]___{(5,_3),_weight___0.000000},_terminal_2  <= 0
- _1._norm_bound_for_edge_Edge[12]___{(5,_3),_weight___0.000000}_and_terminal_0: -1 node_3,_terminal_0 +1 node_5,_terminal_0 -1 edge_Edge[12]___{(5,_3),_weight___0.000000},_terminal_0  <= 0
- _2._norm_bound_for_edge_Edge[12]___{(5,_3),_weight___0.000000}_and_terminal_0: +1 node_3,_terminal_0 -1 node_5,_terminal_0 -1 edge_Edge[12]___{(5,_3),_weight___0.000000},_terminal_0  <= 0
- _1._norm_bound_for_edge_Edge[12]___{(5,_3),_weight___0.000000}_and_terminal_1: -1 node_3,_terminal_1 +1 node_5,_terminal_1 -1 edge_Edge[12]___{(5,_3),_weight___0.000000},_terminal_1  <= 0
- _2._norm_bound_for_edge_Edge[12]___{(5,_3),_weight___0.000000}_and_terminal_1: +1 node_3,_terminal_1 -1 node_5,_terminal_1 -1 edge_Edge[12]___{(5,_3),_weight___0.000000},_terminal_1  <= 0
- _1._norm_bound_for_edge_Edge[12]___{(5,_3),_weight___0.000000}_and_terminal_2: -1 node_3,_terminal_2 +1 node_5,_terminal_2 -1 edge_Edge[12]___{(5,_3),_weight___0.000000},_terminal_2  <= 0
- _2._norm_bound_for_edge_Edge[12]___{(5,_3),_weight___0.000000}_and_terminal_2: +1 node_3,_terminal_2 -1 node_5,_terminal_2 -1 edge_Edge[12]___{(5,_3),_weight___0.000000},_terminal_2  <= 0
+ cost_bound_for_edge_Edge[12]___{(5,_3),_weight___1.000000}: +1 edge_Edge[12]___{(5,_3),_weight___1.000000},_terminal_0 +1 edge_Edge[12]___{(5,_3),_weight___1.000000},_terminal_1 +1 edge_Edge[12]___{(5,_3),_weight___1.000000},_terminal_2  <= 2
+ _1._norm_bound_for_edge_Edge[12]___{(5,_3),_weight___1.000000}_and_terminal_0: -1 node_3,_terminal_0 +1 node_5,_terminal_0 -1 edge_Edge[12]___{(5,_3),_weight___1.000000},_terminal_0  <= 0
+ _2._norm_bound_for_edge_Edge[12]___{(5,_3),_weight___1.000000}_and_terminal_0: +1 node_3,_terminal_0 -1 node_5,_terminal_0 -1 edge_Edge[12]___{(5,_3),_weight___1.000000},_terminal_0  <= 0
+ _1._norm_bound_for_edge_Edge[12]___{(5,_3),_weight___1.000000}_and_terminal_1: -1 node_3,_terminal_1 +1 node_5,_terminal_1 -1 edge_Edge[12]___{(5,_3),_weight___1.000000},_terminal_1  <= 0
+ _2._norm_bound_for_edge_Edge[12]___{(5,_3),_weight___1.000000}_and_terminal_1: +1 node_3,_terminal_1 -1 node_5,_terminal_1 -1 edge_Edge[12]___{(5,_3),_weight___1.000000},_terminal_1  <= 0
+ _1._norm_bound_for_edge_Edge[12]___{(5,_3),_weight___1.000000}_and_terminal_2: -1 node_3,_terminal_2 +1 node_5,_terminal_2 -1 edge_Edge[12]___{(5,_3),_weight___1.000000},_terminal_2  <= 0
+ _2._norm_bound_for_edge_Edge[12]___{(5,_3),_weight___1.000000}_and_terminal_2: +1 node_3,_terminal_2 -1 node_5,_terminal_2 -1 edge_Edge[12]___{(5,_3),_weight___1.000000},_terminal_2  <= 0
  cost_bound_for_edge_Edge[13]___{(5,_4),_weight___1.000000}: +1 edge_Edge[13]___{(5,_4),_weight___1.000000},_terminal_0 +1 edge_Edge[13]___{(5,_4),_weight___1.000000},_terminal_1 +1 edge_Edge[13]___{(5,_4),_weight___1.000000},_terminal_2  <= 2
  _1._norm_bound_for_edge_Edge[13]___{(5,_4),_weight___1.000000}_and_terminal_0: -1 node_4,_terminal_0 +1 node_5,_terminal_0 -1 edge_Edge[13]___{(5,_4),_weight___1.000000},_terminal_0  <= 0
  _2._norm_bound_for_edge_Edge[13]___{(5,_4),_weight___1.000000}_and_terminal_0: +1 node_4,_terminal_0 -1 node_5,_terminal_0 -1 edge_Edge[13]___{(5,_4),_weight___1.000000},_terminal_0  <= 0
@@ -1288,7 +1288,7 @@ Bounds
  0 <= edge_Edge[9]___{(2,_6),_weight___2.000000},_terminal_0
  0 <= edge_Edge[10]___{(2,_11),_weight___2.000000},_terminal_0
  0 <= edge_Edge[11]___{(2,_18),_weight___3.000000},_terminal_0
- 0 <= edge_Edge[12]___{(5,_3),_weight___0.000000},_terminal_0
+ 0 <= edge_Edge[12]___{(5,_3),_weight___1.000000},_terminal_0
  0 <= edge_Edge[13]___{(5,_4),_weight___1.000000},_terminal_0
  0 <= edge_Edge[14]___{(5,_6),_weight___1.000000},_terminal_0
  0 <= edge_Edge[15]___{(8,_4),_weight___1.000000},_terminal_0
@@ -1337,7 +1337,7 @@ Bounds
  0 <= edge_Edge[9]___{(2,_6),_weight___2.000000},_terminal_1
  0 <= edge_Edge[10]___{(2,_11),_weight___2.000000},_terminal_1
  0 <= edge_Edge[11]___{(2,_18),_weight___3.000000},_terminal_1
- 0 <= edge_Edge[12]___{(5,_3),_weight___0.000000},_terminal_1
+ 0 <= edge_Edge[12]___{(5,_3),_weight___1.000000},_terminal_1
  0 <= edge_Edge[13]___{(5,_4),_weight___1.000000},_terminal_1
  0 <= edge_Edge[14]___{(5,_6),_weight___1.000000},_terminal_1
  0 <= edge_Edge[15]___{(8,_4),_weight___1.000000},_terminal_1
@@ -1386,7 +1386,7 @@ Bounds
  0 <= edge_Edge[9]___{(2,_6),_weight___2.000000},_terminal_2
  0 <= edge_Edge[10]___{(2,_11),_weight___2.000000},_terminal_2
  0 <= edge_Edge[11]___{(2,_18),_weight___3.000000},_terminal_2
- 0 <= edge_Edge[12]___{(5,_3),_weight___0.000000},_terminal_2
+ 0 <= edge_Edge[12]___{(5,_3),_weight___1.000000},_terminal_2
  0 <= edge_Edge[13]___{(5,_4),_weight___1.000000},_terminal_2
  0 <= edge_Edge[14]___{(5,_6),_weight___1.000000},_terminal_2
  0 <= edge_Edge[15]___{(8,_4),_weight___1.000000},_terminal_2
@@ -1407,7 +1407,7 @@ Bounds
 End
 [MIPSolver] number of variables   = 148
 [MIPSolver] number of constraints = 229
-[MIPSolver] Problem solved in 12 milliseconds.
+[MIPSolver] Problem solved in 13 milliseconds.
 [MIPSolver] optimal objective value = 11.25
 [GroupManager] compute solution for group GroupSimplexEmbedding
 [GroupManager] add group GroupEdges
@@ -1421,7 +1421,7 @@ End
 \     Integer        : 0
 \     Continuous     : 240
 Minimize
- Obj: +3 undirected_edge_Edge[0]___{(0,_12),_weight___3.000000},_net_net_0 +2 undirected_edge_Edge[1]___{(0,_14),_weight___2.000000},_net_net_0 +2 undirected_edge_Edge[2]___{(0,_16),_weight___2.000000},_net_net_0 +3 undirected_edge_Edge[3]___{(0,_18),_weight___3.000000},_net_net_0 +3 undirected_edge_Edge[4]___{(1,_3),_weight___3.000000},_net_net_0 +2 undirected_edge_Edge[5]___{(1,_4),_weight___2.000000},_net_net_0 +2 undirected_edge_Edge[6]___{(1,_7),_weight___2.000000},_net_net_0 +3 undirected_edge_Edge[7]___{(1,_12),_weight___3.000000},_net_net_0 +3 undirected_edge_Edge[8]___{(2,_3),_weight___3.000000},_net_net_0 +2 undirected_edge_Edge[9]___{(2,_6),_weight___2.000000},_net_net_0 +2 undirected_edge_Edge[10]___{(2,_11),_weight___2.000000},_net_net_0 +3 undirected_edge_Edge[11]___{(2,_18),_weight___3.000000},_net_net_0 +1 undirected_edge_Edge[13]___{(5,_4),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[14]___{(5,_6),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[15]___{(8,_4),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[16]___{(8,_7),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[17]___{(8,_9),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[18]___{(10,_6),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[19]___{(10,_9),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[20]___{(10,_11),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[21]___{(13,_7),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[22]___{(13,_12),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[23]___{(13,_14),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[24]___{(15,_9),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[25]___{(15,_14),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[26]___{(15,_16),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[27]___{(17,_11),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[28]___{(17,_16),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[29]___{(17,_18),_weight___1.000000},_net_net_0 
+ Obj: +3 undirected_edge_Edge[0]___{(0,_12),_weight___3.000000},_net_net_0 +2 undirected_edge_Edge[1]___{(0,_14),_weight___2.000000},_net_net_0 +2 undirected_edge_Edge[2]___{(0,_16),_weight___2.000000},_net_net_0 +3 undirected_edge_Edge[3]___{(0,_18),_weight___3.000000},_net_net_0 +3 undirected_edge_Edge[4]___{(1,_3),_weight___3.000000},_net_net_0 +2 undirected_edge_Edge[5]___{(1,_4),_weight___2.000000},_net_net_0 +2 undirected_edge_Edge[6]___{(1,_7),_weight___2.000000},_net_net_0 +3 undirected_edge_Edge[7]___{(1,_12),_weight___3.000000},_net_net_0 +3 undirected_edge_Edge[8]___{(2,_3),_weight___3.000000},_net_net_0 +2 undirected_edge_Edge[9]___{(2,_6),_weight___2.000000},_net_net_0 +2 undirected_edge_Edge[10]___{(2,_11),_weight___2.000000},_net_net_0 +3 undirected_edge_Edge[11]___{(2,_18),_weight___3.000000},_net_net_0 +1 undirected_edge_Edge[12]___{(5,_3),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[13]___{(5,_4),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[14]___{(5,_6),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[15]___{(8,_4),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[16]___{(8,_7),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[17]___{(8,_9),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[18]___{(10,_6),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[19]___{(10,_9),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[20]___{(10,_11),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[21]___{(13,_7),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[22]___{(13,_12),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[23]___{(13,_14),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[24]___{(15,_9),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[25]___{(15,_14),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[26]___{(15,_16),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[27]___{(17,_11),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[28]___{(17,_16),_weight___1.000000},_net_net_0 +1 undirected_edge_Edge[29]___{(17,_18),_weight___1.000000},_net_net_0 
 Subject to
  edge_connection_undirected_edge_Edge[0]___{(0,_12),_weight___3.000000}_and_directed_edge_Edge[0]___{(0,_12),_weight___3.000000}_and_directed_edge_Edge[1]___{(12,_0),_weight___3.000000}_and_net_net_0: -1 undirected_edge_Edge[0]___{(0,_12),_weight___3.000000},_net_net_0 +1 bidirected_edge_Edge[0]___{(0,_12),_weight___3.000000},_net_net_0 +1 bidirected_edge_Edge[1]___{(12,_0),_weight___3.000000},_net_net_0  <= 0
  edge_connection_undirected_edge_Edge[1]___{(0,_14),_weight___2.000000}_and_directed_edge_Edge[2]___{(0,_14),_weight___2.000000}_and_directed_edge_Edge[3]___{(14,_0),_weight___2.000000}_and_net_net_0: -1 undirected_edge_Edge[1]___{(0,_14),_weight___2.000000},_net_net_0 +1 bidirected_edge_Edge[2]___{(0,_14),_weight___2.000000},_net_net_0 +1 bidirected_edge_Edge[3]___{(14,_0),_weight___2.000000},_net_net_0  <= 0
@@ -1435,7 +1435,7 @@ Subject to
  edge_connection_undirected_edge_Edge[9]___{(2,_6),_weight___2.000000}_and_directed_edge_Edge[18]___{(2,_6),_weight___2.000000}_and_directed_edge_Edge[19]___{(6,_2),_weight___2.000000}_and_net_net_0: -1 undirected_edge_Edge[9]___{(2,_6),_weight___2.000000},_net_net_0 +1 bidirected_edge_Edge[18]___{(2,_6),_weight___2.000000},_net_net_0 +1 bidirected_edge_Edge[19]___{(6,_2),_weight___2.000000},_net_net_0  <= 0
  edge_connection_undirected_edge_Edge[10]___{(2,_11),_weight___2.000000}_and_directed_edge_Edge[20]___{(2,_11),_weight___2.000000}_and_directed_edge_Edge[21]___{(11,_2),_weight___2.000000}_and_net_net_0: -1 undirected_edge_Edge[10]___{(2,_11),_weight___2.000000},_net_net_0 +1 bidirected_edge_Edge[20]___{(2,_11),_weight___2.000000},_net_net_0 +1 bidirected_edge_Edge[21]___{(11,_2),_weight___2.000000},_net_net_0  <= 0
  edge_connection_undirected_edge_Edge[11]___{(2,_18),_weight___3.000000}_and_directed_edge_Edge[22]___{(2,_18),_weight___3.000000}_and_directed_edge_Edge[23]___{(18,_2),_weight___3.000000}_and_net_net_0: -1 undirected_edge_Edge[11]___{(2,_18),_weight___3.000000},_net_net_0 +1 bidirected_edge_Edge[22]___{(2,_18),_weight___3.000000},_net_net_0 +1 bidirected_edge_Edge[23]___{(18,_2),_weight___3.000000},_net_net_0  <= 0
- edge_connection_undirected_edge_Edge[12]___{(5,_3),_weight___0.000000}_and_directed_edge_Edge[24]___{(5,_3),_weight___0.000000}_and_directed_edge_Edge[25]___{(3,_5),_weight___0.000000}_and_net_net_0: -1 undirected_edge_Edge[12]___{(5,_3),_weight___0.000000},_net_net_0 +1 bidirected_edge_Edge[24]___{(5,_3),_weight___0.000000},_net_net_0 +1 bidirected_edge_Edge[25]___{(3,_5),_weight___0.000000},_net_net_0  <= 0
+ edge_connection_undirected_edge_Edge[12]___{(5,_3),_weight___1.000000}_and_directed_edge_Edge[24]___{(5,_3),_weight___1.000000}_and_directed_edge_Edge[25]___{(3,_5),_weight___1.000000}_and_net_net_0: -1 undirected_edge_Edge[12]___{(5,_3),_weight___1.000000},_net_net_0 +1 bidirected_edge_Edge[24]___{(5,_3),_weight___1.000000},_net_net_0 +1 bidirected_edge_Edge[25]___{(3,_5),_weight___1.000000},_net_net_0  <= 0
  edge_connection_undirected_edge_Edge[13]___{(5,_4),_weight___1.000000}_and_directed_edge_Edge[26]___{(5,_4),_weight___1.000000}_and_directed_edge_Edge[27]___{(4,_5),_weight___1.000000}_and_net_net_0: -1 undirected_edge_Edge[13]___{(5,_4),_weight___1.000000},_net_net_0 +1 bidirected_edge_Edge[26]___{(5,_4),_weight___1.000000},_net_net_0 +1 bidirected_edge_Edge[27]___{(4,_5),_weight___1.000000},_net_net_0  <= 0
  edge_connection_undirected_edge_Edge[14]___{(5,_6),_weight___1.000000}_and_directed_edge_Edge[28]___{(5,_6),_weight___1.000000}_and_directed_edge_Edge[29]___{(6,_5),_weight___1.000000}_and_net_net_0: -1 undirected_edge_Edge[14]___{(5,_6),_weight___1.000000},_net_net_0 +1 bidirected_edge_Edge[28]___{(5,_6),_weight___1.000000},_net_net_0 +1 bidirected_edge_Edge[29]___{(6,_5),_weight___1.000000},_net_net_0  <= 0
  edge_connection_undirected_edge_Edge[15]___{(8,_4),_weight___1.000000}_and_directed_edge_Edge[30]___{(8,_4),_weight___1.000000}_and_directed_edge_Edge[31]___{(4,_8),_weight___1.000000}_and_net_net_0: -1 undirected_edge_Edge[15]___{(8,_4),_weight___1.000000},_net_net_0 +1 bidirected_edge_Edge[30]___{(8,_4),_weight___1.000000},_net_net_0 +1 bidirected_edge_Edge[31]___{(4,_8),_weight___1.000000},_net_net_0  <= 0
@@ -1456,9 +1456,9 @@ Subject to
  balance_node___node_0,_sink_terminal_id___1: +1 edge_Edge[0]___{(0,_12),_weight___3.000000},_sink_terminal_set_{1} -1 edge_Edge[1]___{(12,_0),_weight___3.000000},_sink_terminal_set_{1} +1 edge_Edge[2]___{(0,_14),_weight___2.000000},_sink_terminal_set_{1} -1 edge_Edge[3]___{(14,_0),_weight___2.000000},_sink_terminal_set_{1} +1 edge_Edge[4]___{(0,_16),_weight___2.000000},_sink_terminal_set_{1} -1 edge_Edge[5]___{(16,_0),_weight___2.000000},_sink_terminal_set_{1} +1 edge_Edge[6]___{(0,_18),_weight___3.000000},_sink_terminal_set_{1} -1 edge_Edge[7]___{(18,_0),_weight___3.000000},_sink_terminal_set_{1}  = 1
  balance_node___node_1,_sink_terminal_id___1: +1 edge_Edge[8]___{(1,_3),_weight___3.000000},_sink_terminal_set_{1} -1 edge_Edge[9]___{(3,_1),_weight___3.000000},_sink_terminal_set_{1} +1 edge_Edge[10]___{(1,_4),_weight___2.000000},_sink_terminal_set_{1} -1 edge_Edge[11]___{(4,_1),_weight___2.000000},_sink_terminal_set_{1} +1 edge_Edge[12]___{(1,_7),_weight___2.000000},_sink_terminal_set_{1} -1 edge_Edge[13]___{(7,_1),_weight___2.000000},_sink_terminal_set_{1} +1 edge_Edge[14]___{(1,_12),_weight___3.000000},_sink_terminal_set_{1} -1 edge_Edge[15]___{(12,_1),_weight___3.000000},_sink_terminal_set_{1}  = -1
  balance_node___node_2,_sink_terminal_id___1: +1 edge_Edge[16]___{(2,_3),_weight___3.000000},_sink_terminal_set_{1} -1 edge_Edge[17]___{(3,_2),_weight___3.000000},_sink_terminal_set_{1} +1 edge_Edge[18]___{(2,_6),_weight___2.000000},_sink_terminal_set_{1} -1 edge_Edge[19]___{(6,_2),_weight___2.000000},_sink_terminal_set_{1} +1 edge_Edge[20]___{(2,_11),_weight___2.000000},_sink_terminal_set_{1} -1 edge_Edge[21]___{(11,_2),_weight___2.000000},_sink_terminal_set_{1} +1 edge_Edge[22]___{(2,_18),_weight___3.000000},_sink_terminal_set_{1} -1 edge_Edge[23]___{(18,_2),_weight___3.000000},_sink_terminal_set_{1}  = 0
- balance_node___node_3,_sink_terminal_id___1: -1 edge_Edge[8]___{(1,_3),_weight___3.000000},_sink_terminal_set_{1} +1 edge_Edge[9]___{(3,_1),_weight___3.000000},_sink_terminal_set_{1} -1 edge_Edge[16]___{(2,_3),_weight___3.000000},_sink_terminal_set_{1} +1 edge_Edge[17]___{(3,_2),_weight___3.000000},_sink_terminal_set_{1} -1 edge_Edge[24]___{(5,_3),_weight___0.000000},_sink_terminal_set_{1} +1 edge_Edge[25]___{(3,_5),_weight___0.000000},_sink_terminal_set_{1}  = 0
+ balance_node___node_3,_sink_terminal_id___1: -1 edge_Edge[8]___{(1,_3),_weight___3.000000},_sink_terminal_set_{1} +1 edge_Edge[9]___{(3,_1),_weight___3.000000},_sink_terminal_set_{1} -1 edge_Edge[16]___{(2,_3),_weight___3.000000},_sink_terminal_set_{1} +1 edge_Edge[17]___{(3,_2),_weight___3.000000},_sink_terminal_set_{1} -1 edge_Edge[24]___{(5,_3),_weight___1.000000},_sink_terminal_set_{1} +1 edge_Edge[25]___{(3,_5),_weight___1.000000},_sink_terminal_set_{1}  = 0
  balance_node___node_4,_sink_terminal_id___1: -1 edge_Edge[10]___{(1,_4),_weight___2.000000},_sink_terminal_set_{1} +1 edge_Edge[11]___{(4,_1),_weight___2.000000},_sink_terminal_set_{1} -1 edge_Edge[26]___{(5,_4),_weight___1.000000},_sink_terminal_set_{1} +1 edge_Edge[27]___{(4,_5),_weight___1.000000},_sink_terminal_set_{1} -1 edge_Edge[30]___{(8,_4),_weight___1.000000},_sink_terminal_set_{1} +1 edge_Edge[31]___{(4,_8),_weight___1.000000},_sink_terminal_set_{1}  = 0
- balance_node___node_5,_sink_terminal_id___1: +1 edge_Edge[24]___{(5,_3),_weight___0.000000},_sink_terminal_set_{1} -1 edge_Edge[25]___{(3,_5),_weight___0.000000},_sink_terminal_set_{1} +1 edge_Edge[26]___{(5,_4),_weight___1.000000},_sink_terminal_set_{1} -1 edge_Edge[27]___{(4,_5),_weight___1.000000},_sink_terminal_set_{1} +1 edge_Edge[28]___{(5,_6),_weight___1.000000},_sink_terminal_set_{1} -1 edge_Edge[29]___{(6,_5),_weight___1.000000},_sink_terminal_set_{1}  = 0
+ balance_node___node_5,_sink_terminal_id___1: +1 edge_Edge[24]___{(5,_3),_weight___1.000000},_sink_terminal_set_{1} -1 edge_Edge[25]___{(3,_5),_weight___1.000000},_sink_terminal_set_{1} +1 edge_Edge[26]___{(5,_4),_weight___1.000000},_sink_terminal_set_{1} -1 edge_Edge[27]___{(4,_5),_weight___1.000000},_sink_terminal_set_{1} +1 edge_Edge[28]___{(5,_6),_weight___1.000000},_sink_terminal_set_{1} -1 edge_Edge[29]___{(6,_5),_weight___1.000000},_sink_terminal_set_{1}  = 0
  balance_node___node_6,_sink_terminal_id___1: -1 edge_Edge[18]___{(2,_6),_weight___2.000000},_sink_terminal_set_{1} +1 edge_Edge[19]___{(6,_2),_weight___2.000000},_sink_terminal_set_{1} -1 edge_Edge[28]___{(5,_6),_weight___1.000000},_sink_terminal_set_{1} +1 edge_Edge[29]___{(6,_5),_weight___1.000000},_sink_terminal_set_{1} -1 edge_Edge[36]___{(10,_6),_weight___1.000000},_sink_terminal_set_{1} +1 edge_Edge[37]___{(6,_10),_weight___1.000000},_sink_terminal_set_{1}  = 0
  balance_node___node_7,_sink_terminal_id___1: -1 edge_Edge[12]___{(1,_7),_weight___2.000000},_sink_terminal_set_{1} +1 edge_Edge[13]___{(7,_1),_weight___2.000000},_sink_terminal_set_{1} -1 edge_Edge[32]___{(8,_7),_weight___1.000000},_sink_terminal_set_{1} +1 edge_Edge[33]___{(7,_8),_weight___1.000000},_sink_terminal_set_{1} -1 edge_Edge[42]___{(13,_7),_weight___1.000000},_sink_terminal_set_{1} +1 edge_Edge[43]___{(7,_13),_weight___1.000000},_sink_terminal_set_{1}  = 0
  balance_node___node_8,_sink_terminal_id___1: +1 edge_Edge[30]___{(8,_4),_weight___1.000000},_sink_terminal_set_{1} -1 edge_Edge[31]___{(4,_8),_weight___1.000000},_sink_terminal_set_{1} +1 edge_Edge[32]___{(8,_7),_weight___1.000000},_sink_terminal_set_{1} -1 edge_Edge[33]___{(7,_8),_weight___1.000000},_sink_terminal_set_{1} +1 edge_Edge[34]___{(8,_9),_weight___1.000000},_sink_terminal_set_{1} -1 edge_Edge[35]___{(9,_8),_weight___1.000000},_sink_terminal_set_{1}  = 0
@@ -1496,8 +1496,8 @@ Subject to
  connection_empty_set___edge_Edge[21]___{(11,_2),_weight___2.000000},_sink_terminal_id___1: -1 edge_Edge[21]___{(11,_2),_weight___2.000000},_sink_terminal_set_{} +1 edge_Edge[21]___{(11,_2),_weight___2.000000},_sink_terminal_set_{1}  <= 0
  connection_empty_set___edge_Edge[22]___{(2,_18),_weight___3.000000},_sink_terminal_id___1: -1 edge_Edge[22]___{(2,_18),_weight___3.000000},_sink_terminal_set_{} +1 edge_Edge[22]___{(2,_18),_weight___3.000000},_sink_terminal_set_{1}  <= 0
  connection_empty_set___edge_Edge[23]___{(18,_2),_weight___3.000000},_sink_terminal_id___1: -1 edge_Edge[23]___{(18,_2),_weight___3.000000},_sink_terminal_set_{} +1 edge_Edge[23]___{(18,_2),_weight___3.000000},_sink_terminal_set_{1}  <= 0
- connection_empty_set___edge_Edge[24]___{(5,_3),_weight___0.000000},_sink_terminal_id___1: -1 edge_Edge[24]___{(5,_3),_weight___0.000000},_sink_terminal_set_{} +1 edge_Edge[24]___{(5,_3),_weight___0.000000},_sink_terminal_set_{1}  <= 0
- connection_empty_set___edge_Edge[25]___{(3,_5),_weight___0.000000},_sink_terminal_id___1: -1 edge_Edge[25]___{(3,_5),_weight___0.000000},_sink_terminal_set_{} +1 edge_Edge[25]___{(3,_5),_weight___0.000000},_sink_terminal_set_{1}  <= 0
+ connection_empty_set___edge_Edge[24]___{(5,_3),_weight___1.000000},_sink_terminal_id___1: -1 edge_Edge[24]___{(5,_3),_weight___1.000000},_sink_terminal_set_{} +1 edge_Edge[24]___{(5,_3),_weight___1.000000},_sink_terminal_set_{1}  <= 0
+ connection_empty_set___edge_Edge[25]___{(3,_5),_weight___1.000000},_sink_terminal_id___1: -1 edge_Edge[25]___{(3,_5),_weight___1.000000},_sink_terminal_set_{} +1 edge_Edge[25]___{(3,_5),_weight___1.000000},_sink_terminal_set_{1}  <= 0
  connection_empty_set___edge_Edge[26]___{(5,_4),_weight___1.000000},_sink_terminal_id___1: -1 edge_Edge[26]___{(5,_4),_weight___1.000000},_sink_terminal_set_{} +1 edge_Edge[26]___{(5,_4),_weight___1.000000},_sink_terminal_set_{1}  <= 0
  connection_empty_set___edge_Edge[27]___{(4,_5),_weight___1.000000},_sink_terminal_id___1: -1 edge_Edge[27]___{(4,_5),_weight___1.000000},_sink_terminal_set_{} +1 edge_Edge[27]___{(4,_5),_weight___1.000000},_sink_terminal_set_{1}  <= 0
  connection_empty_set___edge_Edge[28]___{(5,_6),_weight___1.000000},_sink_terminal_id___1: -1 edge_Edge[28]___{(5,_6),_weight___1.000000},_sink_terminal_set_{} +1 edge_Edge[28]___{(5,_6),_weight___1.000000},_sink_terminal_set_{1}  <= 0
@@ -1535,9 +1535,9 @@ Subject to
  balance_node___node_0,_sink_terminal_id___2: +1 edge_Edge[0]___{(0,_12),_weight___3.000000},_sink_terminal_set_{2} -1 edge_Edge[1]___{(12,_0),_weight___3.000000},_sink_terminal_set_{2} +1 edge_Edge[2]___{(0,_14),_weight___2.000000},_sink_terminal_set_{2} -1 edge_Edge[3]___{(14,_0),_weight___2.000000},_sink_terminal_set_{2} +1 edge_Edge[4]___{(0,_16),_weight___2.000000},_sink_terminal_set_{2} -1 edge_Edge[5]___{(16,_0),_weight___2.000000},_sink_terminal_set_{2} +1 edge_Edge[6]___{(0,_18),_weight___3.000000},_sink_terminal_set_{2} -1 edge_Edge[7]___{(18,_0),_weight___3.000000},_sink_terminal_set_{2}  = 1
  balance_node___node_1,_sink_terminal_id___2: +1 edge_Edge[8]___{(1,_3),_weight___3.000000},_sink_terminal_set_{2} -1 edge_Edge[9]___{(3,_1),_weight___3.000000},_sink_terminal_set_{2} +1 edge_Edge[10]___{(1,_4),_weight___2.000000},_sink_terminal_set_{2} -1 edge_Edge[11]___{(4,_1),_weight___2.000000},_sink_terminal_set_{2} +1 edge_Edge[12]___{(1,_7),_weight___2.000000},_sink_terminal_set_{2} -1 edge_Edge[13]___{(7,_1),_weight___2.000000},_sink_terminal_set_{2} +1 edge_Edge[14]___{(1,_12),_weight___3.000000},_sink_terminal_set_{2} -1 edge_Edge[15]___{(12,_1),_weight___3.000000},_sink_terminal_set_{2}  = 0
  balance_node___node_2,_sink_terminal_id___2: +1 edge_Edge[16]___{(2,_3),_weight___3.000000},_sink_terminal_set_{2} -1 edge_Edge[17]___{(3,_2),_weight___3.000000},_sink_terminal_set_{2} +1 edge_Edge[18]___{(2,_6),_weight___2.000000},_sink_terminal_set_{2} -1 edge_Edge[19]___{(6,_2),_weight___2.000000},_sink_terminal_set_{2} +1 edge_Edge[20]___{(2,_11),_weight___2.000000},_sink_terminal_set_{2} -1 edge_Edge[21]___{(11,_2),_weight___2.000000},_sink_terminal_set_{2} +1 edge_Edge[22]___{(2,_18),_weight___3.000000},_sink_terminal_set_{2} -1 edge_Edge[23]___{(18,_2),_weight___3.000000},_sink_terminal_set_{2}  = -1
- balance_node___node_3,_sink_terminal_id___2: -1 edge_Edge[8]___{(1,_3),_weight___3.000000},_sink_terminal_set_{2} +1 edge_Edge[9]___{(3,_1),_weight___3.000000},_sink_terminal_set_{2} -1 edge_Edge[16]___{(2,_3),_weight___3.000000},_sink_terminal_set_{2} +1 edge_Edge[17]___{(3,_2),_weight___3.000000},_sink_terminal_set_{2} -1 edge_Edge[24]___{(5,_3),_weight___0.000000},_sink_terminal_set_{2} +1 edge_Edge[25]___{(3,_5),_weight___0.000000},_sink_terminal_set_{2}  = 0
+ balance_node___node_3,_sink_terminal_id___2: -1 edge_Edge[8]___{(1,_3),_weight___3.000000},_sink_terminal_set_{2} +1 edge_Edge[9]___{(3,_1),_weight___3.000000},_sink_terminal_set_{2} -1 edge_Edge[16]___{(2,_3),_weight___3.000000},_sink_terminal_set_{2} +1 edge_Edge[17]___{(3,_2),_weight___3.000000},_sink_terminal_set_{2} -1 edge_Edge[24]___{(5,_3),_weight___1.000000},_sink_terminal_set_{2} +1 edge_Edge[25]___{(3,_5),_weight___1.000000},_sink_terminal_set_{2}  = 0
  balance_node___node_4,_sink_terminal_id___2: -1 edge_Edge[10]___{(1,_4),_weight___2.000000},_sink_terminal_set_{2} +1 edge_Edge[11]___{(4,_1),_weight___2.000000},_sink_terminal_set_{2} -1 edge_Edge[26]___{(5,_4),_weight___1.000000},_sink_terminal_set_{2} +1 edge_Edge[27]___{(4,_5),_weight___1.000000},_sink_terminal_set_{2} -1 edge_Edge[30]___{(8,_4),_weight___1.000000},_sink_terminal_set_{2} +1 edge_Edge[31]___{(4,_8),_weight___1.000000},_sink_terminal_set_{2}  = 0
- balance_node___node_5,_sink_terminal_id___2: +1 edge_Edge[24]___{(5,_3),_weight___0.000000},_sink_terminal_set_{2} -1 edge_Edge[25]___{(3,_5),_weight___0.000000},_sink_terminal_set_{2} +1 edge_Edge[26]___{(5,_4),_weight___1.000000},_sink_terminal_set_{2} -1 edge_Edge[27]___{(4,_5),_weight___1.000000},_sink_terminal_set_{2} +1 edge_Edge[28]___{(5,_6),_weight___1.000000},_sink_terminal_set_{2} -1 edge_Edge[29]___{(6,_5),_weight___1.000000},_sink_terminal_set_{2}  = 0
+ balance_node___node_5,_sink_terminal_id___2: +1 edge_Edge[24]___{(5,_3),_weight___1.000000},_sink_terminal_set_{2} -1 edge_Edge[25]___{(3,_5),_weight___1.000000},_sink_terminal_set_{2} +1 edge_Edge[26]___{(5,_4),_weight___1.000000},_sink_terminal_set_{2} -1 edge_Edge[27]___{(4,_5),_weight___1.000000},_sink_terminal_set_{2} +1 edge_Edge[28]___{(5,_6),_weight___1.000000},_sink_terminal_set_{2} -1 edge_Edge[29]___{(6,_5),_weight___1.000000},_sink_terminal_set_{2}  = 0
  balance_node___node_6,_sink_terminal_id___2: -1 edge_Edge[18]___{(2,_6),_weight___2.000000},_sink_terminal_set_{2} +1 edge_Edge[19]___{(6,_2),_weight___2.000000},_sink_terminal_set_{2} -1 edge_Edge[28]___{(5,_6),_weight___1.000000},_sink_terminal_set_{2} +1 edge_Edge[29]___{(6,_5),_weight___1.000000},_sink_terminal_set_{2} -1 edge_Edge[36]___{(10,_6),_weight___1.000000},_sink_terminal_set_{2} +1 edge_Edge[37]___{(6,_10),_weight___1.000000},_sink_terminal_set_{2}  = 0
  balance_node___node_7,_sink_terminal_id___2: -1 edge_Edge[12]___{(1,_7),_weight___2.000000},_sink_terminal_set_{2} +1 edge_Edge[13]___{(7,_1),_weight___2.000000},_sink_terminal_set_{2} -1 edge_Edge[32]___{(8,_7),_weight___1.000000},_sink_terminal_set_{2} +1 edge_Edge[33]___{(7,_8),_weight___1.000000},_sink_terminal_set_{2} -1 edge_Edge[42]___{(13,_7),_weight___1.000000},_sink_terminal_set_{2} +1 edge_Edge[43]___{(7,_13),_weight___1.000000},_sink_terminal_set_{2}  = 0
  balance_node___node_8,_sink_terminal_id___2: +1 edge_Edge[30]___{(8,_4),_weight___1.000000},_sink_terminal_set_{2} -1 edge_Edge[31]___{(4,_8),_weight___1.000000},_sink_terminal_set_{2} +1 edge_Edge[32]___{(8,_7),_weight___1.000000},_sink_terminal_set_{2} -1 edge_Edge[33]___{(7,_8),_weight___1.000000},_sink_terminal_set_{2} +1 edge_Edge[34]___{(8,_9),_weight___1.000000},_sink_terminal_set_{2} -1 edge_Edge[35]___{(9,_8),_weight___1.000000},_sink_terminal_set_{2}  = 0
@@ -1575,8 +1575,8 @@ Subject to
  connection_empty_set___edge_Edge[21]___{(11,_2),_weight___2.000000},_sink_terminal_id___2: -1 edge_Edge[21]___{(11,_2),_weight___2.000000},_sink_terminal_set_{} +1 edge_Edge[21]___{(11,_2),_weight___2.000000},_sink_terminal_set_{2}  <= 0
  connection_empty_set___edge_Edge[22]___{(2,_18),_weight___3.000000},_sink_terminal_id___2: -1 edge_Edge[22]___{(2,_18),_weight___3.000000},_sink_terminal_set_{} +1 edge_Edge[22]___{(2,_18),_weight___3.000000},_sink_terminal_set_{2}  <= 0
  connection_empty_set___edge_Edge[23]___{(18,_2),_weight___3.000000},_sink_terminal_id___2: -1 edge_Edge[23]___{(18,_2),_weight___3.000000},_sink_terminal_set_{} +1 edge_Edge[23]___{(18,_2),_weight___3.000000},_sink_terminal_set_{2}  <= 0
- connection_empty_set___edge_Edge[24]___{(5,_3),_weight___0.000000},_sink_terminal_id___2: -1 edge_Edge[24]___{(5,_3),_weight___0.000000},_sink_terminal_set_{} +1 edge_Edge[24]___{(5,_3),_weight___0.000000},_sink_terminal_set_{2}  <= 0
- connection_empty_set___edge_Edge[25]___{(3,_5),_weight___0.000000},_sink_terminal_id___2: -1 edge_Edge[25]___{(3,_5),_weight___0.000000},_sink_terminal_set_{} +1 edge_Edge[25]___{(3,_5),_weight___0.000000},_sink_terminal_set_{2}  <= 0
+ connection_empty_set___edge_Edge[24]___{(5,_3),_weight___1.000000},_sink_terminal_id___2: -1 edge_Edge[24]___{(5,_3),_weight___1.000000},_sink_terminal_set_{} +1 edge_Edge[24]___{(5,_3),_weight___1.000000},_sink_terminal_set_{2}  <= 0
+ connection_empty_set___edge_Edge[25]___{(3,_5),_weight___1.000000},_sink_terminal_id___2: -1 edge_Edge[25]___{(3,_5),_weight___1.000000},_sink_terminal_set_{} +1 edge_Edge[25]___{(3,_5),_weight___1.000000},_sink_terminal_set_{2}  <= 0
  connection_empty_set___edge_Edge[26]___{(5,_4),_weight___1.000000},_sink_terminal_id___2: -1 edge_Edge[26]___{(5,_4),_weight___1.000000},_sink_terminal_set_{} +1 edge_Edge[26]___{(5,_4),_weight___1.000000},_sink_terminal_set_{2}  <= 0
  connection_empty_set___edge_Edge[27]___{(4,_5),_weight___1.000000},_sink_terminal_id___2: -1 edge_Edge[27]___{(4,_5),_weight___1.000000},_sink_terminal_set_{} +1 edge_Edge[27]___{(4,_5),_weight___1.000000},_sink_terminal_set_{2}  <= 0
  connection_empty_set___edge_Edge[28]___{(5,_6),_weight___1.000000},_sink_terminal_id___2: -1 edge_Edge[28]___{(5,_6),_weight___1.000000},_sink_terminal_set_{} +1 edge_Edge[28]___{(5,_6),_weight___1.000000},_sink_terminal_set_{2}  <= 0
@@ -1635,8 +1635,8 @@ Subject to
  connection_GroupEdges___edge_Edge[21]___{(11,_2),_weight___2.000000}: -1 bidirected_edge_Edge[21]___{(11,_2),_weight___2.000000},_net_net_0 +1 edge_Edge[21]___{(11,_2),_weight___2.000000},_sink_terminal_set_{}  <= 0
  connection_GroupEdges___edge_Edge[22]___{(2,_18),_weight___3.000000}: -1 bidirected_edge_Edge[22]___{(2,_18),_weight___3.000000},_net_net_0 +1 edge_Edge[22]___{(2,_18),_weight___3.000000},_sink_terminal_set_{}  <= 0
  connection_GroupEdges___edge_Edge[23]___{(18,_2),_weight___3.000000}: -1 bidirected_edge_Edge[23]___{(18,_2),_weight___3.000000},_net_net_0 +1 edge_Edge[23]___{(18,_2),_weight___3.000000},_sink_terminal_set_{}  <= 0
- connection_GroupEdges___edge_Edge[24]___{(5,_3),_weight___0.000000}: -1 bidirected_edge_Edge[24]___{(5,_3),_weight___0.000000},_net_net_0 +1 edge_Edge[24]___{(5,_3),_weight___0.000000},_sink_terminal_set_{}  <= 0
- connection_GroupEdges___edge_Edge[25]___{(3,_5),_weight___0.000000}: -1 bidirected_edge_Edge[25]___{(3,_5),_weight___0.000000},_net_net_0 +1 edge_Edge[25]___{(3,_5),_weight___0.000000},_sink_terminal_set_{}  <= 0
+ connection_GroupEdges___edge_Edge[24]___{(5,_3),_weight___1.000000}: -1 bidirected_edge_Edge[24]___{(5,_3),_weight___1.000000},_net_net_0 +1 edge_Edge[24]___{(5,_3),_weight___1.000000},_sink_terminal_set_{}  <= 0
+ connection_GroupEdges___edge_Edge[25]___{(3,_5),_weight___1.000000}: -1 bidirected_edge_Edge[25]___{(3,_5),_weight___1.000000},_net_net_0 +1 edge_Edge[25]___{(3,_5),_weight___1.000000},_sink_terminal_set_{}  <= 0
  connection_GroupEdges___edge_Edge[26]___{(5,_4),_weight___1.000000}: -1 bidirected_edge_Edge[26]___{(5,_4),_weight___1.000000},_net_net_0 +1 edge_Edge[26]___{(5,_4),_weight___1.000000},_sink_terminal_set_{}  <= 0
  connection_GroupEdges___edge_Edge[27]___{(4,_5),_weight___1.000000}: -1 bidirected_edge_Edge[27]___{(4,_5),_weight___1.000000},_net_net_0 +1 edge_Edge[27]___{(4,_5),_weight___1.000000},_sink_terminal_set_{}  <= 0
  connection_GroupEdges___edge_Edge[28]___{(5,_6),_weight___1.000000}: -1 bidirected_edge_Edge[28]___{(5,_6),_weight___1.000000},_net_net_0 +1 edge_Edge[28]___{(5,_6),_weight___1.000000},_sink_terminal_set_{}  <= 0
@@ -1743,12 +1743,12 @@ Subject to
  connection_common_flow_lower_bound___edge_Edge[23]___{(18,_2),_weight___3.000000},_sink_terminal_id___1,_sink_terminal_set___{1,_2}: -1 edge_Edge[23]___{(18,_2),_weight___3.000000},_sink_terminal_set_{1} +1 edge_Edge[23]___{(18,_2),_weight___3.000000},_sink_terminal_set_{1,_2}  <= 0
  connection_common_flow_lower_bound___edge_Edge[23]___{(18,_2),_weight___3.000000},_sink_terminal_id___2,_sink_terminal_set___{1,_2}: -1 edge_Edge[23]___{(18,_2),_weight___3.000000},_sink_terminal_set_{2} +1 edge_Edge[23]___{(18,_2),_weight___3.000000},_sink_terminal_set_{1,_2}  <= 0
  connection_common_flow_upper_bound___edge_Edge[23]___{(18,_2),_weight___3.000000},_sink_terminal_set___{1,_2}: -1 edge_Edge[23]___{(18,_2),_weight___3.000000},_sink_terminal_set_{} +1 edge_Edge[23]___{(18,_2),_weight___3.000000},_sink_terminal_set_{1} +1 edge_Edge[23]___{(18,_2),_weight___3.000000},_sink_terminal_set_{2} -1 edge_Edge[23]___{(18,_2),_weight___3.000000},_sink_terminal_set_{1,_2}  <= 0
- connection_common_flow_lower_bound___edge_Edge[24]___{(5,_3),_weight___0.000000},_sink_terminal_id___1,_sink_terminal_set___{1,_2}: -1 edge_Edge[24]___{(5,_3),_weight___0.000000},_sink_terminal_set_{1} +1 edge_Edge[24]___{(5,_3),_weight___0.000000},_sink_terminal_set_{1,_2}  <= 0
- connection_common_flow_lower_bound___edge_Edge[24]___{(5,_3),_weight___0.000000},_sink_terminal_id___2,_sink_terminal_set___{1,_2}: -1 edge_Edge[24]___{(5,_3),_weight___0.000000},_sink_terminal_set_{2} +1 edge_Edge[24]___{(5,_3),_weight___0.000000},_sink_terminal_set_{1,_2}  <= 0
- connection_common_flow_upper_bound___edge_Edge[24]___{(5,_3),_weight___0.000000},_sink_terminal_set___{1,_2}: -1 edge_Edge[24]___{(5,_3),_weight___0.000000},_sink_terminal_set_{} +1 edge_Edge[24]___{(5,_3),_weight___0.000000},_sink_terminal_set_{1} +1 edge_Edge[24]___{(5,_3),_weight___0.000000},_sink_terminal_set_{2} -1 edge_Edge[24]___{(5,_3),_weight___0.000000},_sink_terminal_set_{1,_2}  <= 0
- connection_common_flow_lower_bound___edge_Edge[25]___{(3,_5),_weight___0.000000},_sink_terminal_id___1,_sink_terminal_set___{1,_2}: -1 edge_Edge[25]___{(3,_5),_weight___0.000000},_sink_terminal_set_{1} +1 edge_Edge[25]___{(3,_5),_weight___0.000000},_sink_terminal_set_{1,_2}  <= 0
- connection_common_flow_lower_bound___edge_Edge[25]___{(3,_5),_weight___0.000000},_sink_terminal_id___2,_sink_terminal_set___{1,_2}: -1 edge_Edge[25]___{(3,_5),_weight___0.000000},_sink_terminal_set_{2} +1 edge_Edge[25]___{(3,_5),_weight___0.000000},_sink_terminal_set_{1,_2}  <= 0
- connection_common_flow_upper_bound___edge_Edge[25]___{(3,_5),_weight___0.000000},_sink_terminal_set___{1,_2}: -1 edge_Edge[25]___{(3,_5),_weight___0.000000},_sink_terminal_set_{} +1 edge_Edge[25]___{(3,_5),_weight___0.000000},_sink_terminal_set_{1} +1 edge_Edge[25]___{(3,_5),_weight___0.000000},_sink_terminal_set_{2} -1 edge_Edge[25]___{(3,_5),_weight___0.000000},_sink_terminal_set_{1,_2}  <= 0
+ connection_common_flow_lower_bound___edge_Edge[24]___{(5,_3),_weight___1.000000},_sink_terminal_id___1,_sink_terminal_set___{1,_2}: -1 edge_Edge[24]___{(5,_3),_weight___1.000000},_sink_terminal_set_{1} +1 edge_Edge[24]___{(5,_3),_weight___1.000000},_sink_terminal_set_{1,_2}  <= 0
+ connection_common_flow_lower_bound___edge_Edge[24]___{(5,_3),_weight___1.000000},_sink_terminal_id___2,_sink_terminal_set___{1,_2}: -1 edge_Edge[24]___{(5,_3),_weight___1.000000},_sink_terminal_set_{2} +1 edge_Edge[24]___{(5,_3),_weight___1.000000},_sink_terminal_set_{1,_2}  <= 0
+ connection_common_flow_upper_bound___edge_Edge[24]___{(5,_3),_weight___1.000000},_sink_terminal_set___{1,_2}: -1 edge_Edge[24]___{(5,_3),_weight___1.000000},_sink_terminal_set_{} +1 edge_Edge[24]___{(5,_3),_weight___1.000000},_sink_terminal_set_{1} +1 edge_Edge[24]___{(5,_3),_weight___1.000000},_sink_terminal_set_{2} -1 edge_Edge[24]___{(5,_3),_weight___1.000000},_sink_terminal_set_{1,_2}  <= 0
+ connection_common_flow_lower_bound___edge_Edge[25]___{(3,_5),_weight___1.000000},_sink_terminal_id___1,_sink_terminal_set___{1,_2}: -1 edge_Edge[25]___{(3,_5),_weight___1.000000},_sink_terminal_set_{1} +1 edge_Edge[25]___{(3,_5),_weight___1.000000},_sink_terminal_set_{1,_2}  <= 0
+ connection_common_flow_lower_bound___edge_Edge[25]___{(3,_5),_weight___1.000000},_sink_terminal_id___2,_sink_terminal_set___{1,_2}: -1 edge_Edge[25]___{(3,_5),_weight___1.000000},_sink_terminal_set_{2} +1 edge_Edge[25]___{(3,_5),_weight___1.000000},_sink_terminal_set_{1,_2}  <= 0
+ connection_common_flow_upper_bound___edge_Edge[25]___{(3,_5),_weight___1.000000},_sink_terminal_set___{1,_2}: -1 edge_Edge[25]___{(3,_5),_weight___1.000000},_sink_terminal_set_{} +1 edge_Edge[25]___{(3,_5),_weight___1.000000},_sink_terminal_set_{1} +1 edge_Edge[25]___{(3,_5),_weight___1.000000},_sink_terminal_set_{2} -1 edge_Edge[25]___{(3,_5),_weight___1.000000},_sink_terminal_set_{1,_2}  <= 0
  connection_common_flow_lower_bound___edge_Edge[26]___{(5,_4),_weight___1.000000},_sink_terminal_id___1,_sink_terminal_set___{1,_2}: -1 edge_Edge[26]___{(5,_4),_weight___1.000000},_sink_terminal_set_{1} +1 edge_Edge[26]___{(5,_4),_weight___1.000000},_sink_terminal_set_{1,_2}  <= 0
  connection_common_flow_lower_bound___edge_Edge[26]___{(5,_4),_weight___1.000000},_sink_terminal_id___2,_sink_terminal_set___{1,_2}: -1 edge_Edge[26]___{(5,_4),_weight___1.000000},_sink_terminal_set_{2} +1 edge_Edge[26]___{(5,_4),_weight___1.000000},_sink_terminal_set_{1,_2}  <= 0
  connection_common_flow_upper_bound___edge_Edge[26]___{(5,_4),_weight___1.000000},_sink_terminal_set___{1,_2}: -1 edge_Edge[26]___{(5,_4),_weight___1.000000},_sink_terminal_set_{} +1 edge_Edge[26]___{(5,_4),_weight___1.000000},_sink_terminal_set_{1} +1 edge_Edge[26]___{(5,_4),_weight___1.000000},_sink_terminal_set_{2} -1 edge_Edge[26]___{(5,_4),_weight___1.000000},_sink_terminal_set_{1,_2}  <= 0
@@ -1853,9 +1853,9 @@ Subject to
  connection_common_flow_upper_bound___edge_Edge[59]___{(18,_17),_weight___1.000000},_sink_terminal_set___{1,_2}: -1 edge_Edge[59]___{(18,_17),_weight___1.000000},_sink_terminal_set_{} +1 edge_Edge[59]___{(18,_17),_weight___1.000000},_sink_terminal_set_{1} +1 edge_Edge[59]___{(18,_17),_weight___1.000000},_sink_terminal_set_{2} -1 edge_Edge[59]___{(18,_17),_weight___1.000000},_sink_terminal_set_{1,_2}  <= 0
  balance_common_flow___node_1,_sink_terminal_set___{1,_2}: +1 edge_Edge[8]___{(1,_3),_weight___3.000000},_sink_terminal_set_{1,_2} -1 edge_Edge[9]___{(3,_1),_weight___3.000000},_sink_terminal_set_{1,_2} +1 edge_Edge[10]___{(1,_4),_weight___2.000000},_sink_terminal_set_{1,_2} -1 edge_Edge[11]___{(4,_1),_weight___2.000000},_sink_terminal_set_{1,_2} +1 edge_Edge[12]___{(1,_7),_weight___2.000000},_sink_terminal_set_{1,_2} -1 edge_Edge[13]___{(7,_1),_weight___2.000000},_sink_terminal_set_{1,_2} +1 edge_Edge[14]___{(1,_12),_weight___3.000000},_sink_terminal_set_{1,_2} -1 edge_Edge[15]___{(12,_1),_weight___3.000000},_sink_terminal_set_{1,_2}  <= 0
  balance_common_flow___node_2,_sink_terminal_set___{1,_2}: +1 edge_Edge[16]___{(2,_3),_weight___3.000000},_sink_terminal_set_{1,_2} -1 edge_Edge[17]___{(3,_2),_weight___3.000000},_sink_terminal_set_{1,_2} +1 edge_Edge[18]___{(2,_6),_weight___2.000000},_sink_terminal_set_{1,_2} -1 edge_Edge[19]___{(6,_2),_weight___2.000000},_sink_terminal_set_{1,_2} +1 edge_Edge[20]___{(2,_11),_weight___2.000000},_sink_terminal_set_{1,_2} -1 edge_Edge[21]___{(11,_2),_weight___2.000000},_sink_terminal_set_{1,_2} +1 edge_Edge[22]___{(2,_18),_weight___3.000000},_sink_terminal_set_{1,_2} -1 edge_Edge[23]___{(18,_2),_weight___3.000000},_sink_terminal_set_{1,_2}  <= 0
- balance_common_flow___node_3,_sink_terminal_set___{1,_2}: -1 edge_Edge[8]___{(1,_3),_weight___3.000000},_sink_terminal_set_{1,_2} +1 edge_Edge[9]___{(3,_1),_weight___3.000000},_sink_terminal_set_{1,_2} -1 edge_Edge[16]___{(2,_3),_weight___3.000000},_sink_terminal_set_{1,_2} +1 edge_Edge[17]___{(3,_2),_weight___3.000000},_sink_terminal_set_{1,_2} -1 edge_Edge[24]___{(5,_3),_weight___0.000000},_sink_terminal_set_{1,_2} +1 edge_Edge[25]___{(3,_5),_weight___0.000000},_sink_terminal_set_{1,_2}  <= 0
+ balance_common_flow___node_3,_sink_terminal_set___{1,_2}: -1 edge_Edge[8]___{(1,_3),_weight___3.000000},_sink_terminal_set_{1,_2} +1 edge_Edge[9]___{(3,_1),_weight___3.000000},_sink_terminal_set_{1,_2} -1 edge_Edge[16]___{(2,_3),_weight___3.000000},_sink_terminal_set_{1,_2} +1 edge_Edge[17]___{(3,_2),_weight___3.000000},_sink_terminal_set_{1,_2} -1 edge_Edge[24]___{(5,_3),_weight___1.000000},_sink_terminal_set_{1,_2} +1 edge_Edge[25]___{(3,_5),_weight___1.000000},_sink_terminal_set_{1,_2}  <= 0
  balance_common_flow___node_4,_sink_terminal_set___{1,_2}: -1 edge_Edge[10]___{(1,_4),_weight___2.000000},_sink_terminal_set_{1,_2} +1 edge_Edge[11]___{(4,_1),_weight___2.000000},_sink_terminal_set_{1,_2} -1 edge_Edge[26]___{(5,_4),_weight___1.000000},_sink_terminal_set_{1,_2} +1 edge_Edge[27]___{(4,_5),_weight___1.000000},_sink_terminal_set_{1,_2} -1 edge_Edge[30]___{(8,_4),_weight___1.000000},_sink_terminal_set_{1,_2} +1 edge_Edge[31]___{(4,_8),_weight___1.000000},_sink_terminal_set_{1,_2}  <= 0
- balance_common_flow___node_5,_sink_terminal_set___{1,_2}: +1 edge_Edge[24]___{(5,_3),_weight___0.000000},_sink_terminal_set_{1,_2} -1 edge_Edge[25]___{(3,_5),_weight___0.000000},_sink_terminal_set_{1,_2} +1 edge_Edge[26]___{(5,_4),_weight___1.000000},_sink_terminal_set_{1,_2} -1 edge_Edge[27]___{(4,_5),_weight___1.000000},_sink_terminal_set_{1,_2} +1 edge_Edge[28]___{(5,_6),_weight___1.000000},_sink_terminal_set_{1,_2} -1 edge_Edge[29]___{(6,_5),_weight___1.000000},_sink_terminal_set_{1,_2}  <= 0
+ balance_common_flow___node_5,_sink_terminal_set___{1,_2}: +1 edge_Edge[24]___{(5,_3),_weight___1.000000},_sink_terminal_set_{1,_2} -1 edge_Edge[25]___{(3,_5),_weight___1.000000},_sink_terminal_set_{1,_2} +1 edge_Edge[26]___{(5,_4),_weight___1.000000},_sink_terminal_set_{1,_2} -1 edge_Edge[27]___{(4,_5),_weight___1.000000},_sink_terminal_set_{1,_2} +1 edge_Edge[28]___{(5,_6),_weight___1.000000},_sink_terminal_set_{1,_2} -1 edge_Edge[29]___{(6,_5),_weight___1.000000},_sink_terminal_set_{1,_2}  <= 0
  balance_common_flow___node_6,_sink_terminal_set___{1,_2}: -1 edge_Edge[18]___{(2,_6),_weight___2.000000},_sink_terminal_set_{1,_2} +1 edge_Edge[19]___{(6,_2),_weight___2.000000},_sink_terminal_set_{1,_2} -1 edge_Edge[28]___{(5,_6),_weight___1.000000},_sink_terminal_set_{1,_2} +1 edge_Edge[29]___{(6,_5),_weight___1.000000},_sink_terminal_set_{1,_2} -1 edge_Edge[36]___{(10,_6),_weight___1.000000},_sink_terminal_set_{1,_2} +1 edge_Edge[37]___{(6,_10),_weight___1.000000},_sink_terminal_set_{1,_2}  <= 0
  balance_common_flow___node_7,_sink_terminal_set___{1,_2}: -1 edge_Edge[12]___{(1,_7),_weight___2.000000},_sink_terminal_set_{1,_2} +1 edge_Edge[13]___{(7,_1),_weight___2.000000},_sink_terminal_set_{1,_2} -1 edge_Edge[32]___{(8,_7),_weight___1.000000},_sink_terminal_set_{1,_2} +1 edge_Edge[33]___{(7,_8),_weight___1.000000},_sink_terminal_set_{1,_2} -1 edge_Edge[42]___{(13,_7),_weight___1.000000},_sink_terminal_set_{1,_2} +1 edge_Edge[43]___{(7,_13),_weight___1.000000},_sink_terminal_set_{1,_2}  <= 0
  balance_common_flow___node_8,_sink_terminal_set___{1,_2}: +1 edge_Edge[30]___{(8,_4),_weight___1.000000},_sink_terminal_set_{1,_2} -1 edge_Edge[31]___{(4,_8),_weight___1.000000},_sink_terminal_set_{1,_2} +1 edge_Edge[32]___{(8,_7),_weight___1.000000},_sink_terminal_set_{1,_2} -1 edge_Edge[33]___{(7,_8),_weight___1.000000},_sink_terminal_set_{1,_2} +1 edge_Edge[34]___{(8,_9),_weight___1.000000},_sink_terminal_set_{1,_2} -1 edge_Edge[35]___{(9,_8),_weight___1.000000},_sink_terminal_set_{1,_2}  <= 0
@@ -1882,7 +1882,7 @@ Bounds
  0 <= undirected_edge_Edge[9]___{(2,_6),_weight___2.000000},_net_net_0 <= 1
  0 <= undirected_edge_Edge[10]___{(2,_11),_weight___2.000000},_net_net_0 <= 1
  0 <= undirected_edge_Edge[11]___{(2,_18),_weight___3.000000},_net_net_0 <= 1
- 0 <= undirected_edge_Edge[12]___{(5,_3),_weight___0.000000},_net_net_0 <= 1
+ 0 <= undirected_edge_Edge[12]___{(5,_3),_weight___1.000000},_net_net_0 <= 1
  0 <= undirected_edge_Edge[13]___{(5,_4),_weight___1.000000},_net_net_0 <= 1
  0 <= undirected_edge_Edge[14]___{(5,_6),_weight___1.000000},_net_net_0 <= 1
  0 <= undirected_edge_Edge[15]___{(8,_4),_weight___1.000000},_net_net_0 <= 1
@@ -1924,8 +1924,8 @@ Bounds
  0 <= bidirected_edge_Edge[21]___{(11,_2),_weight___2.000000},_net_net_0 <= 1
  0 <= bidirected_edge_Edge[22]___{(2,_18),_weight___3.000000},_net_net_0 <= 1
  0 <= bidirected_edge_Edge[23]___{(18,_2),_weight___3.000000},_net_net_0 <= 1
- 0 <= bidirected_edge_Edge[24]___{(5,_3),_weight___0.000000},_net_net_0 <= 1
- 0 <= bidirected_edge_Edge[25]___{(3,_5),_weight___0.000000},_net_net_0 <= 1
+ 0 <= bidirected_edge_Edge[24]___{(5,_3),_weight___1.000000},_net_net_0 <= 1
+ 0 <= bidirected_edge_Edge[25]___{(3,_5),_weight___1.000000},_net_net_0 <= 1
  0 <= bidirected_edge_Edge[26]___{(5,_4),_weight___1.000000},_net_net_0 <= 1
  0 <= bidirected_edge_Edge[27]___{(4,_5),_weight___1.000000},_net_net_0 <= 1
  0 <= bidirected_edge_Edge[28]___{(5,_6),_weight___1.000000},_net_net_0 <= 1
@@ -1984,8 +1984,8 @@ Bounds
  0 <= edge_Edge[21]___{(11,_2),_weight___2.000000},_sink_terminal_set_{} <= 1
  0 <= edge_Edge[22]___{(2,_18),_weight___3.000000},_sink_terminal_set_{} <= 1
  0 <= edge_Edge[23]___{(18,_2),_weight___3.000000},_sink_terminal_set_{} <= 1
- 0 <= edge_Edge[24]___{(5,_3),_weight___0.000000},_sink_terminal_set_{} <= 1
- 0 <= edge_Edge[25]___{(3,_5),_weight___0.000000},_sink_terminal_set_{} <= 1
+ 0 <= edge_Edge[24]___{(5,_3),_weight___1.000000},_sink_terminal_set_{} <= 1
+ 0 <= edge_Edge[25]___{(3,_5),_weight___1.000000},_sink_terminal_set_{} <= 1
  0 <= edge_Edge[26]___{(5,_4),_weight___1.000000},_sink_terminal_set_{} <= 1
  0 <= edge_Edge[27]___{(4,_5),_weight___1.000000},_sink_terminal_set_{} <= 1
  0 <= edge_Edge[28]___{(5,_6),_weight___1.000000},_sink_terminal_set_{} <= 1
@@ -2044,8 +2044,8 @@ Bounds
  0 <= edge_Edge[21]___{(11,_2),_weight___2.000000},_sink_terminal_set_{1} <= 1
  0 <= edge_Edge[22]___{(2,_18),_weight___3.000000},_sink_terminal_set_{1} <= 1
  0 <= edge_Edge[23]___{(18,_2),_weight___3.000000},_sink_terminal_set_{1} <= 1
- 0 <= edge_Edge[24]___{(5,_3),_weight___0.000000},_sink_terminal_set_{1} <= 1
- 0 <= edge_Edge[25]___{(3,_5),_weight___0.000000},_sink_terminal_set_{1} <= 1
+ 0 <= edge_Edge[24]___{(5,_3),_weight___1.000000},_sink_terminal_set_{1} <= 1
+ 0 <= edge_Edge[25]___{(3,_5),_weight___1.000000},_sink_terminal_set_{1} <= 1
  0 <= edge_Edge[26]___{(5,_4),_weight___1.000000},_sink_terminal_set_{1} <= 1
  0 <= edge_Edge[27]___{(4,_5),_weight___1.000000},_sink_terminal_set_{1} <= 1
  0 <= edge_Edge[28]___{(5,_6),_weight___1.000000},_sink_terminal_set_{1} <= 1
@@ -2104,8 +2104,8 @@ Bounds
  0 <= edge_Edge[21]___{(11,_2),_weight___2.000000},_sink_terminal_set_{2} <= 1
  0 <= edge_Edge[22]___{(2,_18),_weight___3.000000},_sink_terminal_set_{2} <= 1
  0 <= edge_Edge[23]___{(18,_2),_weight___3.000000},_sink_terminal_set_{2} <= 1
- 0 <= edge_Edge[24]___{(5,_3),_weight___0.000000},_sink_terminal_set_{2} <= 1
- 0 <= edge_Edge[25]___{(3,_5),_weight___0.000000},_sink_terminal_set_{2} <= 1
+ 0 <= edge_Edge[24]___{(5,_3),_weight___1.000000},_sink_terminal_set_{2} <= 1
+ 0 <= edge_Edge[25]___{(3,_5),_weight___1.000000},_sink_terminal_set_{2} <= 1
  0 <= edge_Edge[26]___{(5,_4),_weight___1.000000},_sink_terminal_set_{2} <= 1
  0 <= edge_Edge[27]___{(4,_5),_weight___1.000000},_sink_terminal_set_{2} <= 1
  0 <= edge_Edge[28]___{(5,_6),_weight___1.000000},_sink_terminal_set_{2} <= 1
@@ -2164,8 +2164,8 @@ Bounds
  0 <= edge_Edge[21]___{(11,_2),_weight___2.000000},_sink_terminal_set_{1,_2} <= 1
  0 <= edge_Edge[22]___{(2,_18),_weight___3.000000},_sink_terminal_set_{1,_2} <= 1
  0 <= edge_Edge[23]___{(18,_2),_weight___3.000000},_sink_terminal_set_{1,_2} <= 1
- 0 <= edge_Edge[24]___{(5,_3),_weight___0.000000},_sink_terminal_set_{1,_2} <= 1
- 0 <= edge_Edge[25]___{(3,_5),_weight___0.000000},_sink_terminal_set_{1,_2} <= 1
+ 0 <= edge_Edge[24]___{(5,_3),_weight___1.000000},_sink_terminal_set_{1,_2} <= 1
+ 0 <= edge_Edge[25]___{(3,_5),_weight___1.000000},_sink_terminal_set_{1,_2} <= 1
  0 <= edge_Edge[26]___{(5,_4),_weight___1.000000},_sink_terminal_set_{1,_2} <= 1
  0 <= edge_Edge[27]___{(4,_5),_weight___1.000000},_sink_terminal_set_{1,_2} <= 1
  0 <= edge_Edge[28]___{(5,_6),_weight___1.000000},_sink_terminal_set_{1,_2} <= 1
@@ -2213,7 +2213,7 @@ Binaries
  undirected_edge_Edge[9]___{(2,_6),_weight___2.000000},_net_net_0
  undirected_edge_Edge[10]___{(2,_11),_weight___2.000000},_net_net_0
  undirected_edge_Edge[11]___{(2,_18),_weight___3.000000},_net_net_0
- undirected_edge_Edge[12]___{(5,_3),_weight___0.000000},_net_net_0
+ undirected_edge_Edge[12]___{(5,_3),_weight___1.000000},_net_net_0
  undirected_edge_Edge[13]___{(5,_4),_weight___1.000000},_net_net_0
  undirected_edge_Edge[14]___{(5,_6),_weight___1.000000},_net_net_0
  undirected_edge_Edge[15]___{(8,_4),_weight___1.000000},_net_net_0
@@ -2255,8 +2255,8 @@ Binaries
  bidirected_edge_Edge[21]___{(11,_2),_weight___2.000000},_net_net_0
  bidirected_edge_Edge[22]___{(2,_18),_weight___3.000000},_net_net_0
  bidirected_edge_Edge[23]___{(18,_2),_weight___3.000000},_net_net_0
- bidirected_edge_Edge[24]___{(5,_3),_weight___0.000000},_net_net_0
- bidirected_edge_Edge[25]___{(3,_5),_weight___0.000000},_net_net_0
+ bidirected_edge_Edge[24]___{(5,_3),_weight___1.000000},_net_net_0
+ bidirected_edge_Edge[25]___{(3,_5),_weight___1.000000},_net_net_0
  bidirected_edge_Edge[26]___{(5,_4),_weight___1.000000},_net_net_0
  bidirected_edge_Edge[27]___{(4,_5),_weight___1.000000},_net_net_0
  bidirected_edge_Edge[28]___{(5,_6),_weight___1.000000},_net_net_0
@@ -2294,7 +2294,7 @@ Binaries
 End
 [MIPSolver] number of variables   = 330
 [MIPSolver] number of constraints = 446
-[MIPSolver] Problem solved in 46 milliseconds.
+[MIPSolver] Problem solved in 56 milliseconds.
 [MIPSolver] optimal objective value = 12
 [GroupManager] compute solution for group GroupEdges
 [GroupManager] compute solution for group GroupBidirectedMultiCommodityCommonFlow
@@ -2434,7 +2434,7 @@ instances/integrality_gaps/3_terminals_planar_01/solution_3_terminals_planar_01.
                         {
                             "head": 3,
                             "tail": 5,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 5,
@@ -2676,7 +2676,7 @@ instances/integrality_gaps/3_terminals_planar_01/solution_3_terminals_planar_01.
                         {
                             "head": 3,
                             "tail": 5,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 4,
@@ -3141,7 +3141,7 @@ instances/integrality_gaps/3_terminals_planar_01/solution_3_terminals_planar_01.
                         {
                             "head": 3,
                             "tail": 5,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 4,
@@ -3230,7 +3230,1090 @@ instances/integrality_gaps/3_terminals_planar_01/solution_3_terminals_planar_01.
                         }
                     ]
                 },
-                "GroupMultiCommodityFlow": null
+                "GroupMultiCommodityFlow": {
+                    "variables": [
+                        {
+                            "head": 12,
+                            "tail": 0,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 12,
+                            "tail": 0,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 12,
+                            "tail": 0,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 12,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 12,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 12,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 14,
+                            "tail": 0,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 14,
+                            "tail": 0,
+                            "terminal_id": 1,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 14,
+                            "tail": 0,
+                            "terminal_id": 2,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 0,
+                            "tail": 14,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 14,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 14,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 0,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 0,
+                            "terminal_id": 1,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 16,
+                            "tail": 0,
+                            "terminal_id": 2,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 0,
+                            "tail": 16,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 16,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 16,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 0,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 0,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 0,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 18,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 18,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 0,
+                            "tail": 18,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 1,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 1,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 1,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 3,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 3,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 3,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 1,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 1,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 1,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 4,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 4,
+                            "terminal_id": 1,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 1,
+                            "tail": 4,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 7,
+                            "tail": 1,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 7,
+                            "tail": 1,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 7,
+                            "tail": 1,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 7,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 7,
+                            "terminal_id": 1,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 1,
+                            "tail": 7,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 12,
+                            "tail": 1,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 12,
+                            "tail": 1,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 12,
+                            "tail": 1,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 12,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 12,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 1,
+                            "tail": 12,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 2,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 2,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 2,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 3,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 3,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 3,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 2,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 2,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 2,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 6,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 6,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 6,
+                            "terminal_id": 2,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 11,
+                            "tail": 2,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 11,
+                            "tail": 2,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 11,
+                            "tail": 2,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 11,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 11,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 11,
+                            "terminal_id": 2,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 18,
+                            "tail": 2,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 2,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 2,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 18,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 18,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 2,
+                            "tail": 18,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 5,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 5,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 3,
+                            "tail": 5,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 5,
+                            "tail": 3,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 5,
+                            "tail": 3,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 5,
+                            "tail": 3,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 5,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 5,
+                            "terminal_id": 1,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 4,
+                            "tail": 5,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 5,
+                            "tail": 4,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 5,
+                            "tail": 4,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 5,
+                            "tail": 4,
+                            "terminal_id": 2,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 6,
+                            "tail": 5,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 5,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 5,
+                            "terminal_id": 2,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 5,
+                            "tail": 6,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 5,
+                            "tail": 6,
+                            "terminal_id": 1,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 5,
+                            "tail": 6,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 8,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 4,
+                            "tail": 8,
+                            "terminal_id": 1,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 4,
+                            "tail": 8,
+                            "terminal_id": 2,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 8,
+                            "tail": 4,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 8,
+                            "tail": 4,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 8,
+                            "tail": 4,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 7,
+                            "tail": 8,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 7,
+                            "tail": 8,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 7,
+                            "tail": 8,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 8,
+                            "tail": 7,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 8,
+                            "tail": 7,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 8,
+                            "tail": 7,
+                            "terminal_id": 2,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 9,
+                            "tail": 8,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 9,
+                            "tail": 8,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 9,
+                            "tail": 8,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 8,
+                            "tail": 9,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 8,
+                            "tail": 9,
+                            "terminal_id": 1,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 8,
+                            "tail": 9,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 10,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 6,
+                            "tail": 10,
+                            "terminal_id": 1,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 6,
+                            "tail": 10,
+                            "terminal_id": 2,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 10,
+                            "tail": 6,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 10,
+                            "tail": 6,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 10,
+                            "tail": 6,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 9,
+                            "tail": 10,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 9,
+                            "tail": 10,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 9,
+                            "tail": 10,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 10,
+                            "tail": 9,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 10,
+                            "tail": 9,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 10,
+                            "tail": 9,
+                            "terminal_id": 2,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 11,
+                            "tail": 10,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 11,
+                            "tail": 10,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 11,
+                            "tail": 10,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 10,
+                            "tail": 11,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 10,
+                            "tail": 11,
+                            "terminal_id": 1,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 10,
+                            "tail": 11,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 7,
+                            "tail": 13,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 7,
+                            "tail": 13,
+                            "terminal_id": 1,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 7,
+                            "tail": 13,
+                            "terminal_id": 2,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 13,
+                            "tail": 7,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 13,
+                            "tail": 7,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 13,
+                            "tail": 7,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 12,
+                            "tail": 13,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 12,
+                            "tail": 13,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 12,
+                            "tail": 13,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 13,
+                            "tail": 12,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 13,
+                            "tail": 12,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 13,
+                            "tail": 12,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 14,
+                            "tail": 13,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 14,
+                            "tail": 13,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 14,
+                            "tail": 13,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 13,
+                            "tail": 14,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 13,
+                            "tail": 14,
+                            "terminal_id": 1,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 13,
+                            "tail": 14,
+                            "terminal_id": 2,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 9,
+                            "tail": 15,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 9,
+                            "tail": 15,
+                            "terminal_id": 1,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 9,
+                            "tail": 15,
+                            "terminal_id": 2,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 15,
+                            "tail": 9,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 15,
+                            "tail": 9,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 15,
+                            "tail": 9,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 14,
+                            "tail": 15,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 14,
+                            "tail": 15,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 14,
+                            "tail": 15,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 15,
+                            "tail": 14,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 15,
+                            "tail": 14,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 15,
+                            "tail": 14,
+                            "terminal_id": 2,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 16,
+                            "tail": 15,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 15,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 15,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 15,
+                            "tail": 16,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 15,
+                            "tail": 16,
+                            "terminal_id": 1,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 15,
+                            "tail": 16,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 11,
+                            "tail": 17,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 11,
+                            "tail": 17,
+                            "terminal_id": 1,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 11,
+                            "tail": 17,
+                            "terminal_id": 2,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 17,
+                            "tail": 11,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 17,
+                            "tail": 11,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 17,
+                            "tail": 11,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 17,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 17,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 16,
+                            "tail": 17,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 17,
+                            "tail": 16,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 17,
+                            "tail": 16,
+                            "terminal_id": 1,
+                            "value": 0.25
+                        },
+                        {
+                            "head": 17,
+                            "tail": 16,
+                            "terminal_id": 2,
+                            "value": 0.5
+                        },
+                        {
+                            "head": 18,
+                            "tail": 17,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 17,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 18,
+                            "tail": 17,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 17,
+                            "tail": 18,
+                            "terminal_id": 0,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 17,
+                            "tail": 18,
+                            "terminal_id": 1,
+                            "value": 0.0
+                        },
+                        {
+                            "head": 17,
+                            "tail": 18,
+                            "terminal_id": 2,
+                            "value": 0.0
+                        }
+                    ]
+                }
             }
         },
         "integer": {
@@ -3366,7 +4449,7 @@ instances/integrality_gaps/3_terminals_planar_01/solution_3_terminals_planar_01.
                         {
                             "head": 3,
                             "tail": 5,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 5,
@@ -3608,7 +4691,7 @@ instances/integrality_gaps/3_terminals_planar_01/solution_3_terminals_planar_01.
                         {
                             "head": 3,
                             "tail": 5,
-                            "value": 1.0
+                            "value": 0.0
                         },
                         {
                             "head": 4,
@@ -3719,24 +4802,24 @@ instances/integrality_gaps/3_terminals_planar_01/solution_3_terminals_planar_01.
                         {
                             "node": "1",
                             "value_per_terminal": [
-                                0.75,
-                                5.25,
+                                0.0,
+                                6.0,
                                 0.0
                             ]
                         },
                         {
                             "node": "2",
                             "value_per_terminal": [
+                                0.75,
                                 0.0,
-                                0.0,
-                                6.0
+                                5.25
                             ]
                         },
                         {
                             "node": "3",
                             "value_per_terminal": [
-                                0.75,
-                                2.25,
+                                0.0,
+                                3.0,
                                 3.0
                             ]
                         },
@@ -3744,71 +4827,71 @@ instances/integrality_gaps/3_terminals_planar_01/solution_3_terminals_planar_01.
                             "node": "4",
                             "value_per_terminal": [
                                 0.75,
-                                3.25,
-                                2.0
+                                4.0,
+                                1.25
                             ]
                         },
                         {
                             "node": "5",
                             "value_per_terminal": [
                                 0.75,
-                                2.25,
-                                3.0
+                                3.0,
+                                2.25
                             ]
                         },
                         {
                             "node": "6",
                             "value_per_terminal": [
                                 0.75,
-                                1.25,
-                                4.0
+                                2.0,
+                                3.25
                             ]
                         },
                         {
                             "node": "7",
                             "value_per_terminal": [
                                 2.0,
-                                3.25,
-                                0.75
+                                4.0,
+                                0.0
                             ]
                         },
                         {
                             "node": "8",
                             "value_per_terminal": [
                                 1.75,
-                                2.5,
-                                1.75
+                                3.25,
+                                1.0
                             ]
                         },
                         {
                             "node": "9",
                             "value_per_terminal": [
                                 2.25,
-                                1.5,
-                                2.25
+                                2.25,
+                                1.5
                             ]
                         },
                         {
                             "node": "10",
                             "value_per_terminal": [
                                 1.75,
-                                1.0,
-                                3.25
+                                1.75,
+                                2.5
                             ]
                         },
                         {
                             "node": "11",
                             "value_per_terminal": [
                                 2.0,
-                                0.0,
-                                4.0
+                                0.75,
+                                3.25
                             ]
                         },
                         {
                             "node": "12",
                             "value_per_terminal": [
-                                3.75,
-                                2.25,
+                                3.0,
+                                3.0,
                                 0.0
                             ]
                         },
@@ -3816,40 +4899,40 @@ instances/integrality_gaps/3_terminals_planar_01/solution_3_terminals_planar_01.
                             "node": "13",
                             "value_per_terminal": [
                                 3.0,
-                                2.25,
-                                0.75
+                                3.0,
+                                0.0
                             ]
                         },
                         {
                             "node": "14",
                             "value_per_terminal": [
                                 4.0,
-                                1.25,
-                                0.75
+                                2.0,
+                                0.0
                             ]
                         },
                         {
                             "node": "15",
                             "value_per_terminal": [
                                 3.25,
-                                1.0,
-                                1.75
+                                1.75,
+                                1.0
                             ]
                         },
                         {
                             "node": "16",
                             "value_per_terminal": [
                                 4.0,
-                                0.0,
-                                2.0
+                                0.75,
+                                1.25
                             ]
                         },
                         {
                             "node": "17",
                             "value_per_terminal": [
                                 3.0,
-                                0.0,
-                                3.0
+                                0.75,
+                                2.25
                             ]
                         },
                         {
@@ -3867,3 +4950,4 @@ instances/integrality_gaps/3_terminals_planar_01/solution_3_terminals_planar_01.
         }
     }
 }
+
