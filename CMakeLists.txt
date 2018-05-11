@@ -1,19 +1,21 @@
 cmake_minimum_required(VERSION 3.9)
 
-project(steiner_trees VERSION 0.1 DESCRIPTION "Steiner Tree MIP Solver")
+project(steiner_trees LANGUAGES CXX VERSION 0.1 DESCRIPTION "Steiner Tree MIP Solver")
+
+include(GNUInstallDirs)
 
 set(WARNING_FLAGS "-Wall -Wextra -Werror -pedantic")
 set(OPTIMIZATION_FLAGS "-DNDEBUG -O3")
 
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_FLAGS "${WARNING_FLAGS}")# ${OPTIMIZATION_FLAGS}")
+set(CMAKE_CXX_FLAGS "${WARNING_FLAGS} ${OPTIMIZATION_FLAGS}")
 
 set(SOURCE_FILES
         source/main.cpp
         source/typedefs.cpp
         source/debug.cpp
         source/json.cpp
-        source/python.cpp
+#        source/python.cpp
         source/Output.cpp
         source/Storage.cpp
         source/Logger.cpp
@@ -52,12 +54,32 @@ set(MIP_FILES
         source/mip/MIP.cpp
         source/mip/Solution.cpp source/mip/Solution.hpp)
 
+set(DIJKSTRA_STEINER_FILES
+        source/steiner_trees/dijkstra_steiner/DijkstraSteiner.cpp
+        source/steiner_trees/dijkstra_steiner/DijkstraSteinerAlgorithm.hpp
+        source/steiner_trees/dijkstra_steiner/SteinerTreeKey.hpp
+        source/steiner_trees/dijkstra_steiner/SteinerTreeLabel.hpp
+        source/steiner_trees/dijkstra_steiner/SteinerTreeLabelQueue.hpp
+        source/steiner_trees/dijkstra_steiner/SteinerTreeLabelTable.hpp
+        source/steiner_trees/dijkstra_steiner/SteinerTreeLowerBound.hpp
+        source/steiner_trees/dijkstra_steiner/SteinerTreesManager.hpp
+)
+
+set(DATA_FILES
+        source/data/BinaryHeap.hpp
+        source/data/BitSet.hpp
+        source/data/BitSetEnumerator.hpp
+        source/data/BitSetTable.hpp
+)
+
 set(STEINER_TREE_FILES
         source/steiner_trees.cpp
         source/steiner_trees/SteinerTreeProblem.cpp
         source/steiner_trees/SteinerTreeSolution.cpp
         source/steiner_trees/SteinerTreeSolver.cpp
         source/steiner_trees/SteinerTreeCut.cpp
+#        source/steiner_trees/optimal_integrality_gap/OptimalIntegralityGap.cpp
+#        source/steiner_trees/optimal_integrality_gap/OptimalEdgeWeights.cpp
 )
 
 set(STEINER_TREE_MIPS_FILES
@@ -73,6 +95,10 @@ set(STEINER_TREE_MIPS_FILES
         source/steiner_trees/mips/objective/GroupMultiCommodityOptimal.cpp
         source/steiner_trees/mips/SteinerTreeMIPFactory.cpp source/steiner_trees/mips/SteinerTreeMIPFactory.hpp
         source/steiner_trees/mips/SteinerTreeMIP.cpp source/steiner_trees/mips/SteinerTreeMIP.hpp)
+
+set(UNIT_TESTS_FILES
+        source/unit_tests/unit_tests.cpp
+        source/unit_tests/test_BitSetEnumerator.cpp)
 
 set(SKUTELLA_FILES
         source/skutella.cpp
@@ -102,39 +128,50 @@ set(YANNICK_FILES
 )
 
 # Python
-find_package(PythonLibs 3.5 REQUIRED)
-include_directories(${PYTHON_INCLUDE_DIRS})
+#find_package(PythonLibs 3.5 REQUIRED)
+#include_directories(${PYTHON_INCLUDE_DIRS})
 
 # Python
-find_package(Threads REQUIRED)
+#find_package(Threads REQUIRED)
 
 # Boost
 #set(BOOST_LOG_DYN_LINK ON)
-find_package(Boost 1.61 COMPONENTS python-py35 REQUIRED) # log
-include_directories(${Boost_INCLUDE_DIR})
+#find_package(Boost 1.61 COMPONENTS python-py35 REQUIRED) # log
+#include_directories(${Boost_INCLUDE_DIR})
 
 # Google or-tools
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DUSE_CLP -DUSE_SCIP") # -fwrapv USE_GLOP USE_CBC
+set(GOOGLE_OR_TOOLS_DIR or-tools-6.7.1)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -I/opt/gurobi800/linux64/include -DUSE_GUROBI")
 
 include_directories(
-        or-tools-6.4/
-        or-tools-6.4/dependencies/install/include
-        or-tools-6.4/ortools/gen/
+        ${GOOGLE_OR_TOOLS_DIR}
+        ${GOOGLE_OR_TOOLS_DIR}/dependencies/install/include
+        ${GOOGLE_OR_TOOLS_DIR}/ortools/gen/
 )
 
 link_directories(
-        or-tools-6.4/lib
+        ${GOOGLE_OR_TOOLS_DIR}/lib
 )
 
 add_executable(steiner_trees
         ${SOURCE_FILES}
         ${HELPER_FILES}
+        ${DATA_FILES}
         ${GRAPH_FILES}
         ${MIP_FILES}
+        ${DIJKSTRA_STEINER_FILES}
         ${STEINER_TREE_FILES}
         ${STEINER_TREE_MIPS_FILES}
         ${SKUTELLA_FILES}
 )
+
+add_executable(steiner_trees_unit_tests
+        ${DATA_FILES}
+        ${UNIT_TESTS_FILES}
+        )
+
+target_include_directories(steiner_trees PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/source)
 
 add_executable(yannick
         ${SOURCE_FILES}
@@ -144,14 +181,14 @@ add_executable(yannick
         ${YANNICK_FILES}
 )
 
-add_library(steiner_trees_python_lib SHARED
-        ${SOURCE_FILES}
-        ${HELPER_FILES}
-        ${GRAPH_FILES}
-        ${MIP_FILES}
-        ${STEINER_TREE_FILES}
-        ${STEINER_TREE_MIPS_FILES}
-)
+#add_library(steiner_trees_python_lib SHARED
+#        ${SOURCE_FILES}
+#        ${HELPER_FILES}
+#        ${GRAPH_FILES}
+#        ${MIP_FILES}
+#        ${STEINER_TREE_FILES}
+#        ${STEINER_TREE_MIPS_FILES}
+#)
 
 target_link_libraries(steiner_trees
         ${PYTHON_LIBRARIES}
@@ -167,15 +204,15 @@ target_link_libraries(yannick
         libortools.so
 )
 
-target_link_libraries(steiner_trees_python_lib
-        ${PYTHON_LIBRARIES}
-        ${CMAKE_THREAD_LIBS_INIT}
-        ${Boost_LIBRARIES}
-        libortools.so
-)
+#target_link_libraries(steiner_trees_python_lib
+#        ${PYTHON_LIBRARIES}
+#        ${CMAKE_THREAD_LIBS_INIT}
+#        ${Boost_LIBRARIES}
+#        libortools.so
+#)
 
-include(GNUInstallDirs)
-install(TARGETS steiner_trees_python_lib
-        LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-        PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
-)
+#include(GNUInstallDirs)
+#install(TARGETS steiner_trees_python_lib
+#        LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+#        PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+#)

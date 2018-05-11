@@ -1,5 +1,7 @@
 #include "skutella.hpp"
 
+#include <fstream>
+
 #include "Logger.hpp"
 
 #include "skutella/SkutellaProblem.hpp"
@@ -12,7 +14,9 @@ void run_skutella(
 	std::string const& instance_name
 )
 {
-	Logger::set_logger(std::make_shared<std::ofstream>(instance_path + "/" + instance_name + ".log"));
+	std::ofstream log(instance_path + "/" + instance_name + ".log");
+
+	Logger::set_logger(log);
 
 	Logger::logger() << "Skutella LP/MIP Solver\n"
 					 << "\n"

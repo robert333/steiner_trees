@@ -48,6 +48,15 @@ json GroupEdges::compute_solution() const
 					{"value", bidirected_edge_variables().solution_value(edge.id(), net.name())}
 				}
 			);
+
+			if (bidirected_edge_variables().solution_value(edge.id(), net.name()) == 1.0) {
+				solution["activated"].push_back(
+					{
+						{"tail",  edge.tail()},
+						{"head",  edge.head()}
+					}
+				);
+			}
 		}
 	}
 

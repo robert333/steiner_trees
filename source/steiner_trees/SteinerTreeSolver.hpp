@@ -13,7 +13,11 @@ public:
 	using Vector = std::vector<SteinerTreeSolver>;
 
 public:
-	static SteinerTreeSolution solve(
+	static SteinerTreeSolution solve_via_combinatorial_optimization(
+		SteinerTreeProblem const& steiner_tree_problem
+	);
+
+	static SteinerTreeSolution solve_via_linear_programming(
 		SteinerTreeProblem const& steiner_tree_problem,
 		SteinerTreeMIP::Type const& steiner_tree_mip_type,
 		mip::MIP::OptimizationProblem const& optimization_problem

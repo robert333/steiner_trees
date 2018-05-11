@@ -77,7 +77,11 @@ Edge::Vector const& Graph::edges() const
 
 EdgeId Graph::find_edge(NodeId const& tail_id, NodeId const& head_id) const
 {
-	for (EdgeId const& edge_id : node(tail_id).outgoing_edges()) {
+	std::vector<EdgeId> const& edge_ids = is_directed()
+										  ? node(tail_id).outgoing_edges()
+										  : node(tail_id).incident_edges();
+
+	for (EdgeId const& edge_id : edge_ids) {
 		if (head_id == edge(edge_id).opposite(tail_id)) {
 			return edge_id;
 		}

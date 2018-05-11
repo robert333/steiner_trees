@@ -1487,7 +1487,7 @@ Binaries
 End
 [MIPSolver] number of variables   = 405
 [MIPSolver] number of constraints = 281
-[MIPSolver] Problem solved in 25 milliseconds.
+[MIPSolver] Problem solved in 29 milliseconds.
 [MIPSolver] optimal objective value = 18.6
 [GroupManager] compute solution for group GroupEdges
 [GroupManager] compute solution for group GroupMultiCommodityFlow
@@ -2070,7 +2070,7 @@ Bounds
 End
 [MIPSolver] number of variables   = 220
 [MIPSolver] number of constraints = 343
-[MIPSolver] Problem solved in 21 milliseconds.
+[MIPSolver] Problem solved in 26 milliseconds.
 [MIPSolver] optimal objective value = 18.6
 [GroupManager] compute solution for group GroupSimplexEmbedding
 [GroupManager] add group GroupEdges
@@ -3389,7 +3389,7 @@ Binaries
 End
 [MIPSolver] number of variables   = 495
 [MIPSolver] number of constraints = 668
-[MIPSolver] Problem solved in 81 milliseconds.
+[MIPSolver] Problem solved in 99 milliseconds.
 [MIPSolver] optimal objective value = 20
 [GroupManager] compute solution for group GroupEdges
 [GroupManager] compute solution for group GroupBidirectedMultiCommodityCommonFlow
@@ -7332,4 +7332,3 @@ instances/integrality_gaps/3_terminals_planar/solution_3_terminals_planar.json
         }
     }
 }
-

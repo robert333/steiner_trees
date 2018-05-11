@@ -1,16 +1,15 @@
 #ifndef LOGGER_HPP
 #define LOGGER_HPP
 
-#include <fstream>
-#include <memory>
+#include <ostream>
 
 class Logger {
 public:
-	static void set_logger(std::shared_ptr<std::ostream> const& ostream_ptr);
+	static void set_logger(std::ostream& ostream);
 	static std::ostream& logger();
 
 private:
-	static std::shared_ptr<std::ostream> _ostream_ptr;
+	static std::ostream* _ostream_ptr;
 };
 
 #endif

@@ -1,7 +1,7 @@
 #ifndef MIP_MIPMODEL_HPP
 #define MIP_MIPMODEL_HPP
 
-#include "../../or-tools-6.4/ortools/linear_solver/linear_solver.h"
+#include <ortools/linear_solver/linear_solver.h>
 
 #include "Constraint.hpp"
 

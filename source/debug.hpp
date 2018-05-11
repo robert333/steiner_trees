@@ -14,6 +14,16 @@
 
 //#define DEBUG
 
+#ifdef NDEBUG
+inline void debug_output(std::string const&)
+{}
+#else
+inline void debug_output(std::string const& text)
+{
+	std::cout << text;
+}
+#endif
+
 template<typename T>
 void output(T const& object, std::string const& name = "")
 {

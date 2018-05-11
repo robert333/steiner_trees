@@ -19,9 +19,9 @@ mip::GroupManager SteinerTreeMIPFactory::create(
 )
 {
 	switch (steiner_tree_mip_type) {
-		case SteinerTreeMIP::NMC : FORBIDDEN;
-		case SteinerTreeMIP::EMC : return create_emc(steiner_tree_problem);
-		case SteinerTreeMIP::EMC_DUAL : return create_emc_dual(steiner_tree_problem);
+		case SteinerTreeMIP::NMCF : FORBIDDEN;
+		case SteinerTreeMIP::EMCF : return create_emc(steiner_tree_problem);
+		case SteinerTreeMIP::EMCF_DUAL : return create_emc_dual(steiner_tree_problem);
 		case SteinerTreeMIP::CF : FORBIDDEN;
 		case SteinerTreeMIP::UCB : FORBIDDEN;
 		case SteinerTreeMIP::DCB : return create_dcb(steiner_tree_problem);

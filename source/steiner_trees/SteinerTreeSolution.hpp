@@ -7,17 +7,25 @@
 
 namespace steiner_trees {
 
-class SteinerTreeSolution : public mip::Solution {
+class SteinerTreeSolution {
 public:
 	using SharedPtr = std::shared_ptr<SteinerTreeSolution>;
 	using Vector = std::vector<SteinerTreeSolution>;
 
 public:
-	explicit SteinerTreeSolution(mip::Solution const& mip_solution);
+	explicit SteinerTreeSolution(
+		graph::Weight const& optimum_value,
+		json const& solution = {}
+	);
+
+	graph::Weight const& optimum_value() const;
+	json const& solution() const;
 
 private:
 
 private:
+	graph::Weight _optimum_value;
+	json _solution;
 };
 
 } // namespace steiner_trees

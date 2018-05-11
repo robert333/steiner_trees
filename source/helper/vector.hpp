@@ -26,6 +26,19 @@ bool is_unique(std::deque<T> const& deque)
 }
 
 template<typename T>
+void sort(std::vector<T>& vector)
+{
+	std::sort(vector.begin(), vector.end());
+}
+
+template<typename T>
+void sort_and_unique_and_erase(std::vector<T>& vector)
+{
+	sort(vector);
+	vector.erase(std::unique(vector.begin(), vector.end()), vector.end());
+}
+
+template<typename T>
 typename std::vector<T>::const_iterator find(std::vector<T> const& vector, T const& object)
 {
 	return std::find(vector.begin(), vector.end(), object);

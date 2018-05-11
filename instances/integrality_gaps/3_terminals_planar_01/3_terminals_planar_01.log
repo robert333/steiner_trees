@@ -1010,7 +1010,7 @@ Binaries
 End
 [MIPSolver] number of variables   = 270
 [MIPSolver] number of constraints = 188
-[MIPSolver] Problem solved in 16 milliseconds.
+[MIPSolver] Problem solved in 28 milliseconds.
 [MIPSolver] optimal objective value = 11.25
 [GroupManager] compute solution for group GroupEdges
 [GroupManager] compute solution for group GroupMultiCommodityFlow
@@ -1407,7 +1407,7 @@ Bounds
 End
 [MIPSolver] number of variables   = 148
 [MIPSolver] number of constraints = 229
-[MIPSolver] Problem solved in 13 milliseconds.
+[MIPSolver] Problem solved in 24 milliseconds.
 [MIPSolver] optimal objective value = 11.25
 [GroupManager] compute solution for group GroupSimplexEmbedding
 [GroupManager] add group GroupEdges
@@ -2294,7 +2294,7 @@ Binaries
 End
 [MIPSolver] number of variables   = 330
 [MIPSolver] number of constraints = 446
-[MIPSolver] Problem solved in 56 milliseconds.
+[MIPSolver] Problem solved in 87 milliseconds.
 [MIPSolver] optimal objective value = 12
 [GroupManager] compute solution for group GroupEdges
 [GroupManager] compute solution for group GroupBidirectedMultiCommodityCommonFlow

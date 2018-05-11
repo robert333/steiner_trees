@@ -1,7 +1,7 @@
 #ifndef MIP_MIP_SOLVER_HPP
 #define MIP_MIP_SOLVER_HPP
 
-#include "../../or-tools-6.4/ortools/linear_solver/linear_solver.h"
+#include <ortools/linear_solver/linear_solver.h>
 
 namespace mip {
 
