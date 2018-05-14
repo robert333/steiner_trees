@@ -1,7 +1,7 @@
 #ifndef JSON_HPP
 #define JSON_HPP
 
-#include <../json/json.hpp>
+#include </opt/json/json.hpp>
 
 using json = nlohmann::json;
 

@@ -26,7 +26,7 @@ json GroupSimplexEmbedding::compute_solution() const
 {
 	json solution;
 
-	solution["simplex"] = _simplex_variable.solution_value(0);
+	solution["lambda"] = _simplex_variable.solution_value(0);
 
 	for (graph::Node const& node : _graph.nodes()) {
 		std::vector<double> terminal_solution_values;
@@ -37,8 +37,8 @@ json GroupSimplexEmbedding::compute_solution() const
 
 		solution["nodes"].push_back(
 			{
-				{"node",               node.to_string()},
-				{"value_per_terminal", terminal_solution_values}
+				{"node",     node.to_string()},
+				{"position", terminal_solution_values}
 			}
 		);
 	}

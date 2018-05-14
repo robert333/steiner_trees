@@ -140,7 +140,7 @@ set(YANNICK_FILES
 #include_directories(${Boost_INCLUDE_DIR})
 
 # Google or-tools
-set(GOOGLE_OR_TOOLS_DIR or-tools-6.7.1)
+set(GOOGLE_OR_TOOLS_DIR /opt/or-tools-6.7.1)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -I/opt/gurobi800/linux64/include -DUSE_GUROBI")
 

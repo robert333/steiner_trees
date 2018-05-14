@@ -1,6 +1,6 @@
 #ifndef UNIT_TESTS_HPP
 #define UNIT_TESTS_HPP
 
-#include <../catch/catch.hpp>
+#include </opt/catch/catch.hpp>
 
 #endif

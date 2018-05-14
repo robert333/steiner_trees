@@ -7,10 +7,14 @@
 #include <vector>
 #include <deque>
 
-#include "helper/vector.hpp"
+#include <helper/vector.hpp>
 
 #define DUMMY_USE(x) ((void)(x))
 #define FORBIDDEN throw
+
+#define CRITICAL_CHECK(boolean_expression, error_message) \
+if (not (boolean_expression)) \
+{ std::cerr << std::endl << "ERROR: " << __FILE__ << ":" << __LINE__ << " : " << (error_message) << "\n" << std::endl; }
 
 //#define DEBUG
 

@@ -1,0 +1,5 @@
+g++ -fPIC -std=c++0x -fwrapv -O4 -DNDEBUG -I. -Iexamples -Iortools/gen -I/home/robert/Documents/studies/discrete_mathematics/steiner-trees/or-tools-6.7.1/dependencies/install/include -Wno-deprecated
+-I/home/robert/Documents/studies/discrete_mathematics/steiner-trees/or-tools-6.7.1/dependencies/install/include -I/home/robert/Documents/studies/discrete_mathematics/steiner-trees/or-tools-6.7.1/dependencies/install/include
+-I/home/robert/Documents/studies/discrete_mathematics/steiner-trees/or-tools-6.7.1/dependencies/install/include/coin -DUSE_CBC -I/include -I/home/robert/Documents/studies/discrete_mathematics/steiner-trees/or-tools-6.7.1/dependencies/install/include/coin -DUSE_CLP   
+-I/opt/gurobi800//linux64/include -DUSE_GUROBI  -DUSE_GLOP -DUSE_BOP -I/home/robert/Documents/studies/discrete_mathematics/steiner-trees/or-tools-6.7.1/dependencies/install/include objs/linear_programming.o
+-Wl,-rpath /home/robert/Documents/studies/discrete_mathematics/steiner-trees/or-tools-6.7.1/lib -L/home/robert/Documents/studies/discrete_mathematics/steiner-trees/or-tools-6.7.1/lib -lortools -lz -lrt -lpthread -o bin/linear_programming
