@@ -1,6 +1,7 @@
 #include "SteinerTreeSolver.hpp"
 
 #include <steiner_trees/dijkstra_steiner/DijkstraSteiner.hpp>
+#include <Chronograph.hpp>
 
 namespace steiner_trees {
 
@@ -9,6 +10,8 @@ SteinerTreeSolution SteinerTreeSolver::solve_via_combinatorial_optimization(
 )
 {
 	std::cout << "[SteinerTreeSolver] Solve Steiner Tree problem via combinatorial optimization\n";
+
+	Chronograph const chronograph("Steiner Tree DijkstraSteiner Solver");
 
 	return DijkstraSteiner::solve(steiner_tree_problem);
 }
@@ -22,6 +25,8 @@ SteinerTreeSolution SteinerTreeSolver::solve_via_linear_programming(
 	std::cout << "[SteinerTreeSolver] Solve Steiner Tree problem via linear programming\n";
 	std::cout << "[SteinerTreeSolver] Steiner Tree MIP type = " << steiner_tree_mip_type << "\n";
 	std::cout << "[SteinerTreeSolver] MIP problem type      = " << optimization_problem << "\n";
+
+	Chronograph const chronograph("Steiner Tree LP/MIP Solver");
 
 	mip::Solution const mip_solution = SteinerTreeMIP::solve(
 		steiner_tree_problem,

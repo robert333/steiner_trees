@@ -19,6 +19,7 @@ set(SOURCE_FILES
         source/Output.cpp
         source/Storage.cpp
         source/Logger.cpp
+        source/Chronograph.cpp
 )
 
 set(HELPER_FILES

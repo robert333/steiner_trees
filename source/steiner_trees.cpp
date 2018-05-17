@@ -46,15 +46,26 @@ void run_steiner_trees(
 
 	write_json(analysis_file_path, analysis);
 
-	std::string const plot_simplex_embedding_command =
-		"python3 /home/robert/Documents/studies/discrete_mathematics/n-simplex/simplex_embedding.py "
-		+ instance_file_path + " " + analysis_file_path;// + " " + instance_path;
+	if (terminal_instance.terminals().size() <= 4) {
+		if (analysis.count("simplex_embedding") > 0) {
+			if (analysis["simplex_embedding"]["lambda"] <= 30) {
+				std::string const plot_simplex_embedding_command =
+					"python3 /home/robert/Documents/studies/discrete_mathematics/n-simplex/simplex_embedding.py "
+					+ instance_file_path + " " + analysis_file_path;// + " " + instance_path;
 
-	Logger::logger() << "execute: " << plot_simplex_embedding_command << "\n";
+				Logger::logger() << "execute: " << plot_simplex_embedding_command << "\n";
 
-	int const status = system(plot_simplex_embedding_command.c_str());
+				int const status = system(plot_simplex_embedding_command.c_str());
 
-	CRITICAL_CHECK(status == 0, "system error")
+				CRITICAL_CHECK(status == 0, "system error")
+			} else {
+				Logger::logger() << "We do not plot the solution as the size of the simplex is too large, "
+								 << "size = " << analysis["simplex_embedding"]["lambda"] << " > 30";
+			}
+		} else {
+			Logger::logger() << "We do not plot the solution as we did not compute a simplex embedding";
+		}
+	}
 }
 
 json analyze_bidirected_cut_relaxation(steiner_trees::SteinerTreeProblem const& steiner_tree_problem)
@@ -62,13 +73,19 @@ json analyze_bidirected_cut_relaxation(steiner_trees::SteinerTreeProblem const& 
 	graph::TerminalInstance const& terminal_instance = steiner_tree_problem.terminal_instance();
 	graph::Graph const& graph = terminal_instance.undirected_graph();
 
+	std::size_t const num_terminals = terminal_instance.terminals().size();
+
 	Logger::logger() << "Steiner Tree BCR Analysis\n"
 					 << "\n"
 					 << "num nodes     : " << graph.num_nodes() << "\n"
 					 << "num edges     : " << graph.num_edges() << "\n"
-					 << "num terminals : " << terminal_instance.terminals().size() << "\n"
+					 << "num terminals : " << num_terminals << "\n"
 					 << "root terminal : " << terminal_instance.root_terminal() << "\n"
 					 << "\n";
+
+	std::optional<steiner_trees::SteinerTreeSolution> solution_simplex_embedding;
+	std::optional<steiner_trees::SteinerTreeSolution> solution_bmccf;
+	std::optional<steiner_trees::SteinerTreeSolution> solution_emcf_integer;
 
 	auto const solution_emcf_continuous = steiner_trees::SteinerTreeSolver::solve_via_linear_programming(
 		steiner_tree_problem,
@@ -76,59 +93,70 @@ json analyze_bidirected_cut_relaxation(steiner_trees::SteinerTreeProblem const& 
 		mip::MIP::LINEAR_PROGRAMMING
 	);
 
-	auto const solution_simplex_embedding = steiner_trees::SteinerTreeSolver::solve_via_linear_programming(
-		steiner_tree_problem,
-		steiner_trees::SteinerTreeMIP::SIMPLEX_EMBEDDING,
-		mip::MIP::LINEAR_PROGRAMMING
-	);
+	if (num_terminals <= 4 and graph.num_edges() < 10000) {
+		solution_simplex_embedding = steiner_trees::SteinerTreeSolver::solve_via_linear_programming(
+			steiner_tree_problem,
+			steiner_trees::SteinerTreeMIP::SIMPLEX_EMBEDDING,
+			mip::MIP::LINEAR_PROGRAMMING
+		);
 
-//	auto const solution_bmccf = steiner_trees::SteinerTreeSolver::solve_via_linear_programming(
+		if (num_terminals == 3) {
+//			solution_bmccf = steiner_trees::SteinerTreeSolver::solve_via_linear_programming(
+//				steiner_tree_problem,
+//				steiner_trees::SteinerTreeMIP::BIDIRECTED_MULTI_COMMODITY_COMMON_FLOW,
+//				mip::MIP::MIXED_INTEGER_PROGRAMMING
+//			);
+		}
+	}
+
+//	auto const solution_emcf_integer = steiner_trees::SteinerTreeSolver::solve_via_linear_programming(
 //		steiner_tree_problem,
-//		steiner_trees::SteinerTreeMIP::BIDIRECTED_MULTI_COMMODITY_COMMON_FLOW,
+//		steiner_trees::SteinerTreeMIP::EMCF,
 //		mip::MIP::MIXED_INTEGER_PROGRAMMING
 //	);
-
-	auto const solution_emcf_integer = steiner_trees::SteinerTreeSolver::solve_via_linear_programming(
-		steiner_tree_problem,
-		steiner_trees::SteinerTreeMIP::EMCF,
-		mip::MIP::MIXED_INTEGER_PROGRAMMING
-	);
 
 	auto const solution_dijkstra_steiner = steiner_trees::SteinerTreeSolver::solve_via_combinatorial_optimization(
 		steiner_tree_problem
 	);
 
 	mip::Value const optimum_value_emcf_continuous = solution_emcf_continuous.optimum_value();
-	mip::Value const optimum_value_simplex_embedding = solution_simplex_embedding.optimum_value();
-//	mip::Value const optimum_value_bmccf = solution_bmccf.optimum_value();
-	mip::Value const optimum_value_emcf_integer = solution_emcf_integer.optimum_value();
 	mip::Value const optimum_value_dijkstra_steiner = solution_dijkstra_steiner.optimum_value();
-	mip::Value const integrality_gap = optimum_value_emcf_integer / optimum_value_emcf_continuous;
+	mip::Value const integrality_gap = optimum_value_dijkstra_steiner / optimum_value_emcf_continuous;
 
-	std::cout << "optimum value EMCF continuous   = " << optimum_value_emcf_continuous << "\n";
-	std::cout << "optimum value simplex embedding = " << optimum_value_simplex_embedding << "\n";
-//	std::cout << "optimum value BMCCF             = " << optimum_value_bmccf << "\n";
-	std::cout << "optimum value EMCF integer      = " << optimum_value_emcf_integer << "\n";
-	std::cout << "optimum value Dijkstra Steiner  = " << optimum_value_dijkstra_steiner << "\n";
-	std::cout << "integrality gap EMCF            = " << integrality_gap << "\n";
+	Logger::logger() << "optimum value EMCF continuous   = " << optimum_value_emcf_continuous << "\n";
+	Logger::logger() << "optimum value Dijkstra Steiner  = " << optimum_value_dijkstra_steiner << "\n";
+	Logger::logger() << "integrality gap EMCF            = " << integrality_gap << "\n";
 
-	CRITICAL_CHECK(
-		optimum_value_emcf_continuous == optimum_value_simplex_embedding,
-		"both programs should have the same optimum value, error = "
-		+ std::to_string(std::abs(optimum_value_emcf_continuous - optimum_value_simplex_embedding))
-	)
-
-	CRITICAL_CHECK(
-		optimum_value_emcf_integer == optimum_value_dijkstra_steiner,
-		"both algorithms should have the same optimum value, error = "
-		+ std::to_string(std::abs(optimum_value_emcf_integer - optimum_value_dijkstra_steiner))
-	)
-
-	json const analysis = {
-		{"emcf_edges",        solution_emcf_continuous.solution()["variables"]["GroupEdges"]["bidirected"]},
-		{"simplex_embedding", solution_simplex_embedding.solution()["variables"]["GroupSimplexEmbedding"]},
-		{"optimum_solution",  solution_dijkstra_steiner.solution()}
+	json analysis = {
+		{"emcf_edges",       solution_emcf_continuous.solution()["variables"]["GroupEdges"]["bidirected"]},
+		{"optimum_solution", solution_dijkstra_steiner.solution()}
 	};
+
+	if (solution_simplex_embedding.has_value()) {
+		mip::Value const optimum_value_simplex_embedding = solution_simplex_embedding->optimum_value();
+		std::cout << "optimum value simplex embedding = " << optimum_value_simplex_embedding << "\n";
+		CRITICAL_CHECK(
+			optimum_value_emcf_continuous == optimum_value_simplex_embedding,
+			"EMCF (LP) and Simplex Embedding (LP) should have the same optimum value, error = "
+			+ std::to_string(std::abs(optimum_value_emcf_continuous - optimum_value_simplex_embedding))
+		)
+		analysis["simplex_embedding"] = solution_simplex_embedding->solution()["variables"]["GroupSimplexEmbedding"];
+	}
+
+	if (solution_bmccf.has_value()) {
+		mip::Value const optimum_value_bmccf = solution_bmccf->optimum_value();
+		std::cout << "optimum value BMCCF             = " << optimum_value_bmccf << "\n";
+	}
+
+	if (solution_emcf_integer.has_value()) {
+		mip::Value const optimum_value_emcf_integer = solution_emcf_integer->optimum_value();
+		std::cout << "optimum value EMCF integer      = " << optimum_value_emcf_integer << "\n";
+		CRITICAL_CHECK(
+			optimum_value_emcf_integer == optimum_value_dijkstra_steiner,
+			"EMFC (MIP) and Dijkstra Steiner should have the same optimum value, error = "
+			+ std::to_string(std::abs(optimum_value_emcf_integer - optimum_value_dijkstra_steiner))
+		)
+	}
 
 //	write_json(std::cout, analysis);
 
